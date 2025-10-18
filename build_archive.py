@@ -1,6 +1,9 @@
 import os
 import json
 import requests
+import re
+from html.parser import HTMLParser
+from urllib.parse import urlparse
 
 import argparse
 import time
@@ -96,6 +99,278 @@ def load_json(file="conf.json"):
     with open(file, encoding='utf8') as f:
         return json.load(f)
 
+
+class HTML2MarkdownParser(HTMLParser):
+    """Convert HTML to Markdown with wiki-link support for internal links"""
+    
+    def __init__(self, base_url, post_id_map):
+        super().__init__()
+        self.base_url = base_url
+        self.post_id_map = post_id_map  # Maps URLs to post IDs
+        self.markdown = []
+        self.tag_stack = []
+        self.list_depth = 0
+        self.in_pre = False
+        self.in_code = False
+        
+    def handle_starttag(self, tag, attrs):
+        attrs_dict = dict(attrs)
+        
+        if tag == 'p':
+            self.markdown.append('\n\n')
+        elif tag == 'br':
+            self.markdown.append('  \n')
+        elif tag == 'strong' or tag == 'b':
+            self.markdown.append('**')
+            self.tag_stack.append('**')
+        elif tag == 'em' or tag == 'i':
+            self.markdown.append('*')
+            self.tag_stack.append('*')
+        elif tag == 'code':
+            self.markdown.append('`')
+            self.tag_stack.append('`')
+            self.in_code = True
+        elif tag == 'pre':
+            self.markdown.append('\n```\n')
+            self.in_pre = True
+        elif tag == 'a':
+            href = attrs_dict.get('href', '')
+            self.tag_stack.append(('link', href))
+        elif tag in ['h1', 'h2', 'h3', 'h4', 'h5', 'h6']:
+            level = int(tag[1])
+            self.markdown.append('\n' + '#' * level + ' ')
+            self.tag_stack.append('header')
+        elif tag == 'ul' or tag == 'ol':
+            self.list_depth += 1
+            self.tag_stack.append(('list', tag))
+        elif tag == 'li':
+            indent = '  ' * (self.list_depth - 1)
+            list_marker = '- ' if self.tag_stack and self.tag_stack[-1][1] == 'ul' else '1. '
+            self.markdown.append(f'\n{indent}{list_marker}')
+        elif tag == 'blockquote':
+            self.markdown.append('\n> ')
+            self.tag_stack.append('blockquote')
+            
+    def handle_endtag(self, tag):
+        if tag == 'p':
+            pass  # Already handled in starttag
+        elif tag in ['strong', 'b', 'em', 'i']:
+            if self.tag_stack and self.tag_stack[-1] in ['**', '*']:
+                self.markdown.append(self.tag_stack.pop())
+        elif tag == 'code':
+            if self.tag_stack and self.tag_stack[-1] == '`':
+                self.markdown.append(self.tag_stack.pop())
+            self.in_code = False
+        elif tag == 'pre':
+            self.markdown.append('\n```\n')
+            self.in_pre = False
+        elif tag == 'a':
+            if self.tag_stack and isinstance(self.tag_stack[-1], tuple) and self.tag_stack[-1][0] == 'link':
+                _, href = self.tag_stack.pop()
+                link_text = self.markdown.pop() if self.markdown else ''
+                
+                # Check if it's an internal link
+                if self.is_internal_link(href):
+                    # Convert to wiki link
+                    target_id = self.get_post_id_from_url(href)
+                    if target_id:
+                        self.markdown.append(f'[[{target_id}|{link_text}]]')
+                    else:
+                        # Fallback to regular link if we can't find the post
+                        self.markdown.append(f'[{link_text}]({href})')
+                else:
+                    # External link - keep as is
+                    self.markdown.append(f'[{link_text}]({href})')
+        elif tag in ['h1', 'h2', 'h3', 'h4', 'h5', 'h6']:
+            if self.tag_stack and self.tag_stack[-1] == 'header':
+                self.tag_stack.pop()
+            self.markdown.append('\n')
+        elif tag == 'ul' or tag == 'ol':
+            self.list_depth -= 1
+            if self.tag_stack:
+                self.tag_stack.pop()
+        elif tag == 'blockquote':
+            if self.tag_stack and self.tag_stack[-1] == 'blockquote':
+                self.tag_stack.pop()
+                
+    def handle_data(self, data):
+        if self.in_pre or self.in_code:
+            self.markdown.append(data)
+        else:
+            # For link text, store temporarily
+            if self.tag_stack and isinstance(self.tag_stack[-1], tuple) and self.tag_stack[-1][0] == 'link':
+                self.markdown.append(data)
+            else:
+                self.markdown.append(data)
+    
+    def is_internal_link(self, url):
+        """Check if URL is internal to the blog"""
+        parsed = urlparse(url)
+        base_parsed = urlparse(self.base_url)
+        return parsed.netloc == base_parsed.netloc or not parsed.netloc
+    
+    def get_post_id_from_url(self, url):
+        """Get post ID from URL using the post_id_map"""
+        # Normalize URL
+        url = url.strip()
+        return self.post_id_map.get(url)
+    
+    def get_markdown(self):
+        """Return the final markdown"""
+        result = ''.join(self.markdown)
+        # Clean up multiple newlines
+        result = re.sub(r'\n{3,}', '\n\n', result)
+        return result.strip()
+
+
+class ObsidianVaultBuilder:
+    """Builds an Obsidian vault from blog and forum data"""
+    
+    def __init__(self, conf):
+        self.conf = conf
+        self.root = conf['root']
+        self.vault_path = os.path.join(self.root, conf.get('vault_path', 'vault'))
+        self.blog_path = os.path.join(self.vault_path, 'Blog')
+        os.makedirs(self.blog_path, exist_ok=True)
+        
+    def sanitize_filename(self, title):
+        """Create a safe filename from a title"""
+        # Replace non-breaking spaces with regular spaces
+        safe = title.replace('\xa0', ' ')
+        # Remove or replace invalid characters
+        safe = re.sub(r'[<>:"/\\|?*#^]', '', safe)
+        safe = safe.strip()
+        # Limit length
+        if len(safe) > 200:
+            safe = safe[:200]
+        return safe
+    
+    def build_post_id_map(self, posts):
+        """Build a mapping of URLs to post filenames (without .md extension)"""
+        post_map = {}
+        for post in posts:
+            # Map URL to the sanitized filename (without extension)
+            filename = self.sanitize_filename(post['title'])
+            post_map[post['url']] = filename
+        return post_map
+    
+    def html_to_markdown(self, html, base_url, post_id_map):
+        """Convert HTML to Markdown"""
+        parser = HTML2MarkdownParser(base_url, post_id_map)
+        parser.feed(html)
+        return parser.get_markdown()
+    
+    def format_date(self, date_obj):
+        """Format date object to readable string"""
+        return f"{date_obj['year']}-{date_obj['month']}-{date_obj['day']} {date_obj.get('time', '00:00')}"
+
+    def create_blog_index(self, posts):
+        """Create an index file listing all blog posts in reverse chronological order"""
+        md = []
+        
+        md.append('# Blog Archive')
+        md.append('')
+        md.append(f'Total posts: {len(posts)}')
+        md.append('')
+        
+        # Sort posts by date (reverse chronological)
+        sorted_posts = sorted(posts, key=lambda p: (
+            int(p['date']['year']),
+            int(p['date']['month']),
+            int(p['date']['day']),
+            p['date'].get('time', '00:00')
+        ), reverse=True)
+        
+        for post in sorted_posts:
+            filename = self.sanitize_filename(post['title'])
+            date_str = self.format_date(post['date'])
+            
+            # Create entry with wiki link
+            md.append(f"- [[{filename}|{post['title']}]] - *{date_str}*")
+            
+            # Add tags if present
+            if post.get('tags'):
+                md.append(f"  - Tags: {', '.join(['#'+self.sanitize_tag(t) for t in post['tags']])}")
+        
+        # Write index file
+        index_path = os.path.join(self.vault_path, 'Blog Archive.md')
+        with open(index_path, 'w', encoding='utf-8') as f:
+            f.write('\n'.join(md))
+        
+        print(f"Created blog archive index at {index_path}")
+    
+    def sanitize_tag(self, tag):
+        safe = re.sub(r'[ ]', '', tag)
+        return safe
+
+    def build_blog_post(self, post, post_id_map, base_url):
+        """Convert a single blog post to markdown"""
+        md = []
+        
+        # Frontmatter
+        md.append('---')
+        md.append(f"id: {post['id']}")
+        md.append(f"title: \"{post['title']}\"")
+        md.append(f"date: {self.format_date(post['date'])}")
+        md.append(f"url: {post['url']}")
+        if post.get('tags'):
+            md.append(f"tags: [{', '.join([self.sanitize_tag(t) for t in post['tags']])}]")
+        md.append('---')
+        md.append('')
+        
+        # Title
+        md.append(f"# {post['title']}")
+        md.append('')
+        
+        # Date
+        md.append(f"*Posted: {self.format_date(post['date'])}*")
+        md.append('')
+        
+        # Body
+        body_md = self.html_to_markdown(post['body'], base_url, post_id_map)
+        md.append(body_md)
+        md.append('')
+        
+        # Comments
+        if post.get('comments'):
+            md.append('---')
+            md.append('')
+            md.append(f"## Comments ({len(post['comments'])})")
+            md.append('')
+            
+            for comment in post['comments']:
+                md.append(f"### {comment['author']} - {self.format_date(comment['date'])}")
+                md.append('')
+                md.append(self.html_to_markdown(comment['body'], base_url, post_id_map))
+                md.append('')
+        
+        return '\n'.join(md)
+    
+    def build_blog_vault(self, blog_data):
+        """Build vault from blog posts"""
+        posts = blog_data['posts']
+        base_url = posts[0]['url'] if posts else 'http://markforster.squarespace.com'
+        
+        # Build URL to ID mapping
+        post_id_map = self.build_post_id_map(posts)
+        
+        for post in posts:
+            # Create filename from title
+            filename = self.sanitize_filename(post['title']) + '.md'
+            filepath = os.path.join(self.blog_path, filename)
+            
+            # Generate markdown
+            markdown = self.build_blog_post(post, post_id_map, base_url)
+            
+            # Write file
+            with open(filepath, 'w', encoding='utf-8') as f:
+                f.write(markdown)
+        
+        # Create blog archive index
+        self.create_blog_index(posts)
+        print(f"Created {len(posts)} blog post files in {self.blog_path}")
+
+
 class DataStore:
     def __init__(self, conf):
         self.conf = conf
@@ -135,6 +410,25 @@ def dump_item(args):
     print(len(data['topics']))
     data = ds.load_raw_file('fvp_forum')
     print(len(data['topics']))
+
+@entry.point
+def build_vault(args):
+    """Build an Obsidian vault from the archived data"""
+    conf = load_json(args.conf)
+    ds = DataStore(conf)
+    builder = ObsidianVaultBuilder(conf)
+    
+    # Load and build blog
+    blog_data = ds.load_raw_file('blog')
+    if args.max_posts is not None:
+        blog_data['posts'] = blog_data['posts'][:args.max_posts]
+    builder.build_blog_vault(blog_data)
+    
+    print(f"Vault created at: {builder.vault_path}")
+
+@build_vault.parser
+def build_vault_parser(parser):
+    parser.add_argument("--max_posts", default=None, type=int)
 
 @entry.add_common_parser
 def common_settings(parser):

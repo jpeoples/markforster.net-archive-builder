@@ -1,6 +1,6 @@
 {
     "root": "data",
-    "vault_path": "data/vault",
+    "vault_path": "vault",
     "local.storage": {
         "raw": "raw"
     },
