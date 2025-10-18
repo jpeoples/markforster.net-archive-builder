@@ -1,0 +1,25 @@
+{
+    "root": "data",
+    "vault_path": "data/vault",
+    "local.storage": {
+        "raw": "raw"
+    },
+    "remote.raw_files": {
+        "blog": "https://raw.githubusercontent.com/andreasmaurer/markforster.net-content-export/refs/heads/master/blog.json",
+        "general_forum": "https://raw.githubusercontent.com/andreasmaurer/markforster.net-content-export/refs/heads/master/forum.json",
+        "fvp_forum": "https://raw.githubusercontent.com/andreasmaurer/markforster.net-content-export/refs/heads/master/fv-forum.json"
+    },
+    "local.raw_files": {
+        "blog": "blog.json",
+        "general_forum": "forum.json",
+        "fvp_forum": "fv-forum.json"
+    },
+    "source": {
+        "canonical_root": "http://markforster.squarespace.com",
+        "alternative_roots": [
+            "https://markforster.squarespace.com",
+            "http://markforster.net",
+            "https://markforster.net"
+        ]
+    }
+}
