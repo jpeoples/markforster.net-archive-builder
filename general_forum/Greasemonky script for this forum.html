@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greasemonky script for this forum</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../blog_index.html">Blog</a>
+            <a href="../fvp_forum_index.html">FVP Forum</a>
+            <a href="../general_forum_index.html">General Forum</a>
+        </nav>
+    </header>
+    <main>
+<article>
+<h1>Greasemonky script for this forum</h1>
+<div class="meta">
+Author: Andreas Hofmann | 
+Created: 2009-08-26 9:53
+ | Last Activity: 2014-09-15 1:54
+</div>
+<h2>Original Post</h2>
+<div class="meta">2009-08-26 9:53</div>
+<div class="content">Hello everyone,<br><br>I wrote a really small script to deal with something that was annoying me when using the forum. As you may know, I use the Firefox addon "SiteDelta" to keep track of what's happening in the forum. <br><br>Every discussion thread has a number and its address looks like this:<br><br>/forum/post/866846<br><br>That is the address you reach if you click on a link in the main forum page. And if you add this address to SiteDelta, you'll be informed about new replies to it. Until ...<br><br>... the post count reaches 50. Then a new page is created, and from the first page you first need to scroll down and click on the link to the second page to get there.<br><br>The second page has a new address:<br><br>/forum/post/866846?currentPage=2<br><br>Since the address changed, SiteDelta, which is still watching /forum/post/866846, will not report new replies anymore. I can add the new address again, but I have to do that for every discussion everytime it reaches a new page.<br><br>The solution is to use another address, that looks this:<br><br>/forum/post/866846?lastPage=true<br><br>This will always get you to the last page. If there is one page, you'll end up on page 1. If there are two pages, you'll be on page 2. And so on.<br><br>So if you watch this page, you'll always be informed of new replies. Now I could just add "?lastPage=true" manually everytime I add a discussion to my watchlist, but that's where my script comes in.<br><br>The script changes the links on the main forum page so you always get to the last page of a discussion. It's great if you use SiteDelta, but I think you may benefit from it even if you browse the forum manually since it saves you the trouble to go through the pages.<br><br>You can add the script to Greasemonkey from here: <a href="http://autofocus.cc/public/data/greasemonkey/markforsternet_forum_lastpage.user.js" rel="nofollow">http://autofocus.cc/public/data/greasemonkey/markforsternet_forum_lastpage.user.js</a></div>
+<h2>Reply by Damien</h2>
+<div class="meta">2009-08-26 12:52</div>
+<div class="content">Nice,  works also with Opera (I never tried Greasemonkey scripts before this one)</div>
+<h2>Reply by MartyH</h2>
+<div class="meta">2009-08-26 16:09</div>
+<div class="content">It doesn't seem to work as advertised for me.  Suggestions?  Grease Monkey is enabled and so is the script.  But it doesn't show up when I right click on the GreaseMonkey icon. Do I need to do anything else to get it running?</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2009-08-26 20:10</div>
+<div class="content">MartyH:<br><br>No, you shouldn't need anything beside Greasemonkey. Are you using NoScript or something else that may block Javascript?</div>
+<h2>Reply by MartyH</h2>
+<div class="meta">2009-08-27 0:35</div>
+<div class="content">I think it is working fine now.  I had to add an asterisk at the end of the "included pages" for the script so it now reads: <a href="http://www.markforster.net/forum*" rel="nofollow">http://www.markforster.net/forum*</a></div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2009-08-27 9:17</div>
+<div class="content">The asterisk shouldn't be necessary. The script is supposed to work on the address <a href="http://www.markforster.net/forum" rel="nofollow">http://www.markforster.net/forum</a> only, not on the subpages of the forum. All it does is change the links on the main forum page to point to the last page of each discussion. I'm have not tested what it effects if it's enabled for subpages. But if it's working fine for you, then I guess everything is alright. :-)</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2009-08-27 9:20</div>
+<div class="content">Ah, I see the problem now. There are two addresses in use for the forum main page. Depending on how you reach it, it's either <a href="http://markforster.net/forum" rel="nofollow">http://markforster.net/forum</a> OR <a href="http://markforster.net/forum/" rel="nofollow">http://markforster.net/forum/</a> - with trailing slash.<br><br>So the script should be enabled for <br><a href="http://markforster.net/forum" rel="nofollow">http://markforster.net/forum</a><br><a href="http://markforster.net/forum/" rel="nofollow">http://markforster.net/forum/</a><br><br><a href="http://markforster.net/forum*" rel="nofollow">http://markforster.net/forum*</a> is too much, but probably okay. It could be that you can't access earlier pages of a discussion when you include the asterisk. Have you tried?<br><br>I'll change the script on the server to include both addresses.</div>
+<h2>Reply by MartyH</h2>
+<div class="meta">2009-08-28 3:02</div>
+<div class="content">Thanks!  You were right; I couldn't access earlier pages.  When I include both urls as you suggest, it works fine.</div>
+<h2>Reply by Mike Brown</h2>
+<div class="meta">2014-09-10 15:21</div>
+<div class="content">I have a new installation of Firefox at work, loaded this script, but the color coding, tick boxes, etc are not working. <br><br>I have enabled the script for <a href="http://markforster.squarespace.com/forum" target="new" rel="nofollow">http://markforster.squarespace.com/forum</a> and <a href="http://markforster.squarespace.com/forum/" target="new" rel="nofollow">http://markforster.squarespace.com/forum/</a> but no joy.<br><br>Any clues?</div>
+<h2>Reply by Lachlan Black</h2>
+<div class="meta">2014-09-15 1:54</div>
+<div class="content">Mike:<br><br>I have found this sometimes happens with new versions of FF but seems to resolve itself after a couple of days. Hugo Ferreira suggested in this thread: markforster.squarespace.com/forum/post/1671341 that clearing the browser cache or restarting might help. Didn't work for me but you could give it a try.</div>
+</article>
+    </main>
+    <footer>
+        <p>Archive built from Mark Forster's blog and forums</p>
+    </footer>
+</body>
+</html>

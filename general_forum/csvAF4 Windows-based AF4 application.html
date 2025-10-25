@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>csvAF4: Windows-based AF4 application</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../blog_index.html">Blog</a>
+            <a href="../fvp_forum_index.html">FVP Forum</a>
+            <a href="../general_forum_index.html">General Forum</a>
+        </nav>
+    </header>
+    <main>
+<article>
+<h1>csvAF4: Windows-based AF4 application</h1>
+<div class="meta">
+Author: mit | 
+Created: 2009-11-15 3:39
+ | Last Activity: 2009-11-23 7:55
+</div>
+<h2>Original Post</h2>
+<div class="meta">2009-11-15 3:39</div>
+<div class="content">I would like to share a small application that offers AF4 work flow on Windows-based PCs.<br><br>I have written the scripts in AutoHotkey (AHK; www.autohotkey.com).  It has been working well for a week.  Now I would like to hear from people who are interested.  This system is basically based on CSV files so that it requires few resources.<br><br>Download:<br>https://dl.dropbox.com/u/94280/csvAF4.zip</div>
+<h2>Reply by sabre23t</h2>
+<div class="meta">2009-11-15 8:41</div>
+<div class="content">Thanks, mit. Even though my WMTasks/NotesToDo system using AF4 is working fine, I couldn't resist downloading your csvAF4_AHK system. I'd suspect I'll be able to use dropbox to make it available from all the devices that I have connected to internet. I'll test it in a while. ;-)<br><br>Anyway, did you have a look at Andreas Hofmann's AutofocusAHK described in <a href="http://www.markforster.net/forum/post/869348" rel="nofollow">http://www.markforster.net/forum/post/869348</a> ? His last version <a href="http://cloud.github.com/downloads/andreashofmann/AutofocusAHK/AutofocusAHK-0.8.5.zip" rel="nofollow">http://cloud.github.com/downloads/andreashofmann/AutofocusAHK/AutofocusAHK-0.8.5.zip</a> implemented AF3 (aka RAF, Revised AF).<br><br>I like that Andreas put all his tasks data in one file. I see that your AF4_Exe will create more than 5 CSV files to store all the tasks data, mit.<br><br>regards,<br>sabre23t =^.^=</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2009-11-16 23:53</div>
+<div class="content">mit:<br><br>Nice work, I really like that you can add tasks via command line, that makes it easy to integrate with other tools. Also, csv has the advantage over AutofocusAHK's format that it can be imported into many applications, for example excel.<br><br>sabre23t:<br><br>Thanks for the heads-up. I'll release 0.9 soon, it will let you choose between all versions of AF (AF1-3 are already supported if you download the source and compile it yourself).</div>
+<h2>Reply by mit</h2>
+<div class="meta">2009-11-17 2:32</div>
+<div class="content">sabre23t:<br><br>Thank you for your suggestion.  My idea when I started was that distinct files such as daily logs might be useful when one wants to analyze them by using other tools such as Excel.  However, I do agree that single-file system has another advantage in that it's easy for users to maintain.  Let me consider both once again.<br><br>Andreas:<br><br>Thank you for your evaluation.  Actually I have tried your system, which gave me a lot of implications.  I am just wondering if you have a plan to integrate AF4 work flow in your system; AF4 works best to me so far compared with other AFs.<br><br>Thanks!<br>mit</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2009-11-17 9:03</div>
+<div class="content">"My idea when I started was that distinct files such as daily logs might be useful when one wants to analyze them by using other tools such as Excel. However, I do agree that single-file system has another advantage in that it's easy for users to maintain. Let me consider both once again."<br><br>You could combine both by using a single file and adding an additional column by which you can filter in excel.<br><br>"I am just wondering if you have a plan to integrate AF4 work flow in your system; AF4 works best to me so far compared with other AFs."<br><br>Yes, as I wrote above, the current master branch version supports AF1-3, AF4 is in the works and I will release 0.9 as soon as AF4 is ready (actually I'm aiming at a release later today). You'll be able to switch between the systems at any time.</div>
+<h2>Reply by mit</h2>
+<div class="meta">2009-11-18 1:59</div>
+<div class="content">Andreas:<br><br>Your suggestion "adding an additional column by which you can filter in excel" is really nice.  I wonder why I didn't think about it.  Now I am in process modifying the script (although I am not sure whether to release it).  I am also looking forward to a new version that possesses full features of AF4 (as you mentioned elsewhere, 0.9 seems to lack the "on notice" function).<br><br>Thanks!</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2009-11-19 12:34</div>
+<div class="content">mit:<br><br>I think you should release your new version. The more the merrier. ;-)<br><br>And we can all learn from each other. I for example didn't even know you could pass command line arguments to Autohotkey scripts.<br><br>I admit I rushed my 0.9 release because I knew I wouldn't have time for it the next few days. The AF4 mode should be functional, though. Tasks are dismissed/put on notice/review after the first pass of the closed list without action just fine. The only thing that does not happen is the automatic review when you jump back to the top of the list the next time, instead review mode must be entered manually. I'll try to fix this over the weekend.</div>
+<h2>Reply by mit</h2>
+<div class="meta">2009-11-19 17:33</div>
+<div class="content">Andreas:<br><br>Okay. Since you are interested (which makes me happy), let me announce the new version. The current one is indeed the 4th version; I have uploaded for possible silent users.<br><br><a href="http://dl.dropbox.com/u/94280/csvAF4.zip" rel="nofollow">http://dl.dropbox.com/u/94280/csvAF4.zip</a><br><br>Now you will see just three files generated:<br>- List (including Closed and Open lists)<br>- Done (configurable)<br>- Maybe<br><br>I still think it is beneficial in my system to have separated "Done" and "Maybe" lists from currently-working "List" file. These lists are different in nature, and the first two can become large gradually but are deletable at any time if users don't need. On the other hand, the working file can stay reasonably small.<br><br>Your 0.9 basically worked fine. Like you, I didn't have enough time to use it so that I am going to full-review it this weekend again.</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2009-11-21 14:14</div>
+<div class="content">mit:<br><br>Thanks, I'll try using both csvAF4 and AutofocusAHK (0.9.1 is out) for a while. I think I'll write a small convertor to make our list formats interchangable.</div>
+<h2>Reply by mit</h2>
+<div class="meta">2009-11-22 1:52</div>
+<div class="content">A new version of csvAF4 has been uploaded.  The new feature is a REMINDER to re-enter tasks (such as dismissed ones) in Open list on dates specified.<br><br><a href="http://dl.dropbox.com/u/94280/csvAF4.zip" rel="nofollow">http://dl.dropbox.com/u/94280/csvAF4.zip</a><br><br>This idea came to me a while after I read Mr. Mark Forster's comment elsewhere:<br><br><a href="http://www.markforster.net/forum/post/915943" rel="nofollow">http://www.markforster.net/forum/post/915943</a><br>> My normal rule is that anything which I can't or don't want to do<br>> within two days goes into some form of reminder system.<br>> The reminder is not to do the task, but to put it on my AF list.<br><br>The new feature allows this function and best works when combined with Task Scheduler (or some kind).<br><br>Andreas:<br><br>I like the idea.  Also, I have downloaded the 0.91 and got some questions.  I will post to the relevant thread later.</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2009-11-22 9:07</div>
+<div class="content">Reminders are a great feature! One of these days I'll "borrow" it from you. ;-)</div>
+<h2>Reply by sabre23t</h2>
+<div class="meta">2009-11-22 14:14</div>
+<div class="content">Hi mit and AH,<br>One thing I've come to love in using WMTasks/LotusNotesToDo for AF4 is that each item can have a page of notes attached to it. Could that be added to either csvAF4 or AutofocusAHK? For simplicity I would envisage the "notes" for the item be just a field in that item. The "notes field" is particularly useful for continuity when readding an item with slightly changed title.<br>regards,<br>sabre23t =^.^=</div>
+<h2>Reply by mit</h2>
+<div class="meta">2009-11-23 3:49</div>
+<div class="content">A new build (20091122) has been uploaded.<br>- <a href="http://dl.dropbox.com/u/94280/csvAF4.zip" rel="nofollow">http://dl.dropbox.com/u/94280/csvAF4.zip</a><br><br>Major modifications are as follows:<br>- AF4_Add can register both tasks and reminders.<br>- Instruction has been revised.<br><br>Andreas:<br><br>Yes, please.  The aim of my csvAF4 project is in a sense to present my ideas (data management, simplified interface, command line, etc).  It would be my great pleasure if you could take even a little from my study.<br><br>sabre23t:<br><br>Given the current internal process, what you can do is to describe a note with a task name.  For instance, you may add the following item as it is:<br><br>- Sample task: this will be rephrased in the near future.<br><br>A limitation is that you can not use commas (due to the nature of CSV format).  I will take your proposal into account.</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2009-11-23 7:55</div>
+<div class="content">sabre23t: Regarding notes, take a look at my 0.9.2 release. ^^</div>
+</article>
+    </main>
+    <footer>
+        <p>Archive built from Mark Forster's blog and forums</p>
+    </footer>
+</body>
+</html>

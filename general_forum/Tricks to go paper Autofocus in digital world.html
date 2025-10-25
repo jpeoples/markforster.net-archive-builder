@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tricks to go paper Autofocus in digital world</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../blog_index.html">Blog</a>
+            <a href="../fvp_forum_index.html">FVP Forum</a>
+            <a href="../general_forum_index.html">General Forum</a>
+        </nav>
+    </header>
+    <main>
+<article>
+<h1>Tricks to go paper Autofocus in digital world</h1>
+<div class="meta">
+Author: George | 
+Created: 2010-03-12 9:41
+ | Last Activity: 2010-03-15 15:39
+</div>
+<h2>Original Post</h2>
+<div class="meta">2010-03-12 9:41</div>
+<div class="content">Hello fellow Autofocus users!<br><br>I'm one of those coming from digital implementations of Autofocus to paper version.<br>As Mark once put it "the meditative effect of the paper" is indeed here!<br><br>Here are few tricks I used to smoothen my transmission:<br>1. Erasable pen.<br>2. Short ID for Outlook messages.<br>3. Short ID for web pages/gmail messages.<br><br><br>1. Erasable pen.<br><br>I always wanted my written text to be editable (a bit like electronic version). After long trial-and-error I found this product to do just what I need – Pilot Frixion:<br><br><a href="http://www.jetpens.com/product_info.php/products_id/2115" rel="nofollow">http://www.jetpens.com/product_info.php/products_id/2115</a><br><br>I use black ink version since its more contrast.<br>It was really great help for me to be able to correct/edit my notes/task description without creating any dirt/mess! Highly recommended.<br><br><br>2. Short ID for Outlook messages.<br><br>Now I still have pretty much electronic stuff to deal with, especially in the office. We use Outlook e-mail client so I created the following VBA script to “tag” any e-mail to make it easily searchable:<br><br>Sub CreateID()<br><br>Outlook.ActiveExplorer.Selection.Item(1).Subject = "" + Hex(Now + Timer) + ": " +Outlook.ActiveExplorer.Selection.Item(1).Subject<br><br>Outlook.ActiveExplorer.Selection.Item(1).Save<br><br>End Sub<br><br>This macro adds random “tag” in the beginning of the selected message. I linked this script to a button on the Outlook toolbar. (see here how to assign macro to button: <a href="http://peltiertech.com/WordPress/how-to-assign-a-macro-to-a-toolbar-or-menu/" rel="nofollow">http://peltiertech.com/WordPress/how-to-assign-a-macro-to-a-toolbar-or-menu/</a> ; here is how to persuade Outlook not to give you warnings on potential risk when you start the macro: <a href="http://www.outlookcode.com/d/tips/vbamacro.htm" rel="nofollow">http://www.outlookcode.com/d/tips/vbamacro.htm</a>  )<br><br>So I just select the e-mail in Outlook which I want to associate with my paper Autofocus task, press my macro button. The e-mail adds the unique ID to the e-mail subject line. I write down ID into my paper Autofocus task and from now on I am able to quickly retrieve the e-mail by searching for written ID in Outlook global search. Real time-and-sanity-saver!<br><br><br>3. Short ID for web pages/gmail messages.<br><br>For web-pages and especially for my gmail web messages I use URL-shortening service to get short ID which I could easily write down and then type back to retrieve the original URL quickly. There are plenty of URL-shortening services, but I eventually settled on <a href="http://www.u.nu" rel="nofollow">http://www.u.nu</a> .  See “Why u.nu is the 1-4-u” section on their site to explain you the benefits of this particular service.<br><br><br>These are the tricks which allow me so far to enjoy the delightful meditative effect of the paper version in our digital world.<br><br>Are there other refugees from digital world here? How do you handle the transition?<br><br>Cheers<br>George</div>
+<h2>Reply by JD</h2>
+<div class="meta">2010-03-12 13:53</div>
+<div class="content">George: Your post has amazing timing. I was a happy-camper in the digital world, and had a really nice set up for DWM in my favourite software (MLO). Or so I thought...some intuitive feeling brought me back to paper, perhaps it *is* the meditative effect Mark talks about.<br><br>I really wanted digital to work, because so much of life revolves around it, and DWM seemed particularly suited for a software set up. Paper makes it difficult to "link" to the digital material we accumulate for action. In that sense, your outlook vba code is manna from heaven. I am struggling with flags, and converting emails to outlook tasks, and all sorts of messy cross referencing to my paper. This is ultra simple and neat! Love it and thank you very much for sharing.</div>
+<h2>Reply by George</h2>
+<div class="meta">2010-03-12 20:50</div>
+<div class="content">Hello JD<br><br>You are welcome indeed!<br><br>Now my life somehow seems under control finally. I know it sounds weird - but paper setup indeed has some physical feeling of control.<br><br>Regarding outlook - I use Calendar as "Tickler" - appointments and reminders on tasks which now could be started. I use "follow up date" functionality for Outlook e-mail to put this e-mail on hold until I receive a reply (I label e-mails in "Sent" to follow-up and make sure it would be plied by the recipient).<br><br>I also use Outlook tasks if there is something which could not be started rught now and there is no e-mail associated with the subject.<br><br>I use Outlook calendar view mostly - I show both calendar and follow-up e-mails / tasks in one window - works nice in Outlook 2007.<br><br>Also there is another great trick I picked up from Mark and applied to my Outlook - I COMPLETELY DISABLED ANY INDICATION OF THE INCOMING E-MAILS !<br><br>This is very important and I could not stress it more: I do not want to be interrupted by new e-mail during my batch processing. <br>I made the following setup:<br>- sound notification for incoming e-mail - disabled<br>- small popup notification for incoming e-mail - disabled<br>- rule configured for all incoming e-mail - it gets marked as read and moved to "Deferred inbox" folder.<br><br>Every morning I open "Deferred inbox" folder and copy all received e-mails to normal "Inbox" folder. Then I close "Deferred inbox" and do not open it until next morning!<br><br>I process the mail received yesterday in one batch as Mark recommends in his book and I'm not interrupted by replies/new incoming e-mails. In fact I have no idea if I receive new mail during the day at all!  My scope of work is fixed and I see the whole amount of e-mails to process and I know there would not be any more e-mails today. This alone skyrocketed my productivity! <br><br>Kinda cool, eh? Lots of fun!<br><br>Cheers<br>George</div>
+<h2>Reply by JD</h2>
+<div class="meta">2010-03-15 15:39</div>
+<div class="content">Hi George: Deferred Inbox - That's wicked! I implemented it right away, and am really enjoying batch processing my emails now. Thanks for the tip.<br><br>For ticklers, I still use my favourite program MLO, but appointments go into Outlook that syncs with my BB.</div>
+</article>
+    </main>
+    <footer>
+        <p>Archive built from Mark Forster's blog and forums</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutofocusAHK 0.9.4 release</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../blog_index.html">Blog</a>
+            <a href="../fvp_forum_index.html">FVP Forum</a>
+            <a href="../general_forum_index.html">General Forum</a>
+        </nav>
+    </header>
+    <main>
+<article>
+<h1>AutofocusAHK 0.9.4 release</h1>
+<div class="meta">
+Author: Andreas Hofmann | 
+Created: 2010-02-10 3:48
+ | Last Activity: 2010-02-17 3:40
+</div>
+<h2>Original Post</h2>
+<div class="meta">2010-02-10 3:48</div>
+<div class="content">AutofocusAHK version 0.9.4 is out: <a href="http://cloud.github.com/downloads/andreashofmann/AutofocusAHK/AutofocusAHK-0.9.4.zip" rel="nofollow">http://cloud.github.com/downloads/andreashofmann/AutofocusAHK/AutofocusAHK-0.9.4.zip</a><br><br>I bumped the version number because of one new major feature: real-time search! Pressing Capslock + F will open a search dialog. Type part of a task name and watch the possibilites narrow down. At any time, double-click a task in the results list to jump there.<br><br>Since two people so far had problems with using and uninstalling the application: this is a portable application. Just unzip somewhere you have access rights (in Vista/7, this means *NOT* the Program Files folder!) and run AutofocusAHK.exe to start the program. The app saves all information in the same directory the exe file is and can even be run from an usb device or be synced via dropbox or similar services. To uninstall, just delete its folder, done. EXCEPT if you activated the "start with windows" option in the preferences. This will create a shortcut in your start menu's startup folder. If you just delete the app, it will try to find it everytime windows starts, but fail. To solve this, either delete the shortcut by and or first uncheck "start with windows" in the preferences and then delete the app.<br><br>Also, if you don't know how to use the app, make sure to read the included readme, or the github main page, or the original thread here in the forum: <a href="http://www.markforster.net/forum/post/869348" rel="nofollow">http://www.markforster.net/forum/post/869348</a></div>
+<h2>Reply by sabre23t</h2>
+<div class="meta">2010-02-10 6:50</div>
+<div class="content">AndreasH,<br><br>You're reeling me in. Such real-time search or filter, is my favourite feature in my favourite WM/Palm apps, Handyshopper (the more than a shopping list app). ;-)<br><br>I'm still using test data in my tasks.txt for now though. These are the features of "real-time search" in HS that I do not find in AFAHK (yet) ...<br>(1) Press {enter} after typing, drops cursor into the list.<br>(2) Can use {cursor-up-down-keys} to move through the list.<br>(3) Press {enter} while in the list, open the task.<br>(4) Press other keys (not enter or up-down keys) while in the list, it continues narrowing real-time search/filter.<br>(5) Pressing {esc} doesn't close the dialog (it does close other AFAHK dialogs)<br>(6) On start of search/filter shows all tasks (now if you type a character than backspace you get all tasks in AFAHK).<br>(7) If you can do #6 and also show the task dates in real-time, you can make capslock-s to mean "search" not just "show" (and have one less key to remember, and capslock-s is more convenient for one handed press)<br>(8) To also search the notes and url of the tasks (not just the task description).<br>I'm not sure how difficult for you to include the above in AFAHK though. :-}<br><br>regards,<br>sabre23t =^.^=</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-02-10 9:39</div>
+<div class="content">sabre32t:<br><br>Sorry, I was happy to get search working and it was getting late. (Or rather, early. ^_^)<br><br>Since switching to DWM, I find myself staying up longer to finish stuff from my list and rising earlier to begin doing stuff from my list. It's quite interesting. But somehow I hope that will pass, I'm beginning to feel tired. ;-)<br><br>Anyways, 0.9.4.1 does everything you mentioned (except 7) : <a href="http://cloud.github.com/downloads/andreashofmann/AutofocusAHK/AutofocusAHK-0.9.4.1.zip" rel="nofollow">http://cloud.github.com/downloads/andreashofmann/AutofocusAHK/AutofocusAHK-0.9.4.1.zip</a><br><br>Regarding 1-4, I made it so that the search field has always focus. up/down moves through the list without the search field losing focus, enter immediately opens the selected task.<br><br>Regarding 7, I have plans for the show list window. With the find dialog, for the first time you can break the rules of the system you use. (It doesn't matter for DWM, but you can, for example, jump out of the closed list in AF4 or a page in AF1 without dismissing it.) In my mind, that should be the excception. So CapsLock+s will bring up a window shows the current list with respect to the used system and allows you to quickly jump around while adhering to the rules. But if you want, feel free to simply exchange the hotkeys for find and show in the ini file.<br><br>Regarding 8, it does search notes and url now, but it still only shows the task name in the list. Planning to change that, and make the window re-sizable.</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-02-10 9:43</div>
+<div class="content">Re hotkey, I also chose CapsLock+f for find/search to be consistent with Win+f for file search and Ctrl+f for search inside applications.</div>
+<h2>Reply by sabre23t</h2>
+<div class="meta">2010-02-10 10:56</div>
+<div class="content">AndreasH,<br><br>Thanks for the incredibly fast update to 0.9.4.1 on my suggestions. Some more immediate comments. ;-}<br><br>(1) The title bars is showing 0.9.4, without the .1. Is that intentional?<br>(2) The capslock-f works great.<br>(3) The export to HTML works great. The HTML file display great on my TreoPro Iris browser, reading from my synced dropbox folder.  Including the "unactioned", "done", "on review" buttons.<br>(4) When working off PC (on Mobile), I can do one of the following from dropbox folder ...<br>(4a) print out the HTML, work on paper, update AFAHK later<br>(4b) view the HTML, note on paper, update AFAHK later<br>(4c) save tasks.txt to mobile, directly edit  it, then upload to dropbox<br><br>Looks like I'm running out of reasons not to test AFAHK on my live DWM tasks. :-)<br><br>regards,<br>sabre23t =^.^=</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-02-10 11:13</div>
+<div class="content">sabre32t:<br><br>1. No, that was a mistake. I updated the file but it may take a while you can download the corrected version (github is caching). It's not a big issue, though, the functionality of 0.9.4.1 is all there, only the .1 is missing from the title.<br><br>2. Great!<br><br>3. Also good to know for me (I don't have access to an Iris browser to test.<br><br>4. I recommend against 4c, since that would mean you have to take care to handle the meta data correctly by hand, especially the expires date. Whitespace is also very important (it's a difference wether a space or a tab is between fields). I'm thinking of switching the file format to csv, to make it easier to edit. You could probably open it in Mobile Excel then.</div>
+<h2>Reply by sabre23t</h2>
+<div class="meta">2010-02-10 13:56</div>
+<div class="content">Hi Andreas again,<br><br>Just finished dinner at this part of the world, and starting migrating my Todo/Tasks into AFAHK DWM. I intend to do it as a clean slate, bringing in new items as I execute "Chk old list for items that stand out" task.<br><br>The Iris browser from www.torchmobile.com is WebKit based. So if Safari & Chrome likes the HTML file, Iris would. Mmm, just checked out Torch Mobile, looks like RIM have acquired them, and the IRIS browser is no longer downloadable. Anyway, this Iris version 1.1.9 works well enough.<br><br>Regarding editing tab-delimited tasks.txt, I actually prefers that over CSV, where you have all the hassle of quoting commas and then quoting quotes. I usually either use an editor that can show whitespaces including tabs, or just change tabs to "|" char for a while.<br><br>I couldn't find a way to import CSV into Mobile Excel. Whereas, Excel can import both tab-delimited and CSV easily.<br><br>More input when I've processed significant number of tasks with AFAHK 0.9.4.1. <br><br>PS: AFAHK said I spend 39min on this "Chk AFAHK 0.9.4 thread". Mmm ...</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-02-10 14:03</div>
+<div class="content"><<PS: AFAHK said I spend 39min on this "Chk AFAHK 0.9.4 thread". Mmm ...>><br><br>Interesting, just as I read that, I looked to the top of my screen and saw it showing 42 minutes, which I could swear isn't anywhere near accurate. I stopped the task and started another one and it began counting up normally. I have to watch out if there is something influencing the timer. :-\</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-02-10 14:10</div>
+<div class="content">I'm unsure now if I just forgot you change my task for the last 42 minutes or if there is a problem, since all other times in my list seem to be accurate. If you check the done task in the HTML export, what exact value is in the time column?</div>
+<h2>Reply by sabre23t</h2>
+<div class="meta">2010-02-10 14:28</div>
+<div class="content">I think I may have actually spent 39mins on that post. Which is where the "mmm" came about. Sorry for confusion.<br><br>Anyway, I'm looking at the clock more now. This post is taking me about 5mins. ;-)</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-02-10 14:56</div>
+<div class="content">I see, that's a relieve. ^_^</div>
+<h2>Reply by Roger J</h2>
+<div class="meta">2010-02-10 15:30</div>
+<div class="content">Hi Andreas,<br><br>Another test via the Sony Ericsson.</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-02-10 15:33</div>
+<div class="content">Roger J:<br><br>Well, what do you know, the problem *is* the wifi!</div>
+<h2>Reply by Roger J</h2>
+<div class="meta">2010-02-10 15:35</div>
+<div class="content">Hi Andreas, WORKED!!  Must be the local router modem which is quite an old one, thanks for all your help, now I can start posting again!!!<br><br>Note to others: I was unable to post to the forum or create a new thread and thought my recent download of Andreas' application might have been the problem.  Andreas contacted me and set up a remote session and we narrowed it down after about 30 minutes to the broadband router/modem in the apartment in which I am staying this week.  Andreas is really customer/colleague focused!<br><br>Now to try his application another way.<br><br>Roger J</div>
+<h2>Reply by sabre23t</h2>
+<div class="meta">2010-02-11 16:17</div>
+<div class="content">Hi AndreasH,<br><br>I've now got 17 unactioned tasks out of 31. So some feedbacks on AFAHK v0.9.4.1 (I've redownloaded latest version) ...<br><br>(1) I managed to "corrupt" the tasks.txt file. I used a lot of notes, cut&paste from webpage and apps. Somehow, some of the newlines in the notes were not encoded correctly as "\n" in the tasks.txt. Problem appeared after exiting and reloading AFAHK. It gave spurious "expiring" some tasks message on startup, and the capslock-E function didn't give correct expiry dates.<br><br>(2) I've managed to manually use Crimson Editor (that has show tabs, show space, show linebreak feature) to replace the unencoded newlines with "\n". Now the 31 tasks show correct expiry dates in capslock-E function. I'll monitor more closely if this happens again,  and what could have caused it.<br><br>(3) Now to features, would be nice to show some stats numbers in the capslock-E function. Overall unactioned, done, onreview numbers, as well as per expiry dates. <br><br>(4)  Capslock+D could show "expiry date" of tasks, also the current cycle number through that tasks. Or will I see these task colour coded when it get to expiry-1 and expiry date?<br><br>(5) It'll be convenient if Capslock+A could automatically use "current highlighted text" to be task description. Just as current url is automatically entered in url field.<br><br>Just my requests, if it isn't too difficult.<br><br>Ah, the timer shows I've spent 29+ minutes on this "Chk AFAHK 0.9.4 thread". task. I did spend that long.  ;-)</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-02-11 17:17</div>
+<div class="content">Avrum:<br><br>1. Oy vey, seems I need to do some testing. If you could tell me from what website/application you copied something that broke, it would help me very much.<br><br>2. That's the advantage of using a pure text format, isn't it? :-)<br><br>3. Okay, I'll add stats to the list. I was thinking about this earlier this day, actually. I wanted to compile stats similar to the ones Mark is posting on the blog, and why not let AutofocusAHK do it?<br><br>4. I'll look what I can do. Right now, the "work" window is still independent of the system you use, so it's the same for AF4 and DWM, for example. But I already customized the title bar depending on the system, so I'll just have to do the same with the content of the window. Or simply show that stuff in the title bar. ;-)<br><br>5. Should be doable. I need to figure out a better way to handle this automatic stuff. I have one task which has an url attached to it which wasn't intended at all.</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-02-11 17:29</div>
+<div class="content">sabre23t:<br><br>Sorry, I meant of course to address you. One of the previous posts I read was by Avrum, and I accidently wrote his name instead of yours.</div>
+<h2>Reply by Kevin</h2>
+<div class="meta">2010-02-11 18:09</div>
+<div class="content">This is a really cool application.   Do you know if there is any way to handle tasks that come up regularly, such as every week or every month?</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-02-11 20:21</div>
+<div class="content">Kevin:<br><br>Not yet, but I'll add ticklers soon.</div>
+<h2>Reply by Jens</h2>
+<div class="meta">2010-02-11 21:04</div>
+<div class="content">Andreas,<br>thanks for your AutofocusAHK!!!<br>The content of the clipboard will be added in the notes feed automatically.<br>i would suggest an option to activate/deactivate this feature - if possible...</div>
+<h2>Reply by Jens</h2>
+<div class="meta">2010-02-11 21:11</div>
+<div class="content">Another feature request:<br>Does it make sense (according to the rules) to have an additional buttons DELETE and REVIEW?<br>Otherwise - in DWM mode - tasks which are not yet current will cycle for 30 days round and round... - could be annoying.</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-02-11 22:30</div>
+<div class="content">Jens:<br><br><<i would suggest an option to activate/deactivate this feature - if possible...>><br><br>It will be configurable in the next release.<br><br><<Does it make sense (according to the rules) to have an additional buttons DELETE and REVIEW?>><br><br>According to which rules? AF3 has the "Change to Review Mode" task (which I "ported" back to AF1, too), AF4 has automatic review and DWM hasn't got a review process, expired tasks are dead. So I don't see the use case for a review button.<br><br>I may add a delete button, but so far I follow the philosophy "deciding not to do something counts as working on it". So I just action tasks I want to delete and don't re-add them.<br><br><<Otherwise - in DWM mode - tasks which are not yet current will cycle for 30 days round and round... - could be annoying.>><br><br>What do you mean by a task that is not "current" yet? Adding tasks on an expiration date one month in future and circling through them until the 30 days are over or you did work on them is the whole idea behind DWM.<br><br>If you mean things like appointments and things you can't work on until some future date, those don't belong on the task list, those go on a calendar or tickler. But that's the case with AF, too, not only DWM, so I'm not sure if that's what you mean.</div>
+<h2>Reply by sabre23t</h2>
+<div class="meta">2010-02-12 2:04</div>
+<div class="content">>> If you mean things like appointments and things you can't work on until some future date, those don't belong on the task list, those go on a calendar or tickler. <<<br><br>Like Jens I've been putting weekly and monthly repeating tasks immediately into DWM. Such as "Pay bills". Obviously, I can only act on that when my next paycheck clears. Doing caps-D and repeatedly seeing that item you cannot execute may become annoying. <br><br>As you said putting a tickler in Outlook Calendar or similar, to prompt you to readd that task is the recommended way.<br><br>However, per <a href="http://github.com/andreashofmann/AutofocusAHK/issues#issue/9" rel="nofollow">http://github.com/andreashofmann/AutofocusAHK/issues#issue/9</a> "Tickler implementation", entering a task into AFAHK today that will only add itself into the current list at a future date and future expiry would be great. <br><br>I'm thinking your current A20100212085753 (and similar) date added field in tasks.txt, could be T20100312085753 . When that date comes, change that field to become  A20100312085753 and then only caps-D will display it. We could have caps-T for tickler entry, or just have the caps-A "More" button display a "Future add date" field. I prefer the latter, but you might have a better tickler interface design. <br><br>BTW, I notice AutofocusAHK.ini have "[DWM] ExpirationNew=28" records, but that appears not to be effective, since caps-A give expiry of one calendar month currently.<br><br>Thanks again, Andreas for the hardwork on this tool. ;-)<br><br>PS: The timer said I spent 40mins on this post. I'll have to go do work now.  >:-)</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-02-12 2:09</div>
+<div class="content"><<BTW, I notice AutofocusAHK.ini have "[DWM] ExpirationNew=28" records, but that appears not to be effective, since caps-A give expiry of one calendar month currently.>><br><br>That is merely a coincidence, because this month has 28 days. ;-)</div>
+<h2>Reply by sabre23t</h2>
+<div class="meta">2010-02-12 4:35</div>
+<div class="content"><<  this month has 28 days. >> <br><br>Put hand to forehead. ;-)<br><br>The unencoded newline happened again just now. Lets see whether I can duplicate it. <br><br>Okay a few tests done. It wasn't cut&paste. It was the  "re-add" feature after "stopping" a task in the caps-D function. If there are newlines in the notes text box it will not be saved as "\n" encoded for that task.<br><br>Caps-A function works correctly to encode newlines as "\n".<br><br>For now I've replaced all "\n" in my tasks.txt to " -- ", while waiting for a new version, since I may accidentally re-add existing tasks with "\n".</div>
+<h2>Reply by Will</h2>
+<div class="meta">2010-02-12 6:26</div>
+<div class="content">Andreas,<br><br>1. Thanks for this great extension.<br>2. My "back" key no longer works: is this connected in some way? It's quite a high price to pay.</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-02-12 9:24</div>
+<div class="content">sabre23t:<br><br>I'll look into it.<br><br>Will:<br><br>My backspace key works perfectly while running AutofocusAHK. The only key that will be disabled is CapsLock, and only so if your defined hotkeys contain CapsLock. So as long as you didn't create a hotkey with Backspace in it, it should work.<br><br>Have you tried whether the key works when AutofocusAHK isn't running?</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-02-12 9:53</div>
+<div class="content">sabre23t:<br><br>Thanks to you, I found the problem. Got introduced when I added the ability to add notes from the status window. Shows how much I under-use the notes field. Previously I mostly had one-lined urls in there, and after I added the url field I nearly never write notes. ;-)<br><br>Here's the fixed version: <a href="http://github.com/downloads/andreashofmann/AutofocusAHK/AutofocusAHK-0.9.4.2.zip" rel="nofollow">http://github.com/downloads/andreashofmann/AutofocusAHK/AutofocusAHK-0.9.4.2.zip</a></div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-02-12 9:59</div>
+<div class="content">Btw, AutofocusAHK tells me "AutofocusAHK: Fix Newlines" took 20:19 minutes. ;-)<br><br>I'm using two instances of AutofocusAHK, one my own use and one for development and testing. The hotkeys of the main one are normal (Capslock+a etc.) and I modified the development one's (Strg+Shift+a  etc.) so I can use both at the same time. This allows me to use AutofocusAHK to develop itself and keep my real task list free from various test entries.</div>
+<h2>Reply by Will</h2>
+<div class="meta">2010-02-12 12:00</div>
+<div class="content">Oops: extreme stupidity caused by great age and small hour: my backspace problem is with the greasemonkey script to highlight unread posts.<br><br>Sorry.</div>
+<h2>Reply by sabre23t</h2>
+<div class="meta">2010-02-12 21:32</div>
+<div class="content"><< "AutofocusAHK: Fix Newlines" took 20:19 minutes. >><br><br>Thanks Andreas. I'm now on 0.9.4.2. Does that "Strg+Shift+a" supposed to be "Ctrl+Shift+a"? I can make do with one instance of AFAHK. I just go in with Crimson Editor to delete most of the test tasks after. Could also manually adjust the "Txxx" field on remaining test task, when doing that ;-)<br><br>I've now re-add a few monthly tasks after I did them in DWM, so it goes into +7 days in the list. I now realize it'll expire before I can do it. I think I'll cut&paste the relevant info in a new caps-a task instead, so goes into +28 in the list. How do you re-add monthly tasks, Andreas?<br><br>Mmm ... Timer shows "Chk AFAHK 0.9.4 thread" takes about 15min. I write a post almost as long as you did to update a new AFAHK.</div>
+<h2>Reply by Wooba</h2>
+<div class="meta">2010-02-15 14:43</div>
+<div class="content">Hi Andreas,<br><br>I have tried AFAHK a couple of times in the past, but wasn't too comfortable with it. But I love the way it works with DWM. I have been using it for a few days now and am very pleased at my productivity.<br><br>Thanks very much for putting your time into it.<br><br>I have a suggestion: can you put a "Done" button on the Work dialog, so that I can bypass the timer window if I have already done a task, or I just want to get rid of the task from the list?<br><br>Also, can the timer window be movable and remember its position, and the other windows remember their positions?<br><br>Many many thanks for this.<br><br>Wooba</div>
+<h2>Reply by sabre23t</h2>
+<div class="meta">2010-02-16 3:59</div>
+<div class="content">Hi Andreas,<br><br>Today is the first day my caps-E page shows a yellow bar for "Expiring Tomorrow", though I'm two days ahead of the yellow warning at the moment. Would my caps-D work window be yellow for tasks I do that's Expiring Tomorrow? Red for Expiring Today right?<br><br>Mmm ... Since I've downloaded AHK as well as AFAHK 0.9.4.2 source, I think I'll add to my list "Setup AFAHK test/dev version with ctrl-shift-a start key" to answer these questions myself. ;-)</div>
+<h2>Reply by sabre23t</h2>
+<div class="meta">2010-02-16 10:18</div>
+<div class="content">Hi Andreas, not sure whether it's the best way to do it. But I've modified my copy of DWM_GetWorkWndowTitle and GetCurrentMetaData to get expiry dates in caps-D Work window title bars such as ...<br><br>Work - **TODAY** - DWM - AutofocusAHK 0.9.4.2 SMS<br>Work - Tomorrow - DWM - AutofocusAHK 0.9.4.2 SMS<br>Work - 2010-02-23 - DWM - AutofocusAHK 0.9.4.2 SMS<br><br>... the modification to DWM_GetWorkWindowTitle below...<br><br>DWM_GetWorkWindowTitle()<br>{<br>  global TaskExpire<br>  GetCurrentMetadata()<br>  Expire := SubStr(TaskExpire, 1,10)<br>  FormatTime, Today,, yyyy-MM-dd<br>  Tomorrow := A_Now<br>  Tomorrow += 1, days<br>  FormatTime, Tomorrow, %Tomorrow%, yyyy-MM-dd<br>  If (Expire == Today)<br>    Expire := "**TODAY**"<br>  Else If (Expire == Tomorrow)<br>    Expire := "Tomorrow"<br>  Title := "Work - " . Expire<br>  Title .= GetStandardWindowTitle()<br>  Return Title<br>}</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-02-16 10:42</div>
+<div class="content">sabre23t:<br><br><<Does that "Strg+Shift+a" supposed to be "Ctrl+Shift+a"?>><br><br>Yes, sorry, Strg is German for Ctrl.<br><br><<How do you re-add monthly tasks, Andreas?>><br><br>Currently I don't. I would do it by copy&pasting to the add task window, too. Maybe I could do the following: If the "done" window is active, pressing CapsLock+A autofills the fields of the new task with those of the old one.<br><br><<Would my caps-D work window be yellow for tasks I do that's Expiring Tomorrow? Red for Expiring Today right?>><br><br>Currently, the color coding is only in the HTML export, not in the work window. I will add it with the next release.<br><br><<not sure whether it's the best way to do it. But I've modified my copy of DWM_GetWorkWndowTitle and GetCurrentMetaData to get expiry dates in caps-D Work window title bars>><br><br>That looks good. I'll add it together with the color-coding in the next release. I guess it would be too much overhead for you to clone the git repository and push your changes to github? :-)<br><br>Wooba: <br><br><<I have a suggestion: can you put a "Done" button on the Work dialog, so that I can bypass the timer window if I have already done a task, or I just want to get rid of the task from the list?>><br><br>Yes, I'll do something like that. Added it to the issue tracker.<br><br><<Also, can the timer window be movable and remember its position, and the other windows remember their positions?>><br><br>I can do that, I'm not sure yet whether as a complete replacement or as an option. I'll also look into adding position remembering for all windows (currently, none of them do. The status window is always at the top, all other windows are always centered).</div>
+<h2>Reply by learning as I go</h2>
+<div class="meta">2010-02-16 13:47</div>
+<div class="content">Hi Andreas<br>I feel a great need to say Thank You!  I'm not currently using your system, but I'm really amazed at your level of generous output!  Without your realizing it, I've volunteered myself to do some work to help others that I might have rejected previous to knowing about your endeavors here on Mark's forum!  Thank you for inspiring that better part of me I value!  You're a fine example of good character, high intelligence and a compassionate soul.  If I appear sappy, please forgive me....but I'm speaking the truth of what I feel.<br>THANK YOU!<br>learning as I go</div>
+<h2>Reply by sabre23t</h2>
+<div class="meta">2010-02-16 15:04</div>
+<div class="content">Hi Andreas,<br><br><< I guess it would be too much overhead for you to clone the git repository and push your changes to github? >><br><br>I would if I know my way around github and these source code commits stuff. I'm just an old fortran/basic programmer unfamiliar with multiperson programming projects. I was also hesitant because when I tried to compile my AHK changes it failed (ahk2exe error unable to create compiled archive). I have AHK 1.0.48.05.<br><br>Anyway, I see you've commit "Show expiration date in title of work window" in <a href="http://github.com/andreashofmann/AutofocusAHK/commit/66d49fedc90c99346aa0348bee040084617e53ed" rel="nofollow">http://github.com/andreashofmann/AutofocusAHK/commit/66d49fedc90c99346aa0348bee040084617e53ed</a> about 2hrs ago. I also you've made further commits for the gui colours. I'll try to follow along the changes you're making, perhaps in the future I'll learn my way around github commits.<br><br>Thanks Andreas for your work on next AFAHK 0.9.5 version. ;-)</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-02-16 16:13</div>
+<div class="content">learning:<br><br>Thank you for your kind words, I'm honored.<br><br>sabre23t:<br><br>No biggie, if you decide to become a steady contributor, I recommend learning your way around git, otherwise it's not really necessary. ;-)<br><br>I'm just implementing the tickler feature (in th form you proposed, originally I had something slightly more powerful, but much more complex to code in mind), then I'll release 0.9.5.</div>
+<h2>Reply by Silvia</h2>
+<div class="meta">2010-02-16 16:38</div>
+<div class="content">I tried to use  DWM on my AFAHK 0.9.4 just to give it a chance. Got completely lost.<br><br> In fact, I  am now dependent of  AFAHK 0.9.4 - AF4 for tasks online and on the computer to be a happy, organized and productive person.  Without AFAHK 0.9.4 the old  behaviour online happens again and I waste so many  hours. I also use a AF4 notebook but it does not work for tasks online.</div>
+<h2>Reply by Silvia</h2>
+<div class="meta">2010-02-16 16:49</div>
+<div class="content">Andreas,<br><br>I don't know what I do but there are two different versions on my computer  9.2 e 9.4. A message saying  something about and an old version appears and it addresses to help file, and there is nothing about two versiions running simultaneously. What I should do? Once I deleted all the folder and lost my tasks ( the back up). Sorry for my confusion.</div>
+<h2>Reply by sabre23t</h2>
+<div class="meta">2010-02-16 17:06</div>
+<div class="content">Sorry to hear your probs, Silvia. I hope AndreasH will come along soon.<br><br>Anyway, the date just rollover on my side of the world, and I got my first expiry in DWM. I see that AFAHK 0.9.4.2 *really* expired the task. It's just killed/dismissed/deleted from the tasks.txt list. ;-)</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-02-16 17:32</div>
+<div class="content">Silvia:<br><br>Contact me at andreas@autofocus.cc and we'll sort it out.<br><br>sabre23t:<br><br>Yep, it's rather radical. Just like Mark says in the DWM rules. ;-)<br><br>You still have the daily backups of the Tasks.txt in the backups folder, though.</div>
+<h2>Reply by Silvia</h2>
+<div class="meta">2010-02-16 20:57</div>
+<div class="content">Thanks Sabre. I've been using AHKAF since its release.<br><br>Andreas answered me::" If you copy/move/delete the exe file, you should<br>always disable the start with windows feature beforehand, so windows<br>won't look for the file at the old place." Yes, he has said that before but I forgot.<br><br>AHK - AF page<br><a href="http://github.com/andreashofmann/AutofocusAHK/downloads" rel="nofollow">http://github.com/andreashofmann/AutofocusAHK/downloads</a><br><br>More on this forum -<br>AutofocusAHK - A Quick'n'Dirty AF application<br><a href="http://www.markforster.net/forum/post/869348" rel="nofollow">http://www.markforster.net/forum/post/869348</a><br><br>AutofocusAHK 0.9.3 release<br><a href="http://www.markforster.net/forum/post/1004009" rel="nofollow">http://www.markforster.net/forum/post/1004009</a><br><br>Thanks Andreas!!!</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-02-16 21:34</div>
+<div class="content">The autostart feature seems to be the number one source for problems and confusion, since it's the only aspect of the application that is not portable since it's actually done by Windows instead of AutofocusAHK. But I find it much to useful to remove. If you want to use the app from varying locations, for example a usb pen drive, don't activate the autostart function.</div>
+<h2>Reply by sabre23t</h2>
+<div class="meta">2010-02-17 2:27</div>
+<div class="content">Regarding tasks expiry, AndreasH wrote:<br><<Yep, it's rather radical. Just like Mark says in the DWM rules. >><br><br>Yep follow the rules to the letter, except when we opt not to (caps-F).<br><br>Anyway, regarding expiration, I manually invoked caps-R Reload tasks to get them expired. I only noticed when my Works title bar shows Yesterday's date for current task, then only I did the caps-R. Perhaps, AFAHK's TasksExpires variable can have an "Expired" status in addition to "Today", "Tomorrow" etc. So it'll show "Expired" from midnight to morning 6am daily routine (per default settings).<br><br>Ref <a href="http://github.com/andreashofmann/AutofocusAHK/issuesearch?state=closedq=expire#issue/18" rel="nofollow">http://github.com/andreashofmann/AutofocusAHK/issuesearch?state=closedq=expire#issue/18</a><br><br>BTW, "clone the git repository" is essentially the github "fork" button right? I need to login to use that. Signing up for github account now. ;-)</div>
+<h2>Reply by sabre23t</h2>
+<div class="meta">2010-02-17 3:40</div>
+<div class="content">Continue on AFAHK v0.9.5 thread ...<br><a href="http://www.markforster.net/forum/post/1016775" rel="nofollow">http://www.markforster.net/forum/post/1016775</a></div>
+</article>
+    </main>
+    <footer>
+        <p>Archive built from Mark Forster's blog and forums</p>
+    </footer>
+</body>
+</html>

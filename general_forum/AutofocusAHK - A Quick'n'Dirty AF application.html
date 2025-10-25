@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutofocusAHK - A Quick'n'Dirty AF application</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../blog_index.html">Blog</a>
+            <a href="../fvp_forum_index.html">FVP Forum</a>
+            <a href="../general_forum_index.html">General Forum</a>
+        </nav>
+    </header>
+    <main>
+<article>
+<h1>AutofocusAHK - A Quick'n'Dirty AF application</h1>
+<div class="meta">
+Author: Andreas Hofmann | 
+Created: 2009-08-21 1:57
+ | Last Activity: 2010-09-20 16:46
+</div>
+<h2>Original Post</h2>
+<div class="meta">2009-08-21 1:57</div>
+<div class="content">Hello everyone,<br><br>today I decided to write yet another Autofocus application. I wanted something that was quick, unobtrusive and portable. If you work a lot with keyboard shortcuts, this might be for you.<br><br>Here is Version 0.1: <a href="http://cloud.github.com/downloads/andreashofmann/AutofocusAHK/AutofocusAHK.exe" rel="nofollow">http://cloud.github.com/downloads/andreashofmann/AutofocusAHK/AutofocusAHK.exe</a><br><br>Just download it and save it anywhere on your hard drive. I can run from usb drives, too. All tasks will be saved in a text file in the same directory, so it's 100% portable and leaves no traces elsewhere.<br><br>Okay, here's how to use it. It's probably different from anything you used so far for Autofocus. ^_^<br><br>Start the application, and you get a tray icon that says "af". Right-clicking this gives you a very small menu: About/Help and Exit. About/Help shows an about box with all keyboard shortcuts, Exit closes the application.<br><br>Here are the shortcuts:<br><br>CapsLock + a : Pops up a window where you can enter a new task, which will be added to the end of the list<br><br>CapsLock + d : Shows the current task and asks you if it feels ready to be done. Click yes to start working on it. Click no to go to the next task. Clicking cancel or pressing Esc just closes the window again. <br>If you've worked on something for a while, press CapsLock+d again and it will tell you what you've been working on and whether you want to re-add the task to the end of the list. Yes re-adds, no doesn't, cancel let's you work on the task a little longer.<br><br>CapsLock + c: Shows the current task.<br><br>CapsLock + s: Shows the next 30 tasks<br><br>Note that I use CapsLock for Hotkeys, because I don't have any use for it. If you use CapsLock for anything, you currently can only change the hotkeys in the source and compile it yourself.<br><br>The source can be found here: <a href="http://github.com/andreashofmann/AutofocusAHK/tree/master" rel="nofollow">http://github.com/andreashofmann/AutofocusAHK/tree/master</a><br><br>Note that version 0.1 lacks forward mode and review mode so far, all you can do is add, do, re-add, and move through the list in reverse mode. But when the next version is ready (tomorrow), you can just copy it over the old one and continue with the same list.</div>
+<h2>Reply by Silvia</h2>
+<div class="meta">2009-08-21 4:12</div>
+<div class="content">This is what you call the the effect of  laziness in past days?</div>
+<h2>Reply by Joseph</h2>
+<div class="meta">2009-08-21 6:08</div>
+<div class="content">AF Forum cheat sheet:<br><br>Andreas Hoffman: writes programs and captains the HMS Autofocus.cc website. Also just finished his thesis.<br><br>Andreas E: was feeling lazy. May or may not write programs too (I don't know). May or may not have just completed a thesis (I don't know).<br><br>But, I've seen a few posts that seem to confuse the two men. And, if neither of them are aware of the confusion, then how confusing a comment that confuses them must seem! (I.e. Someone told Andreas E. that he deserves to feel lazy after writing his thesis, and Silvia, you just asked Andreas Hoffman about laziness).<br><br>: )<br><br>Who's on first -- What's on second -- Idunno is on third!<br>-Joseph</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2009-08-21 8:34</div>
+<div class="content">Well, to be fair, like Andreas E. I was pretty lazy lately, though for different reasons. :-)<br><br>There isn't even a contradiction between being lazy and writing this application, version 0.1 came into existance only yesterday and took only 3:49 hours so far. (I'm using a time tracker for all my programming activities.) Since I did not not accomplish much beside it yesterday, I still had a lot of idle time.</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2009-08-21 8:45</div>
+<div class="content">Roadmap:<br>- Add morning routine which does the putting on notice/review<br>- Hotkey to show tasks on notice for review<br>- Implement review mode<br>- Automatically add "Change to review mode" to list after there exist tasks that are on review<br>- Make hotkeys and page size configurable through ini file<br>- Implement forward mode<br>- Automatically add "Change to forward mode" to list after there are 2+ pages<br>- Better GUI - Switch the message boxes with real windows to get rid of the windows default sound effect<br>- Better GUI - nicer List viewer<br>- Ultimately: if at all possible, synchronization with autofocus.cc<br><br>Highest priority is to keep the app lightweight and portable (usable from a usb thumb drive).<br><br></div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2009-08-21 9:17</div>
+<div class="content">Here is the file format of Tasks.txt:<br><br>Every line looks like this:<br>{Task description}{Tab}{Metadata}<br><br>Task description is what is shown to you in the application. I can contain anything except tabs.<br><br>Metadata contains mainly timestamps. Each timestamp has a preceding letter that indicates what it represents.<br><br>Example:<br>Implement review mode	A20090821100628<br><br>The A stands for "added". When the task is done, a new timestamp is added with a "D". When a task is put on notice, it's marked with "N" (but without a timestamp). Once it's on review, it gets a timestamp with "R". The timestamp in the metadata are separated by spaces, there is only one tab in the line, the one between description and metadata.<br><br>So this is the life cycle of a task:<br><br>1) Axxx -> Added<br>2) Axxx Dyyy -> Done before being put on notice<br>3) Axxx N -> On notice<br>4) Axxx N Dyyy -> Done after being put on notice<br>5) Axxx N Ryyy -> Put on review<br>6) Axxx N Ryyy Dzzz -> Re-added in review mode</div>
+<h2>Reply by acedia</h2>
+<div class="meta">2009-08-21 13:42</div>
+<div class="content">Re: "AF Forum cheat sheet:" - if  AndreasE and Andreas Hoffmann were one and the same person, that person would have to be some kind of superman!  As it is, they are BOTH treasured members of this forum!  Lazy or not, their contributions have been invaluable to me.<br><br>(Get well soon, AndreasE!)<br><br>acedia</div>
+<h2>Reply by Joseph</h2>
+<div class="meta">2009-08-21 14:44</div>
+<div class="content">acedia,<br><br>Yes, I agree. I look forward to both of their posts. <br><br>--Joseph</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2009-08-21 15:56</div>
+<div class="content">Thank you.<br><br>The master branch now contains the code for the morning routine. Every day a user-defined time, tasks that are on notice and unactioned are dismissed, then the next block of unactioned tasks is put on notice. When AutofocusAHK is started for the first time, it creates a configuration file, which looks like this so far:<br><br>[ReviewMode]<br>LastRoutine=20090821<br>StartRoutineAt=6<br><br>LastRoutine is the date the last routine ran, this value is updated automatically every day. StartRoutineAt is the time at which you want the morning routine to take place. It can be a value from 0 to 23. Default is 6 in the morning. Depending on when your day starts, you may want to change this. If the app is not running at that time, the morning routine will run immediately when it's started.<br><br>Now I need to implement the review mode itself, then I will release version 0.2.</div>
+<h2>Reply by Silvia</h2>
+<div class="meta">2009-08-21 16:26</div>
+<div class="content">Joseph, <br>thanks! I post late at night and got confused.<br><br>Andreas <br>Loved the application! Really.</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2009-08-22 14:24</div>
+<div class="content">Version 0.2 is out: <a href="http://github.com/andreashofmann/AutofocusAHK/downloads" rel="nofollow">http://github.com/andreashofmann/AutofocusAHK/downloads</a><br><br>You can always just download AutofocusAHK.exe and it will be the most recent version.<br><br>Version 0.2 brings a basic review mode, automatic "change to review mode" task handling and the morning routine.<br><br>I'll be in Munich the next three days, so version 0.3 will probably be released after that.</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2009-08-22 20:48</div>
+<div class="content">Okay, version 0.3 is out, but no forward mode yet. Instead I added an automatic daily backup system. <br><br>Here are the ini file settings:<br><br>[General]<br>DoBackups=1<br>BackupsToKeep=10<br><br>DoBackups - 1: Do daily automatic backups (saved in sub folder "Backups"), 0: don't do backups<br><br>BackupsToKeep - Number of backups that should be kept. Default value is 10.</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2009-08-22 21:49</div>
+<div class="content">Version 0.4. Special version for Silvia. ;-)<br><br>Autostart. It now asks you if you want it to start with windows. Can later be changed by pressing Capslock+1.</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2009-08-22 21:52</div>
+<div class="content">I found that when I downloaded "AutofocusAHK.exe" from github, it was still version 0.1 instead of 0.4 - must be a caching problem somewhere. So until I find a better way, just download <a href="http://cloud.github.com/downloads/andreashofmann/AutofocusAHK/AutofocusAHK-0.4.exe" rel="nofollow">http://cloud.github.com/downloads/andreashofmann/AutofocusAHK/AutofocusAHK-0.4.exe</a> and rename it to "AutofocusAHK.exe" before copying it over the old version.</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2009-08-23 7:59</div>
+<div class="content">Version 0.5: <a href="http://cloud.github.com/downloads/andreashofmann/AutofocusAHK/AutofocusAHK-0.5.exe" rel="nofollow">http://cloud.github.com/downloads/andreashofmann/AutofocusAHK/AutofocusAHK-0.5.exe</a><br><br>Really the last update before Munich (train goes in 30 minutes). Hotkeys are now configurable via ini file.</div>
+<h2>Reply by And</h2>
+<div class="meta">2009-08-23 21:28</div>
+<div class="content">how about a non-Windows-friendly version? ;)</div>
+<h2>Reply by Silvia</h2>
+<div class="meta">2009-08-24 4:39</div>
+<div class="content">Thanks, Andreas! I will use it for tasks to be done on-line. It just happened that I forgot to use it today...but I also forgot to look at my notebook! Ok, today is Sunday, but I really miss AF when I don't use it.<br><br></div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2009-08-25 17:54</div>
+<div class="content">And:<br><br>Unfortunately, AHK is Windows-only. When I'm finished with AutofocusAHK and autofocus.cc, my third (and probably last) Autofocus application will be AutofocusJ, written in Java and thus cross-platform.<br><br>Btw, back from Munich, version 0.6 with forward mode later today (if everything works out as planned).</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2009-08-25 21:55</div>
+<div class="content">Here is version 0.6: <a href="http://cloud.github.com/downloads/andreashofmann/AutofocusAHK/AutofocusAHK-0.6.zip" rel="nofollow">http://cloud.github.com/downloads/andreashofmann/AutofocusAHK/AutofocusAHK-0.6.zip</a><br><br>I switched to zipped format so you don't need to rename the exe file after download (because of the caching problem described above). Just unpack/copy over the old version.<br><br>Forward mode is now there, so it's implementing the complete revised system. The task "Change to forward mode" is added automatically once there are three full pages. You can change the number of tasks per page via the ini file.</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2009-08-27 22:26</div>
+<div class="content">And version 0.7 is out: <a href="http://cloud.github.com/downloads/andreashofmann/AutofocusAHK/AutofocusAHK-0.7.zip" rel="nofollow">http://cloud.github.com/downloads/andreashofmann/AutofocusAHK/AutofocusAHK-0.7.zip</a><br><br>New user interface for adding and doing (real windows instead of message boxes, gets rid of that annoying beeps and allows custom layout).<br><br>And (perhaps) the big one: a status window while you're working on a task with a timer. The time you worked on a task is saved when it's marked as done.</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2009-08-28 18:11</div>
+<div class="content">Version 0.8: <a href="http://cloud.github.com/downloads/andreashofmann/AutofocusAHK/AutofocusAHK-0.8.zip" rel="nofollow">http://cloud.github.com/downloads/andreashofmann/AutofocusAHK/AutofocusAHK-0.8.zip</a><br><br>Some minor fixes, and the new feature this time is HTML export. Just press CapsLock+e.</div>
+<h2>Reply by Silvia</h2>
+<div class="meta">2009-08-31 18:10</div>
+<div class="content">The timer: excellent. Html export: nicely done!<br>Very simple, handy.<br>: ) <br>Silvia<br><br></div>
+<h2>Reply by Derek D</h2>
+<div class="meta">2009-08-31 23:04</div>
+<div class="content">Wow - great stuff Andreas - I LOVE this! - would it be too much to ask for PPC / Windows Mobile version?</div>
+<h2>Reply by JD</h2>
+<div class="meta">2009-09-1 5:37</div>
+<div class="content">Thanks Andreas! Its so easy to run this neat and nifty program. I'm using together with my paper RAF. Time will tell whether it bumps out the paper, but I will let my intuition decide that one :)</div>
+<h2>Reply by Mike</h2>
+<div class="meta">2009-09-1 12:05</div>
+<div class="content">Andreas,<br><br>Color me dumb, but where does this store the task list across a shutdown?  When I came up my few test tasks were gonzo.  I see in the ini file that DoBackups=1 so it should be backing up.</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2009-09-1 14:06</div>
+<div class="content">Mike:<br><br>It stores everything where you saved the executable. The tasks are saved in the file Tasks.txt in the same directory, the Backups are saved in a Backups subdirectory.<br><br>It's supposed to be portable, that's the reason for it to save everything in the same directory as the executable. But it could be a problem if you're running Vista or 7 and copied the executable in a directory which it does not have the rights to write to, for example the program files directory. Since you have an ini file, that does not seem to be the case with you. Do you have a Tasks.txt file?</div>
+<h2>Reply by Mike</h2>
+<div class="meta">2009-09-2 0:16</div>
+<div class="content">Andreas,<br><br>I don't know what happened.  Now I have the tasks.txt file.  I'm running Vista so I'm pretty used to odd things happening.  It could be that it had something to do with where FireFox placed it when I downloaded it.<br><br>But all is well now ;-)  Thanks.</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2009-09-2 8:18</div>
+<div class="content">Mike:<br><br>Well, if it works now. ;-)<br><br>I skipped Vista, went straight from XP to Windows 7 yesterday. So far AutofocusAHK works under 7 just as well as it did under XP. Except I don't like the look of the timer window ...</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2009-09-3 1:06</div>
+<div class="content">Okay, I discovered a potential issue with Vista and 7 -  If the window that has focus has elevated privileges (runs as Administrator), the AutofocusAHK shortcuts won't work. There is not much I can do about it.<br><br>One solution is to run AutofocusAHK as Administrator by rightclicking the exe file and selecting "Run As Administrator". But that doesn't fix Autostart.<br><br>Another option would be to disable UAC, which would fix autostart, but I don't recommend it.<br><br>The pragmatic solution is to accept that the shortcuts don't work if you're in a window with admin rights. Just click once onto the taskbar and the shortcut will work again.<br><br>Normally I don't like applications that need admin rights, but I don't think it's possible so have global hotkeys that work on elevated rights windows if the don't have elevated rights themselves.</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2009-09-4 22:26</div>
+<div class="content">Version 0.8.5: <a href="http://cloud.github.com/downloads/andreashofmann/AutofocusAHK/AutofocusAHK-0.8.5.zip" rel="nofollow">http://cloud.github.com/downloads/andreashofmann/AutofocusAHK/AutofocusAHK-0.8.5.zip</a><br><br>- The add task window now has it's own thread. So you can now Add Tasks without other windows (like the review mode window) disappearing.<br>- Improved review mode - New GUI instead of message box. This means you can now answer the questioen "Do you want to re-add this task?" with yes/not now/never instead of just yes/no.<br>- Status window now has a proper border in Vista/7<br>- New show tasks list GUI<br>- Removed "show current task" (CapsLock+c) and "show tasks on notice" (CapsLock+n), tasks on notice are now shown with the next tasks (CapsLock+s)</div>
+<h2>Reply by Mike</h2>
+<div class="meta">2009-09-16 16:54</div>
+<div class="content">Hi Andreas,<br><br>Thank you for a really neat app.  Worked with it the last few days and pretty much weaned off pen and paper for desk based activities ~ mainly to the simplicity of re-entering repeating and "little and oftem taks"<br><br>A few thoughts for things I'd find useful ~ in no special order.<br><br>1) Search<br>2) Pick a task from the list Cap S<br>3) Enter a done task<br>4) Amend (re-word) task on re-enter<br>5) Alarm or prompt for future dated tasks.<br><br>I haven't quite worked out how the review and reverse modes are working, and I would love to see AF4 implemented<br><br>Easy to ask I know.<br><br>Thanks again.<br><br>Cheers<br><br>Mike</div>
+<h2>Reply by sabre23t</h2>
+<div class="meta">2009-09-17 2:03</div>
+<div class="content">>> I haven't quite worked out how the review and reverse modes are working, and I would love to see AF4 implemented <<<br><br>I've also tried using AFAHK for AF4, even though it implements AF3/RAF. Would love to try it again, when AH got the time to implement AF4 on it. <br><br>In mean time I'm using Google Doc Spreadsheet to implement the AF4 list, that can be as portable, accessible from any web device including mobiles. Using its "auto color rules" and cut&paste, I find it's as fast as writing the list in paper notebook. But it's not as automated as AFAHK nor as rigorous rules enforcement.  ;-)</div>
+<h2>Reply by Charles</h2>
+<div class="meta">2009-09-20 22:39</div>
+<div class="content">Woud be great to have this for mac os x... :D</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2009-11-17 1:42</div>
+<div class="content">Version 0.9 is on its way. The code is more complex now that you can choose which system you want (get the current source release to test it with AF1-3), so I expect there will be some bugs. If you find anything, please use the issue tracker here: <a href="http://github.com/andreashofmann/AutofocusAHK/issues" rel="nofollow">http://github.com/andreashofmann/AutofocusAHK/issues</a><br><br>You can also use it for requests. ;-)</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2009-11-17 20:03</div>
+<div class="content">Okay, here is 0.9: <a href="http://cloud.github.com/downloads/andreashofmann/AutofocusAHK/AutofocusAHK-0.9.zip" rel="nofollow">http://cloud.github.com/downloads/andreashofmann/AutofocusAHK/AutofocusAHK-0.9.zip</a><br><br>The important new shortcut is CapsLock+p, which lets you choose which system to use.<br><br>AF4 support is not complete yet, every seems to work except tasks that are marked for review are *not* reviewed when you get to them the next time. I will implement that as soon as possible. A workaround for the moment  is to switch back to AF3 and enter review mode manually.</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2009-11-21 14:05</div>
+<div class="content">Version 0.9.1: <a href="http://cloud.github.com/downloads/andreashofmann/AutofocusAHK/AutofocusAHK-0.9.1.zip" rel="nofollow">http://cloud.github.com/downloads/andreashofmann/AutofocusAHK/AutofocusAHK-0.9.1.zip</a><br><br>This release adds automatic review to AF4 mode. This means AF4 is now complete and the default system (in version 0.9, AF3 was still default).</div>
+<h2>Reply by Silvia</h2>
+<div class="meta">2009-11-21 14:21</div>
+<div class="content">Well done!!!</div>
+<h2>Reply by mit</h2>
+<div class="meta">2009-11-22 3:25</div>
+<div class="content">Andreas:<br><br>I do thank you because your AutofocusAHK gave me a lot of ideas when I started writing the csvAF4 (and I would not have written it if you had released 0.9 a week earlier).  I tried the newest version and got two questions for now:<br><br>1. The dialog title bar says "Open List - Closed List - AF4" when I choose "Work" function.  How can I take this?<br>2. When do tasks get into Closed List from Open List?  According to the original instruction, if no items stands out in the Closed List, the tasks will get highlighed (on-notice status) and Open List items will become Closed List items.  However, this didn't happen when I began with a new task list and keep clicking "no."<br><br>I also used the AF1 mode, which reminded me of the excitement (and sometimes fearness) I felt back in January.  I was really afraid of dismissal those days.</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2009-11-22 9:18</div>
+<div class="content">Silvia:<br><br>Thanks!<br><br>mit:<br><br>"The dialog title bar says "Open List - Closed List - AF4" when I choose "Work" function."<br><br>Oops, my mistake. That means you're in the open list. When you're in the closed list, the title says "Pass x - Closed List - AF4". Seems I replaced only the "Pass x" part with "Open List" instead of "Pass x - Closed List". I'll fix it. Btw, when you haven't taken any action on a pass of the closed list, the tilte says "Pass x(!)" to remind you that the closed list will be dismissed if you don't do something.<br><br>"When do tasks get into Closed List from Open List? According to the original instruction, if no items stands out in the Closed List, the tasks will get highlighed (on-notice status) and Open List items will become Closed List items. However, this didn't happen when I began with a new task list and keep clicking 'no.'"<br><br>The thing is, at the beginning there is no closed list, only an open list. That's why no dismissal happened for you when you kept clicking no, because the open list does not get dismissed. At some point, the first open list must be declared closed. The instructions are not specific as to when exactly that should happen. I decided to do it when the list contained enough items to fill a "page". So it depends on what ItemsPerPage in the ini file is set to (default is 15). When you start the application and you have more items  than this, the list becomes closed.<br><br>Perhaps I should add a trigger to the "add task" routine so it can happen without restarting the application in case someone never restarts it (computer always on or only in stand-by).<br><br>"I also used the AF1 mode, which reminded me of the excitement (and sometimes fearness) I felt back in January. I was really afraid of dismissal those days."<br><br>It's funny we can now take a nostalgic look back to the "good old Autofocus days", isn't it. Time flows like a river. ;-)</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2009-11-22 9:20</div>
+<div class="content">"So it depends on what ItemsPerPage in the ini file is set to (default is 15)."<br><br>Argh, my memory did not serve me well here. The variable is TasksPerPage and default is 20.</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2009-11-22 11:22</div>
+<div class="content">And yet another version: <a href="http://cloud.github.com/downloads/andreashofmann/AutofocusAHK/AutofocusAHK-0.9.1.1.zip" rel="nofollow">http://cloud.github.com/downloads/andreashofmann/AutofocusAHK/AutofocusAHK-0.9.1.1.zip</a><br><br>This just fixes the two issues mit brought up: The window title for the open list in AF4, and the first closing of the list now works without restarting the application. Sorry for the long number, I didn't want to jump to 0.9.2 just yet, since I'm aiming for a "feature complete" 1.0 release.</div>
+<h2>Reply by sabre23t</h2>
+<div class="meta">2009-11-22 14:54</div>
+<div class="content">Thanks Andreas,<br>AutofocusAHK v0.9.1.1 works okay in my testing so far. However, as usual some comments ...<br>(1) AFAHK cache the Tasks.txt in memory it seems. If you edit the Tasks.txt file it won't reread the file. You have kill AFAHK process, and restart AFAHK to make it reread the modified Tasks.txt.<br>(2) Can you have AFAHK option to reread Tasks.txt and/or AFAHK option to exit?<br>(3) When re-adding an item, can you allow editing the title? Default to editing the title. Notice that in MF's demo he tends to renumber items that he readds.<br><br>regards,<br>sabre23t =^.^=</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2009-11-22 16:10</div>
+<div class="content">sabre23t:<br><br>"(1) AFAHK cache the Tasks.txt in memory it seems. If you edit the Tasks.txt file it won't reread the file. You have kill AFAHK process, and restart AFAHK to make it reread the modified Tasks.txt."<br><br>You don't have to kill the process, just rightclick the tray icon and select "Exit".<br><br>(2) Can you have AFAHK option to reread Tasks.txt and/or AFAHK option to exit?<br><br>I'll have AFAHK monitor the tasks file and reload it if it detects a change. Just need to make sure it ignores its own changes. Exit option exists, see above.<br><br>(3) When re-adding an item, can you allow editing the title? Default to editing the title. Notice that in MF's demo he tends to renumber items that he readds.<br><br>I'll think about something. For now, you can press CapsLock+a when asked if you want to re-add, enter a new description and answer "no" afterwards.</div>
+<h2>Reply by mit</h2>
+<div class="meta">2009-11-22 22:43</div>
+<div class="content">Andreas:<br><br>I saw the issues fixed in the latest version (0.9.1.1).  Now let me bring up two more.<br><br>> The instructions are not specific as to when exactly<br>> that should happen.<br><br>Mark has specified.  The original AF4 instruction says as follows:<br><br>1) Draw up your list of things to do with one task per line.<br>2) Draw a line at the end of the list. Everything before this line is known as the Backlog.<br><br>My take is that the first task set should be treated as Closed List items.  The difference between the way you do and the original instruction doesn't seem to be a problem if a task list has been established already.  But it might confuse new users who are familar with the original instruction.<br><br>> So it depends on what ItemsPerPage in the ini file is set to.<br><br>AF4 are not page-dependent like AF2 and RAF Reverse Mode (while AF1 and RAF Forward Mode are).  If the way you do doesn't affect the AF4 work flow thereafter, that's fine though.<br><br>Hope these would help.</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2009-11-23 5:37</div>
+<div class="content">mit:<br><br>Seems I misinterpreted the rules here. What I meant by "not specific" was that there was no rule that said "close the list after x tasks", I searched for something to tell me when to close the first list based on the contents of the list. But I think I understand now that I don't need that, I should close the list based on the *behaviour* of the user. You mean I should close the list the first time a user opens the "work" window after creating a new list, right?</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2009-11-23 7:53</div>
+<div class="content">Another day, another release (and an awesome one, if I dare say so): <a href="http://cloud.github.com/downloads/andreashofmann/AutofocusAHK/AutofocusAHK-0.9.2.zip" rel="nofollow">http://cloud.github.com/downloads/andreashofmann/AutofocusAHK/AutofocusAHK-0.9.2.zip</a><br><br>These new features make this update worthwile:<br><br>- A newly starte AF4 list now gets closed when the work window is opened the first time. (thanks mit)<br><br>- Added notes field (thanks sabre23t)<br><br>- Added rephrasing of tasks on re-add (okay, everyone was waiting for this)<br><br>- Improved HTML export: Multiple export files per day possible, Current task is bold, and most important: Filters to show/hide tasks that are unactioned, done and/or on review (Javascript required)</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2009-11-23 7:57</div>
+<div class="content">Before someone asks, it is intentional that you cannot edit the notes while choosing which task to do. Following the little and often principle, changing the notes of an task is an action, so you have to work on the task to be able to change the notes. ;-)</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2009-11-23 8:13</div>
+<div class="content">Er, well, that was quick: <a href="http://cloud.github.com/downloads/andreashofmann/AutofocusAHK/AutofocusAHK-0.9.2.1.zip" rel="nofollow">http://cloud.github.com/downloads/andreashofmann/AutofocusAHK/AutofocusAHK-0.9.2.1.zip</a><br><br>I made the mistake of assigning the shortcut alt+n to both the "notes" and the "no" button in the work, done and review windows. Kind of broke keyboard navigation. It's fixed now.<br><br>While I was at it I added two quick hotkeys for sabre23t: CapsLock+r reloads the application, CapsLock+q quits the application.</div>
+<h2>Reply by mit</h2>
+<div class="meta">2009-11-23 13:45</div>
+<div class="content">Andreas:<br><br>Yes, that's correct.  You made a good update!</div>
+<h2>Reply by Silvia</h2>
+<div class="meta">2009-11-25 1:53</div>
+<div class="content">"- Added rephrasing of tasks on re-add (okay, everyone was waiting for this)"<br>Yes, you are right!!  I was lazy to rewrite them.</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2009-11-25 14:52</div>
+<div class="content">For those who asked for something like this for Linux or Mac OS, it does work with Wine.<br><br>I just tried it on my Ubuntu box. Here's a screenshot: <a href="http://dl.dropbox.com/u/1008673/AutofocusAHK-Linux.png" rel="nofollow">http://dl.dropbox.com/u/1008673/AutofocusAHK-Linux.png</a><br><br>Only drawback: Wine does not support the hotkeys, so you have to use the tray icon menu (it's on the top toolbar on the screenshot, leftmost icon of those on the right side).<br><br>I haven't tested this, but it's probably the same for Mac OS</div>
+<h2>Reply by rjh18</h2>
+<div class="meta">2009-11-27 15:10</div>
+<div class="content">Hi Andreas,<br>   Great work!  One caveat.  Is it possible to see the active and non active lists seperately.  I am having trouble distinguishing which action is on what list.  Also are items for review available to see in a list as well.  Thanks and keep up the great work.<br><br>                  Ralph</div>
+<h2>Reply by Andreas</h2>
+<div class="meta">2009-11-27 19:47</div>
+<div class="content">rjh18:<br><br>If you press CapsLock+e, a html export is created and displayed. It has separate headers for closed and open list, and you can also show done/reviewed tasks with the buttons at the top. For those buttons to show up and work, your browser needs to have Javascript enabled.</div>
+<h2>Reply by rjh18</h2>
+<div class="meta">2009-11-30 0:47</div>
+<div class="content">Thanks.  One more thought.  It looks as though you are recording the amount of time spent on each task.  Any possibility of seeing this in a report?  Tks again for all your hard work!</div>
+<h2>Reply by rjh18</h2>
+<div class="meta">2009-12-11 14:45</div>
+<div class="content">Is this thread still active?</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2009-12-13 0:48</div>
+<div class="content">Hi, unfortunately there will always be time periods when I'm away from the forum, depending on what life has in store for me in the real world. I'll try to publish an update tomorrow that displays the time spent as a column in the html export.</div>
+<h2>Reply by Steve in Mexico</h2>
+<div class="meta">2009-12-13 22:46</div>
+<div class="content">Could you put up a list of the shortcut keys?  I'm very impressed.<br><br>Also, now my "caps lock" key doesn't work.  I imagine this is unavoidable, right?<br><br>Steve</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2009-12-13 23:49</div>
+<div class="content">Published version 0.9.2.2: <a href="http://cloud.github.com/downloads/andreashofmann/AutofocusAHK/AutofocusAHK-0.9.2.2.zip" rel="nofollow">http://cloud.github.com/downloads/andreashofmann/AutofocusAHK/AutofocusAHK-0.9.2.2.zip</a><br><br>- Confirmation before reloading task list<br>- Added time column to HTML export<br>- CapsLock doesn't get blocked if no hotkeys use it.<br><br><br>Steve:<br><br>The standard shortcuts are:<br><br>  CapsLock + a: Add a task<br>  CapsLock + s: Show the next tasks and tasks on notice for review<br>  CapsLock + d: Start/Stop Working<br>  CapsLock + e: Export list to HTML<br>  CapsLock + p: Show preferences<br>  CapsLock + r: Reload the tasks list from Tasks.txt<br>  CapsLock + q: Quit the application<br><br>You can also find these in the README.txt file and in the about box (double click the tray icon or right-click and select "About/Help".<br><br>I used CapsLock as a modifier for hotkeys because not many people use it (at least not intentionally). ALL CAPS TEXT SUCKS ;-)<br><br>Unfortunately, using CapsLock in its normal function is not possible when it's used as a modifier key. But I changed release 0.9.2.2 so that CapsLock doesn't get blocked if you don't use it as a modifier.<br><br>To change the hotkey, open the file Autofocus.ini, which contains this section:<br><br>[HotKeys]<br>HKAddTask=CapsLock & a<br>HKWork=CapsLock & d<br>HKShowNextTasks=CapsLock & s<br>HKExport=CapsLock & e<br>HKPreferences=CapsLock & p<br>HKReload=CapsLock & r<br>HKQuit=CapsLock & q<br><br>You can assign your own hotkeys here. If no hotkey uses CapsLock, it will function as usual. The rules for defining hotkeys can be found here: <a href="http://www.autohotkey.com/docs/Hotkeys.htm" rel="nofollow">http://www.autohotkey.com/docs/Hotkeys.htm</a> and in the README.txt file.<br><br>For example, the line <br><br>HKAddTask=^+a<br><br>would mean that you add tasks by pressing Str+Shift+a instead of CapsLock+a.<br><br>If you want the default hotkey back, you can just delete the whole hotkeys section from the ini file. You need to reload the application to apply changes in the ini file.</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2009-12-13 23:57</div>
+<div class="content">"Str+Shift+a" should be "Ctrl+Shift+a".</div>
+<h2>Reply by Steve in Mexico</h2>
+<div class="meta">2009-12-14 18:22</div>
+<div class="content">Thanks, Andreas.  This was very hellpful.  AND I DON"T LIKE ALL CAPS MESSAGES EITHER!</div>
+<h2>Reply by Silvia</h2>
+<div class="meta">2009-12-15 2:03</div>
+<div class="content">Andreas,<br>Will try it right now!  : )</div>
+<h2>Reply by Paul</h2>
+<div class="meta">2010-01-16 21:12</div>
+<div class="content">The more I use this program, the more impressed I am.  It makes working Autofocus so easy.  All you need to do is decide whether to do the task it's presenting you.  It takes care of the rules for you.  If you want the bigger picture, you press Caps Lock  E and it gives you a complete list to look at.  And whatever program you happen to be working on, you can simply press the hot key Caps Lock and A together to add a new task.  It's a very small and unintrusive program.<br><br>Furthermore, when I had a problem with it, I posted it to the forum and Andreas answered within a couple of hours telling me how to solve it.  That's great service ... for free!<br><br>I know it probably sounds as though I'm affiliated with Andreas somehow, but honestly I'm not.  I just think it's a great application!</div>
+<h2>Reply by Isa</h2>
+<div class="meta">2010-01-21 14:10</div>
+<div class="content">Andreas,<br><br>Nice program. Just wanted to suggest a feature...IIt would be useful to have the option to show (but not edit) the notes linked to a particular task while working on a task</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-01-29 17:07</div>
+<div class="content">Isa:<br><br>Sorry for the delay, here is version 0.9.2.3: <a href="http://cloud.github.com/downloads/andreashofmann/AutofocusAHK/AutofocusAHK-0.9.2.3.zip" rel="nofollow">http://cloud.github.com/downloads/andreashofmann/AutofocusAHK/AutofocusAHK-0.9.2.3.zip</a><br><br>You can now view (and edit) task notes while you're working on a task.<br><br>The forum is moving fast at the moment, so this thread is bound to move to the bottom quickly, so I suggest to make feature requests in my issue tracker, I'm less likely to miss them there.</div>
+<h2>Reply by vegheadjones</h2>
+<div class="meta">2010-01-29 21:09</div>
+<div class="content">Hi,<br><br>After migrated from paper to Excel, and giving up on my homebrewed method, I am eagar to give this a spin.<br><br>Andreas: Is there a way I can import my tasks as a text file into Autofocus AHK?</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-01-29 22:16</div>
+<div class="content">vegheadjones:<br><br>Well, it has no excel import. But you can save to csv format, then you have a text file. If you send me some sample data (say three lines from that file, an unactioned, done and dismissed task, you can replace the actual task description with nonsense for privacy reasons) to andreas@autofocus.cc, I can write a small converter for you. If privacy is no concern, you can of course send me your whole list and I'll convert it for you.<br><br>Alternatively just copy all unactioned tasks you want to keep in a text file, on task per line, call it Tasks.txt and save it in the same directory. You won't have the added date column, but otherwise it should work fine.</div>
+<h2>Reply by vegheadjones</h2>
+<div class="meta">2010-01-29 23:40</div>
+<div class="content">Thanks Andreas! I manually entered everything (which really did not take long) and am enjoying your program. I have one question and one feature request:<br><br>Question: After I exit the program and reopen (for a new day of work) where does it start-- Does it leave off where I left off?<br><br>Request-- It would be great to have a way to hide thetimer bar until I am ready to access it again. On sometasks it is good to see how much time I am spending on it, but not all tasks. :)</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-01-30 0:00</div>
+<div class="content">vegheadjones:<br><br>«Question: After I exit the program and reopen (for a new day of work) where does it start-- Does it leave off where I left off?»<br><br>Currently, it just starts at the top of the list. I practically never restart, but I'll change this soon.<br><br>«Request-- It would be great to have a way to hide thetimer bar until I am ready to access it again. On sometasks it is good to see how much time I am spending on it, but not all tasks. :)»<br><br>I'll add a hotkey for hiding/showing the status window.</div>
+<h2>Reply by vegheadjones</h2>
+<div class="meta">2010-01-31 15:59</div>
+<div class="content">Thanks Andreas. I am using the app on both my home and work computer (using dropbox to sync, which works great) and I think it is important to follow Mark's rule to start where you left off, so I really look forward to that being implemented.<br><br>After two days of working off your program, I can say it is a elegant and efficient way to work. Thanks ver much for it (and of course for Mark for AF4, and the soon to be DIT2).</div>
+<h2>Reply by Rebecca</h2>
+<div class="meta">2010-02-1 14:25</div>
+<div class="content">Andreas,<br><br>I'm so sorry to post this here, but couldn't seem to find your website.  Anyway, I had tried your Autofocus program a while back, but wound up deciding to stick with paper.  I thought I deleted the program, but it loads everytime I turn the computer on and is starting to generate error messages.  I probably created a problem by incompletely deleting it.  But I can't figure out where the rest of it is. If there's anyway you could help me to remove it from my computer, I'd be most grateful.  My email is rmyoungesq at gmail dot com, if you want to email me directly.  Thank you so much.<br><br>Rebecca</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-02-1 14:48</div>
+<div class="content">Rebecca:<br><br>The program is pretty much just the one exe file and some text files in the same directory, so if you removed that, the program is gone completely. What you still have is a link in your windows startup folder to my application, generated when you checked "Start AutofocusAHK with windows" in the preferences. So the error message you get is because windows wants to start my application, but can't find it because you deleted it. <br><br>To get rid of the error messages, just open your start menu, go to "All Programs" (or just "Programs", depending on your windows version) and find the folder "Startup". There should be a shortcut called "AutofocusAHK". Right-click it and select delete. That should be it.</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-02-2 13:22</div>
+<div class="content">vegheadjones:<br><br>Though you seem to have moved back to excel, I implemented the changes you wanted: <a href="http://cloud.github.com/downloads/andreashofmann/AutofocusAHK/AutofocusAHK-0.9.2.4.zip" rel="nofollow">http://cloud.github.com/downloads/andreashofmann/AutofocusAHK/AutofocusAHK-0.9.2.4.zip</a><br><br>- It now remembers were you were in the list versus always starting from the beginning (in AF1 and AF4)<br><br>- To permanently hide the status window, just hold down the shift key. You'll notice the "Hide for 30s" button changing to just "Hide". Click it to hide the status window forever. To continue, you must press CaspLock+d.</div>
+<h2>Reply by vegheadjones</h2>
+<div class="meta">2010-02-2 14:46</div>
+<div class="content">Thanks so much Andreas!<br><br>Yes I did move back to Excel for DIT1 experimentation. I am liking it so far, so we'll see.<br><br>I am sure you will implement a DIT2 mode once the rules have been finalized...</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-02-2 15:26</div>
+<div class="content">vegheadjones:<br><br>«I am sure you will implement a DIT2 mode once the rules have been finalized...»<br><br>I'm not wating that long, I'm implementing it right now. AutofocusAHK 0.9.3 will have it. Though I'm sticking with AF5, it does feel more like Autofocus than DIT, especially in the digital implementation. Mark himself said in the comments of the name searching blog post that he thinks "Autofocus" is the best name for the new system.<br><br>On another note, since this thread is getting rather long, I'll start a new thread for the 0.9.3 release. I think I'll make a new thread for every introduction of a bigger new feature (0.9.4, 0.9.5, ... , 1.0) and add small releases (0.9.3.1, 0.9.3.2, ...) to the threads of their corresponding big release.</div>
+<h2>Reply by Alan Baljeu</h2>
+<div class="meta">2010-09-20 16:46</div>
+<div class="content">Looks like you need to lock this one Mark.  SlabePalcleta is too persisent :-/</div>
+</article>
+    </main>
+    <footer>
+        <p>Archive built from Mark Forster's blog and forums</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducing web version of AFv4(support FV)</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../blog_index.html">Blog</a>
+            <a href="../fvp_forum_index.html">FVP Forum</a>
+            <a href="../general_forum_index.html">General Forum</a>
+        </nav>
+    </header>
+    <main>
+<article>
+<h1>Introducing web version of AFv4(support FV)</h1>
+<div class="meta">
+Author: Yunkyung Lee | 
+Created: 2012-03-16 16:02
+ | Last Activity: 2013-06-18 17:01
+</div>
+<h2>Original Post</h2>
+<div class="meta">2012-03-16 16:02</div>
+<div class="content">Hi everyone. <br><br>I started this project to learn rails for personal purpose. After I made basic functions of AFv4 and used it for few months, I could say that using AFv4 was different from using Remember The Mink, Wunderlist, and OmniFocus. After removing priority, due date, and other optional functions, it became much easier to add, cancel, and re-enter tasks. It was not about ‘managing tasks’ but ‘being in the flow of tasks’. The developing site became fun and I have added more functions, tweaked UI (the site works fine with iPhone by using bootstrap css framework from twitter) and got to the point where I should share it with everyone.<br><br>Please visit <a href="http://keepfocustodo.com" target="new" rel="nofollow">http://keepfocustodo.com</a> <br><br>* There are only 4 functions available, which are entering, starting, ending, and re-entering tasks. Other distracting elements are all removed. <a href="http://d37ovo5gdkzyl5.cloudfront.net/assets/kftd-overview.png" target="new" rel="nofollow">http://d37ovo5gdkzyl5.cloudfront.net/assets/kftd-overview.png</a><br>* It was developed for AFv4, but it also supports preselection which Final Version requires.<br>* Simultaneously managing several projects with one list was inconvenient, so I added multi-context support.<br>* It works well with iPhone and iPad. <a href="http://d37ovo5gdkzyl5.cloudfront.net/assets/kftd-iphone.png" target="new" rel="nofollow">http://d37ovo5gdkzyl5.cloudfront.net/assets/kftd-iphone.png</a><br>* It provided the punchcard chart to check at which day and time you performed the most. <a href="http://d37ovo5gdkzyl5.cloudfront.net/assets/kftd-punchcard.png" target="new" rel="nofollow">http://d37ovo5gdkzyl5.cloudfront.net/assets/kftd-punchcard.png</a><br>* Tasks are entered inverse order. When you write tasks on a paper, the latest tasks goes at the bottom of the page. However, it is more familiar to use when the newest content is on top in the website.<br><br>I want to provide other statistics and a graph other than punchcard, but I didn’t know which one will help the performance review so it has not been developed. Your suggestions will be very helpful for me.<br><br>I wish as many people to use it and after using it please let me know what is uncomfortable and need to improve for better service.<br><br>Thank you very much.</div>
+<h2>Reply by avrum</h2>
+<div class="meta">2012-03-17 1:26</div>
+<div class="content">Yunkyung - <br><br>I'm surprised no one has commented on your work. I'm very impressed with your implementation of Mark's work. Two things I would love to see (1 is convienient, 1 would be a deal breaker (for me anyway)):<br><br>1. The deal-breaker: Without an offline option (iPhone app), I can't trust that would work for me if I'm unable to access WIFI or have low 3G coverage<br><br>2. A notes section for tasks (with the possibility of a note being carried over when a task is unfinished.<br><br>In the meantime, kudos to you for coding something that faithfully captures Mark's ideas.</div>
+<h2>Reply by sabre23t</h2>
+<div class="meta">2012-03-18 4:02</div>
+<div class="content">Just tried your <a href="http://keepfocustodo.com." target="new" rel="nofollow">http://keepfocustodo.com.</a> Simple 4 functions;(i) entering, (ii) starting, (iii) ending, and (iv) re-entering. The last 2 only seen after starting the task.<br><br>How do you pre-select? Is it by just starting multiple tasks? Wouldn't that screw up the starting/ending times stats?<br><br>Deal-breaker missing features for me ...<br>(1) Offline option. Perhaps HTML5 offline storage mode?<br>(2) Long notes section per tasks. Should be carried forward when re-entered.<br>(3) Export of tasks into convenient format; one line per task, xml, jason.</div>
+<h2>Reply by Yunkyung Lee</h2>
+<div class="meta">2012-03-19 13:26</div>
+<div class="content">@avrum, @sabre23t Thanks for your feedbacks<br><br>About the missing features,<br><br>1. Offline mode. <br>Although we do have a plan to make a native iPhone application that supports Offline mode, it seems to be difficult to develop HTML5 Offline mode. Supporting html5 offline mode requires developing the application from scratch, but we do not have enough forces for such development.<br><br>2. Notes, and file export.<br>I'll do it right now. Maybe you can use it this weekend. <br><br>Answering about the pre-selection, you can just 'start' the task. Starting task is just for marking which task you are doing or want to do rather than for time tracking. Punchcard chart use completion time of tasks, and new statistics I'll add won't use start time of tasks too. <br><br>I know many features are missing, words are weird, but I'll continuously improve it. Thank you again for your feedback.</div>
+<h2>Reply by sabre23t</h2>
+<div class="meta">2012-03-20 14:15</div>
+<div class="content">Thanks Yunkyung Lee. I'll try kft further later.<br><br>BTW, you got competition, <a href="http://www.blanclist.com/" target="new" rel="nofollow">http://www.blanclist.com/</a> :-)</div>
+<h2>Reply by avrum</h2>
+<div class="meta">2012-03-20 15:40</div>
+<div class="content">Follow-up: <br><br>I've been using Evernote & FV with excellent results. For now, I won't be trying any other software solutions re; FV.</div>
+<h2>Reply by Eurobubba</h2>
+<div class="meta">2012-04-4 15:00</div>
+<div class="content">Remember the Mink — I like that! :-)</div>
+<h2>Reply by Yunkyung Lee</h2>
+<div class="meta">2012-04-6 16:03</div>
+<div class="content">Hi all, <br><br>I’m happy to announce an upgrade of the Keep Focus Todo functions. With this upgrade, you’ll see the following enhancements:<br><br>* The Final Version is completely compatible. The task list is now divided into three areas (“Todo,” “Doing,” and “Done”). When you select a task to work on, it moves to the top of the “Doing” list. Note that if you want to use FV, you should create other contexts; however, any contexts you previously created still support AFv4 mode. <a href="http://d37ovo5gdkzyl5.cloudfront.net/assets/kftd-demo-47879d4fe21135ceec40cc41b9d81b19.png" target="new" rel="nofollow">http://d37ovo5gdkzyl5.cloudfront.net/assets/kftd-demo-47879d4fe21135ceec40cc41b9d81b19.png</a> <br>* You can now create up to three free contexts.<br>* Want to capture details within a task? You can now write notes in tasks. <br><br>To. avrum, Eurobubba, sabre23t :)<br>Please try these new features and let me know how you like them. Thanks!</div>
+<h2>Reply by Roger J</h2>
+<div class="meta">2012-04-6 16:44</div>
+<div class="content">@avrum: ditto, great application, and I've tried OneNote and a lot of others as well, Evernote is THE one for me as well.  And Mark uses it now!</div>
+<h2>Reply by Zack Allen</h2>
+<div class="meta">2012-04-7 5:55</div>
+<div class="content">Great work, Yunkyung Lee. As has been stated, an iDevice (and even Mac) native app would be fantastic. I can't stand web apps.</div>
+<h2>Reply by sabre23t</h2>
+<div class="meta">2012-04-7 9:21</div>
+<div class="content">Hi Yunkyung Lee,<br><br>I had a quick look again at my testing FV list on <a href="http://keepfocustodo.com" target="new" rel="nofollow">http://keepfocustodo.com</a> .<br><br>(1) I see you now have "long notes" using markdown syntax. Great. :-)<br>(2) The context feels like separate list. Is therea way to change the context of an existing task? <br>(3) One thing it does better than EN Windows for FV, is the "auto re-enter" that "strikes out" a done task, and automatically re-create the re-entered task. So the list feels even more like the paper version.<br>(4) What about "offline mode"?<br>(5) What about exporting? Even more important now that you have "long notes" in each task.<br><br>Overall, KFT looks good. However, for now I'm sticking with EN WIndows and EN Android combo, that  allows for offline mode, also xml export.</div>
+<h2>Reply by Yunkyung Lee</h2>
+<div class="meta">2012-04-9 0:59</div>
+<div class="content">@sabre23t<br><br>I really appreciate your review.<br><br>1. I thought Markdown was the simplest way to provide rich text editing. Thank you for noticing that.<br><br>2-1. Hmm. As I’m not a native English speaker, I had a hard time deciding on a name (Context). I needed more than one task list to represent “project” or “location.” I thought “context” has that kind of meaning. If it’s not clear what “context” means, I can change the name. Do you have any suggestions?<br><br>2-2. I intentionally didn’t implement that function, but I am realizing that an Inbox function(in GTD) may be needed. If I implement Inbox, I’ll add a function to move tasks.<br><br>3. Thank you! “Like the paper version” is exactly what I wanted to implement. So many electronic task managers exist out there, but none of them are useful to me. I think that’s why they are not like paper. If I wrote something wrong on paper, I don’t erase and edit it—I just strike it out and then write the task again. I do the same for completed tasks. Completed tasks remain in the list; they are not removed. This gives me a chance to see what I’ve done before; as the paper fills up with tasks, I feel I’m making progress. That’s what I was missing in the other electronic task managers.<br><br>4. I don’t yet have any plans for building HTML5 offline mode, but I’ll find a way to make a crossplatform (iPhone, Android) native application.<br><br>5. I’m working on this. I haven’t had enough time to code, but starting this week I will have more free time to build more functionality into KFT.<br><br>Thank you for your feedback again. I’ll try to address your needs.</div>
+<h2>Reply by sabre23t</h2>
+<div class="meta">2012-04-9 9:01</div>
+<div class="content">Thanks for the detailed response, Yunkyung Lee. I just like to warn you, that I'm only likely to move over to KFT, if it is really "better" than my current EN Windows and EN Android combo. <br><br>But, I would surely do some testing on any new updates you come up with, just because I really like the "minimalist" and "paper" feel of working with KFT. ;-)<br><br>About item 2-1, I don't mind using the word "context" for that. However, when working a task in a specific context I expect to be able to change its context when necessary. For example, a task originally in "work" context, that I later find is usually worked on in "home" context. On FV paper implementation, I would just strike out from "work" notebook(context) and re-enter in "home" notebook(context).</div>
+<h2>Reply by gyakusetsu</h2>
+<div class="meta">2012-05-7 15:10</div>
+<div class="content">Is it down, today? Is it coming back up?</div>
+<h2>Reply by sabre23t</h2>
+<div class="meta">2012-05-8 2:50</div>
+<div class="content">Gyakusetsu, I just tried my test <a href="http://keepfocustodo.com/tasks/Final%20Version" target="new" rel="nofollow">http://keepfocustodo.com/tasks/Final%20Version</a> . It's up. <br><br>Reminded me about two features KFT have over similar FV webapp ...<br>(1) Long notes per task (with Markdown rich markups)<br>(2) Can have multiple context lists (home vs office etc)<br><br>One cons that you indirectly raised. Will it continue to be up? KFT appears to be a personal  site supported by Yunkyung Lee. It has Congruent Works in the copyright notice, but no further corporate/commercial info.</div>
+<h2>Reply by Yunkyung Lee</h2>
+<div class="meta">2012-05-9 12:48</div>
+<div class="content">@gyakusetsu <br><br>I am very sorry for the service outage that you have experienced. It is caused by a network problem of the hosting company, (<a href="http://status.gorazor.net/129224038)." target="new" rel="nofollow">http://status.gorazor.net/129224038).</a> I will add an offline mode next week, and after that, I am sure that this kind of network outage will not be a problem anymore. Be reassured that I will find a way to provide a more reliable service. <br><br>@sabre23t <br><br>I am almost finished preparing the offline mode. I will deploy it next week. Please try KFT again. <br><br>To address your concern, KFT will continue to be up and running! I had a difficult time finding a reliable hosting company, with good servers, and there are some problems with fiber networks that I wasn’t able to handle. If I cannot provide any more services, I will open source KTF and provide a detailed guide to help set up KFT on the heroku platform (<a href="http://www.heroku.com)." target="new" rel="nofollow">http://www.heroku.com).</a> With that you can setup your own KTF within 10 minutes and use it free.<br><br>Congruent Works is a private company, (similar to LLC), in Korea. We have only 3 people in our company. We mainly perform outsourcing jobs for a living, and are also trying to develop our own products and services, e.g. <a href="http://itunes.apple.com/us/app/the-clien/id441744932?mt=8" target="new" rel="nofollow">http://itunes.apple.com/us/app/the-clien/id441744932?mt=8</a> . We do not have enough resources to prepare any corporate information page in English yet, but after deploying the offline mode we will proceed with that kind of work.</div>
+<h2>Reply by Yunkyung Lee</h2>
+<div class="meta">2012-05-19 3:20</div>
+<div class="content">@sabre23t, @avrum<br><br>I've finished addressing all of your deal breakers. I added "Offline mode" to KFT, as well as more new features like moving tasks and reordering preselected tasks. Please try Keep Focus Todo again. And keep the feedback coming!</div>
+<h2>Reply by sabre23t</h2>
+<div class="meta">2012-05-19 9:59</div>
+<div class="content">Okay, I've just tested your latest version of <a href="http://keepfocustodo.com" target="new" rel="nofollow">http://keepfocustodo.com</a> . Some comments ...<br><br>(0) Don't seem to be any command to show current version. Perhaps either the Support dialog or the Account menu can show the current version number.<br><br>(1) Offline mode (storage in browser) now available. How do you sync to the cloud when mainly using offline mode? There's no sync command/button. Do you just go Online then back to Offline?<br><br>(2) Move task from "Final Version" at work to "Home" context, and vice versa now works. I note it will mark done then create a copy of the task into the target context. Looks good.<br><br>(3) The preselection "Start" multiple tasks, now works differently. I remembered that previously clicking the start button for each task, doesn't move the tast in the list. Now it moves to the middle between todo tasks and done tasks. I don't really like that. At least there should be an option for "separate todo/started/done tasks" or "sorted by entry time". I don't prefer the started tasks to immediately move, because I lose my place in the list of todo tasks to consider for preselection. I like the way <a href="http://www.blanclist.com" target="new" rel="nofollow">http://www.blanclist.com</a> shows preselection (dimming unselected tasks and linking the selected tasks).<br><br>(4) The sorting of tasks in the todo/started/done areas are a bit funky. New tasks is sorted at the top, old tasks at the bottom. But if you just change context to another and back again, you'll find that new tasks goes to somewhere in the middle of the list. Sort changes each time you context switch to another and back. The started/done areas are not affected. <br><br>(5) Talking about sorting, there is a "sort" command on tasks already started, but not on todo tasks. I guess this to allow for when you start an urgent tasks in the middle of processing .<br><br>(6) There is no way to delete started/done task. Or hide done tasks.<br><br>That's it for now. Item #4 above is critical, makes KFT not really usable.</div>
+<h2>Reply by Yunkyung Lee</h2>
+<div class="meta">2012-05-19 16:28</div>
+<div class="content">@sabre23t <br><br>Thanks for your fast and detailed feedback. <br><br>First of all, # 4 was a JavaScript-related bug, which I missed. I have now fixed it. Thanks for your bug report.  <br><br>(0) KFT is a Web-based site. Regarding the Web, I think the version number is meaningless. It always serve last version. <br><br>(1) Offline mode means you can use it even though you are offline. If an Internet connection is available, data is synchronized in the background. <br><br>(2) Like paper. :)<br><br>(3) That is the behavior of the AFv4 mode. The AFv4 mode has a list-closing function that hardly understandable and that cannot work in offline mode. Therefore, I dropped support for the AFv4 version of KFT. But I think you have pointed out exactly what the FV mode of KFT is missing. I will add that option, which should not take too long.<br><br>(6) Done/Canceled tasks remain in the list until you refresh the page or change the context. If you refresh the page, the done list shows only the most recent 10 tasks.</div>
+<h2>Reply by daniela</h2>
+<div class="meta">2013-06-18 17:01</div>
+<div class="content">Hi! I see today that keepfocustodo.com does not working and here I find a place I may be can ask and receive some news. I like so much this simple and effective way to manage everyday tasks! Is it off temporarily or it is over with this website?<br>Thank you :)</div>
+</article>
+    </main>
+    <footer>
+        <p>Archive built from Mark Forster's blog and forums</p>
+    </footer>
+</body>
+</html>

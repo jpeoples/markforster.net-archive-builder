@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form getting slower?</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../blog_index.html">Blog</a>
+            <a href="../fvp_forum_index.html">FVP Forum</a>
+            <a href="../general_forum_index.html">General Forum</a>
+        </nav>
+    </header>
+    <main>
+<article>
+<h1>Form getting slower?</h1>
+<div class="meta">
+Author: Mike | 
+Created: 2009-03-30 20:46
+ | Last Activity: 2009-04-1 16:22
+</div>
+<h2>Original Post</h2>
+<div class="meta">2009-03-30 20:46</div>
+<div class="content">Have others noticed that this forum is getting slower?  In watching the load progress bar in Firefox I see that it is making calls to Twitter each time the page needs to reload.<br><br>I thought this Twitter stuff was just a nuisance, but it really seems to be acting like malware ... at least in as much as it gets its hooks into everything.  If I ever needed a reason to avoid Twitter, I have found it!</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2009-03-30 20:58</div>
+<div class="content">Yes, Twitter really slows this website down. I forbid twitter.com the execution of Javascript, which is needed to dynamically load the updates. The problem is, if you disable Javascript completely, posting in the forum doesn't work. The solution: Firefox with the "NoScript" extension: https://addons.mozilla.org/de/firefox/addon/722<br><br>Just forbid twitter.com and allow markforster.net - et voilà, fully functional forum without unnecessary waiting.</div>
+<h2>Reply by Mike</h2>
+<div class="meta">2009-03-30 22:15</div>
+<div class="content">Hi Andreas,<br><br>I checked my No Scripts and have Mark "trusted" and Twitter as "untrusted".  I'll have to monitor speed but I think I still see this site as going to Twitter on page changes.  Maybe it is trying but No Script is turning it back?</div>
+<h2>Reply by Christine B</h2>
+<div class="meta">2009-03-30 22:23</div>
+<div class="content">It really is becoming a problem isn't it?  It doesn't seem consistent though - sometimes the pages load almost instantly and at others you can make half a dozen cups of coffee.  Tonight is the worst it has been for a while - I finally resorted to opening the site about 4 times in separate tags - which no doubt is adding to the slownees for everyone else ...... oops!</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2009-03-30 22:25</div>
+<div class="content">Yes, even with Javascript disabled there are still connections to twitter.com, but less. To get rid of them completely I suggest putting twitter.com in your hosts file. If you don't ever want to do anything with twitter at all, that is.</div>
+<h2>Reply by Christine B</h2>
+<div class="meta">2009-03-30 22:31</div>
+<div class="content">Andreas<br><br>Would it make a difference if the "Twitter Update" section was removed?  Presumably anyone who wanted to "twitter" or see the updates could access them through their own twitter account?</div>
+<h2>Reply by Christine B</h2>
+<div class="meta">2009-03-30 22:34</div>
+<div class="content">I'm bored now!  Off to watch Law & Order | UK - and to action "catch up on recorded video" task :-)</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2009-03-30 22:35</div>
+<div class="content">I haven't looked over the complete code, but the "Twitter Updates" section is what is creating multiple connections to twitter via javascript. So yes, removing it would help.</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2009-03-30 22:37</div>
+<div class="content">Oh, well, have fun with L&O.<br><br>The twitter grade button seems to be a culprit, too.</div>
+<h2>Reply by Mike</h2>
+<div class="meta">2009-03-30 22:40</div>
+<div class="content">Andreas,<br><br>Can I block "grader.twitter.com"  I see the message that it is waiting for it but when I click on the No Script option button it does not give me an option to put it on my untrusted list.  Is there a way to access the No Script untrusted list without actually going to the site?  I can't even get to grader.twitter.com directly.</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2009-03-30 22:41</div>
+<div class="content">Adding these two lines to your hosts file (for XP, it's located in c:\WINDOWS\system32\drivers\etc\) *significantly* speeds up the page load:<br><br>127.0.0.1 twitter.com<br>127.0.0.1 twitter.grader.com<br><br>This prevents you from accessing twitter, though.</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2009-03-30 22:42</div>
+<div class="content">Mike:<br><br>There is no Javascript involved with the connection to grader.com, so NoScript is no help. You have to modify your hosts file as described in my last post.</div>
+<h2>Reply by Mike</h2>
+<div class="meta">2009-03-30 23:53</div>
+<div class="content">Andreas,  You da man!<br><br>Thanks for that.  I don't know why I forgot about the hosts file.  DUH!</div>
+<h2>Reply by Mark Forster</h2>
+<div class="meta">2009-03-30 23:57</div>
+<div class="content">I'm interested to know how widespread a problem this is. I've tested the page loading of this site with every browser that I have (Firefox, IE, Safari, Chrome) and I've found no problem with any of them.<br><br>I can't remember how long ago it was that I put the Twitter Update box on the site but it must have been nearly two weeks ago. So I would have expected there to be an almost immediate reaction that the site had got slower, rather than "the site is getting slower" after two weeks.<br><br>I also remember that there was a spate of people claiming slow page loading a month or so ago, which seemed to go away.<br><br>If the Twitter box does turn out to be causing major problems for more than a few people then I will remove it - but I don't want to do so unless it is the real culprit.</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2009-03-31 0:03</div>
+<div class="content">Mark:<br><br>I think there are several factors - as Christine pointed out, it's not a constant problem, the reaction time for the external connections keeps changing. I also think it depends on where you are. A speed test I started from an US server claimed that your amazon.co.uk inclusion was a lot worse than twitter.com/grader.com concerning load time. But for me here in Germany (probably Europe in general), amazon.co.uk is lightning fast, but the other two cause noticable delays.</div>
+<h2>Reply by Mark Forster</h2>
+<div class="meta">2009-03-31 0:45</div>
+<div class="content">Andreas:<br><br>It's an interesting problem. I'll give it a few days and see what happens. It seems to have only been bothering people quite recently. One of the people who has reported having a problem doesn't live very far from me - but I know that websites sometimes go slow for all sorts of strange reasons.</div>
+<h2>Reply by Christine B</h2>
+<div class="meta">2009-03-31 1:01</div>
+<div class="content">Hi Mark<br><br>Although the problem has been worse recently it did exist prior to twitter, although the page does state that twitter is still downloading on occasions.  I wondered whether perhaps it coincided with Squarespace carrying out server maintenance?  From memory I would say it is usually late evening (UK time).  This evening it was really dire around 10:00pm but had cleared by around 11:00.<br><br>And welcome back - you've been missed!</div>
+<h2>Reply by Will</h2>
+<div class="meta">2009-03-31 7:21</div>
+<div class="content">I haven't had any problems on Google Chrome.</div>
+<h2>Reply by Mike</h2>
+<div class="meta">2009-03-31 10:29</div>
+<div class="content">Hi Mark,<br><br>Good to see you back.  I can report that your site was working well until a few days ago and then it was not just bad, it was a torment.  I mean, 5 seconds plus to load a page.  (Egad, what have we become that a 5 second wait is torment ;-)<br><br>Once I implemented Andras suggestions it is lightning fast.  And I was able to notice that the culprit was Twitter and Grader.Twitter because loading was so slow that I could easily read the progress bar in FireFox.<br><br>The comments by Andreas and Christine make good sense as well.  I know that my ISP dynamically assigns addresses so perhaps my routing changes from time to time.  It could easily be a convergence of factors.  But I can say that with Twitter now in my hosts file my browsing in other places has improved as well.<br><br>(Ah, I remember that I told Andreas that I wanted to go browsing for some recommendations on a populated hosts file so I would not have to keep updating it myself.  One more thing for my AF list ;-)</div>
+<h2>Reply by Peter K</h2>
+<div class="meta">2009-03-31 10:36</div>
+<div class="content">I would contemplate changing/disabling the sidebars, or at least a large portion of it on the forum pages alone. Not sure if it can be done with the software package that is being used. Having dynamic sidebars that adjust to the type of page you're on (blog/forum/article/frontpage) is better design. That way you can display just the information that is relevant to the page of the website. <br><br></div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2009-03-31 11:06</div>
+<div class="content">Another thing that would help would be to change the order of the columns in the source code. We discussed this already in the thread where reported the ie6 bug (which is still there by the way, Mark, do you need help with this?). The sidebars are loaded first, then the middle content column. This worses the situation if a sidebar ist sloggy. It would be better if the content showed up first. That would also solve the problem of people who come here with older PDAs (like Laurence in that thread: <a href="http://www.markforster.net/forum/post/674069" rel="nofollow">http://www.markforster.net/forum/post/674069</a></div>
+<h2>Reply by Mike</h2>
+<div class="meta">2009-03-31 11:33</div>
+<div class="content">Some of that last may account for what I'm seeing when I go TO a thread.  If I'm too fast hitting the END key (to get to the bottom) I see nothing on the screen but the sidebar.  If I go back up I'll see a partially loaded center column which then loads a couple of seconds later.</div>
+<h2>Reply by smileypete</h2>
+<div class="meta">2009-04-1 16:22</div>
+<div class="content">If you're using Firefox with the Adblock extension, another option is to add <a href="http://twitter.com/javascripts/blogger.js" rel="nofollow">http://twitter.com/javascripts/blogger.js</a> as a filter.<br><br>It still lets you access the AutoFocusTM link to twitter.com and the AutoFocus page seems to work OK.<br><br>Personally I find the Twitter stuff on the left intrusive, so wonder why I didn't block it before... :)<br><br>I think just a link to Twitter on the left would be fine.</div>
+</article>
+    </main>
+    <footer>
+        <p>Archive built from Mark Forster's blog and forums</p>
+    </footer>
+</body>
+</html>

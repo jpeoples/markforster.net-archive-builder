@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Annoying Javascript Behavior when hitting ESC on this Website</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../blog_index.html">Blog</a>
+            <a href="../fvp_forum_index.html">FVP Forum</a>
+            <a href="../general_forum_index.html">General Forum</a>
+        </nav>
+    </header>
+    <main>
+<article>
+<h1>Annoying Javascript Behavior when hitting ESC on this Website</h1>
+<div class="meta">
+Author: Jim R | 
+Created: 2010-01-28 4:38
+ | Last Activity: 2010-01-28 13:18
+</div>
+<h2>Original Post</h2>
+<div class="meta">2010-01-28 4:38</div>
+<div class="content">I have been a reader of this website for the past few months.<br><br>I frequently use my browser's find feature in order to search to specific pieces of text, I do this for various reasons, it's one of the ways I read, compare what people said, and so on.<br><br>I typically hit ESC after I'm done my text-searching, in order to get rid of my distracting find box. <br><br>Unfortunately this website attempts to redirect me to the login page every time I hit ESC.<br><br>This behavior is caused by this source code:<br>\<script type="text/javascript"\><br>    YAHOO.util.Event.addListener(document, "keyup", function (e) { if (!e) { e = event; } if (e.keyCode == 27) { document.location.href = "/login/?returnUrl=%2Fforum%2Fpost%2F995228"; } });<br>\</script\><br><br>Does anyone here regularly hit the ESC key for whatever reason and find this behavior annoying?</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-01-28 8:17</div>
+<div class="content">Heh, never noticed this. I've got thrown once or twice to the login page without knowing why, but I don't use the Esc key to close my find bar - I use the "Hide Find Bar" addon to have it disappear automatically after 10 seconds not in use (time is adjustable). Might be an alternative for you, because I don't think (pardon me if I'm wrong) that Mark is tech-savvy enough to solve this problem. It's probably part of the standard squarespace package. I'm not even sure their support will change that if he asks them to. ^_^<br><br>Second do-it-yourself solution: write a user-javascript  to cancel the esc key hook on this page.</div>
+<h2>Reply by Mark Forster</h2>
+<div class="meta">2010-01-28 9:18</div>
+<div class="content">JIm and Andreas:<br><br>I hadn't noticed this behaviour myself because it doesn't happen when one is logged in (which I normally am).<br><br>I'll take it up with Squarespace.</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-01-28 9:40</div>
+<div class="content">In the meantime, you can use this script to block the esc key behaviour: <a href="http://autofocus.cc/public/data/greasemonkey/markforsternet_remove_es.user.js" rel="nofollow">http://autofocus.cc/public/data/greasemonkey/markforsternet_remove_es.user.js</a><br><br>To use it, you need either Firefox with Greasemonkey https://addons.mozilla.org/en-US/firefox/addon/748 or a browser that supports userscripts natively, like Opera.<br><br>Then just click on the link above and say yes to the question if you want to install it. After that, pressing Esc will no longer take you to the login page.<br><br>PS: Writing this script also reminded me of my other script for markforster.net which changes the links in the forum overview to always take you directly to the last page of a discussion: autofocus.cc/public/data/greasemonkey/markforsternet_forum_lastpage.user.js</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-01-28 9:58</div>
+<div class="content">Okay, I just did some testing. In Firefox with Greasemonkey and Google Chrome (Version 4.0), you can just click the above link and it works. In Opera, you first need to set a userscript directory in the preferences, then download the script to that directory, then it works.<br><br>And I forgot the "<a href="http://"" rel="nofollow">http://"</a> in the link to my other script: <a href="http://autofocus.cc/public/data/greasemonkey/markforsternet_forum_lastpage.user.js" rel="nofollow">http://autofocus.cc/public/data/greasemonkey/markforsternet_forum_lastpage.user.js</a></div>
+<h2>Reply by Mark Forster</h2>
+<div class="meta">2010-01-28 10:28</div>
+<div class="content">Reply from Squarespace:<br><br>Yes, the ESC to login is a shortcut key to access your login page. This is a shortcut to help for those times when you might delete a login page and need a back-up login option, or just an option without having to actually keep a login page on the site.</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-01-28 10:33</div>
+<div class="content">So I gather they won't "fix" this feature? Well, the time I spent putting together that little script together seems less wasted now. :-)</div>
+<h2>Reply by Brian</h2>
+<div class="meta">2010-01-28 13:18</div>
+<div class="content">Thanks Andreas, I've added it along side your lastPage script, which I have been using since you first published it.</div>
+</article>
+    </main>
+    <footer>
+        <p>Archive built from Mark Forster's blog and forums</p>
+    </footer>
+</body>
+</html>

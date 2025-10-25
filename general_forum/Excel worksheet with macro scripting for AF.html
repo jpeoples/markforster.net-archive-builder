@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excel worksheet with macro scripting for AF</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../blog_index.html">Blog</a>
+            <a href="../fvp_forum_index.html">FVP Forum</a>
+            <a href="../general_forum_index.html">General Forum</a>
+        </nav>
+    </header>
+    <main>
+<article>
+<h1>Excel worksheet with macro scripting for AF</h1>
+<div class="meta">
+Author: Walter | 
+Created: 2009-03-24 9:44
+ | Last Activity: 2009-07-22 13:31
+</div>
+<h2>Original Post</h2>
+<div class="meta">2009-03-24 9:44</div>
+<div class="content">Hi,<br><br>I created an Excel worksheet with some macro scripting to support AF.<br>This is what's implemented by now:<br><br>- It supports the creation of multiple notebooks in one file. Each worksheet is a notebook; each worksheet column is a list (page).<br><br>- It lets the user to define the amount of lines per list (page), will show exactly that amount in the worksheet (by hiding the rest), and won't let the user to input anything past it. It also allows redefining this amount whenever needed, and will rearrange the lists accordingly. For example: If a notebook was set to 30 lines per list, and later re-arranged to 15 lines per list, all the existing tasks will be redistributed to 4 pages.<br><br>- It supports shortcuts to "Complete", "Dismiss" and "Pause" a task. This last one crosses off the task, and re-adds it at the end of the last active page. It also allows re-opening a task that's been dismissed or completed (though this shouldn't be used).<br><br>- It monitors each list, and will show them dimmed when all of their tasks are either completed or dismissed.<br><br>- It lets the user to jump to the first active page, and to add a task at the end of the last active page.<br><br>Shortcuts:<br><br>CTRL-Shift-A: Re-arranges a list (Asking lines/page)<br>CTRL-Shift-N: Creates a new task at the end of the last active page<br>CTRL-Shift-C: Crosses off a task as completed<br>CTRL-Shift-D: Marks a task as dismissed (with yellow background)<br>CTRL-Shift-P: "Pauses" a task (crosses-it off, re-adds it at the end)<br>CTRL-Shift-O: Restores a task to active status<br>CTRL-Shift-F: Jump to the first active page<br><br>Frankly, I created this until I decide if I want to split my tasks into work/home. It apparently works ok (I only started using it yesterday), though the feeling is that AF works somehow better on paper, as many say. (I made it more or less look like paper, anyway :)<br><br>So, for whoever's interested, even out of curiosity, here's the link for downloading:<br><a href="http://rapidshare.com/files/212885404/AF.xls.html" rel="nofollow">http://rapidshare.com/files/212885404/AF.xls.html</a><br><br>Walter<br></div>
+<h2>Reply by Christine B</h2>
+<div class="meta">2009-03-24 10:16</div>
+<div class="content">Interesting development Walter!<br><br>I feel, as you suggest above, that AF does indeed work best on paper but also think there is scope for a digital option to be run alongside to handle some of our own individual requirements, such as separating out specific tasks when required.  I myself use MS OneNote for that but can see this would be a great tool for those who preferred the Excel option.</div>
+<h2>Reply by Walter</h2>
+<div class="meta">2009-03-24 14:41</div>
+<div class="content">Hi Christine,<br><br>I feel that by writing the lists on paper I somehow internalize the tasks better.<br>But I have to say that I've been using the file today and it flowed quite well, probably because all the "pages" are shown one next to the other.<br><br>Walter<br></div>
+<h2>Reply by Geoff</h2>
+<div class="meta">2009-03-24 15:46</div>
+<div class="content">Walter, <br><br>I would be interested to take a lool but get the following error. I'll check in a day or two's time to see if I can access it.<br><br>"This file is neither allocated to a Premium Account, or a Collector's Account, and can therefore only be downloaded 10 times.<br><br>This limit is reached.<br><br>To download this file, the uploader either needs to transfer this file into his/her Collector's Account, or upload the file again. The file can later be moved to a Collector's Account. The uploader just needs to click the delete link of the file to get further information.</div>
+<h2>Reply by Walter</h2>
+<div class="meta">2009-03-24 16:03</div>
+<div class="content">Hi Geoff,<br><br>I created a Collector's Account. Please try to download again using the same link.<br>If it doesn't work I'll upload the file to another site.<br><br></div>
+<h2>Reply by moises</h2>
+<div class="meta">2009-03-24 17:14</div>
+<div class="content">Walter,<br><br>Very nice!<br><br>Maybe add a macro to change the background color of the cell with the currently active task? This would correspond to the dot that Mark recommends putting next to the item that is being worked on now.</div>
+<h2>Reply by Walter</h2>
+<div class="meta">2009-03-24 22:57</div>
+<div class="content">Thanks Moises,<br><br>I wasn't aware of the dot recommendation. I'll think about how to implement that tomorrow.<br><br>Walter<br></div>
+<h2>Reply by Mike</h2>
+<div class="meta">2009-03-25 10:32</div>
+<div class="content">Walter,<br><br>You might copy the list of shortcuts into a page at the end of the workbook.</div>
+<h2>Reply by Walter</h2>
+<div class="meta">2009-03-25 16:30</div>
+<div class="content">Hi,<br><br>Moises, I added a shortcut for marking the task you're working on: CTRL-Shift-W<br><br>Mike, I added a help popup that's activated with CTRL-Shift-H.<br><br>I also added options to Excel's right click menu (try it on any task). They should only appear when working on the AF file.<br><br>I'm still testing this, you're warned :-)<br><br>New download URL: <a href="http://rapidshare.com/files/213403509/AF.xls" rel="nofollow">http://rapidshare.com/files/213403509/AF.xls</a><br><br>Mark (Mr. Forster), if you see this: I hope I'm not doing anything wrong by posting the file here. I will remove it immediately at your request.<br><br>Thanks,<br>Walter<br> <br></div>
+<h2>Reply by Joshua</h2>
+<div class="meta">2009-04-16 16:10</div>
+<div class="content">Walter,<br><br>Just a quick "Thank You" for developing and sharing your Excel AF solution.  I am not using it myself, but my fiancee loves it!<br><br>Kind regards,<br><br>Joshua<br></div>
+<h2>Reply by kyznetslov</h2>
+<div class="meta">2009-04-18 16:22</div>
+<div class="content">what are the varIious columns for in each excel worksheet?  i'm just looking at this now as a new tool, so need some guidance.  the af 'manual' isn't helping much yet.  there is some date on worksheet 2 and 3, but not in any of the languages that i can read.  maybe you could send a file with several tasks entered in to demonstrate the system</div>
+<h2>Reply by Joshua</h2>
+<div class="meta">2009-04-18 19:00</div>
+<div class="content">The "columns" are the "pages" in AF.<br>The worksheets are individual "notebooks", in this file "work" and "home".<br>The last worksheet is a "Backup" worksheet.<br><br>You simply enter the tasks per line and then use the macro shortcuts (press CTRL + SHIFT + H for a list) to work through the "notebook".<br><br>Hope that helps,<br><br>Joshua</div>
+<h2>Reply by Walter</h2>
+<div class="meta">2009-04-18 21:49</div>
+<div class="content">Wow, I'm glad to hear that.<br><br>I'm using it myself, though I developed it just for the sake of it.<br><br>I also installed DropBox at home and at my office, so my file is accessible from both points without copying it each time.<br><br>Thanks for the kind words :-)<br><br>Walter<br></div>
+<h2>Reply by Joshua</h2>
+<div class="meta">2009-04-18 23:34</div>
+<div class="content">Walter,<br><br>Thank YOU for developing it!<br><br>Here's a little glitch I noticed: The rearranging macro unhides the previously hidden rows below the AF "page".  Not sure why that is so - does the same thing happen for you?  I remember trying this in the file's first version you posted here with no such problem.  Did you change anything in that macro that could be causing the problem?<br><br>This does not affect usability technically, but since I am a highly visual person, I would love to get the "hiding" back.  Unfortunately I do not know enough about Excel yet to be able to do it manually.  Maybe you could have a look at this in your file and update it?  That would be great!<br><br>Thank you,<br><br>Joshua</div>
+<h2>Reply by Joshua</h2>
+<div class="meta">2009-04-19 0:28</div>
+<div class="content">Walter,<br><br>I think I know what happened - I changed your .xls to xlsm, the new 2007 macro format.  That must have blown it apart.<br><br>Joshua</div>
+<h2>Reply by Joshua</h2>
+<div class="meta">2009-04-19 0:33</div>
+<div class="content">... and here's my (hopefully) last post on this: I'll simply go back to the .xls where everything works fine.<br><br>:-)<br><br>Thank you for bearing with me,<br><br>Joshua</div>
+<h2>Reply by Walter</h2>
+<div class="meta">2009-04-19 8:44</div>
+<div class="content">Hi Joshua,<br><br>If it's more convenient for you, I can adapt it to xlsm. I have Office 2007 at work, but I decided to use the old format for compatibility with older versions.<br><br>Please let me know. It shouldn't be much effort at all.<br><br>Walter<br></div>
+<h2>Reply by Joshua</h2>
+<div class="meta">2009-04-20 0:25</div>
+<div class="content">Walter,<br><br>Thank you very much for your kind offer!  It would indeed be great if you could do that.  <br><br>By the way, how do you mark the active page you're on (for finding your place after either inserting a new task or "pausing" a task OR after working in the other worksheet)?<br><br>Joshua</div>
+<h2>Reply by Walter</h2>
+<div class="meta">2009-04-20 13:45</div>
+<div class="content">Hi Joshua,<br><br>I uploaded the xlsm file, you can find it here:<br><br><a href="http://rapidshare.com/files/223571690/AF.xlsm" rel="nofollow">http://rapidshare.com/files/223571690/AF.xlsm</a><br><br>About your other questions, right now there are two options:<br><br>- You can press Ctrl-Shift-W, which will mark the current task in green, as a visual reference. If you mark another task, the previous one will be restored to white. I should add a shortcut to jump to it's position, I'll take a look at it.<br><br>- You can move to the first active page with Ctrl-Shift-F<br><br>That's for now :-)<br><br>Walter<br></div>
+<h2>Reply by Walter</h2>
+<div class="meta">2009-04-20 14:55</div>
+<div class="content">Here's the new version:<br><br>Ctrl-Shift-W sets the working bookmark<br>Ctrl-Shift-R returns to the bookmark's position<br><br>Excel 2007 version: <a href="http://rapidshare.com/files/223594561/AF.xlsm" rel="nofollow">http://rapidshare.com/files/223594561/AF.xlsm</a><br>Excel 2003 version: <a href="http://rapidshare.com/files/223594352/AF.xls" rel="nofollow">http://rapidshare.com/files/223594352/AF.xls</a><br><br>Walter</div>
+<h2>Reply by Joshua</h2>
+<div class="meta">2009-04-20 17:10</div>
+<div class="content">Hi Walter,<br><br>Thank you very much, that's great!  CTRL + Shift + R should come in very handy.<br><br>Unfortunately, the rearranging still does the same weird thing in 2007 as it did before.  After rearranging, the rows below the "page" are not hidden anymore.  Not sure why that happens.<br><br>Kind regards,<br><br>Joshua<br></div>
+<h2>Reply by Rod</h2>
+<div class="meta">2009-04-20 23:53</div>
+<div class="content">Walter, <br>I really like what you've done here! I've been using it for a few days and have only one suggestion for an improvement. When an item is marked completed and gets a strikethrough, how about if at the same time it was made subscript size or made smaller some other way? Then, because it would be smaller on the page, undone items would stand out a bit more on the page. I did that on another program I was using and found it very helpful.</div>
+<h2>Reply by Walter</h2>
+<div class="meta">2009-04-21 15:35</div>
+<div class="content">Hi, Joshua<br>This is really weird. I use it at work and at home it does hide the rest of the rows.<br>I wonder if I understand you correctly. You mean that:<br><br>- You press CTRL-Shift-A<br>- A popup appears, asking you to specify the amount of lines per page, lets say 30<br>- After pressing ok, you see some screen activity<br><br>.... and after that, you are still seeing the rows 31 up to 65536?<br><br>Are you able to hide rows manually?<br>If you mark a few lines (complete lines, by clicking on the row numbers), then right-click and select "Hide", do they get hidden?<br><br>After you answer this, I would send you a single VBScript line (the one that hides the rows) to see if it works.<br><br>Walter</div>
+<h2>Reply by Walter</h2>
+<div class="meta">2009-04-21 15:37</div>
+<div class="content">Hi Rod,<br><br>I'll check how it looks reducing the font to 6 points. I'll let you know.<br><br>:-)<br>Walter</div>
+<h2>Reply by Joshau</h2>
+<div class="meta">2009-04-26 0:17</div>
+<div class="content">Walter,<br><br>Thank you for all the effort you put into this!<br><br>I will try to respond to your questions as clearly as possible.<br><br>---<br><br>Walter: <br><br>"This is really weird. I use it at work and at home it does hide the rest of the rows.<br>I wonder if I understand you correctly. You mean that:<br><br>- You press CTRL-Shift-A<br>- A popup appears, asking you to specify the amount of lines per page, lets say 30<br>- After pressing ok, you see some screen activity<br><br>.... and after that, you are still seeing the rows 31 up to 65536?"<br><br>Joshua: <br><br>No. I see the rows from 65537 onwards. :-)  Could this have to do with the fact that in Office 2007 they increased the maximum number of rows in Excel?<br><br>Walter: <br><br>"Are you able to hide rows manually?"<br><br>Joshua: <br><br>Yes.<br><br>Walter: <br><br>"If you mark a few lines (complete lines, by clicking on the row numbers), then right-click and select "Hide", do they get hidden?"<br><br>Joshua:<br><br>Yes.<br><br></div>
+<h2>Reply by Walter</h2>
+<div class="meta">2009-04-26 10:34</div>
+<div class="content">Hi Joshua,<br><br>I wasn't aware of Excel 2007's new row limit, as I only use "compatibility mode". And it was that, indeed.<br><br>New versions:<br><br>Excel  2007: <a href="http://rapidshare.com/files/225872523/AF.xlsm" rel="nofollow">http://rapidshare.com/files/225872523/AF.xlsm</a><br>Excel  -2003: <a href="http://rapidshare.com/files/225872522/AF.xls" rel="nofollow">http://rapidshare.com/files/225872522/AF.xls</a><br><br>I hope it's ok now :-)<br><br>Walter<br></div>
+<h2>Reply by Joshua</h2>
+<div class="meta">2009-04-27 13:40</div>
+<div class="content">Walter,<br><br>Yes, it works!  Thank you so much! :-)<br><br>Joshua</div>
+<h2>Reply by Derek D</h2>
+<div class="meta">2009-05-19 13:07</div>
+<div class="content">I've decided to give this a go as it seems very simple and effective, thanks Walter.</div>
+<h2>Reply by Derek D</h2>
+<div class="meta">2009-05-22 13:35</div>
+<div class="content">Just a note to say this is working very well for me, many thanks again Walter.<br><br>Regards,<br><br>Derek.</div>
+<h2>Reply by Donna Whitehouse</h2>
+<div class="meta">2009-05-22 15:11</div>
+<div class="content">Hi Walter,<br><br>I've just downloaded your s/s and transferred my existing list into the work sheet, comprising 80 odd items.  However, I've just glanced at the back-up sheet, and noticed it has only got a back up of the first 30 items (ie column a). I'm using the 2007 version.<br><br>Is this me, or is this how it is supposed to work?<br><br>Thanks<br><br>donna</div>
+<h2>Reply by Walter</h2>
+<div class="meta">2009-05-24 10:10</div>
+<div class="content">Hi Donna,<br>The Backup sheet gets updated only when using CTRL-Shift-A (rearrange).<br><br>Lets say the list is set to 30 lines per "page" (column), and the you rearrange it to 40, then the backup will show 30 lines.<br>Notice that there's no formatting, so the columns will be shown with standard width, etc.<br><br>Try using rearrange and if you find any problem let me know.<br><br>I'm glad some of you are using the implementation :-)<br><br>Walter</div>
+<h2>Reply by Donna Whitehouse</h2>
+<div class="meta">2009-05-27 16:07</div>
+<div class="content">Hi Walter,<br>Thanks for that update, I hadn't done a rearrange, so hadn't appreciated that it was linked to that.<br><br>I do have one other problem that I'm hoping you can help with.  If I Pause a task, it takes me to the newest item on the list (ie the item that's just been re-added at the end). I then have to go through my whole list (currently 4 pages) to find the item I've just crossed off to consider the next item (and I may have to do this a number of times, if I've re-added it several times).  I thought that the Ctrl-Shft-R command would do this, but it doesn't.  <br><br>If you can help, that would be great.</div>
+<h2>Reply by Derek D</h2>
+<div class="meta">2009-06-29 22:08</div>
+<div class="content">Walter, will you be updating the excel sheet for AF2?<br><br>Many thanks,<br><br>Derek</div>
+<h2>Reply by Walter</h2>
+<div class="meta">2009-07-1 9:12</div>
+<div class="content">Hi Derek,<br><br>Yes, I'm working on it. I want it to support both AF and AF2 transparently (though I'm converting to AF2 quicker than I thought).<br><br>Will post a link asap :-)<br></div>
+<h2>Reply by Derek D</h2>
+<div class="meta">2009-07-2 23:31</div>
+<div class="content">Great! Thanks Walter.</div>
+<h2>Reply by Mike</h2>
+<div class="meta">2009-07-3 12:03</div>
+<div class="content">Walter,<br><br>I'm in the midst of converting my ListPro tasks to Excel.  I have not done all of the whizbang that you have to make a nice user interface.  My purpose was to just implement metrics so I could keep a history of how the system was working.  If it interests you, it might be useful to add that kind of thing.  Here is a preliminary list of things I'd want to track:<br><br>- Number of currently open tasks<br>- Number of closed tasks (total and for this month or since some parametrized date)<br>- Number of dismissed tasks (as above)<br>- For each task (days active, age when closed, age when dismissed)<br>- Average and maximum ages for the above (for the total and this month or since some date)<br><br>I'm sure you could think of other interesting metrics.  My thought was to have a second "sheet" which was basically a table by day so I could see how things were working.  I might even go hog wild and do some graphing ;-)<br><br>Basically I want to be able to ask the question: "If I changed the dismissal rule this way, what would be the throughput, velocity, maximum age of items, etc.?  How would it change?""  As it is now, I FEEL as if task are aging less before they are handled, in AF2, but I don't have any objective data for why I feel that way.<br><br>Let me know your thoughts.  I'll keep hammering on what I'm doing and maybe I can just add to what you come up with.  In which case, I'll shave.</div>
+<h2>Reply by Mike</h2>
+<div class="meta">2009-07-3 12:21</div>
+<div class="content">Walter,<br><br>I guess I'm a bit dim this morning.  I should have gone to look at your implementation again.  The way you have it implemented (with only one column for each page) I can see that what I am trying to do will not fit.  Oh well, back to my Excel sheet where I have multiple columns per task and go on down with the rows forever ;-) ;-)</div>
+<h2>Reply by JD</h2>
+<div class="meta">2009-07-3 14:43</div>
+<div class="content">Walter - I just had a look at your set up, and would like to add my thanks for sharing your work. This will be very useful in my work with other members in the team.</div>
+<h2>Reply by Jens</h2>
+<div class="meta">2009-07-6 9:17</div>
+<div class="content">Walter,<br>thanks for sharing. I'm trying your xls at work (private stuff I prefer paper).<br>If you think about more features I would suggest to add something like a due-date management (e.g. to give a task a due date and if it's due or overdue the fontcolor changes).</div>
+<h2>Reply by Greenchutney</h2>
+<div class="meta">2009-07-7 1:37</div>
+<div class="content">Walter,<br>I decided to move from OneNote to Excel. Your spreadsheet has been fantastic. I just made a small tweak to change the font color when the item is complete so the incomplete items stand out better. It has been working great! <br><br>Eagerly awaiting your updates for AF2. Thanks for the wonderful spreadsheet.<br><br>GC</div>
+<h2>Reply by Jens</h2>
+<div class="meta">2009-07-7 10:07</div>
+<div class="content">Greenchutney,<br><< I just made a small tweak to change the font color when the item is complete so the incomplete items stand out better. >><br><br>I had tried this also, but it doesn't work. I had added in the module 'global stuff' the <br>Public Sub SetTaskStatus<br>   ...<br>   Case TaskStatuses.TaskStatusComplete<br>   ...<br>   ActiveSheet.Cells(lngRow, intCol).Font.Color = RGB(128, 128, 128)<br><br>I'm far from being an expert in VB-Scripting...<br>Can you give me a hint?<br>Bye, Jens</div>
+<h2>Reply by Jens</h2>
+<div class="meta">2009-07-7 12:45</div>
+<div class="content">Walter,<br>how can I avoid that SHIFT-STRG-A (Rearrange current List) will delete comments?<br>Thanks, Jens</div>
+<h2>Reply by Jens</h2>
+<div class="meta">2009-07-7 12:47</div>
+<div class="content">... and will be also copied when "stop working on task"</div>
+<h2>Reply by Greenchutney</h2>
+<div class="meta">2009-07-7 18:16</div>
+<div class="content">Jens, <br>I am not a vbcode expert either :) <br><br>You are correct -- setting the font in that code doesn't work. The font color appears to be reset later on. I used the following instead to mark the items more clearly. Don't use Green because it's being used to mark a working task. <br><br>      ActiveSheet.Cells(lngRow, intCol).Interior.Color = vbCyan<br><br>Walter please correct me if I am wrong.<br></div>
+<h2>Reply by Walter</h2>
+<div class="meta">2009-07-8 15:32</div>
+<div class="content">Wow!<br><br>I've been really busy and couldn't check the forum for a couple of days. I apologize for not replying before.<br><br>I couldn't update the worksheet to AF2 until now, and I've been using it "manually" myself (drawing the separator line). I've just added a shortcut to do this: Ctrl-Shift-L draws a red line, another hit will remove it.<br><br>I've been thinking about automating the whole thing like this:<br><br>- Save somewhere (in a hidden sheet?) when was the last time I opened the file.<br>- When I open it again, check If more than a day has passed since the last time. If so, look for the last "on notice" line, and dismiss automatically the tasks before it that weren't completed.<br>- Draw the next line automatically.<br><br>But I have the feeling that it'd be taking it too far, because that way I wouldn't "internalize" the situation, if you know what I mean, and it would affect the system negatively. The program would know my tasks better that me. I also want to keep the "manual" spirit of AF/2 to some extent. <br><br>So I decided not to do it ;-)<br><br>I think that Ctrl-Shift-L shortcut is enough. If you have further ideas I'll be glad to hear them.<br><br>I'll answer now your posts.<br></div>
+<h2>Reply by Walter</h2>
+<div class="meta">2009-07-8 15:38</div>
+<div class="content">Mike:<br><br>"I'm in the midst of converting my ListPro tasks to Excel. I have not done all of the whizbang that you have to make a nice user interface. My purpose was to just implement metrics so I could keep a history of how the system was working. If it interests you, it might be useful to add that kind of thing. Here is a preliminary list of things I'd want to track:<br><br>- Number of currently open tasks<br>- Number of closed tasks (total and for this month or since some parametrized date)<br>- Number of dismissed tasks (as above)<br>- For each task (days active, age when closed, age when dismissed)<br>- Average and maximum ages for the above (for the total and this month or since some date)"<br><br><br>I could provide a certain amount of information, like number of open tasks, number of dismissed tasks... For the other metrics you mention, I would have to keep a lot more information about each task.<br><br>It is possible (as you mention, with an auxiliary sheet), but from my experience, it'd be overkill for Excel.<br><br>Maybe I should consider building a small app... though I find that the current Excel thing works (for me at least) because its simple.<br><br><br></div>
+<h2>Reply by Walter</h2>
+<div class="meta">2009-07-8 15:50</div>
+<div class="content">Jens,<br><br>About adding "due date": Please read my answer above to Mike. I would have to store it somewhere else (to hide it from the list), and it'd complicate things.<br><br>Additionally, I would like to keep it as close to the original system as possible. The (AF1) instructions state that one should keep these tasks in a calendar, and it works for me, at least.<br><br>Maybe if I create an application I would add it as an option for those who'd like to use it.<br></div>
+<h2>Reply by Walter</h2>
+<div class="meta">2009-07-8 16:16</div>
+<div class="content">Jens and Greenchutney:<br><br>About changing the font color. Both of your VBA examples appear to be correct.<br><br>It's not working since always after changing a task's status the procedure CheckColumnStatus is invoked.<br><br>It's purpose is to "dim" entire columns when all its tasks are either complete or dismissed. The font color is used for this (All the tasks' turn to light gray). When a column is still "active" all the tasks are set to black.<br><br><br>Jens, about copying comments. I'll check how can I do that. I use them quite a bit as well.<br><br>Walter<br><br><br>PS: Thanks for the kind words!<br></div>
+<h2>Reply by Jens</h2>
+<div class="meta">2009-07-8 16:17</div>
+<div class="content">Walter, a small portable app without bells an whistles would be great!!!</div>
+<h2>Reply by Mike</h2>
+<div class="meta">2009-07-8 20:33</div>
+<div class="content">Walter,<br><br>Thanks for the reply.  I agree, your simple approach is just what the doctor ordered.  ;-)<br><br>My approach (and one which allows for the kind of metrics which interest me) is to have a single sheet for all tasks (more like AF2 than AF1, now that I think about it).  Doing it that way, and including Date Entered, Date Completed, and Date Dismissed, I can do just about anything I want.  I have not spent time on it since I wrote you (too much to actually DO ;-) but I plan to do the metrics on a second sheet because I want the report to be a big table and I want to control the column widths.  It is relatively simple to build a table of the dates in July (or any other moths(s)) then for each row, compare the date with dates on the first sheet and do counts, sums, averages, etc.<br><br>If I want to get info on pages open and closed, etc. I'm going to have to get just a tad more fancy, but I think it is doable.  What I'm looking for is a snapshot of how my list is "going".  Have I started to dismiss more or less?  Have I been completing more or fewer tasks?  Am I adding more tasks or fewer?  What was the greatest number of open tasks on any date?  The fewest?<br><br>You can kind of see where I'm going with this.  As of now, I can "feel" that the AF2 list is moving faster, but I'm not using ANY dismissal rules ... except that if I decide that something is not going to get done (because it is moot, for example) I dismiss it.  My reason is that I have no way right now of measuring alternative dismissal strategies and I need to be able to do that before I start dismissing things.  For me, the overhead of dismissing and scanning lists of someday/maybe to add them back is not something I want to incur right now.  Once I get my sheet up and running, I'm going to have "N" days in July where I used no dismissal rules.  Then I can compare the AF2 rule with the AF1 rule and perhaps combine both of the rules (which really ought to speed things up.)  Anyhow, lacing a means to tell for sure, I'm on hold for now, just recording and annotating dates in my pocket AF list against the day when I'll have the tool to measure my progress.<br><br>I'll let you know when I get it done and you'll be welcome to have it ... if it suits you.<br><br>Thank you again for taking the initiative to produce a very nice and useful too.</div>
+<h2>Reply by Walter</h2>
+<div class="meta">2009-07-19 13:14</div>
+<div class="content">Hi,<br><br>I apologize for the delay, I'm having some crazy days :-/<br><br>I just posted the new version. It only includes the new command:<br><br>CTRL-Shift-L: Insert AF2 dismissal line<br><br>....but also addresses the problem with the comments, reported by Jens. Now they are copied with a task after "pausing" it, and also when rearranging the list.<br><br>I'm tempted to remove the right-click menu (for some reason I feel it doesn't fit). If somebody uses it I'll keep it, though.<br><br>Download link: <a href="http://rapidshare.com/files/257541636/AF.xls" rel="nofollow">http://rapidshare.com/files/257541636/AF.xls</a><br><br>Walter<br><br></div>
+<h2>Reply by Jens</h2>
+<div class="meta">2009-07-20 20:36</div>
+<div class="content">Walter,<br>thanks a lot for the update.<br>If the right-click menue doesn't make extra efforts, please keep it...<br></div>
+<h2>Reply by Jens</h2>
+<div class="meta">2009-07-21 11:33</div>
+<div class="content">Walter,<br>is it ok to simply copy tasks from the old list to your new AF.xls?</div>
+<h2>Reply by Walter</h2>
+<div class="meta">2009-07-22 13:31</div>
+<div class="content">Hi, Jens<br><br>Yes, it should be. Just configure the "pages" to have to same amount of rows.<br><br></div>
+</article>
+    </main>
+    <footer>
+        <p>Archive built from Mark Forster's blog and forums</p>
+    </footer>
+</body>
+</html>

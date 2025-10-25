@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fast FVP</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../blog_index.html">Blog</a>
+            <a href="../fvp_forum_index.html">FVP Forum</a>
+            <a href="../general_forum_index.html">General Forum</a>
+        </nav>
+    </header>
+    <main>
+<article>
+<h1>Fast FVP</h1>
+<div class="meta">Posted: 2016-12-21 12:25</div>
+<div class="content"><p>In <a href="../blog/Systematic, Fast and Flexible.html">Sunday’s post</a> I said that <a href="http://markforster.squarespace.com/blog/2015/5/21/the-final-version-perfected-fvp.html">The Final Version Perfected (FVP)</a> was systematic and flexible but not fast. The lack of speed was due to the fact that the scanning algorithm involves often having to repeatedly scan most of the list.</p>
+<p>So I set out to find a way of making FVP fast. This would obviously require making some changes to the scanning algorithm. As usual when I’m dealing with problems of this nature, I found that the answer was staring me in the face.</p>
+<p>All I had to do was to change the algorithm so that whenever a task is dotted which I am ready to do right now I stop scanning and do it. That’s all there is to it - it’s as simple as that, but the effect on the speed of the system is enormous.</p>
+<p>In order to achieve this, the question asked during the scanning becomes a double question:</p>
+<p style="padding-left: 30px;"><em>1) Am I ready to do this now?</em></p>
+<p>If the answer is “yes”, do it.</p>
+<p>If the answer is “no”, ask the second question.</p>
+<p style="padding-left: 30px;"><em>2) What do I want to do more than this?</em></p>
+<p>In practice these get abbreviated to:</p>
+<p style="padding-left: 30px;"><em>1) Ready?</em></p>
+<p style="padding-left: 30px;"><em>2) More?</em></p>
+<p>Apart from this alteration the scanning proceeds exactly as it does in standard FVP. This simple change saves an enormous amount of scanning time.</p>
+<p><strong>A word of caution</strong></p>
+<p>It seems a bit strange to say this but this system is almost too fast. It’s like trying to ride a thoroughbred racehorse when you’re only used to a pony. I have found that I have a tendency to do so much work with it that I actually end up exhausting myself. So be sure to take plenty of breaks. Good luck!</p></div>
+<hr>
+<h2>Comments (34)</h2>
+<div class="comment">
+<div class="comment-meta">Pat - 2016-12-21 13:57</div>
+<div>So do you essentially only have a chain of 1 selected task?  Couldn't you condense your two questions into one, specifically: Do I want to do this now (yes/no)?  When you action your selected task (either completing it or re-entering if not done) where do you resume your scan (where you left off or at the top)?<br><br>Sorry for the peppering of questions, just want to make sure I understand.</div>
+</div>
+<div class="comment">
+<div class="comment-meta">Ryan - 2016-12-21 14:41</div>
+<div>For me, it's absolutely crucial that the first task is dotted as a rule. That's the only way I defeat procrastinating on the task and what I love about FVP. The whole point is that I may choose to be "ready" for another task further down the list, but eventually I will have to work my way back up to that first task. Otherwise, if I just ask "Am I ready to do this now?" and decide "No", I've basically chosen to procrastinate and may never get around to it. <br><br>But then if the top task must always be dotted, and the first dotted task must get done, wouldn't this just end up meaning that you work through your list from top to bottom? Is there even an algorithm anymore?</div>
+</div>
+<div class="comment">
+<div class="comment-meta">Mark Forster - 2016-12-21 15:22</div>
+<div>Pat:<br><br><< So do you essentially only have a chain of 1 selected task? >><br><br>No, the chain can be any length just as in standard FVP. The only difference is that you cease scanning if and when you reach a task that you are ready to do right now, this minute. With standard FVP you would go on scanning until you reached the end of the list.<br><br><< Couldn't you condense your two questions into one, specifically: Do I want to do this now (yes/no)? >><br><br>No<br><br><< When you action your selected task (either completing it or re-entering if not done) where do you resume your scan (where you left off or at the top)? >><br><br>You do it as in standard FVP except that you ask the two questions instead of just the one. That is to say you go back to the dotted task before the one you have just actioned and ask "Ready?". If you are not ready to do it, then you ask "More?" and scan from the task you have just actioned.</div>
+</div>
+<div class="comment">
+<div class="comment-meta">Mark Forster - 2016-12-21 15:31</div>
+<div>Ryan:<br><br><< For me, it's absolutely crucial that the first task is dotted as a rule. >><br><br>It is. The rules are the exactly the same as for FVP except that you you stop scanning when you have selected a task that you are ready to do right now this minute.<br><br><< That's the only way I defeat procrastinating on the task and what I love about FVP. The whole point is that I may choose to be "ready" for another task further down the list, but eventually I will have to work my way back up to that first task. >><br><br>That's exactly how it's supposed to work.<br><br><< But then if the top task must always be dotted, and the first dotted task must get done, >><br><br>You've read it wrong. The first dotted task doesn't have to be done immediately, nor the second, nor the third. The only ones that have to be done immediately are the ones which you are ready to do right now this minute.<br><br><< wouldn't this just end up meaning that you work through your list from top to bottom? Is there even an algorithm anymore? >><br><br>No, you've got it wrong. The chain can be any length just as in standard FVP. The only difference is that you cease scanning if and when you reach a task that you are ready to do right now this minute. With standard FVP you would go on scanning until you reached the end of the list.</div>
+</div>
+<div class="comment">
+<div class="comment-meta">Pat - 2016-12-21 16:07</div>
+<div>Thanks for the clarifications, Mark.</div>
+</div>
+<div class="comment">
+<div class="comment-meta">JD - 2016-12-21 16:11</div>
+<div>I can't wait to sink my teeth into Fast FVP.<br><br>Ironically (or fortuitously) I had moved to FVP as I found The Next Hour limited in its ability to capture all my commitments. That was its only downside, otherwise the Next Hour was a very focused way of working.<br><br>Dropping the full list scan is a huge deal. It will be fast for sure. The ready to do it part where I believe intuition will have to play its part in suggesting to you that it is indeed the best task to do now, in preference to the tasks further down the list.<br><br>But I think my intuition will be primed to make this  decision because the prior act of writing down your open commitments in the list will tell whether it is the best task this minute, or whether there is a more important consideration further down the list.<br><br>Leaving aside the theory, I will try it out whole heartedly.<br><br>Thank you Mark for taking the time to share your systems through your trying times.</div>
+</div>
+<div class="comment">
+<div class="comment-meta">Mark Forster - 2016-12-21 16:22</div>
+<div>JD:<br><br>"The ready to do it part where I believe intuition will have to play its part in suggesting to you that it is indeed the best task to do now, in preference to the tasks further down the list."<br><br>However do note that once you have done the task you will often be continuing your scan further down the list. One of the things I'm noticing while doing this method is how well my actioned tasks are distributed around the list as a whole.</div>
+</div>
+<div class="comment">
+<div class="comment-meta">james220 - 2016-12-21 22:20</div>
+<div>What do you mean by ready?  Do you mean physically ready or mentally ready?</div>
+</div>
+<div class="comment">
+<div class="comment-meta">nuntym - 2016-12-21 22:24</div>
+<div>"What do you mean by ready? Do you mean physically ready or mentally ready?" - I would say both, james220. <br><br>Anyways Mark I hope you are doing good.  I'm giving this a go!</div>
+</div>
+<div class="comment">
+<div class="comment-meta">Mark Forster - 2016-12-21 23:53</div>
+<div>james220:<br><br>As nuntym has said, the answer is "both". The task is ready to be done, and you are ready to do it.</div>
+</div>
+<div class="comment">
+<div class="comment-meta">Seraphim - 2016-12-21 23:59</div>
+<div>One problem we've discussed with all list-based systems is the tendency to build resistance because of repeatedly rejecting tasks.<br><br><a href="../blog/A Thought About Procrastination.html" target="new" rel="nofollow">http://markforster.squarespace.com/blog/2016/7/10/a-thought-about-procrastination.html</a><br><br>It occurs to me that the problem is not only with *rejecting* tasks, but also in *deferring* tasks that are ready to be done now. The problem is in seeing a task, thinking about it, making an assessment, and after all that, still leaving the task unactioned. Even when all that takes only a fraction of a second, it still takes mental effort and still produces resistance.<br><br>It seems your new rule would relieve this problem, and reduce the mental overhead significantly.</div>
+</div>
+<div class="comment">
+<div class="comment-meta">michael - 2016-12-22 17:53</div>
+<div>Interesting! Worth adding some speculation on how "Am I ready?" might work I think.<br><br>According to Psychology Today..."Your head brain reasons, analyzes, synthesizes, and makes meaning of what is perceived. Your heart brain activates based on how the presenting situation relates to your dreams and desires, including your hopes, disappointments and feelings of betrayal if you feel promises were broken. Your gut brain reacts when your fear is triggered, whether the threat is real or you are just afraid of letting go of what you now have. "<br><br>- <a href="http://www.psychologytoday.com/blog/wander-woman/201409/how-use-your-intuition" target="new" rel="nofollow">http://www.psychologytoday.com/blog/wander-woman/201409/how-use-your-intuition</a></div>
+</div>
+<div class="comment">
+<div class="comment-meta">Don R - 2016-12-22 23:44</div>
+<div>I am really liking this system. It has me doing all kinds of useful things all day long, at home and at work.  I am doing and getting started on all kinds of things I would not have otherwise. It lifts a huge mental load off of deciding what to do next. I am almost always doing something useful, and there's no effort to scan the list. There is a clear feeling of when I'm working on the list and when I'm not productive doing something else, and I keep coming back to the list.  Things that I would normally skip over in a catch-all list, I end up thinking "Am I ready to start this? Well, I could spend a few minutes checking on X, or thinking about Y related to this", and just like that I am doing something useful without having to motivate myself.  I'm gushing over it, but I think this is really something different.</div>
+</div>
+<div class="comment">
+<div class="comment-meta">Mark Forster - 2016-12-23 0:15</div>
+<div>Don R:<br><br>Sounds like you're having the same sort of experience with this system as I'm having.</div>
+</div>
+<div class="comment">
+<div class="comment-meta">Eurobubba - 2016-12-24 0:45</div>
+<div>Seems like it would be a good idea to begin the process by scanning the entire list once, just to make sure you're not forgetting anything urgent.</div>
+</div>
+<div class="comment">
+<div class="comment-meta">Mark Forster - 2016-12-24 8:31</div>
+<div>Eurobubba:<br><br>Yes, that's my normal practice whatever system I'm using.</div>
+</div>
+<div class="comment">
+<div class="comment-meta">Jesse - 2016-12-24 17:52</div>
+<div>This is great. I've been using Fast Final Version, which is just slightly different, and was proposed on the forums in July ( <a href="../fvp_forum/Fast Final Version.html" target="new" rel="nofollow">http://markforster.squarespace.com/fv-forum/post/2619857</a> ).<br><br>I've had better success with that for the last couple of months than any version of a No-List or FVP.<br><br>I'm happy to be able to continue using my current list and try this out. I may amend the "What do I want to do more than this?" question to "What will help me do X?", trusting the "Am I ready to do this now?" question to take care of the timeliness.<br><br>I also was wondering if this method would work questionless and then I realized that would turn it into Fast Final Version, not Fast FVP. (These names are so similar!)<br><br>Anyway, thanks!</div>
+</div>
+<div class="comment">
+<div class="comment-meta">Nanda - 2016-12-24 18:17</div>
+<div>Hello, just read this blog and found very informative and useful.<br><br>Thanks, Mark.<br><br>Do you use paper or electronic for your Fast FVP?<br><br>Thank you</div>
+</div>
+<div class="comment">
+<div class="comment-meta">Mark Forster - 2016-12-25 8:21</div>
+<div>Nanda:<br><br>Personally I use paper, but I'm sure you can adapt it to electronic if you want to.</div>
+</div>
+<div class="comment">
+<div class="comment-meta">Sarah Jane - 2016-12-27 4:55</div>
+<div>Are you making a new list each day?</div>
+</div>
+<div class="comment">
+<div class="comment-meta">Mark Forster - 2016-12-27 17:30</div>
+<div>Sarah Jane,<br><br>I'm not, but there's no reason why you shouldn't if you prefer to.</div>
+</div>
+<div class="comment">
+<div class="comment-meta">Christian G. - 2017-01-11 15:20</div>
+<div>Just returned to (Fast) FVP after using my own system for a while. I have one question: why do I start the scan after finishing a task and being still not ready for the next dotted up ther chain from the just finished task and not the next dotted (finished "Call Joe" instead of "Read Magazine" at the end of your example)?</div>
+</div>
+<div class="comment">
+<div class="comment-meta">Mark Forster - 2017-01-11 16:30</div>
+<div>Christian G.<br><br>In order to follow my answer you will need to open <a href="../blog/Fast FVP - An Example.html" target="new" rel="nofollow">http://markforster.squarespace.com/blog/2017/1/6/fast-fvp-an-example.html</a> in a separate page.<br><br>Answer to your question:<br><br>You have just done Call Joe.<br><br>You are not yet ready to do Read Magazine so the question now is "What do I want to do before Read Magazine?"<br><br>You already know that you don't want to Read War and Peace first because that has already been scanned in response to that very question. The same would apply to any other tasks before Call Joe.<br><br>However the tasks after Call Joe were scanned with the question "What do I want to do before Call Joe?" Since Call Joe has now been done you need to re-scan them with the current question "What do I want to do before Read Magazine?"</div>
+</div>
+<div class="comment">
+<div class="comment-meta">james220 - 2017-02-12 0:03</div>
+<div>Something weird happened... What if you don't feel ready to do a task, but when you scan for a task you want to do more, you can't find one?  Do you just do the last dotted task like in normal FVP?</div>
+</div>
+<div class="comment">
+<div class="comment-meta">Michael B. - 2017-02-12 11:24</div>
+<div>james220:<br><br>Good question, James. I'm curious about this myself. I believe one would do as you say and do the last task, as there's nothing you want to do more than that further down the list. One can always add a task to the end and do that. Perhaps a break!</div>
+</div>
+<div class="comment">
+<div class="comment-meta">Mark Forster - 2017-02-12 12:19</div>
+<div>james220:<br><br><< Something weird happened. >><br><br>Actually it's not weird. It happens every time you reach the end of the list. The first question is really "Am I ready to do this now or would I prefer to do something else first if there's something available?"<br><br>But I wouldn't try to say all that to yourself!</div>
+</div>
+<div class="comment">
+<div class="comment-meta">Bogdan - 2018-04-6 15:49</div>
+<div>How do you reference info you would normally need?<br>I'm trying  to switch from a todo manager where I can hold "comments" inside each task to FVP and I don't know how to reference and where to store those comments when using pen and paper.<br>Sample tasks: record meals + comments: some meal names I can search for; a business opportunity and a link to it; research yoga programs + some program names / links.</div>
+</div>
+<div class="comment">
+<div class="comment-meta">Mark Forster - 2018-04-6 18:15</div>
+<div>Bogdan:<br><br>You can store them in something like Evernote, which syncs between your desktop/tablet and your phone. Give the note the same name as the task. put it in a notebook called Time Management List (or TML) and then you can write comments, put in links, add photos, whatever you like.</div>
+</div>
+<div class="comment">
+<div class="comment-meta">Asim Jalis - 2018-05-22 11:10</div>
+<div>If you find something urgent on the list that needs to get done where do you put it? How does it work with the process? I want to handle the urgent thing—but also not break out of the process.<br><br>Here are some approaches to this. <br><br>1. Put the item at the end of the list. Find the last dotted item. Scan down from the dotted item and dot anything that I would like to do more than the dotted item. The normal dotting process. This is so that when I am done with the urgent thing I can trust that the things above it are dotted correctly.<br><br>2. Put the urgent item in a separate “urgent” list. Before each item in the Fast FVP list check the “urgent” list to see if there is anything there that needs to be done. When I tried it it was disruptive to the Fast FVP flow.<br><br>3. Drop everything. Do the urgent thing. Then come back to the Fast FVP process. The problem here is that at some level everything seems urgent. This approach again breaks the Fast FVP flow.<br><br>Based on this #1 seems like the one that should work the best. Are there other approaches or variants that could work better?</div>
+</div>
+<div class="comment">
+<div class="comment-meta">Mark Forster - 2018-05-22 11:57</div>
+<div>Asim Jalis:<br><br>No. 1 is the correct way. This is one of the advantages of Fast FVP. It can respond to new additions to the list according to whatever degree of urgency they have. The same also applies to ordinary FVP.</div>
+</div>
+<div class="comment">
+<div class="comment-meta">John - 2019-08-17 0:59</div>
+<div>Tetris FFVP<br><br>Just thought I would add a post about my method, which is basically FFVP, but with a satisfying tetris effect because it is digital.  I use dynalist, which is similar to workflowy.  <br><br>I add tasks as normal, and I colour the task (equivalent to dotting).  I then cross it out when I have done it and add it to the bottom if it is repeating.  <br><br>What happens over time is that the oldest tasks end up being surrounded by a bunch of completed tasks.  I actually delete all tasks up to the first incomplete task, to manage my list size.  Inadvertently, this creates rewarding pressure for older tasks, because there have been times where just doing that first task on the list I have been putting off, will result in my list getting culled by 30 or more tasks because I have completed the 29 tasks after it already.  It gives a very satisfying tetris effect, like when you line up four rows of blocks and sneak that long one right into the slot and they all disappear!  :)</div>
+</div>
+<div class="comment">
+<div class="comment-meta">Erin - 2019-09-17 0:55</div>
+<div>John, <br>I've been using your ideas with Dynalist for a month now. I love it. Guess it is the color thing. Also I like the way the older things do stand out.<br><br>Are you using the free version or the pro?</div>
+</div>
+<div class="comment">
+<div class="comment-meta">Mark Forster - 2019-09-17 14:01</div>
+<div>Dynalist seems to be basically a rehash of the very simple and useful Outliners we used to have back in the days of DOS programs (before most of you were born). They went out of fashion when programs got more and more sophisticated and dependent on graphic interfaces (i.e. complicated, incomprehensible and unreliable).<br><br>I used to use PC-Outliner all the time. It can sort of be replicated on Evernote, but nothing like as well. Of course Evernote can do a trillion things PC-Outliner couldn't do, but I still miss the old program.<br><br>Thanks for bringing it to my attention.</div>
+</div>
+<div class="comment">
+<div class="comment-meta">Alan Baljeu - 2019-09-23 23:58</div>
+<div>I'm using Dynalist, have for well over a year.  It works very well for me.<br>Free version at the moment, though at an opportune time I will definitely go Pro.<br>(I'm not using FFVP though.)</div>
+</div>
+</article>
+    </main>
+    <footer>
+        <p>Archive built from Mark Forster's blog and forums</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AF Web Application</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../blog_index.html">Blog</a>
+            <a href="../fvp_forum_index.html">FVP Forum</a>
+            <a href="../general_forum_index.html">General Forum</a>
+        </nav>
+    </header>
+    <main>
+<article>
+<h1>AF Web Application</h1>
+<div class="meta">
+Author: Andreas | 
+Created: 2009-02-17 19:03
+ | Last Activity: 2009-02-27 13:11
+</div>
+<h2>Original Post</h2>
+<div class="meta">2009-02-17 19:03</div>
+<div class="content">Hello everyone,<br><br>I hope no one will hate me for this ... I stumbled upon AF through the Lifehacker article and was immediately hooked by its simple elegance. I started filling a lined pocket moleskine, but soon found myself wondering how I could use AF digitally. Since none of the available options seemed quite right to me, I decided to implement my own digital autofocus system.<br><br>I have reasonable skills in PHP and MySQL, so I downloaded the latest version of Zend Framework and got coding. Four days later, I had a basic system that does most things I need. Then I decided to share my work with anybody who was interested, added user accounts and uploaded it all to freshly registered domain.<br><br>So now I'd like to invite everyone to test it out: <a href="http://autofocus.cc" rel="nofollow">http://autofocus.cc</a><br><br>Features as far:<br>- Add tasks to end of list (duh)<br>- Configurable amount of tasks per page<br>- Re-add done or dismissed tasks with one click<br>- Jump to next page OR jump to next active page<br>- Forces you to do at least one task or dismiss page (Some people will not like that one)<br><br>Here is a screenshot: <a href="http://autofocus.cc/public/img/screenshot.png" rel="nofollow">http://autofocus.cc/public/img/screenshot.png</a><br><br>It's not perfect, it doesn't look too good yet (I designed it with mobile devices with low resolutions in mind, I plan to make a shinier and faster AJAX-Version), it may explode the moment more than two people it. With you help, I will try to bring it closer to being a good autofocus implementation, if ...<br><br>Mark, I hope you are okay with me doing this. I kinda got carried away, and now I realize that you might be against this. If you don't want me to host this service, especially under the autofocus.cc name or at all, I understand and promise to take it down immediately. I didn't want to steal your ideas or anything, I give you full credit on the page, I just thought it would be cool to have an AF web app instead of the nth GTD web app.<br><br>Regards,<br>Andreas</div>
+<h2>Reply by Christian N.</h2>
+<div class="meta">2009-02-17 19:23</div>
+<div class="content">Wow! Very cool! Haven't thoroughly tested it, but looks promising.<br><br>Good work!</div>
+<h2>Reply by Andreas</h2>
+<div class="meta">2009-02-17 19:33</div>
+<div class="content">@Christian: Thanks!<br><br>Here's where I want to go from here:<br><br>- Split into desktop and mobile version. Mobile version stays as is, perhaps adjustments for touch devices like IPhone, e.g. bigger buttons. Desktop version gets better layout and AJAX for faster response (currently it reloads the whole page on every action).<br><br>- Options to blend out done and dismissed items (optionally older than x minutes)<br><br>- Special "review dismissed" mode<br><br>- Option to be able to "cheat" (= jump to next page without doing/dismissing)<br><br>- Separate list for timed tasks, showing them above the af list *if* they are about to begin<br><br>If you have other suggestions or find some bugs, let me know! Thanks again!<br><br>Regards,<br>Andreas</div>
+<h2>Reply by Alex W.</h2>
+<div class="meta">2009-02-17 20:06</div>
+<div class="content">Very nice! And it probably already has almost everything you need to get AF up and running. Pretty impressive for a few days of work. A great alternative to "hacking" web apps that were meant for GTD or generic task management. Thanks! <br><br>My suggestions: <br><br>- Display the page creation date at the top of the list. The instructions say that you should write down the date every time you create the first new task of a day, but I don't think that's necessary. Maybe there could be the creation date of the first and last task of the page at the top. <br><br>- To leverage one of the major advantages of a digital solution, display both timed and immediate/"same day" tasks above/at the top of the AF list.<br><br>- Keyboard shortcuts.<br><br>Bug? Didn't find any except a strange error message when I tried to login for the first time (IE 7), but it didn't happen again.</div>
+<h2>Reply by Andreas</h2>
+<div class="meta">2009-02-17 20:12</div>
+<div class="content">Alex:<br><br>Thanks for the suggestions! I'll definitely add Dates and Keyboard Shortcuts (I love them in gmail) to my list. Time specific tasks are already on there. ;-)<br><br>Concerning browser compatibility, IE7 still has a few flaws, it seems to work as intended in Firefox 2 and 3, Opera 9.6, Chrome and Safari. I didn't dare to check it in IE6 yet. :-\</div>
+<h2>Reply by Alex W.</h2>
+<div class="meta">2009-02-17 20:13</div>
+<div class="content">Two more suggestions: <br><br>- A way to backup to a local plain text file on my own computer (very important for me, I won't use any web app without that). <br><br>- Add a combined "Done and Re-add" button (that does what it says) next to the "Done" button. That will save a click and a page refresh.</div>
+<h2>Reply by Andreas</h2>
+<div class="meta">2009-02-17 20:23</div>
+<div class="content">Alex:<br><br>User Backup's a good idea, too. How about, additionally to a manual download, the option to get your task list mailed to you daily or x times a day? You can just let your mail program filter it in some folder/label, and you're always up-to-date if something goes wrong.<br><br> I originally wanted to make special recurring tasks, that automatically get re-added. A separate button takes up valuable space - on a mobile phone that is, it's a non-issue for the desktop version.</div>
+<h2>Reply by Liz I.</h2>
+<div class="meta">2009-02-17 20:36</div>
+<div class="content">This is just my reaction. (Mark Forster is much more gracious and generous than I am). And I’m speaking as an artist. Taking Mark’s system and making another version of it publicly available without apparent permission or licensing goes beyond fair use and is, in my opinion, a violation of Mark’s intellectual property rights. Far better to contact Mark and discuss a possible web application with him first, before posting it publicly.</div>
+<h2>Reply by Alex W.</h2>
+<div class="meta">2009-02-17 20:41</div>
+<div class="content">Andreas, <br><br>emailing the task list is a great idea. That way, one could print out the whole list if necessary and take it out and about without needing web access. <br><br>Re the separate button: IMO, the saved load times would outweigh the use of additional screen estate. How about only using single letters for the mobile version instead of entire words (like "D" for "Done" and "R" for "Re-Add")? Dismissing, on the other hand, only needs a single button for the whole page, as implemented. An alternative would be using simple symbols instead of words/letters (like a checkoff mark, circled arrow etc.). <br><br>Regarding time-specific tasks: I can't find that function.</div>
+<h2>Reply by Andreas</h2>
+<div class="meta">2009-02-17 20:51</div>
+<div class="content">Liz:<br><br>Perhaps you're right. It was a bad decision on my part. I didn't think it through. I thought it would be okay as long as I don't charge anything for it and give Mark credit, but this probably doesn't fall under fair use. I should have checked with Mark beforehand, I will do so right now. I will take it down if he wants me to. I apologize for any inconvenience.<br><br>Alex:<br><br>Timed tasks are already on the todo list, not already implemented in the todo list.</div>
+<h2>Reply by Alex W.</h2>
+<div class="meta">2009-02-17 21:48</div>
+<div class="content">I'm not so sure a simple procedure is or can be copyrighted. Maybe it can be patented, but I'm not sure about that one either. My impression is that it is legal to use the method for derivative work after it has been originally published. <br><br>But after all, I'm not an IP lawyer. Mark, you should probably consult one ASAP. Not to go after Andreas, but to protect your work as effectively as possible.</div>
+<h2>Reply by Andreas</h2>
+<div class="meta">2009-02-17 21:56</div>
+<div class="content">I think if there ever was an idea worth of patenting, Autofocus is it. I mean, it's orders of magnitude more complex than these "a method to track customer purchases to generate recommendations" software patent crap corporations use to sue the hell out of each other.<br><br>Yes, I realize that point of view doesn't improve my case. :-)<br><br>I sent an email to Mark right after my last post. Now I can only wait. Even if I'm not technically infringing, which I doubt, it would be poor repayment for what Mark has given us all to go against his wishes. He wants it down, it goes down. Of course it would also be cool if he liked it and we could make it official.</div>
+<h2>Reply by Andreas</h2>
+<div class="meta">2009-02-17 22:02</div>
+<div class="content">Perhaps "complex" is the wrong word, I meant to say "useful". Sorry, I'm not a native speaker.</div>
+<h2>Reply by Alex W.</h2>
+<div class="meta">2009-02-17 22:18</div>
+<div class="content">There are a few things to be distinguished. Copyright is different from patents. And U.S. law is different from EU/UK/German law(s). And all of them are quite different from what software corporations, the RIAA, the MPAA et al. want to make people believe. What's in question here is European copyright law(s). The "track customer purchases to generate recommendations" stuff is U.S. patent law, which is not applicable in Europe.</div>
+<h2>Reply by Alex W.</h2>
+<div class="meta">2009-02-17 22:22</div>
+<div class="content">And, of course, there is one more thing: trade marks, like "Autofocus Time Management" could be, if it were protected.</div>
+<h2>Reply by Andreas</h2>
+<div class="meta">2009-02-17 22:27</div>
+<div class="content">I guess I don't know really much about all that. Sigh.</div>
+<h2>Reply by Peter</h2>
+<div class="meta">2009-02-18 1:10</div>
+<div class="content">Well I think it's brilliant stuff. I have my own solution in mindmanager but this is really neat.<br><br>All the trademark stuff...GTD has a million applications, I don't see how this is different. It only helps the idea spread. And I doubt if you can protect an idea like this. Why would you want to anyway. Ultimately just reinforces a scarcity mindset and it limits the distribution and success. <br><br>Some are against commercializing AF and others feel it should be protected. I think even copyrighting the instructions will inhibit it's potential. Doesn't it ultimately stem from the belief that others can take something away from you? By the same token you might be able to justify MF to pay royalties to all the thinkers he's studied that built on his knowledge that lead to his particular insights. Silly obviously...<br>just my 2cts</div>
+<h2>Reply by Christine B</h2>
+<div class="meta">2009-02-18 1:34</div>
+<div class="content">Hi Peter<br><br>Would be interested to know how you have worked your Mindmanager version.  I still use OneNote for AF which works brilliantly for me but use Mindmanager in my project planning.  Can you elaborate a bit on that......  perhaps another post?<br></div>
+<h2>Reply by Liz I.</h2>
+<div class="meta">2009-02-18 4:39</div>
+<div class="content">Peter, I agree that it's great when others are inspired by an idea and use it, extend it, etc.<br><br> I just think--and again, this comes from my own personal perspective--that taking the Autofocus system and extending/changing it to a web based system AND calling it "Autofocus" is an infringement. If someone came up with an an app named "Focus-Pocus" and publicized or marketed it as "a way to implement Autofocus" I'd probably think that's OK. "Things," for example, is a way to implement GTD but it isn't marketed as GettingThingsDone.com. <br><br>But, and again, speaking for myself, if I were the creator/maker of Autofocus, I'd expect to be asked for permission before someone put out an application branded as "autofocus.cc".</div>
+<h2>Reply by Andreas</h2>
+<div class="meta">2009-02-18 8:47</div>
+<div class="content">Liz:<br><br>As I said before, I understand your point of view and agree that it was rude and thoughtless of me not to check with Mark first.<br><br>That being said, I feel the need to point out that there are dozens of free unofficial GTD apps that are branded with the GTD: <a href="http://trgtd.com.au/," rel="nofollow">http://trgtd.com.au/,</a> <a href="http://monkeygtd.blogspot.com/," rel="nofollow">http://monkeygtd.blogspot.com/,</a> <a href="http://www.simplegtd.com/," rel="nofollow">http://www.simplegtd.com/,</a> <a href="http://www.gtdagenda," rel="nofollow">http://www.gtdagenda,</a> GTDTiddlyWiki, iGTD, GTDInbox etc. etc.<br><br>Of course, I'm only defensive because I feel pretty bad about this by now. <br><br>When I searched for domains to use for this, I was surprised to finde autofoucs.cc available and it seemed to good to pass up. I figured it would work like "autofocus.cc implements Autofocus Tme Management System". I even thought it might be nice to take the "cc" in the name literal and to make it open source under Creative Commons license. That of course is a step I definitely won't do without Marks permission.</div>
+<h2>Reply by Dlinked</h2>
+<div class="meta">2009-02-18 9:32</div>
+<div class="content">Let's get real folks: support Andreas rather than critizise him!<br><br><br></div>
+<h2>Reply by Dlinked</h2>
+<div class="meta">2009-02-18 9:34</div>
+<div class="content">Andreas: could you maybe keep a version history or smth on the site so one can see when you have made updates or changes?</div>
+<h2>Reply by Peter</h2>
+<div class="meta">2009-02-18 10:03</div>
+<div class="content">@Liz: You make a good point obviously. I think if Andreas was a corporation or business that came out with a primary intent of making money of a profitable idea, or a business model from the get go, I'd be thinking along those lines as well. <br><br>On a side note, autofocus is probably a standard term in the photography, isn't it? I'd reckon it's hard to protect a term like that even if one would want to.<br><br>@Christine:<br>When I started using Onenote (adore that program) I used it for task management, but then when I discovered mindmanager I realized that was even more flexible. My setup in mindmanager is fairly easy but requires some add-ons to Mindmanager to work best. I'm still tweaking it but will share it for other mindmappers when I've ironed it out. The beauty of it is that you can switch seemlesly between Project Management mode or AF mode...or even GTD mode. <br>For now I could send you a screenshot will give you an idea if you like? Just point me to an email address:)<br><br></div>
+<h2>Reply by Christine B</h2>
+<div class="meta">2009-02-18 10:34</div>
+<div class="content">Hi Peter<br><br>A screenshot would be great!  If you email me at mail@meovoto.co.uk I'll send you my normal email address.  Suspect we can swap OneNote tips too!</div>
+<h2>Reply by Alex W.</h2>
+<div class="meta">2009-02-18 10:38</div>
+<div class="content">It was not my intention to criticize Andreas, who handled this issue in a fairly decent way and already expressed his willingness to change the name of the service or event take it down completely (the latter would be a pity IMO). <br><br>But I stand by my advice to Mark to seek legal counseling (by someone specialized in intellectual property law).</div>
+<h2>Reply by Pascal D.</h2>
+<div class="meta">2009-02-18 12:41</div>
+<div class="content">My 2 cents on that topic: <br><br>Mark did let us know AF is free of usage, as in the same time, it belongs to him.<br><br>Why not (as in IS open source) let Andreas develop its AF solution, as long as he mentions cleraly on his site taht AF is a trademark... of Mark.</div>
+<h2>Reply by Peter</h2>
+<div class="meta">2009-02-18 13:07</div>
+<div class="content">Sent you an email Christine!</div>
+<h2>Reply by Mark Forster</h2>
+<div class="meta">2009-02-18 21:47</div>
+<div class="content">Just to be clear, I have no objection to Andreas or anyone else developing on-line implementations of AF. The name is not trademarked, nor have I any intention of trademarking it. The only thing which is copyrighted is the actual text of the instructions.<br><br>Having said that, I do appreciate it if people let me know if they are producing web versions, and I also like to be given credit with a mention of my website.</div>
+<h2>Reply by Andreas</h2>
+<div class="meta">2009-02-18 22:15</div>
+<div class="content">Thanks Mark. Well, there's one thing I did right - I linked to the instructions instead of repeating them and your name/website is on every page.</div>
+<h2>Reply by Mark Forster</h2>
+<div class="meta">2009-02-18 22:16</div>
+<div class="content">Andreas:<br><br>That's fine. I've got "Look at Andreas' system" on my list,</div>
+<h2>Reply by Andreas</h2>
+<div class="meta">2009-02-18 23:36</div>
+<div class="content">Okay, I just rolled out a minor updated. Some internal fixes, new form markup, and optional page creation date display (check the box in the setting). I also added change history and known issues sections to the homepage.<br><br>Let me know if anything goes awry.</div>
+<h2>Reply by Will</h2>
+<div class="meta">2009-02-19 7:19</div>
+<div class="content">Very nice.<br><br>How about:<br>- a warning if you click on "next page" without doing any of the tasks on a page<br>- putting the task entry line at the top of each page<br>- a button to clear a page to a rejected list<br>- a flag on each task to indicate the one you're working on and<br>- an "open tasks only" view - I don't usually want to see closed tasks<br><br>Some of these are probably easier than others.<br><br>I hope the wave of enthusiasm keeps sustaining your effort, Andreas.<br><br>All the best,<br><br>Will</div>
+<h2>Reply by Andreas</h2>
+<div class="meta">2009-02-19 8:29</div>
+<div class="content">Will:<br><br>- a warning if you click on "next page" without doing any of the tasks on a page<br><br>That's already there - but only if the page has still active tasks and is not the last page.<br><br>- putting the task entry line at the top of each page<br><br>I will do that, thanks.<br><br>- a button to clear a page to a rejected list<br><br>If you click "next page" or "next active page" on a blocked (= at least on active task, not the last page, smalll b in to top right corner), you will be asked if you want to dismiss the page,<br><br>A special "review dismissed" page is in the making (see a previous post)<br><br>- a flag on each task to indicate the one you're working on and<br><br>I'll do that. I also plan to build in a little timer. You click on "do" -> Timer begins to count -> You click "done" -> It saves the time you worked on the task<br><br>- an "open tasks only" view - I don't usually want to see closed tasks<br><br>Options to blend out done and dismissed items (optionally older than x minutes so you can still see freshly done tasks) are in the making (see a previous post). <br><br>Thanks for the feedback, keep it coming. I don't know how fast I can implement all changes, technically there are other important things I have to take care of. :-)</div>
+<h2>Reply by Andreas</h2>
+<div class="meta">2009-02-19 8:35</div>
+<div class="content">Has anyone got an Iphone or Ipod Touch and can check if the service a) looks okay and b) is usable (scrolling, buttons not too small etc)? Thanks!</div>
+<h2>Reply by Jonhello</h2>
+<div class="meta">2009-02-19 14:07</div>
+<div class="content">Each item appears a little too small on my iphone making it difficult to press on the correct line .  I believe if the distance between the item and the "done" box was shorten then it would appear larger on the Iphone.  But this is only a guess on my part.  <br><br>Thanks again Andreas for your work!</div>
+<h2>Reply by Jonhello</h2>
+<div class="meta">2009-02-19 14:27</div>
+<div class="content">There is a definite need for an undone button as it is easy to make a mistake on one's iphone (fat fingers and small script).</div>
+<h2>Reply by Andreas</h2>
+<div class="meta">2009-02-19 14:30</div>
+<div class="content">Jonhello: <br><br>I will put in an Option to double the button's height, that should help a little. Undo sounds like a good idea, too.</div>
+<h2>Reply by Stefano F. Rausch</h2>
+<div class="meta">2009-02-19 15:28</div>
+<div class="content">Nice shot so far Andreas!<br><br>What about the possibility to rephrase tasks and to automatically re-add them to the end of the list as well as to mark the old instance?<br><br>Furthermore, it would be nice to have an edit feature, should one have misspelled some words ... correction are for the time being not possible AFAICS ;)<br><br>Keep up the good work.<br><br>Cheers</div>
+<h2>Reply by Andreas</h2>
+<div class="meta">2009-02-19 15:38</div>
+<div class="content">Stefano:<br><br>Like Alex proposed I will add a "done + re-add" button. I'm not sure if it is good if it possible to edit tasks, it makes it possible to "cheat" in a way you can't in the paper based version. I see the point of rephrasing tasks on re-adding them, but perhaps that will be unnecessary once there is a "quick add" box at the top/bottom of each page. So you could just mark a task as done and rephrase it in the quick add box.<br><br>I'll see what I can do.</div>
+<h2>Reply by Andreas</h2>
+<div class="meta">2009-02-19 15:54</div>
+<div class="content">Jonhello:<br><br>Someone just send me screenshots from an Iphone and it really is very small. I thought it would look like it does in a normal browser resized to Iphone resolution, but the Iphone seems to do some shrinking of its own. There must be a way to tell it to not do that. I'll look into it. Shame I don't have one of those for testing.</div>
+<h2>Reply by Andreas</h2>
+<div class="meta">2009-02-19 16:10</div>
+<div class="content">Jonhello:<br><br>I may have a solution: I added a meta tag to forbid the iPhone to zoom out. Did it do something? :-)</div>
+<h2>Reply by Laurence</h2>
+<div class="meta">2009-02-19 17:51</div>
+<div class="content">Well done with the app, Andreas.<br><br>I had a think about the data structure for this a few weeks ago, regarding tasks which can be done in more than one location. Have you built in the facility to select multiple locations? The consequence in structure was that the line number had to be stored in each instance, to track whether the creation of a new page for that location was triggered.<br><br>There is also the issue of whether, if a cloning technique be used, to adjust all the other clones when one of them is ticked and perhaps copied to the end of the last list.</div>
+<h2>Reply by Andreas</h2>
+<div class="meta">2009-02-19 18:32</div>
+<div class="content">Laurence:<br><br>For now, there is only one list per account. I plan to add a multiple list feature in the future. So far I never thought about having a task on two lists at the same time.<br><br>SInce I use a relational database, I would implement that in the following way:<br><br>- a user-list (1:n) relation<br>- a user-task (1:n) relation (that's what I have now)<br>- a user-list (1:n) relation<br>- a task-list (m:n) relation<br><br>The app would then feature to operations for a task:<br><br>- move to other list<br>- copy to other list<br><br>Moving would remove the old task-list relation and create a new one, copying would also create the new relation but keep the old one.<br><br>If I then mark a task is done, it is marked done in all lists, since exists only once in the database.</div>
+<h2>Reply by Andreas</h2>
+<div class="meta">2009-02-19 18:40</div>
+<div class="content">Regarding creating page instances, I don't do that. ;-)<br><br>My lists are dynamically divided into pages depending on what the user sets his "items per page" setting to. I navigate them simple by using an offset: (pagenumber - 1) * items per page</div>
+<h2>Reply by Andreas</h2>
+<div class="meta">2009-02-19 23:32</div>
+<div class="content">Quick update:<br><br>- iPhone zoom is fixed<br>- New option: double button height (larger spot to touch on mobile devices)<br>- New option:short button captions (D for done, R for re-add, saves space on small screens)<br>- New option: combined done and re-add button for active tasks</div>
+<h2>Reply by ChrisK</h2>
+<div class="meta">2009-02-20 0:04</div>
+<div class="content">Nice work Andreas, it's coming along nicely (is this the first software written specifically for Autofocus?)<br><br>Speaking of which, if I manage to slot in some spare time sometime in the future, I'm also considering developing software to support AutoFocus, but I'm thinking of a desktop version rather than web based.  Would other people be interested in such an app? I'm guessing that a few of us might be a little nervous about putting some of our tasks into a web based system...</div>
+<h2>Reply by Lena</h2>
+<div class="meta">2009-02-20 2:03</div>
+<div class="content">I would be interested in a desktop (not web based) version because most of my to do items for work are confidential.  So anything online is not an option for me.</div>
+<h2>Reply by Jonhello</h2>
+<div class="meta">2009-02-20 5:08</div>
+<div class="content">Thank you, Andreas.  It looks great on the Iphone!  Good job.<br><br>I was wondering if the desktop and the web based couldn't be done together with the option of syncing the two.  This would make a powerful combo.  One wouldn't need to use the desktop or the website but many find it necessary to have both available and in sync.</div>
+<h2>Reply by Jonhello</h2>
+<div class="meta">2009-02-20 5:14</div>
+<div class="content">Bug report: The "readd" button isn't working both using my desktop browser (chrome) and the iphone.<br><br>Notice: Undefined variable: auth in /www/htdocs/w00af745/application/controllers/ListController.php on line 152<br><br>Fatal error: Call to a member function getIdentity() on a non-object in /www/htdocs/w00af745/application/controllers/ListController.php on line 152</div>
+<h2>Reply by Andreas</h2>
+<div class="meta">2009-02-20 8:02</div>
+<div class="content">Jonhello:<br><br>Mh, it is working for me. Have you tried logging out an logging in again? Also try clearing your browser cache (depending on the browser Shift+F5 or Ctrl+F5, I don't know about the iPhone).</div>
+<h2>Reply by Andreas</h2>
+<div class="meta">2009-02-20 8:06</div>
+<div class="content">Jonhello:<br><br>Okay, sorry, I was the one with the cache problem. It really was broken. :-)<br><br>Fixed it.</div>
+<h2>Reply by Laurence</h2>
+<div class="meta">2009-02-20 10:53</div>
+<div class="content">Hi Andreas<br><br>Your proposed structure for multiple lists (e.g. Home, Office, Errands) looks good and should work.<br><br>Good luck with the project!</div>
+<h2>Reply by Jonaz</h2>
+<div class="meta">2009-02-20 12:19</div>
+<div class="content">Actually liking the webapp more than I thought (I use every excuse to get to use a Moleskine... ;-)<br><br>Some feedback/ideas/thoughts:<br><br>- Setting to allow "cheating"<br>Even though I like being forced to do *something* on a page before being able to go to next page, I would appreciate a setting that allows "cheating" (so that I can go form page to page)<br><br>- Go to last (open) page<br>Perhaps this is just beacuse I am now trying out the webapp with a paperlist as well that I'd like to be able to go to the last page (to see what was the last task from the paper list I added to the webapp)<br><br>- Recently added tasks on Add task page doesn't seem to show the latest added tasks (at least not in any order I can descern)<br><br>Keep up the good work<br>/jonaz in stockholm</div>
+<h2>Reply by Nic</h2>
+<div class="meta">2009-02-20 12:59</div>
+<div class="content">I love web apps and this is looking nice. For me, I don't like being reliant on net connectivity in order to review / manage tasks. Have you considered adding offline features along the lines of google gears?<br></div>
+<h2>Reply by Andreas</h2>
+<div class="meta">2009-02-20 13:17</div>
+<div class="content">Jonaz:<br><br>Personally, I'm not sure if not being able to cheat is a good thing. But since it was requested more than once, I will put a cheat mode option in. I guess those who don't want to cheat must rely on their own force of will, like with the paper based version. ;-)<br><br>The recently added tasks are listed in reverse chronological order. The last task on your last page should be the first task in the recently added tasks list and so on.<br><br>Nic:<br><br>Yes, I have considered Gears. I just don't know anything about it yet it will probably take quite some time to implement. I am also pondering creating a standalone java application that could optionally be synchronized with the web application, like ChrisK and Jonhello proposed.</div>
+<h2>Reply by Joshua</h2>
+<div class="meta">2009-02-20 15:01</div>
+<div class="content">Andreas,<br><br>Java sounds great!  That would make it work on all major OSes, too.<br><br>Ever heard of BubbleTimer (www.bubbletimer.com)?  It's basically a very simple and stylish yet quite useful time tracking app (web based).  Anyways, what I was thinking is that in terms of UI design their concept might lend itself very well to AF.  The key components are simplicity and beauty.  While beauty lies in the eyes of the beholder and we could probably discuss simplicity from different angles, I in using BT have found them striking a great balance.  So I thought you might want to have a look at it and maybe get inspired.  <br><br></div>
+<h2>Reply by moises</h2>
+<div class="meta">2009-02-21 2:25</div>
+<div class="content">Andreas,<br><br>I've been on vacation--with only my Blackberry--until this evening. For some reason, I was unable to post here. But I was able to use your autofocus.cc application and it was working quite nicely. Thanks for creating it.</div>
+<h2>Reply by Miriam</h2>
+<div class="meta">2009-02-21 9:17</div>
+<div class="content">Just wondering if this application is available in Australia yet? I have been madly scrolling through my iphone but can't seem to locate anything, much to my dismay as I use my iphone daily - I often forget to take a notebook with me :D</div>
+<h2>Reply by Stefano F. Rausch</h2>
+<div class="meta">2009-02-21 11:41</div>
+<div class="content">Miriam: it's not an iPhone application, but a web based one ... ;)</div>
+<h2>Reply by Dan N</h2>
+<div class="meta">2009-02-21 12:40</div>
+<div class="content">One little thing I've noticed. When logging in, the button still says register. This could be confusing even though it's the only button.</div>
+<h2>Reply by Johan</h2>
+<div class="meta">2009-02-21 13:14</div>
+<div class="content">Finally a solution for us who are constantly worried that we forgot to reenter any tasks:-)<br>Many of the tasks I do involve web pages.<br>It would be great if the software automatically interpreted e.g.<br><a href="http://www.markforster.net/forum/" rel="nofollow">http://www.markforster.net/forum/</a><br>to become an actual link.<br>Now I have to manually copy the link.</div>
+<h2>Reply by Andreas</h2>
+<div class="meta">2009-02-22 3:52</div>
+<div class="content">Another update:<br><br>- Changed session storage from file system to database, should fix "permission denied" issue<br>- Added plain text export (export section on the settings page)<br>- Added “cheat mode” (go to next page without doing or dismissing tasks)<br>- Added option to hide done and dismissed tasks<br>- No “next page” and “next active page” if there's only one page<br><br>Dan:<br><br>The login button now says "login". ;-)<br><br>Johan:<br><br>I will add url recognition.<br></div>
+<h2>Reply by moises</h2>
+<div class="meta">2009-02-22 14:17</div>
+<div class="content">Andreas,<br><br>Can the "Add Task" field be on the same page as Show List? Perhaps up on top?</div>
+<h2>Reply by learning as I go</h2>
+<div class="meta">2009-02-22 15:10</div>
+<div class="content">Hi<br>This is my THIRD attempt at autofocus.  I signed up for the web app.  Within a minute I hit a stumbling block.  When I list a batching item, i.e. answer mail or want a "batch" type project task list, how do I create such a list? The web app is guided by number of items per page.  I don't see how to go to (or create) a subsequent page that's actually a batch of related tasks. My prime batch pages are my preplanned weekly check sheets and my daily checksheets.  I'd like to keep the entire system together, not separate.<br>Am I missing something, or am I expected to keep batch lists separate......yet another thing to keep track of .  If I'm going to keep trying to give autofocus a proper go, I don't want to quit simply because I don't understand a procedure.<br>How do other "planners" work this out both in general usage and using this web app?<br>(Three strikes: I'll be out....I'd really like to make it work simply because so many people are so enamoured over autofocus.  I must either be missing something or it simply doesn't fit my thinking and doing style.  Fingers crossed!)<br>learning as I go<br></div>
+<h2>Reply by learning as I go</h2>
+<div class="meta">2009-02-22 15:17</div>
+<div class="content">p.s.<br>In case I didn't articulate my difficulty with autofocus.  Tasks written randomly on a list overwhems by brain.  I can't remember them.  I need to see reasons and relations on the list itself because of short-term memory loss coupled with my normal thinking syle I've always had.  I can't use a list with random tasks.  My brain can't properly process it.<br>Maybe I'm a hybrid DIT'er.....but I still want to give autofocus one last go....... How do you list preplanned aims for the day? week? month? and batching lists?  Thank you in advance.<br>learning as I go</div>
+<h2>Reply by moises</h2>
+<div class="meta">2009-02-22 16:15</div>
+<div class="content">Andreas,<br><br>One thing I miss from my paper list is the dot I would put next to items that were being processed. I found it quite helpful, if I was interrupted, to see that dot to remind me what I was working on before the interruption.<br><br>I am thinking you'd need to add another button next to the "done" button. Maybe you or others have a more elegant solution.</div>
+<h2>Reply by Andreas</h2>
+<div class="meta">2009-02-22 16:47</div>
+<div class="content">Moises:<br><br>Quick task add for the list view is in the making.<br><br>I plan to *replace* the "done" button with a "do" button. Then you get the message "You're currently working on x" and there you can click "done".<br><br>learning as I go:<br><br>So far, my web application is a strict implementation of autofocus, which doesn't have batch pages or weekly/daily goals. Perhaps you should open a thread to discuss this with Mark and others who can perhaps help you with this, I'm not sure I can. Autofocus does follow a less structured approach, that is its strenght. I could be possible that it's just not compatible with your thinking structures / world view, I don't think there is "one system to rule them all". Everyone is different.</div>
+<h2>Reply by learning as I go</h2>
+<div class="meta">2009-02-22 19:28</div>
+<div class="content">Hi Andreas<br>Thank you for your reply.  I'm beginning to understand better.  Although I do plan my aims for the dday, week, etc, I also leave myself plenty of flex time.  Because I'm creative and extemporaneous........and disabled, I need flex time to allow for the unexpected aspects of the day to present themselves.  (Usually, these times are the best aspects as well!.....but, that doesn't involve referring to a list over and over to decide what to do.  Somehow I think I'm just not "getting" some aspect of it.........Maybe, your advice is golden...maybe my brain is hardwired differently.....(although I seem to intuit that somewhere between my planning and improvising tendencies......I might see where autofocus might fit.  I won't give up just yet.  Perhaps I'll alternate my usual methods with attempts at autofocus sprinkles between.......I WANT to experience what people are saying.....*blush*<br>learning as I go</div>
+<h2>Reply by Andreas</h2>
+<div class="meta">2009-02-22 20:13</div>
+<div class="content">learning as I go:<br><br>I wish you all the best with your autofocus trial. I think it's good that you don't want to give up on it too fast, but don't feel bad if you're struggling. Every system has aspects that make it more or less attractive to certain personality types. There are people who thrive on GTD, but I never got the hang of that. From what you wrote before it seems to me that you're getting good results with DIT, is that correct? If your current system is working, you don't have to get autofocus, but of course trying it can be an interesting experience that gives you one or two new impulses.<br><br>I'm actually currently bedridden. I had an accident several weeks ago in which I fractured my spine. Fortunately, there my spinal cord wasn't damaged, so I will be okay. But I have to lie about for quite some time, which left me somewhat depressed. Even before my accident I had procrastinated a lot, but lying in bed all day I stop doing pretty much anything and things began to pile up. Then I read about autofocus and decided to try it. Since then I unstuck many things that had weighed me down for months. I still have to lie in bed (I can use a notebook computer, that's how I developed the app), but now I have a sense of control over my life that I haven't had in a long time. I feel actually good. It's hard to describe. So for me, autofocus just works, it was just what I needed.</div>
+<h2>Reply by Andreas</h2>
+<div class="meta">2009-02-22 20:54</div>
+<div class="content">Update:<br><br>- Added option to change the password<br>- Added option to make URLs clickable</div>
+<h2>Reply by learning as I go</h2>
+<div class="meta">2009-02-22 23:30</div>
+<div class="content">Hi Andreas<br>I'm so sorry for you.....I will pray for your speedy as possible recovery because......like you I was in an auto accident....without naming all of my injuries, I'm stuck with spinal cord and periphial nerve damage along with brain injuries.  I definitely sympathize with you!  People don't understand that pain is a HUGE distraction and energy drain....(we won't even mention the mind games we need to employ to stave off depression and anger!  LOL!......I hope you recover before "Pain Personality sets in!  *blush*<br>I'm actually quite amazed that you can focus well enough to write code for programs!  Next time I bitch about my broken brain or body, I'll think of you writing code!  Thank you for inspiring me to continue trying!!!  Some days, stubborness to continue on and not "settle" for a whit less than we can eek out of ourselves actually keeps us feeling (sort of) decent about ourselves, yeah?  Writing code?  You are AMAZING!  Sometimes I need to look at my list to see if I showered yet!  LOL!<br>learning as I go<br>learning as I go</div>
+<h2>Reply by Andreas</h2>
+<div class="meta">2009-02-23 0:27</div>
+<div class="content">learning as I go:<br><br>Now I'm really sorry to hear about your injuries. I don't think I'm that amazing, as I said I was very lucky. I do have some pain from the fractured bone and tissue damage, but I can't imagine how much worse it must be if nerves are damaged. I let it get me down even though I knew I will be healthy again in a few months. So I think you deserve much more respect than me for coping with your situation.</div>
+<h2>Reply by learning as I go</h2>
+<div class="meta">2009-02-23 6:16</div>
+<div class="content">Hi Andreas<br>I'm so GLAD that you've got an exit from this waiting in your future!  I, too, am praying.  Barack Obama is championing some aspects of stem cell research....so there's hope for me as well!  Also.........pain is pain......sometimes our attitudes and bravery are cyclic.  Sometimes when I allow myself to privately cry and yell and curse my fate, it somehow washes it away and is replaced by new determination to keep on rolling!  It has taken me a lot of years to realize that it's OK to flush out the negativity that builds up inside of me....it's NOT a loss of my self-respect (so long as there are no witnesses!  LOL!).  In fact, I think of it as natural to care about myself enough to feel sympathy and resesntment about it all.  That same caring also provides me with the fortitude to work like hell to preserve my hopes, gratitudes and determination to uphold the best quality of life I can muster up for myself.......Just don't get too comfortable with giving in to the pain, lonliness, boredom and bleak outlook.........Get stubborn and fight against it like you're covering your own back in a brawl!  LOL!  It'll help you to keep feeling decent about yourself!  besides......you're writing code!  That still knocks me off my feet in amazement!<br>I've got my money on you winning this!<br>learning as I go</div>
+<h2>Reply by Mark Forster</h2>
+<div class="meta">2009-02-23 10:17</div>
+<div class="content">Andreas and Learning as I go:<br><br>Thanks for inspiring the rest of us!</div>
+<h2>Reply by Christine B</h2>
+<div class="meta">2009-02-23 11:03</div>
+<div class="content">Absolutely seconded!</div>
+<h2>Reply by David Coyer</h2>
+<div class="meta">2009-02-23 16:01</div>
+<div class="content">Great app so far. Looks really good on the iPhone now. Keep up the good work.<br><br>I would like to second, or third, the idea for separate lists. I have found a tremendous benefit from separating my physical lists: ie, office and home. <br><br>Thanks for your work.<br><br>David</div>
+<h2>Reply by learning as I go</h2>
+<div class="meta">2009-02-23 16:44</div>
+<div class="content">Hi Christine and Mark<br>*blush* pish posh!  I accept your kind regards with gratitude yet feeling a bit sheepish!  *blush*  After all, I'd venture to bet that no one on this forum is screwing up on learning autofocusTM as badly as I am!  *blush*<br>You'd do far better to place your faith in the guy who's writing code for autofocus!  LOL!  <br>(we're all rooting for you, Andreas!)<br>learning as I go</div>
+<h2>Reply by Krewetka</h2>
+<div class="meta">2009-02-23 18:28</div>
+<div class="content">one small suggestion : add this field for adding new tasks on the top of the page with list...it is really not necessary to have separate page for it and it interface will be much nicer & faster this way<br><br>some keybord shortcuts would be nice as well :)</div>
+<h2>Reply by Krewetka</h2>
+<div class="meta">2009-02-23 18:36</div>
+<div class="content">It would be also nice to have way to go through the pages even when "cheating mode" is turned off... but in this case you can only read items on other pages, not mark them as done...just instead of text "To move on, do one task or dismiss all on this page." there could be a text "you can't marked tasks as done now cause active page is page number X" :)<br><br>One of rules is "DO use common sense. If something comes up which needs doing immediately, do it immediately." so it would be good to have at least option to see all other tasks to control if there is something really important there :)</div>
+<h2>Reply by Andreas</h2>
+<div class="meta">2009-02-23 20:19</div>
+<div class="content">Krewetka:<br><br>Quick task add and shortcuts are planned.<br><br>If you need a quick Glance at all your tasks, you can use the plain text export for now.</div>
+<h2>Reply by Tom Callaghan</h2>
+<div class="meta">2009-02-23 21:40</div>
+<div class="content">Andreas,<br><br>Thanks - this is great!<br><br>Quick question - Using my Iphone I need to log in every time that I use it.  Is there a way to stay logged in?</div>
+<h2>Reply by Andreas</h2>
+<div class="meta">2009-02-23 22:39</div>
+<div class="content">Tom:<br><br>By default, the session ends when you close the browser. I just added a "remember me" option to the login form. Please let me know if it works for you.</div>
+<h2>Reply by Krewetka</h2>
+<div class="meta">2009-02-24 11:54</div>
+<div class="content">Thanks for reply and advice about export feature - still it would be nice to have option to see all pages and still follow AF rules :)<br><br>Also everything (list & adding tasks) on one page would be great - so much simpler and more intuitive  :)</div>
+<h2>Reply by Tom Callaghan</h2>
+<div class="meta">2009-02-24 15:51</div>
+<div class="content">Andreas,<br><br>The "Remember Me" option worked great - thanks!!<br></div>
+<h2>Reply by Johan</h2>
+<div class="meta">2009-02-24 23:57</div>
+<div class="content">Andreas:<br><br>Yeah, "Remember Me" is great!<br>Now it's so much easier on the iPhone<br>(not having to enter email and password every time).<br><br>I would like the possibility to rephrase an item.<br>I usually have an item like this:<br><Next step> : <End goal>,<br>where next step needs to be changed along the way.<br><br>Now I have to mark the item, copy it,<br>paste it in the "Add Task" field,<br>rephrase it, add it, and mark the original item done.<br><br>The best solution would be if I could just<br>click the item, and that would take me to a text field,<br>with the original item in the text field (could be the Add Task field).<br>And when finished, the original item is removed automatically.<br><br>It could work almost as well with a button (besides re-add and done)<br>called rephrase.<br><br>Is that a lot of work to implement?</div>
+<h2>Reply by Christine B</h2>
+<div class="meta">2009-02-25 12:49</div>
+<div class="content">Hi Andreas<br><br>Just tried to register but after adding my email address it just went to a "page not found"  When I tried again it said my email address was already registered but it has therefore bypassed the "create" password option and won't let me as I don't have a password! <br><br>Help ......... :-)<br></div>
+<h2>Reply by Andreas</h2>
+<div class="meta">2009-02-25 14:19</div>
+<div class="content">Johan:<br><br>I'll look into it.<br><br>Christine B:<br><br>That's strange, I've never seen a "page not found" before. And if it says your address is already registered it seems to have added it to the database, in which case it also should have send a random password to your email address. If you did not receive that let me know. If you tell me which address you registered (To avoid spam just post the part before the @, I'll find it), I will set a new password and send it to you.</div>
+<h2>Reply by Christine B</h2>
+<div class="meta">2009-02-25 18:14</div>
+<div class="content">Hi Andreas<br><br>Have been out all afternoon so just seen your reply - password received ok - thanks!<br><br>MY PC has been behaving a little oddly on the AF site also - very slow to refresh but Microsoft downloaded a new Server update yesterday so it could well be that - the number of times Microsoft updates create these hiccups  - but then I'm sure I don't need to tell you that :-)<br><br>Will let you know if I have any more problems.<br><br>Thanks again!</div>
+<h2>Reply by Andreas</h2>
+<div class="meta">2009-02-26 11:42</div>
+<div class="content">Development is slowing down a little since I have more other things on my list and I'm not feeling so well at the moment. But there will be more updates this week. <br><br>I just created a separate location for mobile devices: <a href="http://mobile.autofocus.cc" rel="nofollow">http://mobile.autofocus.cc</a><br><br>If you are using an iPhone or another mobile device, I recommend you use that address from now on. Currently there is no difference between <a href="http://autofocus.cc" rel="nofollow">http://autofocus.cc</a> and <a href="http://mobile.autofocus.cc" rel="nofollow">http://mobile.autofocus.cc</a> because so far I tried to compromise the needs for small and big screens. But soon that will change and the two versions will differ substantially.</div>
+<h2>Reply by Jonaz in Stockholm</h2>
+<div class="meta">2009-02-26 13:11</div>
+<div class="content">Andreas,<br>Thanks for all the great work you're doing with the site. <br><br>I hope you're feeling better soon.<br><br>All the best<br>/jonaz</div>
+<h2>Reply by Mike C</h2>
+<div class="meta">2009-02-26 14:04</div>
+<div class="content">Andreas,<br><br>All credit to you for your hard work on this web application. Hope you're feeling better soon. It's very cool and I particularly love that it's simple and uncluttered. <br><br>If you have access to a machine running Mac OS (and I can thoroughly recommend them!) then you can download the iphone simulator application for free and view your web site as if running in Safari on the iPhone/iPod touch. It's part of the iPhone SDK download (which is quite large unfortunately).<br><br>There are probably simulators online or offline for other mobile platforms.<br><br>Mark,<br>Thanks for generously giving permission for digital implementations of Autofocus. Just to be clear, would you have any objection to desktop/mobile device implementations of Autofocus (as opposed to online implementations)?<br><br>Regards,<br>Mike<br></div>
+<h2>Reply by Christian N</h2>
+<div class="meta">2009-02-27 13:11</div>
+<div class="content">@Andreas<br><br>I don't use an iPhone, but apparently there's a simulator that can be used to test websites. More info here: <a href="http://www.creativetechs.com/iq/test_your_website_on_apples_iphone_simulator.html" rel="nofollow">http://www.creativetechs.com/iq/test_your_website_on_apples_iphone_simulator.html</a><br><br>I have no idea how well it works, but if it does work, it would be a lot cheaper than purchasing an iPhone or a Mac ;)<br><br>- Christian</div>
+</article>
+    </main>
+    <footer>
+        <p>Archive built from Mark Forster's blog and forums</p>
+    </footer>
+</body>
+</html>

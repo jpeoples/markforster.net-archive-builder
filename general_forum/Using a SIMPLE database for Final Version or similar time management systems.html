@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using a SIMPLE database for Final Version or similar time management systems</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../blog_index.html">Blog</a>
+            <a href="../fvp_forum_index.html">FVP Forum</a>
+            <a href="../general_forum_index.html">General Forum</a>
+        </nav>
+    </header>
+    <main>
+<article>
+<h1>Using a SIMPLE database for Final Version or similar time management systems</h1>
+<div class="meta">
+Author: Mark Dunn | 
+Created: 2023-01-15 17:28
+ | Last Activity: 2023-01-24 1:52
+</div>
+<h2>Original Post</h2>
+<div class="meta">2023-01-15 17:28</div>
+<div class="content">I like the way Mark Forster has shared his work on Time Management and provided guidance on how to use his various systems.<br><br>I keep trying to use a simple database table to implement one of these systems, such as Final Version.  This seems like it should be simple.  However, I'm not great at databases.  I have one simple database I am pretty happy with, which is a shopping list table with a few different views for use at different times.<br><br>I created this database in an iOS app called HandDBase.  This is a relational database, but I'm not actually using the relational aspect of the database.  It is great, except for sharing my database with my wife so we can both update the shopping list.  So, I've also investigated using AirTable.  This looks great and there is a powerful free version.  It is web based so should be easy for my wife and I to update the shopping list.  However, it is a lot more complex.  I haven't succeeded in moving my table for shopping onto AirTable.  I suspect it could be quite simple.<br>I am not sure how well synchronisation works when working with AirTable offline.<br><br>Back to Final Version, or similar time management systems.  I would be very interested if someone has created a simple, extensible version in a database that is free or cheap and widely available (ideally on the web and also able to cope with being used offline).<br><br>I think many people could usefully use and customise databases more if there was good guidance for a few basic facilities like: using tables, views, automating actions, syncronising (ideally),  security (for different tables - e.g. viewed from a home PC or from a smartphone).<br>When using a database for personal use, or a very small number of people (like 2 or 3), then many of the rules that relational databases focus on are not so important, so long as the users are aware that their use may not be that sophisticated, extensible or scalable.<br><br>If anyone wants to know more about my simple shopping database, I'm happy to oblige.  I really like it and have made a few simple improvements over the years.</div>
+<h2>Reply by IanS</h2>
+<div class="meta">2023-01-15 19:54</div>
+<div class="content">Hi Mark,<br><br>Nice to meet a fellow HandBase fan. Unfortunately I stopped using it a couple of years ago as the developer doesn't seem to have time to keep up with OS updates and I lost the ability to sync. I use Notion now instead for many of the databases I had on there.<br><br>A great app for sharing shopping lists is AnyList which has a household subscription for $14.99.<br><br>I'm not clear if you need collaboration or mobile app for your task management as well but I use Checkvist for FVP. It's an outliner rather than a database but I recommend you have a look at least, unless a really good mobile app is important. (Checkvist has one but it isn't very suitable, but then again I have never found a great mobile app for any of my favourite Mark Forster systems. I am now resigned to laptop deployment only). And it would be better if it had saved searches but the search function is quick. Dynalist is similar and has a good mobile app but is expensive and the developers have pretty well abandoned it for their new baby, Obsidian.<br><br>If you're prepared for a steep old learning curve, depending on your aptitude in these things, you may want to look at Notion, which IS a database and a half, does have collaboration and a good mobile app and is free if you're not bothered about large file uploads or keeping version history. Take a look at some of Thomas Frank's or Red Gregory's Youtube videos and see if it suits.</div>
+<h2>Reply by Aaron Hsu</h2>
+<div class="meta">2023-01-15 21:48</div>
+<div class="content">FV and FVP type lists can easily be modeled using any relational table approach or list system that has the ability to "dot" tasks, like MS Todo and preserves ordering.<br><br>From a database modeling view, there's really only one relation needed:<br><br>TASKS([name], order, status)<br><br>You sort your tasks based on the order (some permutation vector on the records) and have a single status field that indicates whether the task is done, unmarked, or dotted. That's it. <br><br>In most list based systems, you have the ability to "star" tasks, and then you have the ability to "check them off". With FV or FVP, you simply go down the list starring the ones you care about according to the algorithm, and then check them off and re-enter them as you go. Not much easier than that!</div>
+<h2>Reply by Vegheadjones</h2>
+<div class="meta">2023-01-16 17:49</div>
+<div class="content">Wow, I remember HandBase from my Palm Pilot days!<br><br>I ran FV/FVP in Excel for years. Works well. These days I am using Obsidian which is free and perfect for MF long lists. I have one page where all tasks are set, easy to dot and easy to move. Obsidian allows you to link easily to other pages (reference materials), files on your computer or to the web. You can tag items and run queries-- I do this when I want to drill down to one project or look at things due today.<br><br>Hapyy to answer any questions on Excel or Obsidian setup.</div>
+<h2>Reply by IanS</h2>
+<div class="meta">2023-01-16 20:33</div>
+<div class="content">Vegheadjones<br><br>,,Hapyy to answer any questions on Excel or Obsidian setup...<br><br>I'd love to hear more about your Obsidian setup as I've been trying to figure how to use it for any of Mark's long list systems for months, particularly whether and how you can sort all the items by added date with a keystroke and whether and how you can move items to the end of a list, again with a keystroke, as you can in Dynalist or Checkvist amongst other programmes, or indeed whether you've found a way to work without these features.<br><br>Thanks in advance<br><br>IanS</div>
+<h2>Reply by vegheadjones</h2>
+<div class="meta">2023-01-16 21:26</div>
+<div class="content">Hi Ian,<br><br>After a few weeks on trying different things in Obsidian, I decided to have one page for task items. I use heading 2 to indicate today's date and add to the list. I use a plug in called natural language dates, it allows me to type @today to add today's date as a link. I can then use the daily pages to see all the items under today's header<br><br>I don't know a way to do one keystroke to move an item to the bottom of the list, but I made a hotkeys for moving an item down the list, and I press it a bunch of times for it to go down to the bottom. I use a plug in called archiver to move completed tasks to an archive page, which makes the list smaller and easier to navigate.<br><br>Hope this helps!</div>
+<h2>Reply by Alan Baljeu</h2>
+<div class="meta">2023-01-17 4:43</div>
+<div class="content">DynaList is still my tool of choice. Development has stopped but the program is not abandoned. As is it is a fadt outliner with good support for shortcuts, styling, customization, and multi platform sync. Nothing else does all this as well. I picked it because I can do AF style algorithms efficiently as well as organize notes.</div>
+<h2>Reply by Mark Forster</h2>
+<div class="meta">2023-01-17 12:50</div>
+<div class="content">As I've often said in the past, I've always preferred paper and pen. I'm not trying to convert anyone from electronic means, but I see the following advantages in my way. <br><br>1. I don't have to spend hours, days and in some cases months and years, trying to find the ideal app. <br><br>2. Apps tend to have lots of bells and whistles, and there's always the temptation to use them, with the result that it's easy to spend more time trying to get the system right than doing the actual work.<br><br>2. Paper is easy and simple, completely portable, and doesn't need any power supply. <br><br>3. Paper provides a complete record, which gives a real feel for what I have been doing, what I've been avoiding and what I want to do.<br><br>4. If anyone asks me if I'm busy at the moment I just show them my notebook!<br><br>If I were going to use electronic means (which I'm not) I would use something like Roam Research and keep it as simple as possible, i.e. a bulleted list with strikeout for "done" tasks.</div>
+<h2>Reply by vegheadjones</h2>
+<div class="meta">2023-01-17 19:16</div>
+<div class="content">"1. I don't have to spend hours, days and in some cases months and years, trying to find the ideal app."<br><br>--Years? Try decades :) <br><br>"If I were going to use electronic means (which I'm not) I would use something like Roam Research and keep it as simple as possible, i.e. a bulleted list with strikeout for "done" tasks."<br><br>Obsidian is a Personal Knowledge Management software like Roam, you can make a bulleted list and keep cross outs (I remove the cross outs). Obsidian has the added value of being free unless you want the syncing functionality, then it has a fee but less than Roam. It also lives on your computer, which I prefer.<br><br>I love paper and agree that there are tons of benefits with paper. But it is not as easy to filter the list, nor can you easily link attachments and notes to a paper-based notebook, so I have accepted that I need to use a digital notebook.</div>
+<h2>Reply by vegheadjones</h2>
+<div class="meta">2023-01-17 21:20</div>
+<div class="content">@Alan you might know this already but the developers of Dynalist moved on to develop Obsidian. A lot of similarities between the two apps.</div>
+<h2>Reply by avrum</h2>
+<div class="meta">2023-01-18 13:31</div>
+<div class="content">Mark: <br><br><<As I've often said in the past, I've always preferred paper and pen.>><br><br>IMHO, the best of both worlds is an iPad mini, Apple Pencil and Apple notes. Throughout the day, I tap my Apple Pencil on the screen, it presents me with my current note (even when the screen is locked) and I update my list via handwriting, and a few min later the screen goes blank. At the end of the day, I select all of my handwritten (digital) notes and transcribe them to text. Beautiful. I've been using this approach for 3 years. However... <br><br>There is something soothing about paper/pen that is not achievable with an iPad. The simple fact that I *could* use the other apps, surf the web, etc creates an ambient stress that I don't feel with paper/pen. As well, the experience of writing with paper/pen is not replicable - even with an iPad screen protector with grit - with an iPad.</div>
+<h2>Reply by Alan Baljeu</h2>
+<div class="meta">2023-01-24 1:52</div>
+<div class="content">vegheadjones: I am well aware.  I like the list/outline-oriented nature of DynaList, and am not seeking the document/note-oriented style of Obsidian.</div>
+</article>
+    </main>
+    <footer>
+        <p>Archive built from Mark Forster's blog and forums</p>
+    </footer>
+</body>
+</html>

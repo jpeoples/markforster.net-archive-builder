@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoFocus Web App: How to improve?</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../blog_index.html">Blog</a>
+            <a href="../fvp_forum_index.html">FVP Forum</a>
+            <a href="../general_forum_index.html">General Forum</a>
+        </nav>
+    </header>
+    <main>
+<article>
+<h1>AutoFocus Web App: How to improve?</h1>
+<div class="meta">
+Author: Avi Drucker | 
+Created: 2023-11-1 16:08
+ | Last Activity: 2024-01-6 15:45
+</div>
+<h2>Original Post</h2>
+<div class="meta">2023-11-1 16:08</div>
+<div class="content">I tried making a web app version of AutoFocus 🤓 Note: It should work equally well on desktop or mobile.<br><br>https://avidrucker.github.io/pwa-autofocus-app/<br><br>It supports adding of items to one's list, prioritizing one's list, taking action on the "most ready item"*, and clearing the list completely to start anew.<br><br>Does anyone have any suggestions on how to improve the web app? My goal is to keep it minimalist, and in alignment (feature parity, first and foremost) with at least one version of AutoFocus (I'm not sure if the app is doing classic AutoFocus, FV, FVP, or something else now 😅).<br><br>If anyone wants any technical details on how I built it, please let me know.<br><br>*(still looking for clearer terminology for this, I also have considered "highest priority", "benchmark", and "current most want to do", though "most ready" resonates the most with me currently)</div>
+<h2>Reply by Jesse</h2>
+<div class="meta">2023-11-5 12:58</div>
+<div class="content">I like it! I can think of two things. When you open the web page, it would be nice if the cursor was already in the text field box, so that when you open a tab it's ready for instant entry of a new task. It would also be nice if you could cut and paste a plain text list directly into the text field box. All of my online lists are in Google Keep or Google docs, and I don't know how to turn them into JSON files. These are small things though.</div>
+<h2>Reply by Avi Drucker</h2>
+<div class="meta">2023-11-8 20:33</div>
+<div class="content">Jesse, done and done 👍🤓</div>
+<h2>Reply by Chris W.</h2>
+<div class="meta">2024-01-6 15:45</div>
+<div class="content">Hi Avi! This is so close to what I want! I probably don't want to use the prioritization feature from FVP, but maybe I do, not sure yet. I had a vision for an app like this but wanted it to more closely resemble the paper version. For me, that means adding pagination (like 25 per page) and then having each page automatically get the marks it needs, like the X or X-with-circle. <br><br>The app should then automatically advance to the first page with open tasks when you open it. <br><br>Where is the tasklist stored in your application? I was wondering if having it stored in a flat file would be good, so it could be synced (perhaps using the todo.txt format?). I've also wondered if using sqlite or something would be good. Also I wonder how to eventually make it work for multiple users.<br><br>I also wish it was written in Svelte/SvelteKit (but that's just personal preference ;) ).</div>
+</article>
+    </main>
+    <footer>
+        <p>Archive built from Mark Forster's blog and forums</p>
+    </footer>
+</body>
+</html>

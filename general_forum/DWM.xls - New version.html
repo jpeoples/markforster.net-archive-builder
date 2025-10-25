@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DWM.xls - New version</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../blog_index.html">Blog</a>
+            <a href="../fvp_forum_index.html">FVP Forum</a>
+            <a href="../general_forum_index.html">General Forum</a>
+        </nav>
+    </header>
+    <main>
+<article>
+<h1>DWM.xls - New version</h1>
+<div class="meta">
+Author: Walter | 
+Created: 2010-04-28 14:46
+ | Last Activity: 2010-06-2 15:05
+</div>
+<h2>Original Post</h2>
+<div class="meta">2010-04-28 14:46</div>
+<div class="content">Hi,<br>I posted a new version of DWM.xls<br><br>There are many changes:<br><br>- Configuration worksheet: Check the different options (time/date formats, colors, amount of days)<br><br>- New column "Entered" (different from "Created", as it's updated on every reentry). It comes to fix a bug reported by Mark (Tasks will be sorted by this column instead of “Created”)<br><br>- Import tasks from old file: No need to copy/paste from your old file anymore. It will only work with files formatted for the old version (without additions, etc).<br><br>- Closing Date removed (it duplicated "End Time")<br><br><br>There's quite a bit of programming. I hope there aren't too many bugs.<br>Let me know what you think.<br><br>DWM.xls<br><a href="http://rapidshare.com/files/381174218/DWM.xls" target="new" rel="nofollow">http://rapidshare.com/files/381174218/DWM.xls</a> <br><br>DWM for Excel.pdf<br><a href="http://rapidshare.com/files/381174277/DWM_for_Excel.pdf" target="new" rel="nofollow">http://rapidshare.com/files/381174277/DWM_for_Excel.pdf</a> <br><br>Walter</div>
+<h2>Reply by moises</h2>
+<div class="meta">2010-04-28 18:51</div>
+<div class="content">No warranty?<br><br>Just kidding.<br><br>I look forward to trying this. You've done a yeoman's job creating this. Thanks.</div>
+<h2>Reply by moises</h2>
+<div class="meta">2010-04-29 2:02</div>
+<div class="content">Works nicely on my Windows machine. But it won't work correctly on my Vista machine.<br><br>On the latter, immediately after I download it, if I hit "Apply Changes" on the Configuration Tab, I get "A Problem Occurred When Trying to Set Colors." And it's prone to crashing.</div>
+<h2>Reply by Walter</h2>
+<div class="meta">2010-04-29 6:55</div>
+<div class="content">Hi moises,<br><br>I forgot to warn about that. I don't know about Vista, but I had the same problem with Excel 2007. Apparently there's some incompatibility (since I'm using Excel's old method to set colors)  and I couldn't find a workaround yet.<br><br>By now, this has to be done manually through Excel preferences. I can tell you how this is done if you want.</div>
+<h2>Reply by moises</h2>
+<div class="meta">2010-04-29 12:21</div>
+<div class="content">Hi Walter,<br><br>That's great. Please let me know how to modify Excel 2007 on my Vista machine. The configurability of the dates is something that will be most useful on my Vista (home) machine. Thanks.</div>
+<h2>Reply by Walter</h2>
+<div class="meta">2010-05-2 8:22</div>
+<div class="content">Hi moses,<br><br>Excluding the colors, the other configuration options should work without problems. They don't?</div>
+<h2>Reply by moises</h2>
+<div class="meta">2010-05-2 16:54</div>
+<div class="content">I never was able to start work in Excel 2007. It's not that I changed the configuration for the colors. I would get the error without changing anything.</div>
+<h2>Reply by Walter</h2>
+<div class="meta">2010-05-3 0:08</div>
+<div class="content">Meaning that you open the file, and immediately you're shown with an error message?<br>And if so, Excel crashes afterwards?</div>
+<h2>Reply by moises</h2>
+<div class="meta">2010-05-3 0:15</div>
+<div class="content">It would return an error message as soon as I hit "Apply Changes" even if I made no changes and had entered no data in any tab.</div>
+<h2>Reply by Walter</h2>
+<div class="meta">2010-05-3 8:54</div>
+<div class="content">If "A Problem Occurred When Trying to Set Colors" is shown, the rest of the configuration options (date formats, entry days)  are still applied, only the colors are skipped.<br><br>Can you check if that's your case? (Assuming that you can continue working after the message its shown. I didn't understand if there's a crash or not).<br>You should enter a task and see if the date formats are the ones you specified, and so on.</div>
+<h2>Reply by moises</h2>
+<div class="meta">2010-05-3 14:40</div>
+<div class="content">OK. I will try it again when I get home tonight.</div>
+<h2>Reply by Ilse</h2>
+<div class="meta">2010-05-3 19:40</div>
+<div class="content">For me the file works perfect in Excel 2007.  Thank you Walter.  I has been great experience using your DWM file.</div>
+<h2>Reply by moises</h2>
+<div class="meta">2010-05-4 0:57</div>
+<div class="content">Walter,<br><br>I downloaded it a few more times and crashed it a few more times. <br><br>I take a brand-new file. I add a few tasks to make sure it's working. Then I change the date formats and the month setting 28 days, and the week to 10 days. I ignore the error message about the colors. I add a few more tasks and it crashes.<br><br>Your older version is working fine for me in Excel 2007, so I will stick with that.<br><br>Thanks.</div>
+<h2>Reply by Walter</h2>
+<div class="meta">2010-05-4 7:26</div>
+<div class="content">Moises,<br>I'll tell you what... i'll try to detect if the current version is 2007, and if so, skip the color setting.<br>Maybe this is what's causing the crashing.<br><br>Ilse,<br>I'm glad you find it useful :-)</div>
+<h2>Reply by Walter</h2>
+<div class="meta">2010-05-4 17:24</div>
+<div class="content">Moises,<br>I've been playing with the options and I've found out that if you save the file as the 2007 format .xlsm, it does work, even with the colors.<br><br>With the current version, there's some hard-coding that makes the program to expect exactly "DWM.xls" (as I think you know). I'm preparing a version that can deal with any file name.<br><br>But it would be good if you could try with the newer format, and see how it works.<br><br>Thanks,<br>Walter</div>
+<h2>Reply by moises</h2>
+<div class="meta">2010-05-5 0:29</div>
+<div class="content">Walter,<br><br>That seems to have done the trick. Thanks!<br><br>Before this, I was always prompted to save as an Excel 97-2003 Workbook. Now I saved it as an Excel Macro-enabled Workbook.<br><br>It looks like you solved another problem for me. I look forward to using it.<br><br>Your dedication to this is much appreciated.<br><br>moises</div>
+<h2>Reply by KP</h2>
+<div class="meta">2010-05-26 9:58</div>
+<div class="content">Hi Walter,<br><br>Your macros are great, they stopped me giving up on DWM. However I have one question, on my pc (XP with Excel 2007) it takes about 20 seconds for the macros to run. I'm using an .xlsm file format. Any suggestions on why it runs so slowly?<br><br>Thanks in advance!!<br>Kirstie<br><br>(It's not all bad though as it does give me an opportunity to practice my deep breathing)</div>
+<h2>Reply by Walter</h2>
+<div class="meta">2010-05-26 11:40</div>
+<div class="content">Hi, Kirstie<br><br>Everytime you execute a macro you have to wait 20 seconds, or just when you open the file?<br><br>I really don't know why would that be, I'm sure it's not something related to the program itself.<br><br>I don't know of any, but maybe there are antivirus programs that check office macros before they get executed?<br><br>Anybody else having the same issue?</div>
+<h2>Reply by moises</h2>
+<div class="meta">2010-05-26 18:15</div>
+<div class="content">No problems with XP Professional with Excel 2003.<br>No problems with Vista and Excel 2007.</div>
+<h2>Reply by KP</h2>
+<div class="meta">2010-05-28 7:25</div>
+<div class="content">Hi Walter<br><br>The waiting is everytime I execute a macro, though I've been timing all my actions since I posted and 20 seconds was the most extreme, between 6 and 10 is the average (which isn't really a problem, I've just got used to life happening 'instantly').<br><br>Thanks for responding so promptly!!<br><br>Kirstie</div>
+<h2>Reply by Walter</h2>
+<div class="meta">2010-06-2 15:05</div>
+<div class="content">You are welcome, I'm sorry I couldn't help.<br><br>I'm going to post a new version soon, with a copy option (useful for recurrent tasks).</div>
+</article>
+    </main>
+    <footer>
+        <p>Archive built from Mark Forster's blog and forums</p>
+    </footer>
+</body>
+</html>

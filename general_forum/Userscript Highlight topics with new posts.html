@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Userscript: Highlight topics with new posts</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../blog_index.html">Blog</a>
+            <a href="../fvp_forum_index.html">FVP Forum</a>
+            <a href="../general_forum_index.html">General Forum</a>
+        </nav>
+    </header>
+    <main>
+<article>
+<h1>Userscript: Highlight topics with new posts</h1>
+<div class="meta">
+Author: Andreas Hofmann | 
+Created: 2010-02-8 21:49
+ | Last Activity: 2010-03-10 2:22
+</div>
+<h2>Original Post</h2>
+<div class="meta">2010-02-8 21:49</div>
+<div class="content">Today I wrote a greasemonkey script that remembers the last time you visited the forum main page and will highlight any topics that have new posts since that time. It's very basic at them moment, it doesn't highlight the new posts themselves, only the topic rows on the forum main page. Also note that if you reload the page, the highlights will vanish since the "last visited" time will be the current time. I suggest opening all highlighted topics in new tabs so you don't have to reload the main page. It works in Firefox/Greasemonkey, I haven't tested Opera yet, but Chrome doesn't seem to like it.<br><br><a href="http://autofocus.cc/public/data/greasemonkey/markforster.net_highlight_new_posts.user.js" rel="nofollow">http://autofocus.cc/public/data/greasemonkey/markforster.net_highlight_new_posts.user.js</a><br><br>I also updated my "always go to the last page of a topic" script so that not only it goes to the last page, it also scrolls down to the bottom, like if you pressed the end key.<br><br><a href="http://autofocus.cc/public/data/greasemonkey/markforsternet_forum_sho.user.js" rel="nofollow">http://autofocus.cc/public/data/greasemonkey/markforsternet_forum_sho.user.js</a></div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-02-8 21:59</div>
+<div class="content">Okay, it seems to be working in Chrome now. I had to uninstall and reinstall it, there seems to have been a server error while downloading it. So if it doesn't work for you, try that.</div>
+<h2>Reply by Alan Baljeu</h2>
+<div class="meta">2010-02-8 22:16</div>
+<div class="content">Nice code.  How does one run it?</div>
+<h2>Reply by vegheadjones</h2>
+<div class="meta">2010-02-8 22:19</div>
+<div class="content">Andreas-- you are a genius! This is very useful and works perfectly for me on Chrome.<br><br>Alan if you use Chrome, clicking on the link and allowing it to install was all that was necessary for me.</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-02-8 22:22</div>
+<div class="content">Alan: For firefox, install the Greasemonkey extension, then click the link. In Chrome 4.x, click the link. In Opera, you have to set a userscript directory in the preferences, then right-click the link and save the file in that directory.</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-02-8 22:28</div>
+<div class="content">vegheadjones: It works in Chrome, but it behaves slightly differently than in Firefox, at least on my PC. In Firefox, if I load the forum page, it shows shows updated topics highlighted. Chrome does that too. But if I reload the page in Firefox, the highlighting disappears, because the topics aren't "new" anymore. In Chrome, the highlighting stays upon reloading. But when real new topics show up, Chrome updates too. Do you experience the same or is just me?</div>
+<h2>Reply by vegheadjones</h2>
+<div class="meta">2010-02-8 22:29</div>
+<div class="content">No highlight upon reloading...</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-02-8 22:31</div>
+<div class="content">Interesting ... oh well, I'll figure it out. May a reinstall of chrome is in order. If I may ask, which version of Chrome do you use? Mine is 4.0.249.78 beta (36714).</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-02-8 22:41</div>
+<div class="content">I located the problem, but it's really strange. For some reason my Chrome always returns 1 as the value of a cookie I set, even though I see the value is different in the cookie data. Luckily, that value was redundant (if was the last number of replies, which isn't necessary since the date changes anyways with new replies), so I modified the script to work without it. And now it works in my Chrome, too. Whatever. ;-)</div>
+<h2>Reply by vegheadjones</h2>
+<div class="meta">2010-02-8 22:44</div>
+<div class="content">Sorry Andreas, you're no longer speaking my language :)</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-02-8 22:46</div>
+<div class="content">Sorry. ^^<br><br>And it broke again. Now the time doesn't update anymore. But only in my Chrome build. Firefox works just as intended. I really don't know. Yours still working fine? What is your version number?</div>
+<h2>Reply by vegheadjones</h2>
+<div class="meta">2010-02-8 22:57</div>
+<div class="content">Chrome? 5.0.317.2 I think it's working. I'll try again after more time has past and more posts have been made.</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-02-8 23:01</div>
+<div class="content">Oh, you're using the dev build. It should be working. I found the problem, my Chrome saved two sets of cookies and always retrieved the older ones. Don't know exactly why. But I think I fixed it. If you run into any trouble, uninstall the script in your extensions menu and click on the link again, I've updated it.</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-02-9 8:09</div>
+<div class="content">Okay ... there were three bugs in the original script, I highly recommend reinstalling it!<br><br>The bugs:<br><br>1: A problem with duplicated cookies with different paths, lead to permanent highlighting in some cases.<br><br>2: I made a mistake when parsing the date in the the "last reply" column, lead to the script only working PM. :-P<br><br>3: Tonight a spam topic was posted, which contained the usual strange characters (Cyrillic letters and such). This lead to no highlighting of this topic and all new topics after it.<br><br>These are all solved in the current version that can still be downloaded with the link in the first post.</div>
+<h2>Reply by moises</h2>
+<div class="meta">2010-02-9 19:33</div>
+<div class="content">Andreas,<br><br>Thank you!<br><br>This might not save me quite as much time as DWM does, but it does save me a lot of time. <br><br>I tried that program that was mentioned a while back, and I had to uninstall it. But your script worked like a charm.</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-02-9 19:47</div>
+<div class="content">I still don't get why it works perfectly in Firefox and Chrome is behaving strangely. Currently, I always get exactly one topic highlighted in Chrome, even if there are more that should be. Firefox highlights them all correctly. I'll figure it out eventually.</div>
+<h2>Reply by Lillian</h2>
+<div class="meta">2010-02-9 19:58</div>
+<div class="content">Dare I ask if this works with IE?</div>
+<h2>Reply by vegheadjones</h2>
+<div class="meta">2010-02-9 20:20</div>
+<div class="content">Andreas I get the same result</div>
+<h2>Reply by Daniel M</h2>
+<div class="meta">2010-02-9 20:36</div>
+<div class="content">Andreas,<br><br>I just installed this now.  This is excellent!  Thanks!  I had been keeping track of the date/time of my last visit in my recurring "AF Forums" task, but this is a lot easier, especially with the script to auto-scroll to the bottom on the last page.<br><br>Would it also be possible in a future version to highlight the new posts themselves (when you open up each thread in a new tab)?  That would prevent having to re-read a bunch of posts trying to figure out where you left off last.<br><br>Maybe that wouldn't be possible/worth implementing though, since it wouldn't be enough to just go by "last visit" time...some posts can come in while you're reading tabs of other threads, and you would miss these entries the next time you came to the page.  I guess that's what SiteDelta is for.  I could never get that working quite correctly for me, so I uninstalled it.  Maybe I'll re-install it for just this purpose...</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-02-9 20:48</div>
+<div class="content">Lillian:<br><br>I wouldn't bet on it. There are several methods to use greasemonkey scripts with IE, but none of them is 100% compatible. I tried Trixie, but it didn't work. There's also "Greasemonkey for IE" and Turnabout Advanced, but the I haven't figured out how to use the former and the website of the latter seems to be down.<br><br>Daniel M:<br><br>That would be the next logical step and I already have an idea how to implement it. But before I make the script more complicated, I want to figure out why it doesn't work correctly in Chrome.</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-02-9 21:55</div>
+<div class="content">I found the problem with Chrome (and Opera), I had to change the loops to have it work. I've updated the link yet again, it should now work correctly in Firefox, Opera and Chrome (and Safari,I guess, but I didn't test it yet).</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-02-9 23:35</div>
+<div class="content">I modified the script in the first post once more. It now saves two timestamps instead of one: The time of the last change, and the the time of the *previous* last change. :-)<br><br>This is necessary for the following script to work:<br><br><a href="http://autofocus.cc/public/data/greasemonkey/markforsternet_highlight_unread_posts.user.js" rel="nofollow">http://autofocus.cc/public/data/greasemonkey/markforsternet_highlight_unread_posts.user.js</a><br><br>This one takes the previous last change time and highlights all posts in the thread view that are newer. Plus it scrolls to the first new post. Neato.<br><br>Remember, first uninstall the first script in this thread and reinstall it, then install the second highlight script. It should start working after the first updated topic is reported by the first script.</div>
+<h2>Reply by Daniel M</h2>
+<div class="meta">2010-02-9 23:37</div>
+<div class="content">Andreas,<br><br>You are awesome!</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-02-9 23:40</div>
+<div class="content">A little easter egg: If you edit the script, one of the first commands is "var highlight_mark = 0;". If you change it to "var highlight_mark = 1;", Mark's posts will be highlighted green, everyone else's yellow. ;-)</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-02-9 23:50</div>
+<div class="content">Right now the script is still limited in that when you load the forum main page and the topics get highlighted, as soon as you navigate away from that page, you loose the highlighting. So the best procedure for now is: 1. Open main page, topics get highlighted. 2. Open each highlighted topic in a new tab (Ctrl+Click in most browsers). 3. Read each topic in its seperate thread and close it. 4. Refresh main page and repeat.<br><br>Eventually, I'll modify the script to remember which topics where read when, so it can maintain the highlighting as long as you didn't click on the topic. But I think this will do for now. ^^</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-02-9 23:57</div>
+<div class="content">Since the "last updated" timestamp only changes when something really was changed, the last highlight will "linger" until it is replaced with the new one. I could make it so that it disappears if the main page is loaded with no changes, but that would mean that if you load the page twice by accident you lose all the highlighted posts. I think I'll wait for the thread-by-thread-update to address this issue.</div>
+<h2>Reply by Brian</h2>
+<div class="meta">2010-02-10 15:07</div>
+<div class="content">I don't suppose it's possible to have the script open any post links in a new tab/window?  It's easy to forget to Ctrl-click.  These are great scripts that make up for the basic SquareSpace forum "features."</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-02-10 16:11</div>
+<div class="content">Brian:<br><br>Thy will be done.<br><br>Uninstall the second script from the first post (the "go to last page/scroll to bottom" one). Install this one instead:<br><br><a href="http://autofocus.cc/public/data/greasemonkey/markforsternet_lastpage_scrolldown_newtab.user.js" rel="nofollow">http://autofocus.cc/public/data/greasemonkey/markforsternet_lastpage_scrolldown_newtab.user.js</a></div>
+<h2>Reply by Brian</h2>
+<div class="meta">2010-02-10 16:36</div>
+<div class="content">That is awesome.  Thanks.  FYI, I broadened the scope of the script so that it will also include subsequent pages of the Discussion Forum:<br><br><a href="http://www.markforster.net/forum?currentPage=*" rel="nofollow">http://www.markforster.net/forum?currentPage=*</a></div>
+<h2>Reply by Will</h2>
+<div class="meta">2010-02-10 20:20</div>
+<div class="content">Andreas,<br><br>How do you uninstall the script in Chrome?</div>
+<h2>Reply by Will</h2>
+<div class="meta">2010-02-10 20:26</div>
+<div class="content">Got it: spanner>extensions...</div>
+<h2>Reply by vegheadjones</h2>
+<div class="meta">2010-02-10 20:51</div>
+<div class="content">The new versions are working great Andreas-- now if only it would indicate when there are new comments on Mark's blog posts... :)</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-02-10 21:52</div>
+<div class="content">vegheadjones:<br><br><<now if only it would indicate when there are new comments on Mark's blog posts>><br><br>That's a feature this homepage actually already has. In the right sidebar, there is a box called "feeds", and one of the feeds is "Blog Comments RSS".</div>
+<h2>Reply by Mike</h2>
+<div class="meta">2010-02-11 12:54</div>
+<div class="content">Andreas,<br><br>I'm seeing the updated topics in yellow.  When I select one, I see the new posts in yellow.  When I return to the topic list the yellow is gone.  Did I fail to install something or do it in the wrong order.<br><br>A suggestion: Maybe you could copy the list of links in the order they need to be installed every time you update them.  I was confused about what to update and what sequence to install things in. (and that probably caused this problem.)  I would probably, just to be safe, uninstall everything before reinstalling in the order you specify.<br><br>I LOVE your scripts.  Very nice.  And very much faster than poking around.  ;-)</div>
+<h2>Reply by Mike</h2>
+<div class="meta">2010-02-11 12:57</div>
+<div class="content">Two other things:<br><br>1) I was unclear.  I had in mind copying the entire list of script links to the bottom of any post that notifies us of a change.<br><br>2) New behavior.  When I made that last post and hit "create", it turned yellow, as expected.  But when I went BACK to the LIST of topics, this time this topic was in yellow.  It is the first time I have seen yellow when going BACK to the list of topics.  Interesting.</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-02-11 14:08</div>
+<div class="content">Mike:<br><br><<I'm seeing the updated topics in yellow. When I select one, I see the new posts in yellow. When I return to the topic list the yellow is gone. Did I fail to install something or do it in the wrong order.>><br><br>No, that's how it works right now due to how the script works, as I described above, and the reason for changing one of the scripts to open each thread in a new tab/window.<br><br>There really isn't a right order for installing the scripts. You either have them or don't. I'll reorganize these scripts soon and then update the instructions properly.<br><br>So far, there are four scripts in this thread:<br><br>1. <br><br>The first script highlights the topics that have changed since the last visit on the forum main page:<br><br><a href="http://autofocus.cc/public/data/greasemonkey/markforster.net_highlight_new_posts.user.js" rel="nofollow">http://autofocus.cc/public/data/greasemonkey/markforster.net_highlight_new_posts.user.js</a><br><br>Since it is time based, once you get the highlights, the "last visit" date is set to the current time", that's why the highlights aren't there when you go back - the "last visit" has changed and there weren't new posts in the meantime. (That's also why you get a highlight if you posted yourself), because it notices your post as new since your last visit to the main page). <br><br>2. <br><br>The second script (chronologically the third in this thread) highlights the new posts inside of threads:<br><br><a href="http://autofocus.cc/public/data/greasemonkey/markforsternet_highlight_unread_posts.user.js" rel="nofollow">http://autofocus.cc/public/data/greasemonkey/markforsternet_highlight_unread_posts.user.js</a><br><br>This highlighting does not go away if you navigate from the page and return, because it is dependent on the "last changed" date/time saved by the first script. So the highlights will stay until the first script finds new changes and updates the timestamps.<br><br>These are the scripts that do the highlighting. The other two scripts are variations of my older "go to the last page of threads" script. You don't need them both, only install one.In fact you don't even have to install one of them, if you want to navigate manually from the first page of each thread.<br><br>3.<br><br>One alternative is the script that get's you to the last page of a thread and scrolls down to the bottom (if there are no new posts, otherwise the second script scrolls you to the first new post):<br><br><a href="http://autofocus.cc/public/data/greasemonkey/markforsternet_lastpage_scrolldown_newtab.user.js" rel="nofollow">http://autofocus.cc/public/data/greasemonkey/markforsternet_lastpage_scrolldown_newtab.user.js</a><br><br><a href="http://autofocus.cc/public/data/greasemonkey/markforsternet_forum_sho.user.js" rel="nofollow">http://autofocus.cc/public/data/greasemonkey/markforsternet_forum_sho.user.js</a><br><br>4.<br><br>This is the same as the third script, but additionally it opens each thread in a new tab/window, so you don't have to hold down ctrl or shift (depends on your browser) while clicking to do so manually:</div>
+<h2>Reply by Mike</h2>
+<div class="meta">2010-02-11 14:11</div>
+<div class="content">Thanks for that clarification, Andreas.  It helps.</div>
+<h2>Reply by Will</h2>
+<div class="meta">2010-02-12 12:00</div>
+<div class="content">Andreas,<br><br>1. Thanks for this great extension.<br>2. My "back" key no longer works: is this connected in some way? It's quite a high price to pay.</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-02-12 12:34</div>
+<div class="content">Will:<br><br>Ah, I see. You back key is probably fine. The problem is you installed the version of the "go to last page" script that opens threads in new tabs (script 4 in my previous post). The new tab has no previous page, so the back button doesn't do anything. You can do two things:<br><br>1. Uninstall script 4 and install script 3 which doesn't open threads in new tabs. Then you are still in the same tab and can use the back button to go back to the forum main page. But when go back you'll lose the highlighting of new threads for reasons explained above.<br><br>2. You can try to get used to having threads open in new tabs. Instead of the back key, you'll have to press Ctrl+W (or Cmd+W on Macs, I guess, not sure) to close the tab with the thread and get back to the tab with the forum main page. In this case you'll keep the highlighted threads until you manually reload the main page.</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-02-12 12:57</div>
+<div class="content">Just noticed I screwed up pasting the links in my script summary post. <br><br>This is script 3 (opens threads in same tab):<br><br><a href="http://autofocus.cc/public/data/greasemonkey/markforsternet_forum_sho.user.js" rel="nofollow">http://autofocus.cc/public/data/greasemonkey/markforsternet_forum_sho.user.js</a><br><br>This is script 4 (opens threads in new tabs):<br><br><a href="http://autofocus.cc/public/data/greasemonkey/markforsternet_lastpage_scrolldown_newtab.user.js" rel="nofollow">http://autofocus.cc/public/data/greasemonkey/markforsternet_lastpage_scrolldown_newtab.user.js</a></div>
+<h2>Reply by Will</h2>
+<div class="meta">2010-02-12 20:21</div>
+<div class="content">Andreas,<br><br>In the words of the sage, "Doh".<br><br>Silly me. Thanks for the explanation.</div>
+<h2>Reply by Neltkanna</h2>
+<div class="meta">2010-03-10 2:22</div>
+<div class="content">If you are opulently informed of with the stint as skilfully as benefits of Microsoft <a href=<a href="http://totalcompute.com/microsoftoutlookexchange/>Exchange" rel="nofollow">http://totalcompute.com/microsoftoutlookexchange/>Exchange</a> Post </a><br>and you are thinking to deploy this rich messaging & collaboration platform to explicate your <a href=<a href="http://exchanger.goldentrepreneur.net/>email</a>" rel="nofollow">http://exchanger.goldentrepreneur.net/>email</a></a> needs, <br>you should accommodate take charge of of the following things.</div>
+</article>
+    </main>
+    <footer>
+        <p>Archive built from Mark Forster's blog and forums</p>
+    </footer>
+</body>
+</html>

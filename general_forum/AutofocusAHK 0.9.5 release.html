@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutofocusAHK 0.9.5 release</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../blog_index.html">Blog</a>
+            <a href="../fvp_forum_index.html">FVP Forum</a>
+            <a href="../general_forum_index.html">General Forum</a>
+        </nav>
+    </header>
+    <main>
+<article>
+<h1>AutofocusAHK 0.9.5 release</h1>
+<div class="meta">
+Author: Andreas Hofmann | 
+Created: 2010-02-16 21:22
+ | Last Activity: 2010-05-23 0:15
+</div>
+<h2>Original Post</h2>
+<div class="meta">2010-02-16 21:22</div>
+<div class="content">Hi everyone, version 0.9.5 is here: <a href="http://github.com/downloads/andreashofmann/AutofocusAHK/AutofocusAHK-0.9.5.zip" rel="nofollow">http://github.com/downloads/andreashofmann/AutofocusAHK/AutofocusAHK-0.9.5.zip</a><br><br>New features:<br><br>- Tickler functionality: Add tasks at a given date<br>- Auto-copy selected text when adding a new task<br>- Added checkbox to confirm auto-copied URLs<br><br>Tweaks:<br><br>- Added a button to the work window to mark tasks as already done without actioning them<br>- Added a button to the status window to immediately re-add the current task <br>- Export: Don't show headers if a section hasn't got visible tasks<br>- Export: Only show needed columns when done/review tasks are hidden<br>- Export: No option to show tasks on review if current system is DWM<br>- DWM: Show expiration date in title of work window (thanks to sabre23t)<br>- DWM: Work window changes color when current task expires today/tomorrow<br><br>Fixed bugs:<br><br>- Clipboard content is no longer lost when auto-adding URLs<br>- Task expiration pop up now lists unactioned expired tasks only</div>
+<h2>Reply by Silvia</h2>
+<div class="meta">2010-02-17 1:56</div>
+<div class="content">Excellent!<br><br>Thanks a lot for such a nice tool.</div>
+<h2>Reply by sabre23t</h2>
+<div class="meta">2010-02-17 3:42</div>
+<div class="content">Downloaded v0.9.5. Testing now. TQ, AndreasH. ;-)</div>
+<h2>Reply by Paul</h2>
+<div class="meta">2010-02-17 15:30</div>
+<div class="content">This is a simple yet effective application that just gets better and better.  Using AF4 with this program, my productivity has soared!  Thanks</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-02-18 8:25</div>
+<div class="content">I just uploaded a new version: <a href="http://github.com/downloads/andreashofmann/AutofocusAHK/AutofocusAHK-0.9.5.1.zip" rel="nofollow">http://github.com/downloads/andreashofmann/AutofocusAHK/AutofocusAHK-0.9.5.1.zip</a><br><br>It only fixes three bugs that were in 0.9.5:<br><br>- Instead of always remembering the current task, it was reset to the beginning of list when tasks expired<br>- I accidentally left some debug messages in 0.9.5, which caused popups with "save", "backup" and "load" to appear everytime the daily routine was executed.<br>- The "Already Done" caused the next task on the list to be skipped</div>
+<h2>Reply by sabre23t</h2>
+<div class="meta">2010-02-19 0:56</div>
+<div class="content">Downloading 0.9.5.1. I just noticed bug #1 this morning. That #2 I don't really mind, it's nice to know when the morning routine is being done. I did use #3 once, but didn't notice the skipping.<br><br>I've just started printing caps-E pages, four to an A4 sheet for off computer use and reference on which task should be next. I then realize the "repeating tasks" feeling I get was me chasing the end of  +7 day list, as I re-add previous task. <br><br>Thanks for the work done, AndreasH. ;-)</div>
+<h2>Reply by Ralph</h2>
+<div class="meta">2010-02-19 17:21</div>
+<div class="content">Hi Andrea,<br>   What happened to the time spent on the HTML report?  All I can see now is time added.<br><br>          Ralph</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-02-19 17:35</div>
+<div class="content">Ralph:<br><br>The time column only shows up when needed. By default, only unactioned tasks are shown, which don't need the done/re-added and time columns. If you show done tasks by clicking the button at the top, the time column is shown as well.</div>
+<h2>Reply by Ralph</h2>
+<div class="meta">2010-02-19 17:57</div>
+<div class="content">I have clicked done but no additional column shows up.</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-02-19 18:10</div>
+<div class="content">Ralph:<br><br>Which browser do you use? Do you have Javascript enabled? Without Javascript all dynamic functions of the export won't work.<br><br>My guess: You use IE and it's configured to block Javascript for local files. There should be a warning message somewhere in that case.</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-02-19 18:16</div>
+<div class="content">Wait, if you didn't have Javascript, you wouldn't even have buttons to click on. Do done tasks show up when you click the done filter button and only the extra columns are missing, or does nothing happen at all? I just tested the HTML export in IE, Opera, Chrome and Firefox and both the done tasks and the additional columns show up perfectly.</div>
+<h2>Reply by Ralph</h2>
+<div class="meta">2010-02-19 19:16</div>
+<div class="content">I am using ie and yes the done tasks do show up just no extra column</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-02-19 19:24</div>
+<div class="content">Okay, which version of IE? I'm testing against the newest, IE8.</div>
+<h2>Reply by Ralph</h2>
+<div class="meta">2010-02-19 19:26</div>
+<div class="content">Just tried firefox and that works fine.  It must be some setting in ie.</div>
+<h2>Reply by Ralph</h2>
+<div class="meta">2010-02-19 19:27</div>
+<div class="content">ie 7</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-02-19 20:29</div>
+<div class="content">If you want to use IE as your default browser, I recommend updating to the newest version, for security reasons alone.<br><br>I'll do some testing with a standalone IE6 and IE7 anyway, when I find the time / if it stands out .</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-02-21 15:53</div>
+<div class="content">Version 0.9.5.2: <a href="http://github.com/downloads/andreashofmann/AutofocusAHK/AutofocusAHK-0.9.5.2.zip" rel="nofollow">http://github.com/downloads/andreashofmann/AutofocusAHK/AutofocusAHK-0.9.5.2.zip</a><br><br>    Tweaks:<br><br>      - Windows are always on top<br>      - Windows will close when they lose focus<br>      - Windows don't have taskbar buttons anymore<br>      - All of the above can be toggled in the ini file<br><br>    Fixed Bugs:<br><br>      - Sometimes, duplicated windows would appear<br>      - Expired tasks weren't immediately removed</div>
+<h2>Reply by Rodney Mitchell</h2>
+<div class="meta">2010-02-22 18:31</div>
+<div class="content">Andreas,<br><br>I love how simple and useful this app is but I think I've found a couple bugs for AF1-AF3. <br><br>CapsLock+s does not work at all for AF1.<br>CapsLock+s does not show the task text for AF1-AF3.<br>CapsLock+d does not show the task text for AF1.<br><br>I was hoping to use AF2 but the only way to review tasks is to export. I guess I'll just have to use DWM or AF4 for now!</div>
+<h2>Reply by Wooba</h2>
+<div class="meta">2010-02-23 13:54</div>
+<div class="content">Andreas,<br><br>Your script has made me far more productive than I was with paper. It is simple, quick, brilliant, and complements Mark's methods superbly. Thank you.<br><br>I think there may be a bug, however:<br><br>I think the ExpirationNew and ExpirationReAdd settings in the .ini file are not being picked up. I have ExpirationNew set to 31 days, but new tasks are being added in 28 days. I have tried 20 days, too, and tasks are still added in 28 days.<br><br>The Re-Add Button adds tasks after 28 days -- is this by design? I was expecting Re-Added tasks to be added after 7 days. Or am I misunderstanding something (quite likely)?<br><br>And a suggestion:<br><br>Can you use the format hh:mm:ss in the Report for the Time column? This will make it easier to total up the times after exporting the Report to Excel.<br><br>Many thanks,<br>Wooba</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-02-23 15:29</div>
+<div class="content">Rodney:<br><br>Sorry, I didn't test the older systems thoroughly while adding new features, I will do so for the next release. <br><br>Wooba:<br><br>You have to restart or reload (CapsLock + R) the app for changes in the ini file to apply. Maybe that's the problem. But you're right, there seems to be a problem with the date for re-added tasks. I just tested it and the first task did land on today+7, but the second one didn't. I need to look into that.</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-02-23 15:33</div>
+<div class="content">First inspection of the Tasks.txt files shows me that the expiration date was correctly calculated, but the task was sorted into the wrong place in the list. Strange. :-\</div>
+<h2>Reply by Wooba</h2>
+<div class="meta">2010-02-23 17:12</div>
+<div class="content">I just changed ExpirationNew=20, then Reloaded, then Added a test task, and it was added on 22nd March.</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-02-23 19:23</div>
+<div class="content">Okay, looks like I have to stop adding new stuff and concentrate on bug-fixing for a while. Please continue to report anything you find. Thanks.</div>
+<h2>Reply by Will</h2>
+<div class="meta">2010-02-24 8:11</div>
+<div class="content">Andreas,<br><br>When it's back on the straight and level, are you going to post this on the AHK user examples forum? Always good to spread the word!</div>
+<h2>Reply by sabre23t</h2>
+<div class="meta">2010-02-25 6:45</div>
+<div class="content">Currently on v0.9.5.2. Just noticed my tasks.txt have a bunch of tasks expiring 2&3mar located at multiple wrong places in the list. I've manually resorted my tasks.txt, and will report back if I find the command sequence that causes the error. <br><br>I've been printing the caps-E html page daily for quite sometime. But I didn't immediately notice this task in wrong place issue. Perhaps caps-E can emit a warning (without stopping) when it encounters wrong sorted expiry date while it process the html page.</div>
+<h2>Reply by sabre23t</h2>
+<div class="meta">2010-02-26 1:02</div>
+<div class="content">Hi Andreas,<br><br>I found v0.9.5.2 consistently putting in re-added items in wrong expiry date sort location. Hence, I've gone back to v0.9.5.1. So far the re-added items get put in the correct expiry date sort location.</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-02-26 5:31</div>
+<div class="content">Thanks, I'll figure out what changes between these two version had that effect.</div>
+<h2>Reply by Wooba</h2>
+<div class="meta">2010-02-26 9:37</div>
+<div class="content">I have just tried going back to v0.9.5.1 and it made no difference to the sort location. I have now gone back to v0.9.4.1 and it is happening in that version also.<br><br>However, I tried it with a new, empty, Tasks.txt. It works fine in all versions except for v0.9.5.2.<br><br>HTH</div>
+<h2>Reply by sabre23t</h2>
+<div class="meta">2010-02-26 11:01</div>
+<div class="content">Wooba wrote:<br><<I have just tried going back to v0.9.5.1 and it made no difference to the sort location.>><br><br>Wooba, you need to manually clean up (resort by expiry date, using a text editor etc) the tasks.txt that was "munged" by v0.9.5.2. Then v0.9.5.1 will work okay. Starting from a totally new/empty tasks.txt will also be okay.<br><br>I didn't want to throw away the 80+ tasks already on my list, so I did the manually resorting to revive my tasks.txt.</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-02-26 11:35</div>
+<div class="content">Yes, the sorting mechanism (which seems to be broken in 0.9.5.2 even though not a single line of its code was changed, must be a concurrency issue) only sorts the newly (re-)added task in, it doesn't fix existing unordered tasks. So if you have a task that expires March 5th but is in the March 10th slot, when a new task is added, the sorting mechanism will look backwards through the list, find that task, and say "ah, expires on March 5th, the new tasks goes after this one". And so the new task will be listed under March 10th, too.<br><br>Version 0.9.5.3 will perform a complete resort of the list to fix this, so you don't have to sort the list by hand now if you don't want to. I promise 0.9.5.3 will be released this weekend, before any of the affected tasks get in danger of expiring. The right order will then be restored automatically.</div>
+<h2>Reply by Wooba</h2>
+<div class="meta">2010-02-26 12:22</div>
+<div class="content">Thanks Andreas and sabre23t,<br><br>I resorted by hand -- didn't take long -- and can confirm that everything seems to work perfectly using version 0.9.5.1.<br><br>All the best for the new version, Andreas. I'm looking forward to it.</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-02-26 15:34</div>
+<div class="content">I took the 0.9.5.2 download down and released a small fix release: <a href="http://github.com/downloads/andreashofmann/AutofocusAHK/AutofocusAHK-0.9.5.1.1.zip" rel="nofollow">http://github.com/downloads/andreashofmann/AutofocusAHK/AutofocusAHK-0.9.5.1.1.zip</a><br><br>It's simply 0.9.5.1, but resorts the list by expiration date on load (if you use DWM), so if 0.9.5.2 messed up your list, you don't have to fix it manually. Sorry to those who already did so. Feel free to move some tasks around on purpose and give me feedback on whether the sorting works. ;-)</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-02-27 13:06</div>
+<div class="content">Version 0.9.5.3: <a href="http://github.com/downloads/andreashofmann/AutofocusAHK/AutofocusAHK-0.9.5.3.zip" rel="nofollow">http://github.com/downloads/andreashofmann/AutofocusAHK/AutofocusAHK-0.9.5.3.zip</a><br><br>- All tweaks and bugfixes from 0.9.5.2 are intact.<br>- The DWM sorting bug from 0.9.5.2 should be gone.<br>- Additional bugfix: You can remove URLs from a task in the done and task info windows.<br><br>Next release will concentrate on bugfixes for AF1-3, unless some problems arise with AF4 and DWM.</div>
+<h2>Reply by sabre23t</h2>
+<div class="meta">2010-02-28 9:38</div>
+<div class="content">Thanks AndreasH. Downloaded v0.9.5.3 and running it already on "Chk AFAHK 0.9.5 thread". ;-)<br><br>Some thoughts for when you have time to work on DWM portion ...<br>(1) I've been having caps-E export html page open in my second screen side window while working on main screen with caps-D doing part. Alternatively, I've been using printed caps-E page for the same purpose of being aware of where the task is in the list.<br>(2) Basically, I'm trying to get the same "feel" you have while DWM on paper list. Then you're always aware which page (expiry date) you are on, and whether the item was very fresh (added today). The former is already taken care by dates/notice in the caps-D title bar, but the second is not.<br>(3) Perhaps we can have caps-D window to show/notify when the current task is freshly added today? Another notice in the title bar? And/or different background colour for the window (I associate  light blue/green with fresh stuff)?<br><br>I post this feature request here for others to comment. I'll add it to AFAHK github issue page later, if you haven't done it earlier. <br><br>Thanks for your work on this AFAHK, Andreas.<br><br>PS: The timer says I spent 14:30 minutes on this post. ;-)</div>
+<h2>Reply by sabre23t</h2>
+<div class="meta">2010-03-9 3:12</div>
+<div class="content">AndreasH,<br><br>Have you had a look at Mortscript scripting language for WindowsMobile and Windows? See <a href="http://www.sto-helit.de/index.php?module=page&entry=ms_overview&action=view&menu=29" rel="nofollow">http://www.sto-helit.de/index.php?module=page&entry=ms_overview&action=view&menu=29</a> . I'm tempted to have a go at making at least basic features of caps-D on Mortscript on my Omnia2 for when I'm away from my notebook more than a day or two. I'm interested to know whether you think it is not feasible for some reason.<br><br>Currently, when away from notebook I'll mark off task done and write new task on A4 print out of caps-E page. Alternatively, I enter the new task into Outlook Mobile Tasks that I later cut&paste into AFAHK.</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-03-9 7:53</div>
+<div class="content">sabre23t:<br><br>I'll look into Mortscript. I was busy for the last few days, expect some updates in the near future. ;-)</div>
+<h2>Reply by sabre23t</h2>
+<div class="meta">2010-03-24 5:10</div>
+<div class="content">I've done simple Mortscript on my Omnia2. Seems to me, I could implement the full AutofocusAHK using Mortscript, and might well do so later.<br><br>Currently AutofocusAHK 0.9.5.3 is doing well enough for me using the following process ...<br>(1) Have caps-E HTML Export page open for quick browsing of the full DWM list, so can easily have a feel of all the tasks ahead when needed.<br>(2) Use caps-F Find tasks to Do particular tasks that stands out while browsing caps-E list.<br>(3) Continue considering the prompted next tasks after that, or continue browsing the caps-E list for items standing out and go to #2.<br><br>See <a href="http://www.sabre23t.com/temp/TwoScreensAutofocusAHK-20100324.png" target="new" rel="nofollow">http://www.sabre23t.com/temp/TwoScreensAutofocusAHK-20100324.png</a> for a screenshot when I'm working the above.<br><br>Despite the above, I'm thinking of what can be added to caps-F to allow me to dispense with having to refer to caps-E html export page. I thought about adding an additional step to caps-F. After selecting a filtered task instead of immediately doing the task, display another screen with all the intermediate tasks between current task and selected task. Only go to selected task after going through all those tasks. If another task stands out while browsing that list allow me to jump to it instead of original selected task. <br><br>Mmm ...</div>
+<h2>Reply by sabre23t</h2>
+<div class="meta">2010-05-19 15:14</div>
+<div class="content">Mmm ... <a href="http://github.com/andreashofmann/AutofocusAHK/downloads" target="new" rel="nofollow">http://github.com/andreashofmann/AutofocusAHK/downloads</a> shows 0.9.5.3 is still the latest AutofocusAHK.<br><br>I was looking at <a href="http://wakoopa.com/software/autofocusahk/versions" target="new" rel="nofollow">http://wakoopa.com/software/autofocusahk/versions</a> that appears to say 1.0.48.5 is the latest stable version. Wah. How do I get that? ;-)</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-05-19 16:04</div>
+<div class="content">Erm, yeah, I have no idea where wakoopa gets its information from, I never submitted AutofocusAHK to them nor did I mention it anywhere besides this forum. 0.9.5.3 is still the latest version, sorry. All AutofocusAHK-related tasks were dismissed from my DWM list a long time ago. Perhaps I should try re-adding them, but I can't promise. Been very busy with (to me) more important stuff.</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-05-19 16:05</div>
+<div class="content"><< nor did I mention it anywhere besides this forum >><br><br>Scratch that, I dimly remember twittering about releasing version 0.1 or something. But that's it. ;-)</div>
+<h2>Reply by Imamuddin</h2>
+<div class="meta">2010-05-20 13:02</div>
+<div class="content">Ok I will try it letter</div>
+<h2>Reply by sabre23t</h2>
+<div class="meta">2010-05-20 15:51</div>
+<div class="content">No prob Andreas. If any of the reported bugs or requested features bugs me too much, I'll go gets my hands dirty on the source you kindly posted on github. However, currenly I have the excuse of waiting for Marks next version first. ;-)<br><br>Wakoopa gets the version number from the AutofocusAHK.exe being executed by a PC with Wakoopa client running. So somebody had run an AutofocusAHK.exe with 1.0.48.5 as its version. May not be your AutofocusAHK.exe though.</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-05-21 4:58</div>
+<div class="content">sabre23t:<br><br>I just realized where that number comes from: <a href="http://www.autohotkey.com/" target="new" rel="nofollow">http://www.autohotkey.com/</a><br><br>It's the current version of Autohotkey. :-)</div>
+<h2>Reply by sabre23t</h2>
+<div class="meta">2010-05-23 0:15</div>
+<div class="content">Andreas,<br>Did that happen because a version of AutofocusAHK.exe was compiled without setting a version number of something?<br><br>Anyway, just like to report on how I'm using AFAHK v0.9.5.3 for DWM ...<br>(<br>1) Cycling thru the list via the caps-D command seems to cause me to see more tasks standing out, at the expense of speed cycling through the list.<br><br>(2) Using the caps-E exported HTML to cycle through the list seems to cause me to see less task standing out. Maybe because visually out of my eye I can see in the list other tasks ahead, not just the one I'm considering. When a task standout I use caps-F to find/do the task. I cycle the list faster in this method.<br><br>(3) I'm starting to more often do #2 above early in the day, then swap to #1.<br><br>regards,<br>sabre23t =^.^=</div>
+</article>
+    </main>
+    <footer>
+        <p>Archive built from Mark Forster's blog and forums</p>
+    </footer>
+</body>
+</html>

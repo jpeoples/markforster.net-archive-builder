@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DWM on OmniFocus</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../blog_index.html">Blog</a>
+            <a href="../fvp_forum_index.html">FVP Forum</a>
+            <a href="../general_forum_index.html">General Forum</a>
+        </nav>
+    </header>
+    <main>
+<article>
+<h1>DWM on OmniFocus</h1>
+<div class="meta">
+Author: Curt | 
+Created: 2010-02-17 22:34
+ | Last Activity: 2014-08-25 9:48
+</div>
+<h2>Original Post</h2>
+<div class="meta">2010-02-17 22:34</div>
+<div class="content">Here's how I've set up DWM on OmniFocus.  What's great about it is that it doesn't require me to change around any of how I've used OmniFocus in the past - all projects, folders, and contexts can stay the way they are.<br><br>The main thing about AutoFocus is that it takes over your due date field, and I think that's by design.  Due Dates are generally just a construct of when you'd really like to have something done by, they're not usually hard-and-fast dates.  And AutoFocus takes care of that for you.  If you really do have a hard-and-fast date, that is otherwise known as an "appointment" - put it on your Calendar and take it off your list.<br><br>So, on to DWM.  I set up a Context Perspective using the following settings from left to right.<br><br>All Contexts<br>Grouping: Due<br>Sorting: Due<br>Status Filter: Available<br>Estimated Time: Any<br>Flag Filter: Any<br><br>The great thing about this is the Available status.  It means that for any project I can go in and plan further action items, but if I'm not able to do them yet due to other blocking tasks, they won't show up in the filter.<br><br>When you start, you'll find that almost all of your tasks are in the "No Due Date" grouping.  This will be a familiar routine, you need to always go through all the tasks in "No Due Date" and give them a due date a month from now.<br><br>I don't like how OmniFocus has a default of 5pm on due dates, since I like to respect ordering, so what I do is go through these one by one, typing in "720h".  That's 720 hours from now, or 30 days.  You only have to do this once for all tasks.<br><br>Then when they are all given due dates, you go through them one by one, and if you want to work on any of them, you either check it off if you finish it, delete it if it's irrelevant, or work on it and then reschedule it for a week from now, which is - you guessed it, "168h".<br><br>This is working *great* for me, for the following reasons.<br><br>1) Any time I only want to see a certain family of tasks, I can filter by context, or focus by project/folder.<br>2) If I know I won't even want to consider starting on a task until the future, I can set the Start Date to the future and it will disappear.  I can either leave the Due Date field as is or blank it out so it will be seen as a "new task" when it appears, at which point I 720h it for a month from then.<br>3) If I complete a task and it enables more tasks after it, they automatically show up in my No Due Date grouping, which I see after every cycle through the list, and I just 720h them all.<br>4) If I want, I can retain all my other OmniFocus habits, including reviewing projects, adding new action items for down the line, etc.  It's really the best of all worlds and it doesn't require me to compromise on DWM at all.<br><br>You can enhance this further by creating a couple of applescripts - one to highlight a group of tasks and apply "720h" or "168h" to all of them, and, another one to highlight a group of tasks and apply "24h" to all of them in case you go on vacation or something (although this should be used sparingly as its a cheat if you feel "behind schedule").</div>
+<h2>Reply by CarstenN</h2>
+<div class="meta">2010-02-18 10:17</div>
+<div class="content">It's easy to change attributes like due date on multiple actions at once:<br><br>1. Select the actions you want to modify - by dragging across or command-click or shift-clik<br>2. Open the Inspector<br>3. Change whatever it is that you want to change - fx due date<br><br>Thats it.</div>
+<h2>Reply by ksrhee</h2>
+<div class="meta">2010-02-18 17:24</div>
+<div class="content">You can also use +7d for 7 days from now instead of using hours.<br><br>Also, there is a defer script available in the forum where you could defer the task by a specified number of days (e.g., 7 days).</div>
+<h2>Reply by ksrhee</h2>
+<div class="meta">2010-02-18 17:25</div>
+<div class="content">As stated by Carsten, you can block act on the items.  Also, you can set the default due time to something else in the preference.</div>
+<h2>Reply by Curt</h2>
+<div class="meta">2010-02-19 1:17</div>
+<div class="content">Nice, I didn't realize that about the block-act.  Lots of functionality buried in OmniFocus.<br><br>Of course, I imagine that might only work for times relative to now, rather than times relative to the action's existing date.  The latter is the scenario you'd want for correcting a vacation absence, I think.<br><br>If you use days instead of hours, it defaults to the same time every day - I just like using hours instead because things are more spaced out that way.  Your mileage may vary.</div>
+<h2>Reply by Jupiter</h2>
+<div class="meta">2010-02-19 18:23</div>
+<div class="content">OF is indeed powerfull and adaptable. I personaly use it for managin my numerous project. <br>I gona do a little try with DWM on it just to see if  can get something with it. What i like with OF is the ability to easy work on projects and the way it's easy focus on context. It's also very easy to capture task and the perspectives are really interesting for focus.</div>
+<h2>Reply by ds</h2>
+<div class="meta">2010-02-20 3:44</div>
+<div class="content">For me, OmniFocus was awkward with AF 1-5. But it can work brilliantly for AF5/MWD. After all, all you need is a list of tasks, organized by date.<br><br>In OF, groups by due date and sort by due date, and you're done!<br><br>Unlike previous versions of AutoFocus (in my experience), you can now go in and use OmniFocus's bonus features, and assign your tasks to projects and contexts--this won't mess up your sort by due date.<br><br>But if you ever want to, you can sneak a peak at a certain context or project and just see what you need to see for the time.</div>
+<h2>Reply by Grand Wazoo</h2>
+<div class="meta">2014-08-24 22:34</div>
+<div class="content">My understanding of DWM was that once a task rolled past its 30 day limit you would give a 7 day bump, but then if you still hadn't touched it after that 7 days you would just scratch it off and admit that you weren't going to do anything about it.<br><br>If I'm right about that, how do you manage the 7 day bump in Omnifocus? I've been reviewing my tasks and setting the 720h due date on existing items, but now I need to integrate my DWM tasks from my paper notebook that I've been managing as manual lists, and some of those have fallen into the 7 day red zone.<br><br>One thought I had was just to flag the ones that are in danger, but I was curious about how you are differentiating them. If you don't have some kind of indicator then you could just keep bumping the due dates in perpetuity, which would seem to defeat the purpose.</div>
+<h2>Reply by Mark Forster</h2>
+<div class="meta">2014-08-25 9:48</div>
+<div class="content">Grand Wazoo:<br><br><< My understanding of DWM was that once a task rolled past its 30 day limit you would give a 7 day bump, but then if you still hadn't touched it after that 7 days you would just scratch it off and admit that you weren't going to do anything about it. >><br><br>You haven't got that quite right. All new tasks have 30 days in which you can take action on them. If you haven't done anything on the task by then it goes "over the waterfall" and is lost for ever.<br><br>The 7-day limit applies to tasks on which you *have* taken some action. Any further action on the task has to be taken within 7 days. This applies to any task which you re-enter on the list, such as recurrent tasks like Email and tasks which haven't been completed.</div>
+</article>
+    </main>
+    <footer>
+        <p>Archive built from Mark Forster's blog and forums</p>
+    </footer>
+</body>
+</html>

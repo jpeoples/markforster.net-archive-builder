@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>amFVP - A Simple FVP Web App</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../blog_index.html">Blog</a>
+            <a href="../fvp_forum_index.html">FVP Forum</a>
+            <a href="../general_forum_index.html">General Forum</a>
+        </nav>
+    </header>
+    <main>
+<article>
+<h1>amFVP - A Simple FVP Web App</h1>
+<div class="meta">
+Author: Andreas Maurer | 
+Created: 2015-05-26 21:13
+ | Last Activity: 2015-09-17 17:01
+</div>
+<h2>Original Post</h2>
+<div class="meta">2015-05-26 21:13</div>
+<div class="content">Hello everyone,<br><br>I created a small web app implementing FVP for my personal use that I'd like to share with you:<br><a href="http://www.andreasmaurer.net/public/apps/fvp/" target="new" rel="nofollow">http://www.andreasmaurer.net/public/apps/fvp/</a><br><br>This will not be for everyone since it's specific to my taste, which means the workings of the system including the actual list stay hidden while the user gets a very reduced, focused view.<br><br>So far it only implements the basic selection algorithm of FVP. Once you added a few tasks, you only ever see one of two screens:<br><br>1) A choice between two tasks<br>2) The task you should do now<br><br>== Data Security ==<br><br>After loading the app from the server, no data is sent back to it. Tasks you enter are saved in the local database of your web browser. This means your data remains on your device at all time. The drawback is that for now, no synchronisation between devices or even different browsers on the same device.<br><br>== Keyboard Shortcuts ==<br><br>I prefer using the keyboard over the mouse, so here are some shortcuts:<br><br>Anywhere (except while adding tasks):<br>a - Add new tasks<br><br>While adding tasks:<br>Ctrl+Enter - Add the entered tasks to the system<br>Esc - Cancel without adding the entered tasks<br><br>While doing a task:<br>f - Mark the task as finished<br>r - Re-add the task at the end of the list<br><br>When choosing between two tasks:<br>1 - Choose the first task<br>2 - Choose the second task <br><br>== Feature Requests / Feedback ==<br><br>Feel free to report bugs and request changes here.<br><br>So far I have: <br>- Mark said one should have the option to view the whole list. I will add this in the next version.<br>- Jesse expressed the hope that there would be not feature bloat. To address this, the current version will be available at <a href="http://www.andreasmaurer.net/public/apps/fvp/v1/" target="new" rel="nofollow">http://www.andreasmaurer.net/public/apps/fvp/v1/</a> even after I released a new version. So existing users can choose to keep using the old version or to migrate their tasks to the current version at any time.<br><br>== Planned Features ==<br><br>- Show whole list for review<br>- Remove tasks<br>- Re-prioritize<br>- Synchronization - That is a big maybe, since I don't need it. (I have my private list on my iPad and my work list on my work PC, which is sufficient for me.) Plus it opens a big can of worms like saving your data in the cloud after all, you'd need an account and so forth. I'm open for suggestions.</div>
+<h2>Reply by vegheadjones</h2>
+<div class="meta">2015-05-26 22:22</div>
+<div class="content">I love it, but cannot use it (yet?) If you can allow hyperlinks for items, I would be all set. Currently I use excel and keep data on tasks in onenote, linking to there. If I could keep the link but use this I would be thrilled.</div>
+<h2>Reply by Andreas Maurer</h2>
+<div class="meta">2015-05-27 6:40</div>
+<div class="content">vegheadjones:<br><br>I added basic URL parsing to the current version (not the one at /v1). This creates hyperlinks out of web pages and email addresses. Does that solve your problem? If not, can you give me an example of how one of your links looks like?</div>
+<h2>Reply by Nico</h2>
+<div class="meta">2015-05-27 9:31</div>
+<div class="content">Maybe some stats info:<br>Number of items cleared/deleted/re-entered today or this week.<br><br>Number of items open month to month...trend.</div>
+<h2>Reply by Sean Fellows</h2>
+<div class="meta">2015-05-27 19:03</div>
+<div class="content">Thanks for this! I actually love that it hides the list from you and just tells you what to do next. I'd previously been using Trello for FV/P but there's so many extra widgets on Trello that you just don't need.<br><br>I've used the Dropbox Datastore API before and it is pretty nifty, but of course it is deprecated... :-/</div>
+<h2>Reply by Pat</h2>
+<div class="meta">2015-05-27 19:11</div>
+<div class="content">Hi Andreas-<br><br>Very nice and it is along the lines of an idea I had to do for an app for the original FV (but apparently never got actioned!!).<br><br>You mentioned that one of your potential future enhancements would be re-prioritization.  Is that to handle the part of the FVP instructions that allows you to make changes to your selected tasks like this:<br><br>INITIAL chain:<br>• Go to the bank<br>  Learn to juggle armadillos<br>• Invent a new language<br>  Solve world peace<br>  Eat ice cream<br>• Put on pants<br>  File TPS report<br>  Hide from manager when TPS report is late<br>  <br>Using your app, after I complete (or re-add) the "Put on pants" task, I would then be faced with doing the "Invent a new language" tasks.  According to Mark's instructions though, I should be making a new decision: Which do I want to do more, "Invent a new language", or "File TPS report" (and then decide between "Invent a new language" or "Hide from manager" if appropriate).<br><br>Am I making sense here?  Is this something you have in the works.<br><br>Again, nice job!<br><br>-Pat</div>
+<h2>Reply by Jesse</h2>
+<div class="meta">2015-05-27 21:04</div>
+<div class="content">This is great! I have a few questions....<br><br>1. Just to be clear, https://www.andreasmaurer.net/public/apps/fvp/ will be the most up to date version, and  <a href="http://www.andreasmaurer.net/public/apps/fvp/v1/" target="new" rel="nofollow">http://www.andreasmaurer.net/public/apps/fvp/v1/</a> will be the original version?<br><br>2. If I put a task into the original version will that task carry over to the newest version? And vice versa? I'm worried about losing my data. On that note, is there a way for me to export my tasks just in case the site goes down? <br><br>3. A long task tends to overcrowd or spill out of the box. I've got some long sentences and url's for some of my tasks and when they are in the box on the top, the text overlaps the text in the bottom box making both hard to read. I end up zooming in and out of my browser quite a bit.<br><br>Even if you do no more work on the site, I really really appreciate this. I'm using it and it's a joy. I'm happy to use the newest version and any new features you add. I hope you stay with a focused view, though. That's really helpful as far as being motivated to stay on the current task.<br><br>I know it's not a priority for you (and I already have my own workaround solution), but synchronization would be game-changer. I'd pay money happily.<br><br>Thanks again!</div>
+<h2>Reply by Jesse</h2>
+<div class="meta">2015-05-27 21:34</div>
+<div class="content">As far as re-prioritization as a feature, I saw Mark's quote here:<br><br>"I'm actually coming to the conclusion that one should re-prioritize only as a last resort. I kept yesterday's prioritization going today and found it works better. If something becomes urgent or needs getting on with, then it's best to cross it out and re-enter it at the end of the list, rather than upset what is quite a delicate balancing act by the algorithm."<br>May 25, 2015 at 18:37 | Mark Forster</div>
+<h2>Reply by Andreas</h2>
+<div class="meta">2015-05-27 21:59</div>
+<div class="content">Nico:<br><br>Noted, but stats will probably have to wait until v3 or so.<br><br>Sean:<br><br>Yeah, Dropbox would have been nice. What actually should work without changing too much in the current implementation is synchronizing with a couchdb or couchbase database server. Unfortunately, that is not as trivial for a normal user to set up as something like Dropbox.<br><br>Pat:<br><br>No, re-priorization means removing all the dots and starting from the first task again. Initially Mark recommended doing that daily, which is why I wanted to do it automatically in the app at midnight. But as Jesse points out above, Mark changed his mind about the importance/usefulness of re-priorization, so it will be just a button one can press if the need arises, <br><br>The behavior you describe should already work in the app. i just added the tasks from your list, selected the three you marked and after finishing "Put on pants", it did ask me to choose between "Invent a new language" and "File TPS report". If that does not work for you, that must be a bug. In that case please let me now and I'll look into it.<br><br>Jesse:<br><br>1. Yes, that's how it is right now. The difference is not great between the two versions right now. i'll probably add the bugfixes I did to the v1 version and start v2 when I add the list management.<br><br>2. I have to make some changes to the internal data format for v2, so the data from v1 will not be usuable as is. I will give you a means to export your data (coming soon) and migrate it to v2 (coming with v2), plus I will never delete the date for v1, so even if something goes wrong or you don't like v2, you can just go to the /v1 url and everything will be as you left it.<br><br>3. I think I fixed that issue in the current version, can you check?</div>
+<h2>Reply by Jesse</h2>
+<div class="meta">2015-05-28 0:02</div>
+<div class="content">"3. I think I fixed that issue in the current version, can you check?"<br><br>It's fixed. Thanks!</div>
+<h2>Reply by Pat</h2>
+<div class="meta">2015-05-28 2:35</div>
+<div class="content">Andreas... Perfect!</div>
+<h2>Reply by Andreas Maurer</h2>
+<div class="meta">2015-05-28 21:19</div>
+<div class="content">Okay. I updated v1 to contain the following additional features compared to the first post in this topic:<br><br>1. Automatic detection of http links and email addresses and making them clickable<br><br>2. Additionally, you can use this markdown-inspired format to create links of any kind:<br>[display text](url)<br>For example. "Click [here](<a href="http://google.com)"" target="new" rel="nofollow">http://google.com)"</a> will be displayed as "Click here" and "here" will be a link ot google.com. While auto-detection only works for http:// urls, this method should work for all kinds of urls, for example omnifocus://, evernote:// or similar.<br><br>3. A very basic way to get the tasks you entered back out of the system: https://www.andreasmaurer.net/public/apps/fvp/v1/export/<br>Note that this does not include tasks that have been finished.<br><br>4. Minor bugs and styling fixes.<br><br>If you prefer stability, I recommend starting to use https://www.andreasmaurer.net/public/apps/fvp/v1/ exclusively now. It will not be updated again with the possible exception of bug fixes.</div>
+<h2>Reply by Jesse</h2>
+<div class="meta">2015-05-29 3:18</div>
+<div class="content">I'm now at work and using <a href="http://www.andreasmaurer.net/public/apps/fvp/" target="new" rel="nofollow">http://www.andreasmaurer.net/public/apps/fvp/</a> on a different computer, which has a different list, my work-related tasks. It remembered everything and that's great, but the key commands don't work and the issue I mentioned with the text spilling out of the boxes is back. <br><br>I'm assuming it's because I'm using Internet Explorer 10, and not Chrome like I was at home.</div>
+<h2>Reply by Andreas Maurer</h2>
+<div class="meta">2015-05-29 4:33</div>
+<div class="content">Jesse:<br><br>That sounds like Internet Explorer has cached the old version locally and is not fetching the new version. Try the following:<br><br>1. Go to <a href="http://www.andreasmaurer.net/public/apps/fvp/v1/export" target="new" rel="nofollow">http://www.andreasmaurer.net/public/apps/fvp/v1/export</a> and copy your task list (just to be safe)<br><br>2. Go to <a href="http://www.andreasmaurer.net/public/apps/fvp/" target="new" rel="nofollow">http://www.andreasmaurer.net/public/apps/fvp/</a> and press Ctrl+F5, this should empty the cache. If it doesn't work, try Ctrl+R, or press F12 to open the Developer Tools and select Cache->Empty Cache from its menu bar.</div>
+<h2>Reply by Andreas Maurer</h2>
+<div class="meta">2015-05-29 4:45</div>
+<div class="content">Correction: Don't try Ctrl+r if you're currently on the "doing" screen, the r causes the task to be re-added. - That would be a bug. :-/<br><br>Workaround: Switch to the "add tasks" screen before pressing Ctrl+r.</div>
+<h2>Reply by Andreas Maurer</h2>
+<div class="meta">2015-05-29 7:10</div>
+<div class="content">Bug fixed:<br><br>Ctrl+r (Windows/Linux) and Cmd+r (Mac) now reload the page instead of re-adding the task.</div>
+<h2>Reply by Brad Mills</h2>
+<div class="meta">2015-05-29 8:30</div>
+<div class="content">Andreas,<br><br>I just want to say ditto to Mark's comment about your web app. It is seriously brilliant! I tried it out tonight after adding my very long list of items. I was going to make a few recommendations, but you already mentioned all of them in your comment of upcoming features you would like to add. I love the simplicity, but would like to be able to reprioritize the list at any point. Being able to see the whole list and bulk dismiss would also be nice. But it is already a very usable application as it is. I would also request the ability to view the history. That might be easier to implement than stats, but very helpful to review at the end of the day. Thank you for putting this together and sharing it with us!</div>
+<h2>Reply by Jesse</h2>
+<div class="meta">2015-05-29 9:48</div>
+<div class="content">That worked. Thanks! Eagerly awaiting list editing to get rid of redundant tasks! Can I paypal you some money or something?<br><br>I'm planning to buy Mark's book as well to thank him.</div>
+<h2>Reply by Mark Forster</h2>
+<div class="meta">2015-05-29 10:50</div>
+<div class="content">Jesse:<br><br>Interesting you should mention money...</div>
+<h2>Reply by Kevin Dangoor</h2>
+<div class="meta">2015-05-29 12:48</div>
+<div class="content">I believe you could use the Dropbox API (not their datastore API) to enable syncing between devices. That's how Fargo works:<br><br><a href="http://fargo.io/" target="new" rel="nofollow">http://fargo.io/</a><br><br>It just stores regular files in your Dropbox account.</div>
+<h2>Reply by Andreas Maurer</h2>
+<div class="meta">2015-05-29 13:19</div>
+<div class="content">Jesse, Mark:<br><br>I'm not planning to take money for this. In exchange I don't feel obligated to implement features that I don't find useful for my personal use.<br><br>If I did take money, it would be to cover costs (server costs if I were to implement my own server-side syncing, yearly account costs if I were to create a dedicated mobile app for the App Store for example, both of which are unlikely at the moment). <br><br>Plus I'd feel obligated to split the money with Mark, since my app wouldn't exist without his system. Which reminds me: I recently re-bought all of Mark's books for Kindle and don't need my paper editions anymore. If someone here wants "Get Everything Done", "How to Make Your Dreams Come True", and "Do It Tomorrow", post here and I'll send them to you as a gift. Conditions: You should live in the EU/UK and take all three of them (I don't want to ship them separately). First come, first serve. <br><br>Kevin:<br><br>Sounds interesting, I'll look into it.</div>
+<h2>Reply by Andreas Maurer</h2>
+<div class="meta">2015-05-29 15:43</div>
+<div class="content">Small bugfixes for v1:<br><br>- Allow other common browser shortcuts other than Ctrl/Cmd+r (Most importantly Ctrl/Cmd+F and Ctrl/Cmd+A)<br><br>- If you were currently doing a task, it was missing from the export list under certain circumstances.<br><br><br>PS: How great is it that the favicon of <a href="http://fargo.io/" target="new" rel="nofollow">http://fargo.io/</a> is Clarus the Dogcow?</div>
+<h2>Reply by Mark Forster</h2>
+<div class="meta">2015-05-29 19:22</div>
+<div class="content">Andreas:<br><br>Sorry, I wasn't aiming my remark at you. It was an attempt to nudge people towards the donation box in the right-hand margin. Since publishing FVP I have had a grand total of two donations (two more than for the rest of the year!).</div>
+<h2>Reply by Andreas Maurer</h2>
+<div class="meta">2015-05-29 21:22</div>
+<div class="content">Mark:<br><br>No problem, I fully support that nudge.</div>
+<h2>Reply by Jesse</h2>
+<div class="meta">2015-05-30 7:14</div>
+<div class="content">One little bug I noticed. 1 & 2 on the number pad don't work for options 1 and 2, but the numbers above the letter keys work fine. Might be me though.</div>
+<h2>Reply by Andreas Maurer</h2>
+<div class="meta">2015-05-30 8:05</div>
+<div class="content">Jesse:<br><br>It's not you, regular 1 and 2 and numpad 1 and 2 technically are completely different keys. I added handling for the numpad. Can you refresh your browser and try again?</div>
+<h2>Reply by Jesse</h2>
+<div class="meta">2015-05-30 8:10</div>
+<div class="content">Andreas, that did it! I hope you don't mind the feedback...!</div>
+<h2>Reply by Andreas Maurer</h2>
+<div class="meta">2015-05-30 9:06</div>
+<div class="content">Jesse:<br><br>I don't mind at all. It gives me ideas and helps me discover problems I wouldn't have found myself. (My keyboard doesn't even have a number pad.)</div>
+<h2>Reply by Andreas Maurer</h2>
+<div class="meta">2015-05-30 23:38</div>
+<div class="content">Big update:<br><br>Time for some serious browser refreshing. Being able to use an app to better develop the app itself is one of the perks of creating a todo app, I guess. I had a productive Saturday today thanks to FVP and here are the results: <br><br>1. <a href="http://www.andreasmaurer.net/public/apps/fvp/" target="new" rel="nofollow">http://www.andreasmaurer.net/public/apps/fvp/</a> will be a landing page in the future to host an instruction manual and to let you directly choose the version of the app you want. Most of that is yet to come, but the take-away is to directly go to /v1 or /v2 for the app in the future.<br><br>2. <a href="http://www.andreasmaurer.net/public/apps/fvp/v1/" target="new" rel="nofollow">http://www.andreasmaurer.net/public/apps/fvp/v1/</a> remains as it was as a fallback for everyone who has problems with v2.<br><br>3. <a href="http://www.andreasmaurer.net/public/apps/fvp/v2" target="new" rel="nofollow">http://www.andreasmaurer.net/public/apps/fvp/v2</a> now hosts the new version with some major new features. When you first visits, it creates a copy of your tasks from v1. From then on, the two lists are separate, which means if anything goes wrong in v2, you'll find your data untouched when going back to v1. The app is more complex now, so there is a larger probability of bugs, especially this early. You'll have to decide which one to use.<br><br>== New Features ==<br><br>- New layout. Less minimal, but still pretty minimal. I like it.<br><br>- A settings screen that for now allows you to<br><br>    - Re-prioritise your list (as in "reset the pre-selection")<br><br>    - Clear your list (as in "remove all tasks and start completely from scratch")<br><br>- A list view to show your whole list, and if you hover over a task you get<br><br>    - An option to re-add/move it to the end of the list<br>    - An option to delete the task<br><br>- When adding tasks, the text field start small now and automatically grows as you enter text. That looks pretty neat and fixes some weird scrolling behaviour on iPhone/iPad.<br><br>== Things Still Missing ==<br><br>The following things are still work in progress in v2 and I will address them in the next few days, hopefully tomorrow:<br><br>- Keyboard navigation for the new screens is basically non-existent. You can use the tab and enter keys to get around, but I'll add a lot more shortcuts.<br><br>- The list view is not very usable for mobile/touch devices, especially the iPhone. I think about a solution for that one.<br><br>== Next version ==<br><br>I actually did not change the data format yet, so in v2 there is still almost no metadata saved with a task, e.g. date added, date selected, date started, date finished. Also finished tasks are completely removed. To implement any form of stats, I need to change the data format for v3.<br><br>The data format is also something to consider when trying to add any form of synchronisation. I'm still not sure it can be done without saving anything on my server.<br><br>Well, that's it for now. I need to finish my day. If you have any feed back for the new features, or missing ones, let me know.</div>
+<h2>Reply by Nico</h2>
+<div class="meta">2015-05-31 1:53</div>
+<div class="content">Great update!! Thanks Andreas</div>
+<h2>Reply by Seraphim</h2>
+<div class="meta">2015-05-31 2:28</div>
+<div class="content">This is great!   I was resisting my paper list because it's been getting kind of long, and scanning the list was feeling tedious.  So I gave the web app a try and it made the whole process feel much faster and lighter, and really helped me get going today.  So thank you!!  :-)</div>
+<h2>Reply by Brad Mills</h2>
+<div class="meta">2015-05-31 2:42</div>
+<div class="content">Really great update! I've been using it all day. These upgrades are perfect! Thanks again for all your hard work.</div>
+<h2>Reply by nick61</h2>
+<div class="meta">2015-05-31 18:58</div>
+<div class="content">Thank You very much Andreas for letting us use your app.<br>As far as synchronization is concerned, I think that an import/export function with the conservation of the "selection" of items could solve the problem.<br>One could be able to export the list with pre selected items from one browser/device, send it to another one (via a few alternatives: email, dropbox, evernote, etc...) and start again from where he left.<br>This could also give the opportunity to have multiple lists, based on context, project, home/office, etc... the export/clear list/import functions could surrogate a more complex synchronization approach.</div>
+<h2>Reply by Jesse</h2>
+<div class="meta">2015-05-31 20:27</div>
+<div class="content">nick61,<br><br>This is kind of what I've been doing. I'm not sure if having two separate lists is more or less productive than two. I feel like the algorithm can handle contexts as well as anything else which is throwing up resistance to getting stuff done.<br><br>I do worry about my work context stuff getting buried in the back of the list when I'm at home and vice versa.<br><br>Still it would be nice to have one list and just let it sort itself out for everything. Right now if I think of a work task while I'm at home, I use Google Keep to capture it and then paste it into my amFVP when I get to work. So of course there are tasks on both of my lists about remembering to do that.</div>
+<h2>Reply by Jesse</h2>
+<div class="meta">2015-05-31 20:34</div>
+<div class="content">Looks like Mark has been testing the "exciting" question instead of the "want" question recently here <a href="../fvp_forum/The Metaphysical Basis Behind FVP.html" target="new" rel="nofollow">http://markforster.squarespace.com/fv-forum/post/2508019</a><br><br>That leads me to a maybe dangerous request... A way to customize the question?</div>
+<h2>Reply by Seraphim</h2>
+<div class="meta">2015-06-1 4:46</div>
+<div class="content"><< A way to customize the question? >><br><br>I just do this mentally -- e.g., "if I could only get one of these tasks done today, which would I choose?" -- and it works fine.</div>
+<h2>Reply by Jesse</h2>
+<div class="meta">2015-06-1 4:54</div>
+<div class="content">Having it on the screen is pretty useful for me. If my brain or willpower is low, I often forget what I'm doing and having the question there to remind me is helpful.</div>
+<h2>Reply by Andreas Maurer</h2>
+<div class="meta">2015-06-1 8:42</div>
+<div class="content">Jesse:<br><br> I thought the same thing after reading Mark's comment. I added an option to change the question to the settings. As always, you may have to refresh your browser for it to show up.</div>
+<h2>Reply by Andreas Maurer</h2>
+<div class="meta">2015-06-1 20:07</div>
+<div class="content">Added more keyboard shortcuts;<br><br>- s: Opens settings from main screen<br><br>- l: Opens list from main screen<br><br>- Esc: Now closes all screens that have a close button in the upper right and returns to main screen<br><br>- Down or j: Move downward through the visible buttons or list items<br><br>- Up or k: Move upward through the visible buttons or list items<br><br>- Delete or x: Same as clicking the delete button of the selected task<br><br>- r: Re-Adds the current task (either the current one on the main screen, as before; or the selected task in the list</div>
+<h2>Reply by Jesse</h2>
+<div class="meta">2015-06-1 20:36</div>
+<div class="content">Really cool!<br><br>I'm running into a problem with my recurring tasks. It's not the app, it's just that I have a lot of routine tasks and the algorithm naturally starts looping them so that I'm constantly "re-adding" them, and I'm not going further up the list to the older items.<br><br>This is more an issue with my mindset and how I personally use the system. I'm going to try using version 1 for a while to see if I can figure out how to use the system without too much tinkering. The settings, changing the question, and even access to the list as a whole has me doing too many meta productivity tasks. (I have a couple of tasks which say to get rid of duplicate tasks!) I can go down a rabbit hole of productivity hacks, and the simpler, option free environment helps me cut down on that.<br><br>I'll let you know how it goes! If I feel like I can handle it, I'll move back to version 2!</div>
+<h2>Reply by Jesse</h2>
+<div class="meta">2015-06-2 3:27</div>
+<div class="content">I just ran into an issue. I clicked clear list on version 2 after exporting my tasks to a google document. I then emptied the cache and cookies and everything on both versions to start from scratch. I didn't want double the tasks in version 1. I then pasted my tasks from the google doc onto version 1. They stuck around and I started prioritizing. I closed and opened the site a few times and my data was still there. Now I go back and it's gone. <br><br>I'm pretty darn sure that I did something stupid myself, but any tips to get the app to remember to not dump my data would be great. I'm sure the last thing you want to do is play IT for a free app!</div>
+<h2>Reply by Ryan Freckleton</h2>
+<div class="meta">2015-06-2 3:53</div>
+<div class="content">I also found a bug in v2:<br><br>While on the "add task" screen in Firefox and the text box selected, typing j or k will capture focus and select the 'Add Tasks' or 'Cancel' buttons instead of putting a j or a k into the text box. Right now I'm working around this by copy/pasting from an editor.<br><br>Please let me know if there's anything else you need.<br><br>Also, any thoughts on open-sourcing this? I'd be happy to contribute patches if it was under a FOSS license.<br><br>Cheers,<br>Ryan</div>
+<h2>Reply by Jesse</h2>
+<div class="meta">2015-06-2 4:04</div>
+<div class="content">Ok, weird. I restarted the computer and I go back to version 1 and all my tasks are back.<br><br>Ok. I'll just leave the tab open and hope that internet explorer is archiving it.</div>
+<h2>Reply by Jesse</h2>
+<div class="meta">2015-06-2 4:14</div>
+<div class="content">Ok, so with the data returned, I'm going through the list, making my decisions about which task I want to do more. (There's a lot because I copied the entirety of my task list. I know, I'm not too bright!) And of course I accidentally closed the tab. When I reopened it, it put me back about 10-20 decisions. <br><br>I'm assuming that it's just taking a while longer than I expect for it to "cache" the info and I need to wait for it to catch up. I'm crap at computers, as you can tell.</div>
+<h2>Reply by Jesse</h2>
+<div class="meta">2015-06-2 4:42</div>
+<div class="content">And now my data is gone again. Ok, I'll stop clogging up the thread with this. Luckily, I can use the paper version. And the Chrome version at home seems fine!</div>
+<h2>Reply by Andreas Maurer</h2>
+<div class="meta">2015-06-2 5:20</div>
+<div class="content">Jesse:<br><br>Sorry to hear about your troubles. As a web developer, my first guess is that you are faced with some IE10-specific problem. I guess using the latest version of IE or another browser is not an option at your work?<br><br>I'll look and see if I can find the cause and maybe a cure for your problems. If it's not too much trouble, can you let me know how many tasks you had and how many letters those contained in total? It might be storage-related.<br><br>Ryan Freckleton:<br><br>I fixed the bug, please refresh your browser.</div>
+<h2>Reply by Andreas Maurer</h2>
+<div class="meta">2015-06-2 7:15</div>
+<div class="content">Jesse:<br><br>I don't think its a storage issue, the app has to adhere to a 250mb storage limit in IE10+.<br><br>It's highly unlikely that you exceeded 250mb with a pure text list.<br><br>It might be that your IT department configured your IE to be more restrictive.</div>
+<h2>Reply by Jesse</h2>
+<div class="meta">2015-06-2 11:19</div>
+<div class="content">I'm thinking that's what it is. I'm just going to use my version one with my iPhone for a bit and see how that goes. I think Safari has a limit of 5MB on iOS for local data, but I'm assuming that shouldn't be an issue. <br><br>On the internet explorer, I pasted a huge list and there might have been some weirdness in the text.<br><br>This way I can also test having just one list for work and home.</div>
+<h2>Reply by Seraphim</h2>
+<div class="meta">2015-06-2 15:45</div>
+<div class="content">Regarding the recurring tasks...   (raised by Jesse earlier)<br><br>There are many recurring tasks I really just want to do once daily (or even less often).   When that task is "potentially actionable", then I want it to show up on my list.  But when I've actioned it recently, and don't want to see it again for a day or two, I'd like to "snooze" it so it doesn't show up.<br><br>This goes outside the scope of the FVP algorithm, of course.    For most of Mark's systems, I've implemented this idea by keeping recurring reminders in a tickler -- either a paper tickler, or in Outlook reminders.  When the tickler item comes due, I enter it into the list, and then snooze the tickler item again.<br><br>It would be really cool if this kind of snoozing could be done inside an app like amFVP -- but maybe this is the kind of feature creep you are trying to avoid.  :-)</div>
+<h2>Reply by Jesse</h2>
+<div class="meta">2015-06-3 2:20</div>
+<div class="content">Little bug on version 1. When using Safari on iOS, The text: "Based on FVP Copyright 2015 Mark Forster" will sometimes appear in the boxes on either the decision or the "work on the following task now" screen.<br><br>Cheers!</div>
+<h2>Reply by Andreas Maurer</h2>
+<div class="meta">2015-06-3 7:55</div>
+<div class="content">Seraphim:<br><br>I'm not completely opposed to "feature creep", it's just why I keep old versions around. In the long run, I'd like to have the ability to add tasks automatically from other sources. One instance of this that I thought about putting into the next version is time-based trigger. Say you have some routine tasks you want to do daily. This feature would enable you to have them added to you list at a certain time of day. Would that cover your use case or is the separate ability to "snooze" a single task preferable?<br><br>Jesse:<br><br>Fixed the v1 issue. Btw, are you allowed to execute portable software on your work PC? I'm experimenting with packaging standalone applications for Windows, OS X and Linux.</div>
+<h2>Reply by Andreas Maurer</h2>
+<div class="meta">2015-06-3 9:57</div>
+<div class="content">Other feature ideas rolling around in my head right now:<br><br>- an integrated pomodoro timer.<br>- the ability to switch between multiple lists</div>
+<h2>Reply by Jesse</h2>
+<div class="meta">2015-06-3 19:23</div>
+<div class="content">I'm not sure. I was able to install Chrome, but if there's a lot of "this would require administrative settings" warnings that pop up.</div>
+<h2>Reply by Jesse</h2>
+<div class="meta">2015-06-3 19:49</div>
+<div class="content">The text: "Based on FVP Copyright 2015 Mark Forster" doesn't bleed into the gray boxes (Finish, Re-add or the two options) but if there's a wordy task on the "Work on the following task now:" screen it will still be in the middle of the task's words.<br><br>And this is on Safari on iOS with an iphone 4s</div>
+<h2>Reply by Andreas</h2>
+<div class="meta">2015-06-3 21:39</div>
+<div class="content">Jesse:<br><br>I can't reproduce this on my iPhone 5s, even with comically long tasks. The credit should move down with the content, so that it's not visible initially and you have to scroll down to see it. Either you still see the old version(try refreshing once more) or something else is wrong. <br><br>When you compare two short one-line tasks, where is the copyright notice? Directly below the second task, or is there a gap and the copyright is at the bottom of the screen? If it's at the bottom it's definitely the old version.</div>
+<h2>Reply by ERIC</h2>
+<div class="meta">2015-06-3 22:01</div>
+<div class="content">I finally got to - Thank Andreas Maurer - on my FVP list!<br><br>Your web app has helped me so much.  FVP seems like the best system for me so far, but I can't do it nearly as well on paper as I can with your app.  When I use paper,  I tend to skim along quickly looking at the whole page at once and not doing a disciplined A vs. B, A vs. C comparison.  This is not a fault of the FVP system but of me.  I seem to have attention surplus disorder and need to look at many items at once.  <br><br>Your app forces me to do a one on one comparison  and I make more thoughtful decisions.  I am having a particularly busy time in my life (family member in hospital, major system upgrade this weekend) and the combination of Mark's brilliant system and your fantastic app is keeping me functioning at a higher level than any time I can recall.<br><br>The features you recently suggested (time-based trigger, Pomodoro timer, and the ability to switch between multiple lists) would all be wonderful for me.  I have many recurring tasks that I have to keep re-adding and then not picking until the appropriate time.  I currently use a separate Pomodoro timer.  Also,  I maintain a separate home and work list by using different computers.<br><br>So Andreas, thanks again for your wonderful work and your generosity with your time.<br><br>Live long and prosper.</div>
+<h2>Reply by Jesse</h2>
+<div class="meta">2015-06-3 22:12</div>
+<div class="content">Yup. Refresh got it. That's what I get for never closing the app. Thanks. I appreciate your patience and time.</div>
+<h2>Reply by Seraphim</h2>
+<div class="meta">2015-06-4 4:32</div>
+<div class="content">Andreas - I am glad you are considering these ideas!   Personally, I'd prefer the "snooze" option - it seems more flexible, and it's more in tune with what I already do in the iPhone Mailbox app with emails, and also how I usually manage recurring Outlook tasks.   But it's probably harder to code, too.</div>
+<h2>Reply by Daniel Reeves</h2>
+<div class="meta">2015-06-4 17:03</div>
+<div class="content">Thank you so much for implementing this, Andreas! (And thanks to Mark -- I just donated again!)<br><br>Alas, I have a tragic story. I was accumulating a list of ideas to include in this post but then lost them all, due to what I think counts as a bug in amFVP, so I'll just describe the bug (alternatively: my stupidity):<br><br>I've been using amFVP for a week or so now and loving it. When I noticed how quickly you've been making improvements I impulsively hit Refresh in the middle of a chain, to make sure I was on the latest version. And... sadness! My task list seems to have reverted to what it was days earlier.<br><br>For me a key feature of FVP is, as GTD puts it, having a system where you can dump ideas and put them out of your mind with complete faith that your system will bring them back to your attention. So I'm wondering if it would be safer to drop the database and instead have the program write the tasks to a text file every time.<br><br>If you could also specify the location of that text file you could point it to a Dropbox folder and have the best of all worlds: local execution and no login, but also the ability to use the same list on different computers. And I'm pretty sure that even if someone went completely overboard and accumulated 100s or 1000s of tasks there'd be no noticeable performance hit from writing and re-reading it all from a text file with every task addition/completion.<br><br>Or maybe I'm confused about I managed to lose my latest tasks? Could a rogue browser refresh cause that?<br><br>Thanks again for building it and sharing it!</div>
+<h2>Reply by Andreas</h2>
+<div class="meta">2015-06-4 17:28</div>
+<div class="content">Daniel Reeves:<br><br>Could you tell me which browser you used? I'm trying to determine if there is a pattern there. I guess like Jesse, you put in many tasks? I have to do some stress tests. Either my task load is too small to trigger these problems or it's a browser-specific problem.</div>
+<h2>Reply by Daniel Reeves</h2>
+<div class="meta">2015-06-4 18:06</div>
+<div class="content">Sure! I'm Chrome on Mac. And I had under 20 tasks. I guess this means the problem is not reproducible?</div>
+<h2>Reply by Andreas Maurer</h2>
+<div class="meta">2015-06-5 4:03</div>
+<div class="content">Daniel Reeves:<br><br>Yes, that is not good at all. I guess saving the tasks in the browser is unreliable in general, even if it seems to work most of the time.<br><br>Nothing is worse than a task manager that loses tasks, so I can't really recommend using this app until I changed the underlying storage.</div>
+<h2>Reply by Andreas Maurer</h2>
+<div class="meta">2015-06-5 7:55</div>
+<div class="content">Jesse, Daniel Reeves:<br><br>Did you by any chance open the app in multiple bowser windows or tabs at the same time before you lost your progress? I think that might be the issue. At least it's *an* issue I can reproduce and fix.</div>
+<h2>Reply by Andreas Maurer</h2>
+<div class="meta">2015-06-5 16:35</div>
+<div class="content">Major bugfix for both v1 and v2:<br><br>The client could get into a state were it wasn't in sync with the database anymore (e.g. by opening multiple browser tabs and then continuing to work in an old one, possibly other causes). This would lead to losing all changes after that moment. To prevent this, any change will now trigger an immediate warning and prompt to refresh if the sync is lost. If that last change was adding tasks, which have not yet been saved to the db, they will be listed on the resulting error page so they can be rescued by copying them.<br><br>This is not the most convenient solution, but it should prevent data loss until backend synchronization gets implemented. My apologies to everyone who was affected by this bug. Please be cautious and regularly export your list.</div>
+<h2>Reply by Jesse</h2>
+<div class="meta">2015-06-5 19:03</div>
+<div class="content">Andreas, <br><br>Oh, I'm sure I opened it multiple times, especially on my Chromebook. I set up the address for the web app to open when I opened a new tab so I could have quick entry for fast capturing of ideas and thoughts. I'm very much a student of GTD, where I collect everything that pops into my head. <br><br>This is probably why my lists are so so long as well. <br><br>I'm very much used to using Google tasks and Google Keep, where it seems to keep stuff synced across every tab and every device, so it was tough to remember to enter things in only one "session" of amFVP. Unfortunately, this and the thought that I could lose my data (even through a mistake I'll probably make myself) builds up "resistance" to collecting the thought in amFVP.</div>
+<h2>Reply by Daniel Reeves</h2>
+<div class="meta">2015-06-5 20:41</div>
+<div class="content">Andreas, I totally did! I was trying the export feature and looking at the javascript source, etc, in other tabs. That probably explains my bug. I will resume using it and let you know if I see any other problems! (I still think the plaintext/dropbox solution instead of pouchdb would be a big improvement and eliminate potential future bugs, ie, keep the tasks always safe and sound and human-readable in a text file.)<br><br>PS: Any chance of getting this on GitHub?</div>
+<h2>Reply by Beth</h2>
+<div class="meta">2015-06-6 21:56</div>
+<div class="content">wow, I just tried this out for the first time, and it's really wonderful. I love the prioritization process and the way it hides everything except what you should be working on right now. Really terrific, thank you.</div>
+<h2>Reply by Andreas Maurer</h2>
+<div class="meta">2015-06-7 21:31</div>
+<div class="content">Jesse:<br><br>Quite understandable. I would resist putting things into a system that previously lost some of them, too.<br><br>Daniel:<br><br>I'm looking into Dropbox sync, hopefully v3 will have it. I'll also put v3 on GitHub.<br><br>Everyone:<br><br>Just to explain my recent lack of activity, my wife went into labour on Friday night and I am now proud father of a newborn son. It's my first child, so my life is changing a lot right now and I have less time in general.</div>
+<h2>Reply by Mark Forster</h2>
+<div class="meta">2015-06-7 21:36</div>
+<div class="content">Congratulations, Andreas!<br><br>I warn you that getting married changes your life much less than having your first child does!<br><br>(Spoken as a father of 3)</div>
+<h2>Reply by Jesse</h2>
+<div class="meta">2015-06-7 21:58</div>
+<div class="content">Congratulations, Andreas! That's great. I hope you all have a lot of fun together. Kids are so cool.</div>
+<h2>Reply by Seraphim</h2>
+<div class="meta">2015-06-8 16:18</div>
+<div class="content">Congratulations Andreas!!</div>
+<h2>Reply by ERIC</h2>
+<div class="meta">2015-06-8 21:50</div>
+<div class="content">Congratulations!  The app is very functional as it is  so we can survive without any tweaking or updates.  Focus on your family (add that to your FVP list).  We'll be here when you have more time.</div>
+<h2>Reply by nick61</h2>
+<div class="meta">2015-06-14 16:16</div>
+<div class="content">I'm using amFVP on differente PCs with different browsers. With MS explorer it always work correctly. On the contrary, with chrome and firefox sometime it does not work: the buttons on the top right part of the page do not react to clicking, so it becomes impossible to load the list of tasks.<br><br>Someone else is having the same experience? Any workaround?<br><br>Thank you</div>
+<h2>Reply by Beth</h2>
+<div class="meta">2015-06-14 17:55</div>
+<div class="content">I have seen this too, in Firefox. however for me, clicking a  2nd or 3rd time usually works.</div>
+<h2>Reply by Andreas Maurer</h2>
+<div class="meta">2015-06-16 15:56</div>
+<div class="content">nick61, Beth:<br><br>After looking into your issue, I found that the SVG icons in the buttons sometimes swallowed the click event. The second or third click worked because you slightly moved the cursor between clicks. I never stumbled upon this because I tend to click buttons in the lower-right corner area. I fixed the issue for v2 (v1 doesn't have it because it has no SVG icons).  Please refresh your browser and check if it works for you.</div>
+<h2>Reply by nick61</h2>
+<div class="meta">2015-06-16 21:13</div>
+<div class="content">Windows: IE (ok), Firefox (OK), Chrome (OK)<br>Linux: Firefox (OK), Chrome (OK)<br><br>Thanks a lot!</div>
+<h2>Reply by Beth</h2>
+<div class="meta">2015-06-19 1:13</div>
+<div class="content">Cool, thanks!</div>
+<h2>Reply by Jesse</h2>
+<div class="meta">2015-06-19 4:51</div>
+<div class="content">Heh. I'm actually back to using version one on my iphone. My paper list got too unwieldy, and having most of the list "under the hood" is pretty helpful for me.</div>
+<h2>Reply by Kyle Nesgood</h2>
+<div class="meta">2015-06-25 22:15</div>
+<div class="content">This is awesome, Andreas! Congratulations on the new baby. I'm looking forward to the Dropbox sync - it's the last missing piece before I can get rid of my backup text file entirely!</div>
+<h2>Reply by Jesse</h2>
+<div class="meta">2015-07-21 16:07</div>
+<div class="content">Andreas, I'm curious if v3 is available or how it's coming along.</div>
+<h2>Reply by Andreas Maurer</h2>
+<div class="meta">2015-07-26 11:53</div>
+<div class="content">Jesse:<br><br>Unfortunately, it's not progressing very well at the moment. Between my job and my new family, I have very little time left for other things. I also have to admit that it doesn't help that v2 does everything I really need for myself.<br><br>On the other hand, I do have lots of ideas I want to try out, so I'm trying to put at least some work into it on weekends.</div>
+<h2>Reply by Jesse</h2>
+<div class="meta">2015-07-26 19:41</div>
+<div class="content">I get you. Please don't feel obligated, by the way. I just was curious. I'm a fan!</div>
+<h2>Reply by nick61</h2>
+<div class="meta">2015-09-16 9:25</div>
+<div class="content">Hi Andreas, any ideas about a brand new 5T web app?<br><br>... from another fan</div>
+<h2>Reply by Jesse</h2>
+<div class="meta">2015-09-16 18:58</div>
+<div class="content">Is the 5T app available?</div>
+<h2>Reply by Andreas Maurer</h2>
+<div class="meta">2015-09-17 12:45</div>
+<div class="content">nick61, Jesse:<br><br>I hadn't considered creating a 5T app. But the algorithm isn't that complicated. If you're okay with it not having more features than amFVP v2, I can whip something up in one or two days.<br><br>Since this thread has already been brought back to the top of the forum, I'll use this opportunity to move my book giveaway (which no one took me up on so far) to a separate thread in the general forum. So if you want the books, do not reply to this thread anymore, but to this one:<br><a href="../general_forum/Book Giveaway.html" target="new" rel="nofollow">http://markforster.squarespace.com/forum/post/2541679</a></div>
+<h2>Reply by Mark Forster</h2>
+<div class="meta">2015-09-17 17:01</div>
+<div class="content">I've been a bit slack lately about closing threads when they are about to run over onto more than one page, so this one is well overdue.<br><br>Anyone is welcome to start a new thread to continue this discussion. If you do, please include a link back to this original thread. Once a continuation thread has been started, I'll put a link to the new thread here.</div>
+</article>
+    </main>
+    <footer>
+        <p>Archive built from Mark Forster's blog and forums</p>
+    </footer>
+</body>
+</html>

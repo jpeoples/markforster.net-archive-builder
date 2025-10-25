@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andreas Hofmann's helper script</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../blog_index.html">Blog</a>
+            <a href="../fvp_forum_index.html">FVP Forum</a>
+            <a href="../general_forum_index.html">General Forum</a>
+        </nav>
+    </header>
+    <main>
+<article>
+<h1>Andreas Hofmann's helper script</h1>
+<div class="meta">
+Author: jFenter | 
+Created: 2011-12-9 15:50
+ | Last Activity: 2012-03-19 22:17
+</div>
+<h2>Original Post</h2>
+<div class="meta">2011-12-9 15:50</div>
+<div class="content">Off topic, I know. I've been using the script for months and it's wonderful, but it has recently started to fail. On the main discussion board where it lists all of the topics, none of the topics ever show as unread or new, so I'm having a hard time keeping track of which threads I've read. Also, when I open a thread, every individual comment within the thread shows as new. I've tried uninstalling and reinstalling but that didn't fix it. Does anyone know how to fix it or how to get in touch with Andreas so he can help me? (I'm using Chrome, latest version.)</div>
+<h2>Reply by Wooba</h2>
+<div class="meta">2011-12-9 20:49</div>
+<div class="content">I am having exactly the same problem using Firefox. I assume that there has been some change with Mark's website -- something in the code has changed. Perhaps Mark knows what might have changed? It started going wrong while he was away a couple of weeks ago.</div>
+<h2>Reply by Mark Forster</h2>
+<div class="meta">2011-12-9 21:47</div>
+<div class="content">No idea, I'm afraid. It wasn't anything I did, officer. Honest.</div>
+<h2>Reply by MartyH</h2>
+<div class="meta">2011-12-11 14:45</div>
+<div class="content">I heard that the new version of Greasemonkey broke some other scripts, so it could be related to that.  I haven't tried to reinstall an older version.  Right now, I am using version 0.9.1.3 which I updated 12 Nov and I have exactly the same problems described above.  <br><br>There have also been several versions of Firefox lately, so that may be contributing to the problem if it changes where and how information from Greasemonkey and its scripts can be stored.</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2011-12-11 17:45</div>
+<div class="content">I'll look into it.</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2011-12-11 18:10</div>
+<div class="content">I installed the script in Firefox 8 and Chrome 15 on Mac OS X 10.7. No obvious errors so far. Menu shows up in left sidebar, highlighting of Mark's posts works. No posts are highlighted as new. Let's see if Chrome highlights this topic/post when I submit it in Firefox.</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2011-12-11 18:12</div>
+<div class="content">Nope, no highlighting. But I do not experience all posts in a thread being highlighted as jFenter described.</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2011-12-11 18:13</div>
+<div class="content">Other way around?</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2011-12-11 18:15</div>
+<div class="content">Yup, its's broken alright. Have to find a way to trouble-shoot this without further spamming.</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2011-12-11 18:50</div>
+<div class="content">By the way, if you installed my script, you can get in touch with me by clicking on my name at the bottom of the userscript options box in the left sidebar. ;-)</div>
+<h2>Reply by MartyH</h2>
+<div class="meta">2011-12-12 4:06</div>
+<div class="content">I just looked at this post:  <a href="http://www.markforster.net/forum/post/1630099" target="new" rel="nofollow">http://www.markforster.net/forum/post/1630099</a> <br><br>Leon's post from Oct 25 was not highlighted, so apparently I had read it.  All the following posts were highlighted.  So at some time after Oct 25th the script stopped marking individual posts as read.  Previously marked posts appear to retain the marking.<br><br>Hope this helps with troubleshooting.</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2011-12-24 16:37</div>
+<div class="content">Little status update: I decided to rewrite the script from scratch and take that opportunity to improve it by tracking read states for each topic instead of only one "last visit" date. Of course, I've had little time until today (Merry Christmas btw.) and I'm running into strange problems.<br><br>Currently my problem is that the dates on the overview page don't match with the dates inside a topic. Take the electric task lists topic: <a href="http://www.markforster.net/forum/post/1671656" target="new" rel="nofollow">http://www.markforster.net/forum/post/1671656</a><br><br>The last post was written 16:15, but in the overview it says the last change was 16:26. Which triggers my script to permanently flag it as unread and drives me crazy. :-)<br><br>Be that as it may, I'll soon post a link to the first version of the new script.</div>
+<h2>Reply by Mark Forster</h2>
+<div class="meta">2011-12-24 16:47</div>
+<div class="content">Good luck with your efforts, Andreas, and thank you for taking so much trouble over something that benefits so many people. <br><br>And a Merry Christmas to you and all Forum members and readers.</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2011-12-24 17:18</div>
+<div class="content">Thank you, Mark.<br><br>For the adventurous: <a href="http://dl.dropbox.com/u/1008673/mfimprovement2.js" target="new" rel="nofollow">http://dl.dropbox.com/u/1008673/mfimprovement2.js</a><br><br>The time differences are a result of the 'revise post' function. I fixed the problem by checking both date and post count.</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2011-12-25 7:43</div>
+<div class="content">The 'final' version of the user script is now available, please uninstall the old one as well as the above adventurous one if you have installed them.<br><br>Get the script from here: <a href="http://cdn.ahofmann.de/markforster.net/improvements.user.js" target="new" rel="nofollow">http://cdn.ahofmann.de/markforster.net/improvements.user.js</a><br><br>The reason why it's 'final' is that it doesn't do that much anymore. It only loads the real script and a css file directly from my server. This means: if you install this script, you'll get all future updates and new functionality automatically.<br><br>Currently, only the "Highlight New Posts" function is available, but I will add new features soon.</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2011-12-25 8:10</div>
+<div class="content">The script ignores posts older than a month. So if you install it for the first time, every topic within the last 30 day will be highlighted. You can either click through all of them once, or simply wait until they cross the time threshold.</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2011-12-25 15:16</div>
+<div class="content">Hint for Chrome users: Chrome seems to download the script instead of installing it if you click on the above link. Probably a security measure since the domain names don't match. Just copy the link and paste it into the location bar and it will prompt you to install it. I'll update my script download page to amend this issue.</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2011-12-25 15:18</div>
+<div class="content">It's kind of fun that I have the forum for myself, but it doesn't help with testing. :-)</div>
+<h2>Reply by Hugo Ferreira</h2>
+<div class="meta">2011-12-25 15:28</div>
+<div class="content">Here'a a test messgae for you ;)<br>I'll check the script out once I get back.</div>
+<h2>Reply by moises</h2>
+<div class="meta">2011-12-25 21:17</div>
+<div class="content">Thank you Andreas. It appears to be functioning properly for me on Firefox 8.0.</div>
+<h2>Reply by Natalia</h2>
+<div class="meta">2011-12-26 11:05</div>
+<div class="content">Thank you so much, Andreas. I had even stopped reading the forums after your script stopped working. :)</div>
+<h2>Reply by Joerg R.</h2>
+<div class="meta">2011-12-26 13:14</div>
+<div class="content">Tested successfully with Chrome 16.0.912.63 m<br><br>Thx a lot for repairing</div>
+<h2>Reply by MartyH</h2>
+<div class="meta">2011-12-27 13:01</div>
+<div class="content">Seems to be fine in Firefox 9.0.1 with Greasemonkey 0.9.13.<br><br>Thanks for taking the time to work on this over the holidays.   I do miss the other features, but this shouldn't take you away from family at this time of year.<br><br>Merry Christmas everyone!  Today, it's back to work (at least a little) for me.</div>
+<h2>Reply by jFenter</h2>
+<div class="meta">2011-12-27 16:18</div>
+<div class="content">One of the best Christmas presents I've received this year. Thanks, Andreas! Is there a PayPal link on *your* site? :)</div>
+<h2>Reply by Hugo Ferreira</h2>
+<div class="meta">2011-12-27 17:38</div>
+<div class="content">Andreas:<br><br>Any change of github'ing this version of the script? I'd like to help out with it…<br><br>I think the user script you have there now is quite outdated, right? https://github.com/andreashofmann</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2011-12-28 8:45</div>
+<div class="content">Hugo:<br><br>Alright, I will. Yes, the current one is outdated. Like everything in my github account. :-\<br><br>Everyone:<br><br>Well, I suck, and therefore everyone please uninstall and reinstall the script from <a href="http://cdn.ahofmann.de/markforster.net/improvements.user.js" target="new" rel="nofollow">http://cdn.ahofmann.de/markforster.net/improvements.user.js</a> one more time. Final indeed. The good news is that you won't lose your saved read data.</div>
+<h2>Reply by Dave D</h2>
+<div class="meta">2012-01-6 17:17</div>
+<div class="content">I can't get this script to work, using IE8.0.6001.  Microsoft JScript runtime error "top" is undefined.</div>
+<h2>Reply by MartyH</h2>
+<div class="meta">2012-01-7 1:21</div>
+<div class="content">I'm not sure about running scripts in IE, but the original script was designed for Greasemonkey in Firefox.  This one runs fine in that environment as well.</div>
+<h2>Reply by Hugo Ferreira</h2>
+<div class="meta">2012-01-17 17:23</div>
+<div class="content">Andreas:<br><br>With today's redesign, the comment highlights do not show up in each topic page: it's all grey, both new and Mark's posts.<br><br>However, the script does work in the main discussion forum listing page:<br><a href="http://www.markforster.net/forum" target="new" rel="nofollow">http://www.markforster.net/forum</a></div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2012-01-17 18:53</div>
+<div class="content">Hugo: <br><br>Should be fixed, no reinstall needed.<br><br>Dave:<br><br>IE doesn't support userscripts (as far as I know). Supported browsers are Firefox with GreaseMonkey, Chrome without an extension or NinjaKit and Safari with NinjaKit. Other GreaseMonkey-compatible extensions may exist, Opera will probably work.</div>
+<h2>Reply by Dave D</h2>
+<div class="meta">2012-01-17 20:19</div>
+<div class="content">Unfortunately, my employer only allows IE.</div>
+<h2>Reply by Hugo Ferreira</h2>
+<div class="meta">2012-01-17 23:51</div>
+<div class="content">Andreas:<br>Many thanks, it's working fine now.</div>
+<h2>Reply by Lachlan Black</h2>
+<div class="meta">2012-01-18 1:27</div>
+<div class="content">Andreas:<br>Hugo Ferreira:<br><br>I'm also using Firefox 9.0.1 and Greasemonkey 0.9.13, but having trouble with the script highlighting new posts. As Hugo said, works fine in the main forum page, but is not highlighting the individual posts in each topic. Scrolling to the first unread post is working fine.<br><br>Any ideas?</div>
+<h2>Reply by Hugo Ferreira</h2>
+<div class="meta">2012-01-18 2:37</div>
+<div class="content">Lachlan:<br>Clear browser cache?<br>Close/restart the browser?</div>
+<h2>Reply by Lachlan Black</h2>
+<div class="meta">2012-01-18 3:57</div>
+<div class="content">Hugo:<br><br>Unfortunately, no. Clearing the cache resets the script but doesn't change its behaviour and restarting doesn't change anything either. No-one else seems to be having a problem, so I'm beginning to suspect the problem lies with my Firefox install -- which has been acting a bit buggy of late. Maybe time for a re-install.<br><br>Anyway, thanks for the suggestions. In any case, the script still does what it needs to do, so I can live with the loss of individual post highlighting!<br><br>By the way, Mark: congratulations on the new look. Very classy!</div>
+<h2>Reply by Lachlan Black</h2>
+<div class="meta">2012-01-18 4:22</div>
+<div class="content">Update: It's working again! Bizarre ...</div>
+<h2>Reply by MartyH</h2>
+<div class="meta">2012-01-18 5:21</div>
+<div class="content">On Christmas Day, Andreas posted this:<br><br><The 'final' version of the user script is now available, please uninstall the old one as well as the above adventurous one if you have installed them.<br><br>Get the script from here: <a href="http://cdn.ahofmann.de/markforster.net/improvements.user.js" target="new" rel="nofollow">http://cdn.ahofmann.de/markforster.net/improvements.user.js</a><br><br>The reason why it's 'final' is that it doesn't do that much anymore. It only loads the real script and a css file directly from my server. This means: if you install this script, you'll get all future updates and new functionality automatically.><br><br>He has updated it a couple of times since then and it seems that after a couple of visits to the forum, the updated version kicks in automagically.</div>
+<h2>Reply by jFenter</h2>
+<div class="meta">2012-01-18 17:38</div>
+<div class="content">At first, the individual comments weren't being highlighted for me, either, in Chrome. All I did to fix it was to uncheck the "Highlight New Posts" option then check it again. The next discussion thread I viewed had the highlighting. I also noticed that the new "High Contrast" option didn't show up until then, either. My guess is that doing something that specifically set an option made the script reload all of the options and apply then as it should.</div>
+<h2>Reply by Natalia</h2>
+<div class="meta">2012-03-19 17:59</div>
+<div class="content">Hi, Andreas! Long time user of your script! I think the new version is not working for me when a forum topic has more than one page. When I go to page 2, everything is highlighted, all the time. Is it a hiccup in my installation? I use Chrome and <a href="http://cdn.ahofmann.de/markforster.net/improvements.user.js" target="new" rel="nofollow">http://cdn.ahofmann.de/markforster.net/improvements.user.js</a> -- thanks!</div>
+<h2>Reply by Mike D</h2>
+<div class="meta">2012-03-19 22:17</div>
+<div class="content">I've noticed that too.  I'm also using Chrome.<br>Mark had been limiting a topic to 50 posts but now several have surpassed that number and in the process a possible bug in the user script has been revealed.  I'm going to uncheck and recheck the boxes in the lower right hand margin to see if that does the trick.<br><br>This did not fix it; all previously read posts on second pages are still highlighted as unread.</div>
+</article>
+    </main>
+    <footer>
+        <p>Archive built from Mark Forster's blog and forums</p>
+    </footer>
+</body>
+</html>

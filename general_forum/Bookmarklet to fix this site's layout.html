@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmarklet to fix this site's layout</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../blog_index.html">Blog</a>
+            <a href="../fvp_forum_index.html">FVP Forum</a>
+            <a href="../general_forum_index.html">General Forum</a>
+        </nav>
+    </header>
+    <main>
+<article>
+<h1>Bookmarklet to fix this site's layout</h1>
+<div class="meta">
+Author: UmbrellaWeather | 
+Created: 2022-10-13 5:43
+ | Last Activity: 2022-12-17 16:34
+</div>
+<h2>Original Post</h2>
+<div class="meta">2022-10-13 5:43</div>
+<div class="content">You can use the following code as the URL for a bookmarklet to move the main content out of the sidebar and back to the main content area:<br><br>javascript:(()=>{document.getElementById('pageBody').insertAdjacentElement('afterbegin',document.getElementById('contentWrapper'))})()</div>
+<h2>Reply by Don R</h2>
+<div class="meta">2022-10-13 17:46</div>
+<div class="content">Works for me! In case someone doesn't know how to create a bookmarklet:<br><br>Create a bookmark, but before you save it, edit the name and url. The name can be anything like "fix markforster".  Change the URL to the the entire code above starting with javascript and ending with ()   It's all one line.<br><br>When you're on a page on this site, just select that bookmark and it'll adjust the layout of the site.</div>
+<h2>Reply by Don R</h2>
+<div class="meta">2022-10-13 17:48</div>
+<div class="content">Also, you have to click it for every page you load on the site so if you put the bookmark on the bookmarks bar for quick access, it'll make it a lot more useful because it's quicker to get to.</div>
+<h2>Reply by Seraphim</h2>
+<div class="meta">2022-10-14 16:59</div>
+<div class="content">Thanks! This works for me, too. Makes it much easier to read the site.</div>
+<h2>Reply by Lenore</h2>
+<div class="meta">2022-10-15 14:37</div>
+<div class="content">Thank you so much!!!!</div>
+<h2>Reply by Virix</h2>
+<div class="meta">2022-10-16 9:22</div>
+<div class="content">Thanks!<br>Never heard of a "bookmarklet" before.</div>
+<h2>Reply by Erin</h2>
+<div class="meta">2022-10-17 18:47</div>
+<div class="content">Got it to work in Safari on my phone. Open the page then press the bookmark. <br>Wish someone could work with Squarespace to really fix the site. There is so much good content built up over the years.</div>
+<h2>Reply by Alan Baljeu</h2>
+<div class="meta">2022-10-18 16:27</div>
+<div class="content">Squarespace is a host that provides website making tools.  It's generally up to the individual to update the site using these tools.</div>
+<h2>Reply by avrum</h2>
+<div class="meta">2022-10-18 18:03</div>
+<div class="content">Clearly I'm missing something... <br><br>I've been using Squarespace since 2009. If my entire site went wonky, I'd be on w/ support and it would get resolved in 15 min. SS support is generally fantastic. So I'm unclear on how this problem on Forster's site has continued for so long.<br><br>Also, I've noticed that Mark hasn't been responding for the past few days (weeks?). I hope he's ok.</div>
+<h2>Reply by Don R</h2>
+<div class="meta">2022-10-19 1:39</div>
+<div class="content">He posted as recently as Oct 3 in the forum, and Oct 5 is the first mention of the centering problem.</div>
+<h2>Reply by Andreas Maurer</h2>
+<div class="meta">2022-10-19 10:46</div>
+<div class="content">I asked Mark via email about it, he's well, and he will fix the site, but it's not a priority for him right now.</div>
+<h2>Reply by Andreas Maurer</h2>
+<div class="meta">2022-10-19 11:53</div>
+<div class="content">UmbrellaWeather: I added the code of your bookmarklet to the userscript, so people who use it can use the site normally without manual action after every page load: <br><br><a href="http://github.com/andreasmaurer/markforster.net-improvements-userscript" target="new" rel="nofollow">http://github.com/andreasmaurer/markforster.net-improvements-userscript</a><br><br>Hope that's okay.</div>
+<h2>Reply by avrum</h2>
+<div class="meta">2022-10-19 13:24</div>
+<div class="content"><<I asked Mark via email about it, he's well, and he will fix the site, but it's not a priority for him right now.>><br><br>Andreas - I appreciate the update.</div>
+<h2>Reply by Chris Cooper</h2>
+<div class="meta">2022-10-26 16:46</div>
+<div class="content">Andreas, that seems to have worked. Thankyou.</div>
+<h2>Reply by Chris Cooper</h2>
+<div class="meta">2022-11-4 8:13</div>
+<div class="content">I've made Andreas's solution work on my laptop (Windows / Firefox), but I'm not quite there with my phone (Android 9 / Chrome 107).<br><br>* I've installed TamperMonkey for Android from the Chrome Store.<br>* I went to the site linked in Andreas's github instructions: <br><br>  https://github.com/andreasmaurer/markforster.net-improvements-userscript/raw/master/markforster-net-improvements.user.js<br><br>* The script was displayed, but TamperMonkey didn't ask me to install it.<br>* I've tried copying and pasting the code into the box on the TamperMonkey page that appears when you click the menu instruction "Get new scripts ... " <br>* I've hit Run! but nothing happens.<br>* When I click on other menu commands, TamperMonkey says that no script is installed or running.<br><br>Can anyone give me any guidance?</div>
+<h2>Reply by Alan Baljeu</h2>
+<div class="meta">2022-11-22 15:52</div>
+<div class="content">Additional issue: The Login link directs to markforster.net.  This should be edited to point to squarespace.</div>
+<h2>Reply by Andreas Maurer</h2>
+<div class="meta">2022-11-23 13:08</div>
+<div class="content">Alan:<br><br>I updated my userscript, it now automatically updates all links that still have the old domain. It should update by itself, or you can update it manually by clicking its version number on the Tampermonkey dashboard.<br><br>Chris:<br><br>I don't have Android, but from what I gather, userscript support is in a bad state right now. Chrome hasn't been supporting Tampermonkey for a long time, Firefox used to work, but stopped doing so. There is a standalone Tampermonkey app on the Play Store, but that was always experimental and recent reviews indicate that it also stopped working with recent Android versions.<br><br>Your best bet might be trying out Dolphin Browser, apparently the Tampermonkey extension for that is still being maintained.</div>
+<h2>Reply by Andreas Maurer</h2>
+<div class="meta">2022-11-23 13:14</div>
+<div class="content">Actually, the latest reviews of the Tampermonkey Dolphin extension also say it stopped working with the new Android version. So there might be no solution for now.</div>
+<h2>Reply by Alan Baljeu</h2>
+<div class="meta">2022-11-26 4:27</div>
+<div class="content">I think tampermonkey is also not available in iPad.<br><br>“Stay” userscript manager seems to work with Andreas’ script.  Except just now when i went to edit this post, the page flipped to un-fixed</div>
+<h2>Reply by Alan Baljeu</h2>
+<div class="meta">2022-11-26 4:44</div>
+<div class="content">error message was something like ‘getelement(‘pagebyId’) was null.  But then later it went back to working.</div>
+<h2>Reply by Andreas Maurer</h2>
+<div class="meta">2022-11-27 20:35</div>
+<div class="content">Alan:<br><br>I didn't get the problem you described when editing this post with Stay on my iPhone. I'll look into it.</div>
+<h2>Reply by Andreas Maurer</h2>
+<div class="meta">2022-11-27 20:36</div>
+<div class="content">Heh, immediately got it after posting the last message. But different error message. I'll see what I can do.</div>
+<h2>Reply by Andreas Maurer</h2>
+<div class="meta">2022-11-29 7:34</div>
+<div class="content">I updated the script, hopefully that will fix the problem. I can only test it by writing posts here, so that is a little inconvenient.<br><br>I noticed that in Stay, you need to enable auto update with a toggle in the settings of the script. Current version is 2.0.7.</div>
+<h2>Reply by Lenore</h2>
+<div class="meta">2022-12-11 14:59</div>
+<div class="content">Website formatting is fixed for me now (on Safari). Not sure who to thank -- presumably some combination of Mark/Squarespace.</div>
+<h2>Reply by Margaret1</h2>
+<div class="meta">2022-12-11 18:14</div>
+<div class="content">Yippee!  Great to see the site back to normal - although I'd gotten quite used to the interim version.  Thanks very much.</div>
+<h2>Reply by Mark Forster</h2>
+<div class="meta">2022-12-12 12:46</div>
+<div class="content">To bring you all up-to-date the website has now reverted to normal. I've been chasing Squarespace for a considerable amount of time and they have confessed themselves baffled up to now. It looks as if they have finally sorted out the problem. <br><br>Only one problem remains - I can't log in! That means that I can't write any blog posts until that is fixed as well.</div>
+<h2>Reply by Alan Baljeu</h2>
+<div class="meta">2022-12-16 15:31</div>
+<div class="content">It’s good to hear!  I was getting the impression you maybe had finally given up activity on this site. It’s weird how SS got messed up like this.</div>
+<h2>Reply by Margaret1</h2>
+<div class="meta">2022-12-17 10:03</div>
+<div class="content">Thanks again, Mark, for your efforts on this.<br><br>I've noticed that the description of the systems under the "TM Systems" tab shows the following when you open the links:<br><br>"Domain Not Claimed<br>This domain has been mapped to Squarespace, but it has not yet been claimed by a website. If this is your domain, claim it in the Domains tab of your Website Manager"<br><br>I know there's been some discussion of how to get round this, but hopefully Squarespace will get this fixed too, in the fullness of time.<br><br>Meanwhile, it's great to have the site back to normal.<br><br>Best wishes.</div>
+<h2>Reply by Chris Cooper</h2>
+<div class="meta">2022-12-17 16:34</div>
+<div class="content">Andreas, thanks for your reply to me above, which I've only just seen. Everything seems fine now, with TamperMonkey disabled.<br><br>And it's great to see Mark back.<br><br>Chris</div>
+</article>
+    </main>
+    <footer>
+        <p>Archive built from Mark Forster's blog and forums</p>
+    </footer>
+</body>
+</html>

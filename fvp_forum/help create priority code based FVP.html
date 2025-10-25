@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>help create priority code based FVP</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../blog_index.html">Blog</a>
+            <a href="../fvp_forum_index.html">FVP Forum</a>
+            <a href="../general_forum_index.html">General Forum</a>
+        </nav>
+    </header>
+    <main>
+<article>
+<h1>help create priority code based FVP</h1>
+<div class="meta">
+Author: Christopher | 
+Created: 2015-11-7 18:24
+ | Last Activity: 2015-11-17 5:52
+</div>
+<h2>Original Post</h2>
+<div class="meta">2015-11-7 18:24</div>
+<div class="content">Like most (sic) todo list apps, the one I would like to use is not really up to the task of maintaining an autofocus style list. It sorts the list of tasks automatically by all sorts of wierd criteria such as by priority code or in alphabetical order (explain me the thinking behind that one). Yes, you know Outlook.<br><br>Now, I simply maintain the positition that I want to use such a tool for doing FVP, which is the most best ever time managament system known to humanity.<br><br>I am aware that some just number the tasks and sort by alphabeth, but this would only be a second rate solution, since I'd prefer to keep task names intact.<br><br>How could I use the priority codes (0,1,2,3) to implement a FVP algorithm?<br><br>Ideas, however tangentiala and incomplete welcome!<br><br>Please brainstorm with me.</div>
+<h2>Reply by Seraphim</h2>
+<div class="meta">2015-11-8 16:08</div>
+<div class="content">If I were doing FVP in Outlook tasks (as you seem to be trying to do), I'd sort by Modified Date, and set all tasks to Normal priority.  Then I'd set priority to High to indicate dotted items.  I think that's what I did when I was doing FV in Outlook and see no reason why it wouldn't work for FVP.<br><br>Also, it's easy to set a different font style for the High items, so it's easier to see them when scanning the list.</div>
+<h2>Reply by vegheadjones</h2>
+<div class="meta">2015-11-8 23:37</div>
+<div class="content">Hi, I tried that Seraphim a while back but marking it high pritority means you modified it and moved the item to the bottom.<br><br>Now I use start dates and sort by it, which works very well.</div>
+<h2>Reply by Seraphim</h2>
+<div class="meta">2015-11-9 3:54</div>
+<div class="content">Yeah, come to think of it, I think I was using Created Date or Start Date or Due Date.   I don't have that View any more -- I think it disappeared after an upgrade or reinstall or something.</div>
+<h2>Reply by Will</h2>
+<div class="meta">2015-11-9 12:36</div>
+<div class="content">Sort by date created (possibly descending order, if you like to see the latest at the top...), show categories and set the quick click to mark selected tasks. Simple as that. <br><br>It only gets difficult if you want to share with another device.<br><br>Then again, I use a moleskine cahier and a pen. I do use the task list to capture tasks from mail quickly, and refer to these with a (T) in the cahier so I know where to go for detail.<br><br>Hope this helps.<br><br>Will</div>
+<h2>Reply by vegheadjones</h2>
+<div class="meta">2015-11-9 15:14</div>
+<div class="content">Created date makes it more difficult if you want to cross off and reenter at the bottom and you have notes and so on in the task that you do not want to lose by literally crossing it off and reentering  it. That's why I move the start date to get it to the bottom of the list.</div>
+<h2>Reply by Will</h2>
+<div class="meta">2015-11-9 23:34</div>
+<div class="content">Vegheadjones,<br><br>I can see that. It's a bit weird that a copied task copies the created date as well as the content. How do you keep track of which tasks to review when you've moved the completed task?<br><br>Cheers,<br><br>Will</div>
+<h2>Reply by Christopher</h2>
+<div class="meta">2015-11-12 0:10</div>
+<div class="content">Thanks for your enthusiasm guys, but I have to say I did not make myself clear. What I meant was I am on the search of a way to incorporate all four priority codes (0, 1, 2, 3) into the system.<br><br>The thought of using only two of them (in the manner suggested above) does not please me. Of course it is an utter valid way to fo FVP and I use a similar approach at this point in time.<br><br>But what would really give me the kicks would be a "translation" of teh FVP algorithm into a list that is sorted by priority and uses either 3 or 4 different priority codes.<br><br>Again, I am glad for any pointers, because I am full aware that my request is borderline crazy. <br><br>But I sooo would like to have this going...</div>
+<h2>Reply by Seraphim</h2>
+<div class="meta">2015-11-12 18:01</div>
+<div class="content">Let me restate what I think you are asking.   <br><br>You have an existing tool that you like, and it allows you to set a priority for each task.  The priority values are 0, 1, 2, or 3.   You want to use this tool to implement the FVP algorithm.<br><br>Is that an accurate restatement?<br><br>Maybe you could do something like this.   Use priority=1 for all tasks by default, and set priority=0 instead of dotting the task.   Don't use priority=2 or priority=3.<br><br>If you really want the prioritization granularity of four different levels, then you could do this:<br>1. Set priority=3 as your default for all new tasks.<br>2. Scan all these priority=3 items as per normal FVP rules, but instead of dotting tasks, set priority=2.   <br>3. When you reach the end of the list, apply a filter that shows only the tasks with priority=2. <br>4. Scan this smaller list as per normal FVP rules, but instead of dotting tasks, set priority=1.   <br>5. When you reach the end of the list, apply a filter that shows only the tasks with priority=1. <br>6. Scan this smaller list as per normal FVP rules, but instead of dotting tasks, set priority=0.   <br>7. Treat the priority=0 items as your dotted list.  Ignore everything else.   <br>8. Repeat from (5) when all your priority=0 items are completed.<br>9. Repeat from (3) when all your priority=1 items are completed.<br>10. Repeat from (1) when all your priority=2 items are completed.<br><br>Personally, I wouldn't recommend this, because <br>(1) it's too complicated<br>(2) managing new tasks is difficult:  If you put all new tasks as priority=3, then new tasks get far too little attention (urgent interruptions are neglected).  If you put all new tasks as priority=0 so they appear on your current focus list, then new tasks get far too much attention vs older tasks.  If you choose to set all new tasks as 1 or 2, you still get the same problems, just not as severe.  If you assess and set the priority for new tasks as they arrive, it takes too much work unless you have really clear criteria for what 0, 1, 2, and 3 actually mean (such as 0=now, 1=today, 2=this week, 3=this month; or something like that), and firmly adhere to those criteria.   I played with something like this using OneNote and could never find a good solution to this.   "Dot" or "no dot" seemed to work a lot better.<br><br>But come to think of it, this is similar to what I've been trying to do by setting a scope for the week and focusing on those tasks before moving on to any earlier tasks.   I'll keep exploring this.<br><br>Any other ideas out there?</div>
+<h2>Reply by Will</h2>
+<div class="meta">2015-11-16 10:27</div>
+<div class="content">You could use the priority codes to flag the selected tasks, in increasing order of importance. This would keep your selection lists short, which might or might not be a good thing.<br><br>Again, complicated and not particularly helpful.<br><br>Without understanding why you want to use this particular field, it's hard to advise.</div>
+<h2>Reply by Christopher</h2>
+<div class="meta">2015-11-17 5:52</div>
+<div class="content">Seraphim: "You have an existing tool that you like, and it allows you to set a priority for each task. The priority values are 0, 1, 2, or 3. You want to use this tool to implement the FVP algorithm."<br><br>Yes, except that for the aesthetic reason of elegance I want to use all four priority codes. Or at least the three numbered ones. <br><br>A system that just uses 1-2 priority is easily possible, as pointed out above.<br><br>This is just a bonus-round. Can I get the perfect system (FVP) running with the classic todo app which provides those classic priorities.<br><br>----<br><br>The best I could come up for now is to use the priorities as a mechanism to weed out the list. <br><br>Each new task starts with priority zero. Every day each task gets promoted. Before that I kill the leftover priority three tasks.<br><br>The downside to that is, that if I scan each task anyway I might just weed the list out directly. OTOH this gives me a nice DWMness to it.<br><br>But preferably I just use FVP as it is and just squeeze it into the priority codes somehow.<br><br>----<br><br>Seraphim, your idea sound like the right type of thing. Problem though is, that This wouldn't work with the few items I have. I remember we had that exchange way back in another thread about how many tasks we have in our AF lists. My problem is NOT too many tasks. That curse was lifted up from me. You, on the other hand...</div>
+</article>
+    </main>
+    <footer>
+        <p>Archive built from Mark Forster's blog and forums</p>
+    </footer>
+</body>
+</html>

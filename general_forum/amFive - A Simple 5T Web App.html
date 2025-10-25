@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>amFive - A Simple 5T Web App</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../blog_index.html">Blog</a>
+            <a href="../fvp_forum_index.html">FVP Forum</a>
+            <a href="../general_forum_index.html">General Forum</a>
+        </nav>
+    </header>
+    <main>
+<article>
+<h1>amFive - A Simple 5T Web App</h1>
+<div class="meta">
+Author: Andreas Maurer | 
+Created: 2015-09-18 22:06
+ | Last Activity: 2016-04-2 1:24
+</div>
+<h2>Original Post</h2>
+<div class="meta">2015-09-18 22:06</div>
+<div class="content">Hello everyone,<br><br>Nick and Jesse asked in the amFVP thread [1] about a 5T version . I'm not sure 5T benefits from a dedicated app as much as FVP since the algorithm is a lot simpler, but it only took me about two hours to modify the existing code and it was fun, so here we are:<br><br><a href="http://www.andreasmaurer.net/public/apps/5t/v1/" target="new" rel="nofollow">http://www.andreasmaurer.net/public/apps/5t/v1/</a> [2]<br><br>Like amFVP, amFive is very modal. There are two main modes, one to create the list and one to work on the current task. Additionally, the list view lets you see all tasks you've worked on and the settings page currently only holds the option to clear the list (to start over at the beginning of each day or whenever one feels like it).<br><br>Feature-wise, amFive v1 is on the same level as amFVP v2, which primarily means local data storage only, no data is sent to my servers and there is no sync capability.<br><br>== Keyboard Shortcuts ==<br><br>These are also similar to amFVP, inspired by Vim. Most shortcuts do not work while the input field for adding a new task has focus (because you'll want the actual letters to come out in that case).<br><br>Shortcuts to trigger the buttons in the upper right corner:<br>s - Shows the settings<br>l - Shows the list view<br>Esc - Closes the settings / list view<br><br>While adding tasks:<br>Enter - Adds the task<br><br>While doing a task:<br>f - Mark the task as finished<br>r - Re-add the task at the end of the list<br><br>For list view and button groups:<br>j or down arrow - Move focus down<br>k or up arrow - Move focus up<br><br>For list view:<br>x or delete: Remove tasks from list<br><br><br>Hope this is useful to someone, let me know if something is amiss.<br><br>Regards,<br>Andreas<br><br>[1] <a href="http://markforster.squarespace.com/fv-forum/post/2506783?currentPage=2#post2541321" target="new" rel="nofollow">http://markforster.squarespace.com/fv-forum/post/2506783?currentPage=2#post2541321</a><br>[2] It's actually https://www.andreasmaurer.net/public/apps/5t/v1/ but Mark's forum doesn't create links for secure websites for some reason. It's no problem since I redirect http to https automatically.</div>
+<h2>Reply by Andreas Maurer</h2>
+<div class="meta">2015-10-28 20:37</div>
+<div class="content">As I thought, a 5T app doesn't provide as much value as a FVP app. But I did create a new version which implements the 5T variant Mark is testing[1], just to get a feeling for it.<br><br>You can find it it here: https://www.andreasmaurer.net/public/apps/5t/variant/v1/<br><br>The main difference to the regular 5T app is that this one needs an additional state, since you can choose the order in which you do tasks.<br><br>Regards,<br>Andreas<br><br>[1] <a href="../fvp_forum/A Variation on the 5T Method.html" target="new" rel="nofollow">http://markforster.squarespace.com/fv-forum/post/2550548</a></div>
+<h2>Reply by nick61</h2>
+<div class="meta">2015-10-29 12:32</div>
+<div class="content">Hi Andreas, thank you so much! ... i've been using amFive since this morning: I've 2 tabs, one with amFVP (capture/master list) and one with amFive.<br><br>I try to select the new 3 tasks through questioning ... but when I feel stuck or insecure I go back to FVP, being sure i will select the most significant 3 tasks...<br><br>"I'm not sure 5T benefits from a dedicated app as much as FVP since the algorithm is a lot simpler" -> I agree, the algorith is so simple: but I like very much the idea to see only one task at the time in order to be very focused, and let the app interrupt me to invite me to choose 3 more tasks.<br><br>I also like the list mode, with the recording of all the tasks executed!<br><br>Thank's again<br><br>(I tryed to delete few tasks from the list mode and the app freezed.... I had to delete all the active tasks to let it work again.... I'm sorry but I was not able to replicate the error to provide you with informations usefull for debugging)</div>
+<h2>Reply by Andreas Maurer</h2>
+<div class="meta">2015-10-29 13:53</div>
+<div class="content">nick61:<br><br>Glad you find it useful. Too bad you apparently didn't see this thread before. I would've posted a link to here over in the amFVP thread, but that was closed off by the time I finished the first amFive version.<br><br>I could not reproduce the freezing issue when deleting tasks so far. Deleting single or multiple tasks at once, deleting the current task or other tasks worked. Which browser do you use? From what you wrote, I gather you use the original 5T implementation, not the newer variant, correct?</div>
+<h2>Reply by nick61</h2>
+<div class="meta">2015-10-29 14:08</div>
+<div class="content">browser: Microsoft Edge<br>app version: original 5T</div>
+<h2>Reply by Jesse</h2>
+<div class="meta">2016-04-2 1:24</div>
+<div class="content">A weird thing happened when I was using the variant version. When I went to list-view to delete something instead of deleting the item that I hit "X" for, it deleted a different item, the top, uncompleted one, I believe.</div>
+</article>
+    </main>
+    <footer>
+        <p>Archive built from Mark Forster's blog and forums</p>
+    </footer>
+</body>
+</html>

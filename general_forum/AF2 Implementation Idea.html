@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AF2: Implementation Idea</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../blog_index.html">Blog</a>
+            <a href="../fvp_forum_index.html">FVP Forum</a>
+            <a href="../general_forum_index.html">General Forum</a>
+        </nav>
+    </header>
+    <main>
+<article>
+<h1>AF2: Implementation Idea</h1>
+<div class="meta">
+Author: Christian G. | 
+Created: 2009-07-14 15:12
+ | Last Activity: 2009-07-23 3:35
+</div>
+<h2>Original Post</h2>
+<div class="meta">2009-07-14 15:12</div>
+<div class="content">What do you (and esp. Mark) think about the following paper based implementation?<br><br>When starting a new book, one does not write the first task on the first line of the first page but instead on the last line of the last page. New tasks are then added filling the book backwards. AF2 is then implemented as described by Mark, just the other way around:<br>- the last block of unactioned items is set "on notice"<br>- the initial scan of the list is done back-to-front<br>- working with the list is done front-to-back (which seems to be more natural for most of us western people), so you always start from and return to the very first item of the list.<br><br>I haven't tried it yet (I still have a couple of empty pages in my book), but I guess I'll give it a whirl... From my perspective all the AF2 rules are adhered to.<br><br>Regards, <br>Christian</div>
+<h2>Reply by Sarah</h2>
+<div class="meta">2009-07-14 15:22</div>
+<div class="content">Seems like the logical extension of writing tasks from the bottom of the page up and then working down the page for those who were bothered by moving from top to bottom on each page.</div>
+<h2>Reply by ratz</h2>
+<div class="meta">2009-07-14 15:43</div>
+<div class="content">That's an excellent idea. The key would be to have the implementor ask themselves which way they are most comfortable working.<br><br>I almost wonder if this is an AGE issue. I grew up at the birth of the computer age; and learned everything on paper. I work on computers for a living and most people consider me the expert to the expert on computer stuff, yet to this day I'm more comfortable thinking and reading on paper (usually with pencil) than I am on the computer screen.   <br><br>For me I find the reading backwards in the journal completely natural because that's the way notes got taken in college, so I was always working the bottom of the page scanning backwards.<br><br>I've done AF2 now in my paper journal and on the electronic tools as an experiment; and I find on both I'm more inclined to work backwards from bottom up; because me brain interrupts that linear reverse flow to be tied to my internal sense of time and age of the issue.</div>
+<h2>Reply by RevDave</h2>
+<div class="meta">2009-07-14 17:25</div>
+<div class="content">I think the way to go is whatever works simplest for you. The tools and mechanics of a system need to become almost transparent: present, available, working, yet not as focus. Right now, as we are all trying to learn this new (I think great tool) system, we are focused on the mechanics of how it will work for us. We need to think about the rules, but I'm looking forward to that day when I don't have to think about the list, I'm simply working it and it is working for me.<br><br>I'm a big geek, but find (other than using google calendar and Remember the Milk) that a paper, pocket Moleskine works best. It is convenient, it is super fast, and it is working for me.</div>
+<h2>Reply by Jabbe</h2>
+<div class="meta">2009-07-14 19:31</div>
+<div class="content">ratz,<br>I am not sure it is an age issue. I am older than most computers, but I prefer not having to start from the last row, reading backwards, at least not in computers.<br>I fully understand your thinking, however.<br>In fact I have a problem with this, when I file papers in binders. I discovered that I sometimes file them chronologically, with the newest at the back. Most often I file it with the newer pages up front, e.g. bank statements. I never quite know why I do it differently.<br><br>The best thing with an electronic implementation is that it is so easy to change my mind - I just swap the sort order from Descending to Ascending, and then I have it the other way around.</div>
+<h2>Reply by ratz</h2>
+<div class="meta">2009-07-15 5:55</div>
+<div class="content">I know two things; (1) most people seem have a skin crawl reaction to doing it the way they aren't comfortable with; and (2) I bet we could get a government grant to waste a bunch of time and money to try and fail to figure out why.</div>
+<h2>Reply by Christine B</h2>
+<div class="meta">2009-07-15 11:08</div>
+<div class="content">At the beginning of AF2 i had toyed with the idea of starting at the back of the book but the idea of writing up the page didn't sit well.  Strangely though, perhaps because I have a lot of pages, each with only a few items, I have realised that when i change page i start reading in the middle and go down and then back up.  Weird huh?  If I focus on reading from the bottom it feels wrong, but because I had already decided to treat each page as a unit I had stopped thinking about how to read it. But then maybe I'm just odd!</div>
+<h2>Reply by Ulrich</h2>
+<div class="meta">2009-07-15 16:39</div>
+<div class="content">My AF2 implementation uses index cards, one item per card. The "list" resides in a small box with the newest item at the front. I found these advantages:<br>- It seems "natural" to add new items at the front.<br>- It seems "natural" to work through the box from front to back.<br>- Handling the cards takes a little time and causes me to think better about the item. I found that with a simple list, I read through the items too fast.<br>- It is possible to add further notes to each item easily.<br>This is the system I am most happy with, from all I have tried up to now...</div>
+<h2>Reply by moises</h2>
+<div class="meta">2009-07-15 19:07</div>
+<div class="content">Ulrich,<br><br>Do you keep completed items in the box?</div>
+<h2>Reply by Ulrich</h2>
+<div class="meta">2009-07-15 19:39</div>
+<div class="content">moises,<br><br>the completed items are removed. Some of them are recurring items, they are put back into the tickler (I'm very proud of my index card tickler box). If they are related to a project which has a folder of its own, then I put them there to get a kind of project log. And the remaining ones are either simple one-shot actions (solemnly tear up the card) or could be used to create diary entries. I'm still experimenting on that.<br><br>Now you will ask how to find the "first block of unactioned tasks". Currently, I'm replacing each "done" card with an empty card, because I happened to get hold of a stack of wonderfully coloured index cards (which are of no real use because their surface makes me shiver when I try to write on it). In this way, it is easy to spot the unactioned tasks between the coloured cards.<br><br>However, it is a bit awkward to replace the "done" cards. I would like it better just to take them out. Maybe there will be a solution in the near future: since a few days, I am also placing a date marker card at the front of the stack each day. These date markers are now creeping towards the end of the stack, and once they will have reached it, I'll be able to compare them to the empty cards and decide whether to use them as markers for dismissal.</div>
+<h2>Reply by Sarah J</h2>
+<div class="meta">2009-07-17 1:39</div>
+<div class="content">I am doing AF2 this way! After a couple of weeks, when I had decided that this was really going to work for me, I went out and bought a little book (like Moleskine pocket, but taller ~ good for lists) and started at the back of the book, adding tasks as I go upward through the page.<br><br>To me, it makes a lot of sense, because it is a model, or sort of a metaphor, for piling things on a stack. But unlike the stack on my desk, under which important things might get buried, this stack has a way for "zapping" items in the middle and especially at the bottom of the stack, without making the whole pile fall onto the floor.<br><br>I would like to get the stack on my desk to behave that way too. Actually, it might, if I just get in the habit of putting them in a file or some other accessible place, and writing a reference to the item on my AF2 list... hmmm...<br><br>Anyway, I love the new notebook, and how I am working back-to-front!<br><br></div>
+<h2>Reply by MartyH</h2>
+<div class="meta">2009-07-23 3:35</div>
+<div class="content">ChristineB - <br><br>Today I found myself starting each page in the middle.  Once I noticed it and thought of your post here, I thought back and for at least several pages I had been doing the same thing.  I wonder how long that has been going on?</div>
+</article>
+    </main>
+    <footer>
+        <p>Archive built from Mark Forster's blog and forums</p>
+    </footer>
+</body>
+</html>

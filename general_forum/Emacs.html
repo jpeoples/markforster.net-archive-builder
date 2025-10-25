@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emacs</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../blog_index.html">Blog</a>
+            <a href="../fvp_forum_index.html">FVP Forum</a>
+            <a href="../general_forum_index.html">General Forum</a>
+        </nav>
+    </header>
+    <main>
+<article>
+<h1>Emacs</h1>
+<div class="meta">
+Author: sindikat | 
+Created: 2010-11-27 19:11
+ | Last Activity: 2011-10-3 18:50
+</div>
+<h2>Original Post</h2>
+<div class="meta">2010-11-27 19:11</div>
+<div class="content">Hi all! I'm a student studying programming, so for long i was eager to implement Autofocus in digital. So this is were i'm currently at.<br><br>First of all: you may not care about this all, if you do not rely on a computer much, or not an Emacs text editor user!<br><br>I'm using a text editor called Emacs, which is powerful all-in-one tool, but a bit hard to learn. Though it is very helpful when you've learned all keystrokes and tricky stuff, it may not be helpful for those, who do not rely on computer much. The text editor itself is not enough, so there is a "mode" (plugin, addon) for it called Planner. Now i'll start describing how to make all this work on your computer.<br><br>Let's say you use GNU/Linux, you've installed Emacs and Planner using either a package manager or manually. Create a file called .emacs in your home directory and enter the following:<br><br>(setq planner-project "autofocus")<br>(setq muse-project-alist<br>       '(("autofocus"<br>        ("~/autofocus"   ;the folder, where you store Autofocus related files<br>        :default "index" ;default file<br>        :major-mode planner-mode<br>        :visit-link planner-visit-link))))<br>(require 'planner)<br>; Extra keystrokes for deleting, postponing etc. tasks<br>(planner-install-extra-task-keybindings)<br>; Autofocus does not use date and time, so turn off using day pages<br>(setq planner-use-day-pages nil)<br>; Autofocus adds tasks at the end, so do we<br>(setq planner-add-task-at-end-flag t)<br>; This pops up planner whenever we start Emacs<br>(plan)<br><br>Now in Emacs what you do is you doing M-x (which is pressing Alt, holding it, and pressing 'x'), and then entering "plan" without quotes. Now you see "*Tasks *Notes" or something like that. To add tasks enter C-c C-t C-t (which is pressing 'c', while holding Ctrl and so on). To mark the task done enter C-c C-x. Now do exactly what it is in your favourite Autofocus system. Besides that Planner can do deadlines, regular tasks, notes, links to webpages, wiki-like information manager and much more, but this is beyond the scope of Autofocus. You can read more by entering 'M-x info' and then in info-mode 'm planner', or by reading <a href="http://www.emacswiki.org/emacs/PlannerMode" target="new" rel="nofollow">http://www.emacswiki.org/emacs/PlannerMode</a><br><br>This method is not complete, because i didn't found how to re-enter the same task, or how to break task list into blocks/pages of exact amount of tasks. I will work on that. Ask, if something is not clear<br><br>By the way, you can install Emacs on Windows and Mac too.<br><br>Somebody called Charles already mentioned using Emacs with org-mode in two threads:<br><a href="http://www.markforster.net/forum/post/735044" target="new" rel="nofollow">http://www.markforster.net/forum/post/735044</a><br><a href="http://www.markforster.net/forum/post/687996" target="new" rel="nofollow">http://www.markforster.net/forum/post/687996</a></div>
+<h2>Reply by James Levine</h2>
+<div class="meta">2011-10-3 18:50</div>
+<div class="content">Have you considered using Org in Outline mode? It also picks up where the remember package left off. Off the bat, the shortcuts are far more stripped down.</div>
+</article>
+    </main>
+    <footer>
+        <p>Archive built from Mark Forster's blog and forums</p>
+    </footer>
+</body>
+</html>

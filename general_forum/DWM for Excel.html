@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DWM for Excel</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../blog_index.html">Blog</a>
+            <a href="../fvp_forum_index.html">FVP Forum</a>
+            <a href="../general_forum_index.html">General Forum</a>
+        </nav>
+    </header>
+    <main>
+<article>
+<h1>DWM for Excel</h1>
+<div class="meta">
+Author: Walter | 
+Created: 2010-02-24 10:39
+ | Last Activity: 2010-03-18 19:36
+</div>
+<h2>Original Post</h2>
+<div class="meta">2010-02-24 10:39</div>
+<div class="content">Hi,<br><br>For people who like Excel, as with AF, I prepared an Excel file with some vba scripting.<br>It's very simple to use.<br><br>Features:<br><br>- There are 3 worksheets: Open Tasks, Closed Tasks and Expired Tasks. <br>- Tasks that are about to expire (last day) are displayed in red.<br>- Expiration dates are grouped with automatic separation lines.<br>- Tasks are automatically moved to "Expired Tasks" when needed.<br>- There's a "category" column. It can be used, for example, for contexts. Tasks can then be filtered by this value. This is the part that requires a little more testing.<br><br>There are 4 shortcuts:<br><br>CTRL-Shift-N: Positions the cursor on an empty line at the end of the list. The cursor can also be positioned manually. After entering the description, the dates are automatically set and the list is re-sorted.<br><br>CTRL-Shift-C: Marks a task as done (moves it to "Closed Tasks"). The closing date is saved in an additional column.<br><br>CTRL-Shift-R: Reenters a task. It works different depending on which worksheet is active. <br>  - When in "Open Tasks", its expiration will be modified to today+7. <br>  - When in "Closed Tasks", the item will be returned to "Open Tasks".<br>  - When in "Expired Tasks" the item will also be reactivated, but its date will be set to today+one month.<br><br>CTRL-Shift-S: Resorts the list (usually there's no need for this, it's done automatically)<br><br>This is how it looks:<br><a href="http://i153.photobucket.com/albums/s238/walrez/Misc/DWM.jpg" rel="nofollow">http://i153.photobucket.com/albums/s238/walrez/Misc/DWM.jpg</a><br><br>... and this is the download link:<br><a href="http://www.4shared.com/file/228708616/a79d311d/DWM.html" rel="nofollow">http://www.4shared.com/file/228708616/a79d311d/DWM.html</a><br><br>Be aware that It's beta-ish, though it seems to work ok.<br><br>Walter</div>
+<h2>Reply by vegheadjones</h2>
+<div class="meta">2010-02-24 14:49</div>
+<div class="content">Hi Walter,<br><br>Your spreadsheet is very elegant. I've been happily doing DWM in Excel as well, my sheets are much uglier than yours, but works for me. Here are a few things I've been doing, in case you or anyone else are interested.<br><br>I have a column for link which goes to either the filename or url of what the task relates to. I made a macro that inserts it automatically.<br><br>I have start and stop times that I use to both track my progress and note where I left off on the list. I made a macro that inserts current time and then pastes it as a value so it does not keep updating.<br><br>I have another column for "days left", today's date - the expire date. It's more meaningful to me than some far away date. <br><br>And  when I resechdule a task I do not delete the previous iteration but rather mark it as complete-- this way I keep track on my progress with said task.<br><br>And (now you see what I mean when I say mine sheet is ugly) I have another column for Current Initative, which I use when needed.</div>
+<h2>Reply by moises</h2>
+<div class="meta">2010-02-24 15:49</div>
+<div class="content">I am almost ready to abandon paper. Thus far, it's a toss-up between Excel and Outlook (2003). This, Walter, is pushing me closer to Excel, since I've had .pst file problems in the past. This looks quite nice. Thanks, from someone who doesn't know VBA.</div>
+<h2>Reply by moises</h2>
+<div class="meta">2010-02-24 17:03</div>
+<div class="content">Walter,<br><br>I like this a lot.<br><br>Suggestions:<br><br>A. Important<br><br>CTRL-Shift-R<br>-When in "Open Tasks"<br><br>I would like to see a copy of the reentered task moved to the "Closed Tasks" sheet. It helps remind me that I've already done that task, and the date that I last did it. Sometimes, I will do the same task a number of times each day. And I would like a record of it.<br><br>B. Important<br><br>I use Excel 2003. When I do CTRL-F for Find. The results of searches in the Description field on the Open Tasks worksheet are inconsistent. I will find some strings and others I will not find. I cannot yet determine what differentiates the cases where it works from those where it does not work. But, obviously, losing the search capability would be a very bad thing.<br><br><br>C. Trivial<br>Is there any way you can give me the option of using the barbaric date format: m/d?<br><br>Thanks.</div>
+<h2>Reply by Walter</h2>
+<div class="meta">2010-02-25 13:28</div>
+<div class="content">Hi,<br>I'm working on some of the changes. I'll let you know.<br>Thanks,<br>Walter</div>
+<h2>Reply by moises</h2>
+<div class="meta">2010-02-25 17:40</div>
+<div class="content">Walter,<br><br>Thanks. Yesterday I migrated from paper to your Excel version. I am enjoying it. There's no going back to paper for me. I put your file in my xlstart folder so it opens up each morning when I open Excel.<br><br>It almost makes me want to learn vba. But, since I don't know any programming at all, there's probably better things I could be doing.<br><br>I had a great deal of trepidation about leaving paper, though prior to AF I was always electronic. I used to do DIT in Excel as well. <br><br>What I have found is that none of my concerns about leaving paper have materialized. There have been a lot of upsides going from paper to Excel and, so far, no downsides at all.<br><br>Here are some upsides:<br><br>*completed tasks no longer clutter the open tasks list, leading to<br>*fewer lines to scan<br>*my physical desktop used to have 2 large spiral-bound notebooks (I was in transition from one book to another), now that they're gone there is a huge amount of extra workspace, while having the open Excel file doesn't clutter my computer screen at all<br>*automagical dating and sorting<br>*no need to keep rewriting recurrent tasks<br>*no need to scan empty, or mostly empty, pages</div>
+<h2>Reply by vegheadjones</h2>
+<div class="meta">2010-02-25 18:15</div>
+<div class="content">Hi Moises,<br><br>I don't know any vba either but FYI Excel has a macro recorder that will record your mouse clicks/keyboarding and make a macro out of it. It's how I have done all my macros which have worked well for me thus far. If you are using Excel 07 the recorder is on the "developer" ribbon.</div>
+<h2>Reply by moises</h2>
+<div class="meta">2010-02-26 21:40</div>
+<div class="content">Hi veghead,<br><br>I am quite comfortable with the macro recorder, but, the stuff that Walter's doing appears goes way beyond anything I know how to do with the macro recorder. I actually viewed some Microsoft stuff on VBA, which looks quite intriguing. And, perhaps, I wouldn't actually have to learn that much VBA, since all I would really need to do would be to modify Walter's code.</div>
+<h2>Reply by sabre23t</h2>
+<div class="meta">2010-02-27 9:48</div>
+<div class="content"><< perhaps, I wouldn't actually have to learn that much VBA, since all I would really need to do would be to modify Walter's code >><br>That's how I learn all my new languages. Get working source code nearest to what I want done. Then incrementally modify it to what I want it to do. Along the way learning just enough of the new language syntax to do my modifications. ;-)</div>
+<h2>Reply by Walter</h2>
+<div class="meta">2010-02-27 16:25</div>
+<div class="content">Hi, moises<br>Here's an updated version:<br><a href="http://www.4shared.com/file/230942205/7ff49017/DWM.html" rel="nofollow">http://www.4shared.com/file/230942205/7ff49017/DWM.html</a><br><br>It adds a row to "Closed Tasks" even when you are re-entering.<br><br>To change the date format, you'll have to edit one line of vba code.<br>On Excel, press ALT-F11. This will take you to the vba editor. It'll look like this:<br><br><a href="http://i153.photobucket.com/albums/s238/walrez/Misc/DWMvba-1.jpg" rel="nofollow">http://i153.photobucket.com/albums/s238/walrez/Misc/DWMvba-1.jpg</a><br><br>On the left side of the screen, you'll see a tree, similar to Windows Explorer's. Double click on DWM (marked with a red arrow). You'll see the code on the right side. A second arrow points to the line you have to change, from "dd/mm" to "mm/dd".<br>Close the vba editor, save the file, and you're done.<br><br>Welcome to the world of vba ;-)<br><br>My code in this case is a little "dirty", but there's a fair amount of remarks to understand what's going on.<br><br>If I have to post newer versions of the file, you'll have to make this change again, so I'd save the instructions.<br><br>Walter</div>
+<h2>Reply by Walter</h2>
+<div class="meta">2010-02-27 16:26</div>
+<div class="content">I forgot. There's a new shortcut. CTRL-Shift-D: Deletes the current task.</div>
+<h2>Reply by moises</h2>
+<div class="meta">2010-02-27 20:33</div>
+<div class="content">Walter,<br><br>You are awesome! Thanks. I will install this when I get to work Monday morning.</div>
+<h2>Reply by moises</h2>
+<div class="meta">2010-03-2 14:48</div>
+<div class="content">This new version is a joy to work with. I much prefer this to using paper. <br><br>The only remaining issue is that the search function is not consistent. I think your code puts an asterisk in the search function. Even when I type in a new string, the search does not work consistently.<br><br>Regardless of this search issue, I am sticking with DWM in Excel. Thanks again, Walter.</div>
+<h2>Reply by moises</h2>
+<div class="meta">2010-03-2 15:05</div>
+<div class="content">I found out what the problem is with search. It only succeeds if I search for all of the characters in the cell. If I search for only part of the string, it will not find it.<br><br>For example, if the cell has the followiing: "read Mark Forster blog", and I search "Mark", nothing will be found. Likewise, if I search "Forster" or "blog", nothing will be found. If I search for the entire contents of the cell, "read Mark Forster blog" then it will be found.<br><br>And this is happening in all Excel files.<br><br>Is the script doing this? My memory was that in the past, in Excel, I could do a find and replace, for example, replacing "blog" with "post" and Excel would successfully change "read Mark Forster blog" to "read Mark Forster post". Now, Excel cannot do that.</div>
+<h2>Reply by Walter</h2>
+<div class="meta">2010-03-2 15:54</div>
+<div class="content">Hi Moises,<br><br>In the search window, there's and "Options" button.<br>If you press it, you'll see a checkbox "Match entire cell contents", which is marked by default.<br>Unmarking it should solve your problem.<br>Please let me know.<br><br>Walter</div>
+<h2>Reply by moises</h2>
+<div class="meta">2010-03-2 17:25</div>
+<div class="content">Hi Walter,<br><br>Yes. That fixed it. I think your script is marking the checkbox and entering the asterisk.<br><br>No matter. Everything works like a charm now.<br><br>I know Mark won't accept donations. Do you?<br><br>Thanks,<br><br>moises</div>
+<h2>Reply by Walter</h2>
+<div class="meta">2010-03-2 19:24</div>
+<div class="content">:-)<br><br>I'm happy that it works for you.<br>I'll check the checkbox and *.<br><br>Walter</div>
+<h2>Reply by Walter</h2>
+<div class="meta">2010-03-4 17:07</div>
+<div class="content">Hi Moses,<br><br>Here's the fix.<br><a href="http://rapidshare.com/files/358902785/DWM.xls" rel="nofollow">http://rapidshare.com/files/358902785/DWM.xls</a><br><br>Don't forget to backup your current file before updating.<br><br>Regards,<br>Walter</div>
+<h2>Reply by Cilla</h2>
+<div class="meta">2010-03-4 22:18</div>
+<div class="content">Walter, <br><br>This excel DWM is really great, I have tried all the paper versions of AF and DWM, but couldn't keep up with them. But with the excel, I find that it is a joy to work in it, and I can stay on track. <br><br>Thanks so much!<br><br>Cilla</div>
+<h2>Reply by moises</h2>
+<div class="meta">2010-03-5 15:13</div>
+<div class="content">Walter,<br><br>I am glad to see that I am not the only one appreciating your powerful creation.<br><br>I know that once people start an implementation, they are reluctant to switch platforms. But, I would much rather be using your application than Outlook. Yours has the advantage of being faster for filtering and sorting. Furthermore, if there ever is the need to renumber (i.e., redate) the items, it can be done in a few seconds with a global "find and replace" in Excel.<br><br>I know some people are just using regular Excel. But your application makes it so much easier by: automatically creating the week and month expiration dates, automatically changing the color of items that are going to expire in the next day, automatically creating a separation between days of expiration, automatically moving expired items off the list, and automatically documenting all completed items.<br><br>It's great. Thanks.</div>
+<h2>Reply by Chris Cooper</h2>
+<div class="meta">2010-03-6 10:17</div>
+<div class="content">This is terrific, Walter - thanks. <br><br>Is there any way of preventing the annoying warning that the file contains macros, which appears every time I open it?<br><br>Chris</div>
+<h2>Reply by Mike</h2>
+<div class="meta">2010-03-6 12:00</div>
+<div class="content">Yeah, you can.  It is somewhere in the preferences.  You can set security to allow macros without warning.  But be careful, that could get you in trouble with someone who produces a spreadsheet who is not as trustworthy as Walter.  ;-)</div>
+<h2>Reply by Chris Cooperocation</h2>
+<div class="meta">2010-03-6 15:56</div>
+<div class="content">I've just discovered the solution to my problem - at least where Windows 7 Starter, running on my mini-laptop, is concerned. Seems that in Excel Options you define a folder as a Trusted Location; anything opened from there doesn't get the macro warning. <br><br>I just found this while sitting in my library's coffee shop. When I get home, I'll find out what the equivalent is on Win XP.<br><br>Chris</div>
+<h2>Reply by Walter</h2>
+<div class="meta">2010-03-6 16:31</div>
+<div class="content">I'm really glad that it's useful for some of you.<br><br>Right from AF1 Excel works very good with Mark's methods.<br><br>I'm open to hear (small:-) suggestions.</div>
+<h2>Reply by moises</h2>
+<div class="meta">2010-03-7 12:06</div>
+<div class="content">I've never programmed before. Now, thanks to Walter, I have. <br><br>I didn't want to ask Walter to do this, since I made a tweak that runs contrary to the rules. And Walter had to jump through a few hoops to make his application follow the rules. Programming my tweak made the script much simpler.<br><br>At work I almost never work weekends. So, I don't want DWM to create weekend expiration dates. I changed Walter's app so that the expiration date is 28 days from the date of creation of a new task.<br><br>This took me about 2 hours of searching on the web and fiddling around. I now realize that it would have taken Walter about 30 seconds. But that's fine. Walter has convinced me that it really is worth learning some VBA. Thanks, again.<br><br>(I have not tested my changes very much. I am assuming that I have not created too many bugs. ;) )</div>
+<h2>Reply by moises</h2>
+<div class="meta">2010-03-7 12:19</div>
+<div class="content">Something that I've noticed using Walter's app is that there really is some truth to Mcluhan's apothegm "The medium is the message."<br><br>DWM in Excel is a totally different animal than on paper, even though the rules are the same. Digitally, it flows much, much faster, so the entire experience is transformed. <br><br>And, yes, I agree with Walter that all of Mark's systems work well with Excel. Until the AFs came along, I was doing DIT in Excel.</div>
+<h2>Reply by Walter</h2>
+<div class="meta">2010-03-7 17:40</div>
+<div class="content">Hi moises,<br><br>Indeed, I programmed the date calculation exactly as specified in the instructions (same day number, one month after today).<br>Glad to hear that you're getting to know vba.<br><br>There's something I forgot to tell:<br><br>The "Created" column contains not only the creation date, but also the time (including seconds). It's not displayed, but if you position the cursor on a cell you'll see it's value on the formula bar.<br><br>The purpose of this value is to act as a "key", a unique identification for each task.<br>Then, when you reenter a task, even if you alter the text, this value is kept.<br><br>In the "Closed Tasks" worksheet, you can then sort by this column, and see how you worked on every task over the time.<br><br>I hope I was clear enough :-)<br><br>Walter</div>
+<h2>Reply by vikram</h2>
+<div class="meta">2010-03-8 9:54</div>
+<div class="content">Hi Walter,<br>Many thanks for the Excel solution.<br>I was using a todo-list software, and was creating folders in it for each date - but that was messy.<br><br>The flat look is clean, and best of all - its simple and super fast<br><br>Many thanks<br>Vikram</div>
+<h2>Reply by moises</h2>
+<div class="meta">2010-03-8 16:08</div>
+<div class="content">Walter,<br><br>Thanks for telling us about this. Now I have another project. I am going to figure out how to format the "Closed" column on the "Closed" tab so I can see the date and time completed.</div>
+<h2>Reply by vegheadjones</h2>
+<div class="meta">2010-03-8 16:11</div>
+<div class="content">Hi Walter,<br><br>I am trying out your spreadsheet today-- I have been sing Excel for DWM since the beginning but because I don't know vba, my sheet became to large in memory and ugly. Yours is great!<br><br>I have one request-- I added a column for links since one of the advantages to an electronic version is jhaving the ability to link to files and webpages, but when your sheet sorts it does not sort my column. Any way to fix that?</div>
+<h2>Reply by moises</h2>
+<div class="meta">2010-03-8 16:19</div>
+<div class="content">veghead,<br><br>I am glad to see you joining the fun!<br>I often enter data in column E and it always sorts. <br>Generally, I have been putting my links in the Category column. But that shouldn't make a difference. I use Excel 2003. What version are you using?</div>
+<h2>Reply by vegheadjones</h2>
+<div class="meta">2010-03-8 16:24</div>
+<div class="content">Excel 2007. I have column e as the Created column, right?</div>
+<h2>Reply by vegheadjones</h2>
+<div class="meta">2010-03-8 16:25</div>
+<div class="content">Ah sorry, I added a new column after expires that calculates the days left--I like seeing whole numbers instead of dates so my column e is now your column f :)</div>
+<h2>Reply by moises</h2>
+<div class="meta">2010-03-8 18:14</div>
+<div class="content">veghead,<br><br>You are right. Walter's app only brings the date from E over, not F. Unfortunately, my "VBA for Dummies" book doesn't arrive for 2 more days. Sorry.  :(</div>
+<h2>Reply by Walter</h2>
+<div class="meta">2010-03-8 19:23</div>
+<div class="content">Hi!<br><br>What you are trying to do is actually simple.<br>The procedure that sort tasks is called... mh... SortTasks.<br><br>Look for this statement: <br><br>  ' Sort tasks by expiration date + creation date<br>  objWS.Range("A1:E" & lngLastRow).Sort _<br>        Key1:=Range(strExpirationColumnLetter & "2"), Order1:=xlAscending, _<br>        Key2:=Range(strCreationColumnLetter & "2"), Order2:=xlAscending, _<br>        Header:=xlYes, OrderCustom:=1, MatchCase:=False, Orientation:=xlTopToBottom<br><br>You then replace<br><br>  objWS.Range("A1:E" & lngLastRow).Sort<br><br>with<br><br>  objWS.Range("A1:F" & lngLastRow).Sort<br><br>Actually, you could specify Z or whatever letter you want, and it'll work as well.<br><br>I can do it myself if you wish, but I see that our code is getting dangerously branched ;-)</div>
+<h2>Reply by moises</h2>
+<div class="meta">2010-03-9 12:59</div>
+<div class="content">I am finding that DWM with Walter's app is really a different animal than DWM with paper. With the latter, I had to use two large books (because I was at the end of one book and the start of a new one). It was bulky and clumsy. Walter's app makes it lightning-fast. It was too easy to change focus with paper, and not write it down first, because that would have involved endless page turning. With Walter's app, there's no excuse for not writing it down first. Everything is accessible with the keyboard shortcuts. I can search for anything or add anything new almost instantaneously.<br><br>By the way. Thanks for the code. I expanded the sortable columns.</div>
+<h2>Reply by Walter</h2>
+<div class="meta">2010-03-9 13:19</div>
+<div class="content">Should we unify our code somehow?<br><br>If any of us makes an improvement it could be difficult to integrate, otherwise.</div>
+<h2>Reply by Seraphim</h2>
+<div class="meta">2010-03-9 20:57</div>
+<div class="content">This is not Excel-related, but I am also finding that my electronic version of DWM is much faster and nimbler than the paper-based version.  I am doing it in Outlook 2007, with a macro or two to help expedite resetting the due dates to Today+7 or Today+1M as needed.  I really like it.<br><br>I didn't have this experience with the AF variants.  Paper was better for those.  <br><br>Maybe it's working now, because pre-AF I was always prone to tweaking the system.  Now I just couldn't care less about tweaking the system -- I am so happy it just *works* so well.</div>
+<h2>Reply by moises</h2>
+<div class="meta">2010-03-9 22:09</div>
+<div class="content">Walter,<br><br>It sounds like a good idea. How many columns do people need to have sort?</div>
+<h2>Reply by moises</h2>
+<div class="meta">2010-03-12 13:40</div>
+<div class="content">Walter,<br><br>Another request:<br><br>Currently, if I try to print the Open Tasks tab, all the blank lines are counted as active. I have to manually set the pages to print. Could you get it to print only the pages with nonblank lines?</div>
+<h2>Reply by Walter</h2>
+<div class="meta">2010-03-14 11:55</div>
+<div class="content">Hi moises,<br><br>Are you talking about setting the print area?<br><br>What do you mean by blank lines? At the end of the list?<br><br>Walter</div>
+<h2>Reply by moises</h2>
+<div class="meta">2010-03-14 14:41</div>
+<div class="content">Hi Walter,<br><br>Yes, I was talking about setting the print area. I would want it to keep going down column A until it reaches a blank cell. The bottom of the print area would be the bottommost nonblank cell. The rightmost end of the print area would be column F? Do others use more than 2 extra columns?</div>
+<h2>Reply by Walter</h2>
+<div class="meta">2010-03-14 19:31</div>
+<div class="content">Hi,<br><br>Doesn't CTRL-A do what you need? Then, on the print dialog you can mark "Selection".</div>
+<h2>Reply by moises</h2>
+<div class="meta">2010-03-14 21:32</div>
+<div class="content">Yes! That will work. <br><br>I was accustomed to just hitting Print, and I was getting 70 page print jobs. I'll just develop a new habit.</div>
+<h2>Reply by JD</h2>
+<div class="meta">2010-03-15 1:41</div>
+<div class="content"><<easy to change focus with paper, and not write it down first, because that would have involved endless page turning.>><br><br>Moises: as you no doubt know, writing down a task involves having 2 pages in focus - the month (for new tasks) and the week (for re-entered or recurring tasks). Why do you say it involves endless page turning?<br><br>Sorry if I changed the focus of this thread a little, just wondering...</div>
+<h2>Reply by Walter</h2>
+<div class="meta">2010-03-15 9:52</div>
+<div class="content">Hi,<br><br>I've uploaded a new version with a nice new feature.<br><br>I'm still testing it, but it seems to work fine. Anyway, you should back up your original one in a safe place, then copy the tasks to the new file.<br><br><a href="http://rapidshare.com/files/363577929/DWM.xls" rel="nofollow">http://rapidshare.com/files/363577929/DWM.xls</a><br><br>moises: I added the shortcut CTRL-Shift-P for printing the whole list.<br><br>There's a new shortcut: CTRL-Shift-W, where "W" is for "work on task".<br><br>It will display a stopwatch, and when you complete the task, it will include the invested time in the "Closed Tasks" list. <br><br>If you reenter tasks, you will be able to sum the total invested time between sessions.<br><br>Please let me know if you find any problems (it's a beta!)<br><br>Walter</div>
+<h2>Reply by moises</h2>
+<div class="meta">2010-03-15 15:53</div>
+<div class="content">Walter,<br><br>This looks amazing! But I get "runtime error (9): subscript out of range" when I work on task and then try to complete or reenter it.<br><br>JD wrote: "Why do you say it involves endless page turning?"<br><br>Thanks for the question! <br>My office environment can sometimes be rather fast-paced. So, I like to have in front of me the task that I am currently working on. When I get interrupted I sometimes lose track of what it is I am doing. I also need to have ready access to today plus 7 days and today plus 1 month, so that as I think of stuff still to be done, I can enter it. Furthermore, since I review my lists so frequently, I know that there is a task that I want to do next that is behind the one I just finished. So, with paper, I spent a lot of time flipping through the pages. <br><br>If I was spending long periods of time on each item, I might have a different experience altogether. But I am often switching from one thing to another rather rapidly. I found that Excel works quite well for this.</div>
+<h2>Reply by JD</h2>
+<div class="meta">2010-03-16 0:29</div>
+<div class="content">Walter: any chance you could host your file elsewhere? My ISP uses a proxy server, which rapidshare does not seem to like.<br><br>Moises: I see your point of view entirely and thanks for your detailed response. Those were some of the reasons I liked electronic myself. I suspect however, that my environment is not as rapidfire as yours, at least not on most days. I have the one week and one month flagged out so entries are manageable that way.. <br><br>At the moment, if I really need to work on something urgent, I enter it at the one month mark, even if it repeats itself elsewhere. I jump from my current task, after re-entering if necessary, to the urgent task at the one month mark. After the "immediacy" is over, I re-commence at the beginning. I cross off the repetitive task if I come across it. Sometimes, urgencies force me to stay on the one month page as tasks come in rapidfire and are entered at the end of the list.</div>
+<h2>Reply by moises</h2>
+<div class="meta">2010-03-16 1:04</div>
+<div class="content">Walter,<br><br>It seems to work fine at home with Vista. At work I have XP. I'll try to download it again at work tomorrow, just to confirm.</div>
+<h2>Reply by JD</h2>
+<div class="meta">2010-03-16 5:32</div>
+<div class="content">Walter: Got a work around for the download, please ignore my earlier request (if you haven't already :)  ). And thank you for very generously sharing your work here.</div>
+<h2>Reply by JD</h2>
+<div class="meta">2010-03-16 5:48</div>
+<div class="content"><< "runtime error (9): subscript out of range" >><br><br>Moises: I am not sure if you are still getting this error... I ran the de-bugger when I got the same error and it appeared to come on if you changed the name of the file to something other than the original "DWM". The error disappeared when I changed it back to the original.<br><br>I suppose you could change the code to reflect your new file name, but I'm not a code expert, so did the above instead. Hope that helps in some way.</div>
+<h2>Reply by Walter</h2>
+<div class="meta">2010-03-16 12:27</div>
+<div class="content">Hi!<br><br>JD is right. The file name is important, because if you have more than one Excel file open, it needs to know where to go back when you press "Complete".<br><br>Frankly, I programmed this feature just for fun (since I'm not so much into statistics), but I find myself using it more and more. I'm amazed to find out how much time I invest in things that seemed to go on only for a couple of minutes.<br><br>Hope you enjoy it,<br>Walter</div>
+<h2>Reply by moises</h2>
+<div class="meta">2010-03-16 19:58</div>
+<div class="content">JD and Walter,<br><br>That was the problem! Thanks for the solution.<br><br>moises</div>
+<h2>Reply by moises</h2>
+<div class="meta">2010-03-17 12:42</div>
+<div class="content">Everything works well, except sometimes, when I switch applications, I get runtime error 1004: "Method 'OnTime' of object '_Applicaton' failed"<br><br>The script stops at "Stop the time, and hide the window"<br><br>I am still using it despite the bugs.</div>
+<h2>Reply by Walter</h2>
+<div class="meta">2010-03-17 14:41</div>
+<div class="content">Hi,<br><br>This version should fix the problem you mention:<br><br><a href="http://rs924.rapidshare.com/files/364574276/DWM.xls" rel="nofollow">http://rs924.rapidshare.com/files/364574276/DWM.xls</a><br><br>Please let me know if it does (or not).<br><br>Regards,<br>Walter</div>
+<h2>Reply by moises</h2>
+<div class="meta">2010-03-17 18:48</div>
+<div class="content">Walter,<br><br>The runtime error seems to be fixed. I still get the watch stopping, when I switch to one of my applications. But that's a minor issue.<br><br>Another minor issue. Can you change the format on the Stopwatch to the same hh:mm:ss format that you use in the "invested" column F on Closed Tasks?<br><br>And thanks again for everything you've done on this.</div>
+<h2>Reply by Walter</h2>
+<div class="meta">2010-03-18 8:11</div>
+<div class="content">Hi Moises,<br><br>I kind of suspected that some kind of problem could arise.  :-(<br>Excel doesn't have a proper timer.<br><br>Can you point me to the kind of situation when this happens?<br>Is it a specific application that causes it?<br><br>In any case, if things aren't stable, I have a simpler, less fancy option:<br>I can simply save the starting time, and when you press CTRL-Shift-C or R, calculate the difference. That wouldn't show the progress, though. You could only know how much you worked when you finish.</div>
+<h2>Reply by moises</h2>
+<div class="meta">2010-03-18 15:43</div>
+<div class="content">Walter,<br><br>The stopwatch seems to fail only when I use a "terminal server" application. I don't mind at all, since it seems to be good with everything else.<br><br>But here's another thing I just discovered about the stopwatch.<br><br>Let's say that I am in cell A23, with the description "Task1". I turn on the stopwatch for this task and the message box is titled "Task1." While I am doing Task1, I realize that I need to enter another task. So, I go to my first empty cell, which is A35 and enter "Task2". And this cell A35 remains selected. <br><br>After I complete Task1 I hit the "complete" button on the "Task1" stopwatch box. What happens next is that Task2, not Task1, is moved from the Open to the Closed tab.</div>
+<h2>Reply by moises</h2>
+<div class="meta">2010-03-18 19:36</div>
+<div class="content">I like your less fancy option. Right now, I put a semicolon (;) next to the active task in column H. (I use column G for extra notes and things.)<br><br>This way, if I need to move around the sheet, while I am working, I can always get back to the selected task with a search for the semicolon, or go to column H and do End-up arrow.<br><br>When we hit CTRL-shift-W, make the selected cell have yellow fill and put a semicolon (or some other character) in column H. Then, proceed using your "less fancy option."<br><br>On the Closed Tasks tab, Column E, I would like to see the time the tasks were closed be the default format. Again, it's just a minor thing.</div>
+</article>
+    </main>
+    <footer>
+        <p>Archive built from Mark Forster's blog and forums</p>
+    </footer>
+</body>
+</html>

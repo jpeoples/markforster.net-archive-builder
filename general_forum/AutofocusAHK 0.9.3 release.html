@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutofocusAHK 0.9.3 release</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../blog_index.html">Blog</a>
+            <a href="../fvp_forum_index.html">FVP Forum</a>
+            <a href="../general_forum_index.html">General Forum</a>
+        </nav>
+    </header>
+    <main>
+<article>
+<h1>AutofocusAHK 0.9.3 release</h1>
+<div class="meta">
+Author: Andreas Hofmann | 
+Created: 2010-02-3 1:18
+ | Last Activity: 2010-02-7 7:58
+</div>
+<h2>Original Post</h2>
+<div class="meta">2010-02-3 1:18</div>
+<div class="content">Hello everyone,<br><br>I just uploaded version 0.9.3 of my application AutofocusAHK  - it brings support for AF5/DIT2. So you can now freely choose between AF1, AF2, AF3/RAF, AF4 and AF5/DIT2. If Mark changes AF5 (as I prefer to call it for now since it's not DIT2 imho) before officially releasing it, I will of course make adjustments.<br><br>Here's the download link: <a href="http://cloud.github.com/downloads/andreashofmann/AutofocusAHK/AutofocusAHK-0.9.3.zip" rel="nofollow">http://cloud.github.com/downloads/andreashofmann/AutofocusAHK/AutofocusAHK-0.9.3.zip</a><br><br>If you want to read up on how to use the applications, see the included text files or the original thread: <a href="http://www.markforster.net/forum/post/869348" rel="nofollow">http://www.markforster.net/forum/post/869348</a><br><br>Please post comments on the 0.9.3.x versions in this thread, you may also request features or report bugs using my issue tracker: <a href="http://github.com/andreashofmann/AutofocusAHK/issues" rel="nofollow">http://github.com/andreashofmann/AutofocusAHK/issues</a></div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-02-3 5:31</div>
+<div class="content">I realize my AF5 implementation is off by a day. If use 30 days in the future for new tasks and 7 days into the future for re-added tasks. In went for 30 days instead of a month because it's easier to calculate (with a computer, that is). That's okay. The problem is, if a tasks in AutofocusAHK 'stands on the page' February 5th, it will be removed as soon as it's February 5th. In Mark's original instructions, it would live the whole of Feb 5 and only be deleted as soon as Feb 6 starts.<br><br>It's easy to fix, I guess, just delete tasks one day later. But I did it that way because it felt natural to me to have tasks expire on the "expiratory date", not one day after. Any thoughts on this?</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-02-3 5:33</div>
+<div class="content">Excuse my typos, it's 6:30 in the morning here and you can see from the first post when I went to bed. ^^</div>
+<h2>Reply by sabre23t</h2>
+<div class="meta">2010-02-3 9:26</div>
+<div class="content">>> In Mark's original instructions, it would live the whole of Feb 5 and only be deleted as soon as Feb 6 starts. <<<br><br>I prefer this, I think of it as the last day of life for the task, last chance to act on it, rather the day the task dies. ;-)<br><br>I love your AFAHK's but not having a version that will work while I'm mobile (either in the cloud or on the mobile smartphone) makes me prefer to use my current Lotus Notes Todo and Windows Mobile Outlook Tasks synched combo.<br><br>Just thought about using AFAHK this way ...<br>(1) On office computer use AFAHK from folder synced with dropbox<br>(2) On home computer use AFAHK from same dropbox folder<br>(3) On mobile, access the textfile in dropbox folder via mobile browser, than edit using notepad<br><br>Mmm ...</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-02-3 10:05</div>
+<div class="content">sabre23t:<br><br>I'll change the expiration with the next release. I have 29 days before it becomes a real issue. ;-)<br><br>I'm working on a websync solution, but I don't know how long it will take. I don't have as much time for this as I'd like.<br><br>What kind of mobile device do you use?</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-02-3 10:05</div>
+<div class="content">Arr, reading comprehension. You use Windows Mobile. :-)</div>
+<h2>Reply by Jonaz in Stockholm</h2>
+<div class="meta">2010-02-3 10:22</div>
+<div class="content">Mmmmmm dreaming of using a digital solution for AF5/DIT2 on an iPad... ;-)</div>
+<h2>Reply by learning as I go</h2>
+<div class="meta">2010-02-3 11:10</div>
+<div class="content">Hi Andreas H.<br>Instead of 30 days, why not 28 days (4 weeks rather than a month ) That would end the problem of short and long months and some days getting jammed with more than one day's worth of new tasks.  Just a thought.....<br>learning as I go</div>
+<h2>Reply by Mike</h2>
+<div class="meta">2010-02-3 11:21</div>
+<div class="content">And even better, why not make these things configurable?  Maybe someone works better with a shorter deadline (20 days?  15 days?) maybe the short date can be configurable as well (3 days? 10 Days?)  We all work differently.  I see no reason such a simple system can not be completely configurable.  I can do it with paper, after all.</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-02-3 11:21</div>
+<div class="content">Learning:<br><br>I think in the long run I'll just make it user-adjustable. But it doesn't really matter if it's 28 or 30 days. The problem of short and long months and some days getting jammed isn't an issue in any case, since it's always the same number of days, regardless of how the current month. In fact, since the current implementation let's tasks expire immediately on "their" day, it's really 29 days. I'll fix it later. But anyways, the issues you mentioned don't apply to using 30 days fixed.</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-02-3 11:22</div>
+<div class="content">Mike:<br><br>Exactly.</div>
+<h2>Reply by learning as I go</h2>
+<div class="meta">2010-02-3 13:10</div>
+<div class="content">Hi Andreas H.<br>You are absolutely correct!  What was I thinking....or NOT thinking?  LOL!  I apologize for the time you wasted on both reading and repying to my useless and incorrect post!  ROTFL!<br><br>Mornin' Mike!<br>Thanks for the chuckle about the paper!  And, yes, we all do work differently.  Heck, I can work differently within a day!  lol !<br>Hugs to your feline superiors!<br>learning as I go</div>
+<h2>Reply by Mike</h2>
+<div class="meta">2010-02-3 13:19</div>
+<div class="content">Hi Learning,<br><br>Full bellies and snoring all 'round.  Life is good ;-)  Snow here has canceled school so my lovely Lisa is off today and is ... you guessed it, snoozing ;-) ;-)</div>
+<h2>Reply by learning as I go</h2>
+<div class="meta">2010-02-3 15:11</div>
+<div class="content">Hi Mike<br>Isn't the snow so beautiful?  My Missy loves eating it or turning it yellow.......but she knows not to mix the two!  LOL!  I don't know why that snowfall still makes me feel in awe of how life is.  I hope you, Lisa and the quadrapeds enjoy the day.  I think this is a fine day to make a pot of chili , bake some cornbread and some rum pudding!  We're due for a bigger storm this week-end.  I'll get to decide what "winter" meals to make for it.  This last storm I made Welsh Rarebit and aged steaks.  I use winter as my excuse to sanction eating all these less than healthy meals!  LOL!<br>I know you'll be cooking too!  You're a culinary scientist like me!  LOL!<br>learning as I go</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-02-4 17:16</div>
+<div class="content">Version 0.9.3.1 is out: <a href="http://cloud.github.com/downloads/andreashofmann/AutofocusAHK/AutofocusAHK-0.9.3.1.zip" rel="nofollow">http://cloud.github.com/downloads/andreashofmann/AutofocusAHK/AutofocusAHK-0.9.3.1.zip</a><br><br>Many small bugfixes concerning the DWM implementation. Biggest changes:<br><br>- Renamed AF5 to DWM<br>- Expiration dates configurable by editing the ini file. Defaults are 7 days for re-added tasks and 28 days for new tasks.<br>- Tasks don't expire on 'their day', but on the day after.</div>
+<h2>Reply by Mike</h2>
+<div class="meta">2010-02-4 18:25</div>
+<div class="content">Hey Learning,<br><br>>>>  Isn't the snow so beautiful?  <<<<br><br>Fantastic.  And it looks like we may have another two feet of fantastic over the next couple of days ;-)<br><br>>>>  My Missy loves eating it or turning it yellow.......but she knows not to mix the two! LOL!  <<<<br><br>Well, dogs are not dumb ;-)<br><br>>>>  I don't know why that snowfall still makes me feel in awe of how life is. <<<<br><br>Good question.  I imagine that it is the dazzling white purity.  The whole world looks fresh and new.  Her it coats the branches of all the trees and it is a sight like nothing else.  I have a large Japanese Maple tree in the back yard and it wears a lovely white coat!  ;-)<br><br>>>>  I hope you, Lisa and the quadrapeds enjoy the day. <<<<br><br>Well, the quadrupeds enjoy every day.  They are all curled up in front of the space heater on on a large polyester pad on the bed upstairs.  There is snoring all around ;-)  Lisa eventually stirred her bones and we went out to Five Guys for a burger then did a bit of shopping. It was a nice to have a day to spend together.<br><br>>>>  I think this is a fine day to make a pot of chili , bake some cornbread and some rum pudding!  <<<<br><br>Mmmmmmm.  And this will be superbowl weekend.  Great time for chili ;-)  I'm not much for sports, but every few years I watch a game.<br><br>>>>  We're due for a bigger storm this week-end. I'll get to decide what "winter" meals to make for it. This last storm I made Welsh Rarebit and aged steaks. I use winter as my excuse to sanction eating all these less than healthy meals! LOL!<br>I know you'll be cooking too! You're a culinary scientist like me! LOL!  <<<<br><br>Yeah, but I'm being kind of "good" lately.  I want to get the weight off for the vacation this summer so I'm working at keeping the carbs down.  For me, that and exercise is the secret to it all.  One thing I LOVE about the low carb approach is that I get to eat all the meat I want.  So I'm dieting on Fillet ;-) ;-)<br><br>Stay warm.  The cats are waving sleepy paws at Missy.</div>
+<h2>Reply by learning as I go</h2>
+<div class="meta">2010-02-4 19:05</div>
+<div class="content">Hi Mike<br>Yippee!  We're going to get the same snow storm!  Other than some shoveling done in intervals, it should be quite lovely.  I just love watching Missy's joy!  She's 13 yet for a little while she thinks she's a pup again.  I have to walk up the stairs behind her while propping up her hips to help her get up without falling.  She just plays wildly in the snow until her hips give out.  Bless her little canine soul!  If it's a bad as they're predicting, I'll have to shovel out a temporary pooping station for her!  LOL!<br>I'm so glad that you and Lisa got to enjoy some good times together!  I know that made both of you very happy!<br>learning as I go</div>
+<h2>Reply by Marcin</h2>
+<div class="meta">2010-02-5 12:10</div>
+<div class="content">Hi Andreas,<br><br>The soft has a trojan in it. Can you fix it so that I can download the thing?<br><br>Thanks<br><br>Marcin</div>
+<h2>Reply by Mike</h2>
+<div class="meta">2010-02-5 12:19</div>
+<div class="content">Learning,<br><br>YAY, it is going to be SO bad that Lisa got the word before she left school yesterday that there would be no school today.  They are talking about 30" or more here.  And in DC, almost no one knows how to drive on even wet roads.<br><br>Missy:  LOL ;-)  It is so neat to see them behaving like pups and kittens again.  Poor thing must need a good long nap after play time like that.<br><br>Have fun in it today ... and take care you don't overdo the shoveling.  Little and often with shoveling.  I KNOW Mark will agree ;-)</div>
+<h2>Reply by learning as I go</h2>
+<div class="meta">2010-02-5 12:37</div>
+<div class="content">Hi Mike<br>I don't even use a normal shovel.  I don't want to trip off my spinal cord or my other spinal injuries!  LOL! I can do that task standing totally erect and I remember to stay cautious. I don't want a stun gun zap that might cause me to drop to my knees and soil myself in front of the neighbors!  *blush*  Trust me.......I won't be careless!  ROTFL! <br>  If I'm unable, I'll simply pay someone else to clear the car.  I don't do my sidewalks.  That would surely do me in!  (pssst....I'd never admit to this in true life, but I actually feel proud when my body allows me to do "normal" chores! )<br>learning as I go<br>p.s.  I think you're going to get the brunt of it.  I'm on the Northern Shore.  They're forcasting between one to two feet depending on where you live in relation to how the shoreline winds decide to dance in the snow!  LOL!<br>One year it was only about 2 feet but, lucky me, was in a 9 to 12 foot snow drift.  I had to jump out my window onto my porch, and then remove the snow from the door and a few feet out.  Several of the neighbors and I formed a chain gang and plowed about 1/8 mile to the street and ran shifts to get food to the senior citizens and moms with very young children.  Passing the flask kept us going!  lol!  I love snow even when it's inconvenient....although I've never been buried under an avalanche!  Geeeeezzzzzz, the thought............shivers to the spine!  (When I used to ski out West, I'd pray each morning that blasting the cannons did the trick!  Avalanches are beautiful to watch.........from a safe and far distance!  <br>Keep Lisa and the critters safe!<br>learning as I go</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-02-5 12:41</div>
+<div class="content"><<The soft has a trojan in it. Can you fix it so that I can download the thing?>><br><br>Err, no, it hasn't?<br><br>I would appreciate if you'd check your facts before you post stuff like that.<br><br>I just uploaded the exe to virscan.org, where it gets checked by 36 different virus scanners, and only two of those claimed to have found a trojan. And they even report the same trojan. 34 of 36 virus scanners say my file is clean. So what you have is clearly a false alarm.<br><br>If you don't trust me, you can always download the source code, read it to check that it does nothing malicious and compile it yourself. It not that hard. (Install autohotkey, download my source code, right-click AutofocusAHK.ahk, select "Compile Script", done!)</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-02-5 12:44</div>
+<div class="content"><<And they even report the same trojan.>><br><br>Lol, I meant to says they DIDN'T report the same trojan. So we have one scanner claiming to have found a trojan, one scanner claiming to have found a different trojan, and 34 scanners that didn't found a trojan. Your choice who you believe.</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-02-5 12:53</div>
+<div class="content">To make absolutely sure, I uploaded it to virustotal and it was checked again by 40 different scanners. One of them found a trojan (again a diifferent one than before).<br><br>So if you get a virus alert, please upload the file to <a href="http://virscan.org" rel="nofollow">http://virscan.org</a> or <a href="http://virustotal.com" rel="nofollow">http://virustotal.com</a> before to be sure your scanner isn't failing.</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-02-5 19:25</div>
+<div class="content">Version 0.9.3.2 is out: <a href="http://cloud.github.com/downloads/andreashofmann/AutofocusAHK/AutofocusAHK-0.9.3.2.zip" rel="nofollow">http://cloud.github.com/downloads/andreashofmann/AutofocusAHK/AutofocusAHK-0.9.3.2.zip</a><br><br>Just one nice new feature, inspired by vegheadjones' excel solution: an additional url field per task. So you can save a website's address along with a task (for example, I have the task "Check Mark Forster's forum, and the url is <a href="http://markforster.net/forum)." rel="nofollow">http://markforster.net/forum).</a><br><br>The neat thing: If you are in a browser (IE, Firefox, Opera or Chrome at the moment) and press Casplock+a to add a new task, the url of the website you're on is automatically copied into the url field. And if you start working on a task with a url, it gets opened automatically.</div>
+<h2>Reply by vegheadjones</h2>
+<div class="meta">2010-02-5 19:34</div>
+<div class="content">Very cool Andreas-- can't wait to check it out...</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-02-5 19:49</div>
+<div class="content">It is rather useful. I use gmail and star each email that has a task attached to it and archive all others. Now I can press Capslock+a while haven a mail with a task open and add it to my DWM list. Once it decide to action the task, the original email pops up as reference. I really like it.<br><br>Another thing: The url is not restricted to websites. It can be anything your OS can handle. For example if the task is "Write essay", the url copy be "D:\reference\essay\draft.doc", which would open Word with your essay draft if you action the task. Or the task "write to Andreas" could have the url "mailto:andreas@autofocus.cc". Or you could use a skype url to call somebody etc. etc. <br><br>But I think I'll add an option to turn the auto-copy feature on or off. If you spend a lot of time in the browser you may not want to always have your current url attached to new tasks. Though you can just tab and delete right now.</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-02-5 19:51</div>
+<div class="content">Yet again many strange typos in my last post.<br><br>haven -> having<br>copy -> could<br><br>o_O</div>
+<h2>Reply by Marcin</h2>
+<div class="meta">2010-02-5 20:15</div>
+<div class="content">Andreas!<br><br>No personal thing to you. And no blackmail to your great work.<br><br>My antivir prevented me from a sheer possibility to install your great soft.<br><br>I had to switch off the antivir to make installation possible.<br><br>I sent the alert to the producer and they said it's a hoax and will include it in tonight's actualization.<br><br>All the same, I have to choose whether I use your soft or am safe with my antivir.<br><br>Choice is clear, but I will miss your great soft.<br><br>Working with your soft on an unprotected PC makes no sense at all.<br><br>Some day phaps will be able to use your soft...<br><br>Regards<br><br>Marcin</div>
+<h2>Reply by vegheadjones</h2>
+<div class="meta">2010-02-5 20:18</div>
+<div class="content">Yup. I use gmail too and use to star to refer to it. Having the url to the e-mail connected to the task makes life much easier...</div>
+<h2>Reply by Alan Baljeu</h2>
+<div class="meta">2010-02-5 20:37</div>
+<div class="content">The virus problem is AutoHotKey's.  It isn't a virus, but some systems think it looks like one.</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-02-5 20:47</div>
+<div class="content">Marcin:<br><br><<All the same, I have to choose whether I use your soft or am safe with my antivir.<br><br>Choice is clear, but I will miss your great soft.<br><br>Working with your soft on an unprotected PC makes no sense at all.<br><br>Which antivirus software are you using? Normally there would be the option to make an exception for a single application instead of turning it off completely.<br><br><<Some day phaps will be able to use your soft...>><br><br>What you wrote earlier make it sound like you'll be able to use it tonight:<br><br><<I sent the alert to the producer and they said it's a hoax and will include it in tonight's actualization.>><br><br>:-)<br><br>Alan:<br><br>Yes, some scanners react to Autohotkey, because it can install keyboard hooks (which is, of course, how the hotkeys work). But as the scan results of virustotal and virscan show, the vast majority of scanners now reacts correctly.</div>
+<h2>Reply by Mel</h2>
+<div class="meta">2010-02-6 1:00</div>
+<div class="content">Is there a way to see a list of tasks due after today? Right now all I get is "Does X feel ready to be done?" I'm not familiar with this kind of program. Sorry!</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-02-6 5:30</div>
+<div class="content">Mel:<br><br>The hotkeys I use most are Capslock+a a for adding tasks, Capslock+d for doing/circling through the tasks, and Capslock+e to show the complete list as a HTML page. The latter is what you're looking for, I think. It gives you the whole list, the current task is in bold font. If you have javascript enabled, you can show or hide unactioned/done/dismissed tasks via the buttons on the top right. And the list is grouped depending on your selected system (by page for AF1/AF3. by closed and open list for AF4, by expiration date for DWM). If you use DWM (remember, you can always switch the system you use in the preferences), tasks that expire today are marked red, tasks that expire tomorrow are marked yellow.<br><br>I originally intended for Capslock+a,s,d to be the main keys, but the "show next tasks" funktion on Capslock+s is rather useless compared to the HTML export. I plan to improve it in time, for example by enabling quick jump.</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-02-6 5:36</div>
+<div class="content">The difference between AutofocusAHK and most other digitial implementations is that AutofocusAHK takes care of the rules for you. Whether that's an advantage or not probably depends on how you're wired. Personally, I prefer the increased "autofocus" of only seeing one task at a time and answering the "do it?" question with yes or no, letting the application take care of which task to show me and where to add new tasks. Others might prefer manually adhering to the rules to increase psychological benefits by the process itself.</div>
+<h2>Reply by sabre23t</h2>
+<div class="meta">2010-02-6 18:50</div>
+<div class="content">>> Personally, I prefer the increased "autofocus" of only seeing one task at a time and answering the "do it?" question with yes or no, letting the application take care of which task to show me and where to add new tasks.  <<<br><br>Yes, this is what attracts me to AFAHK. Automatic strict enforcement of the rules, else I tend to bend the rules. Just downloaded ver 0.9.3.2. Will try AFAHK on sample tasks first, while my current active DWM is still in my Lotus Notes Todo and Windows Mobile Outlook Tasks. ;-)</div>
+<h2>Reply by sabre23t</h2>
+<div class="meta">2010-02-6 19:20</div>
+<div class="content">AndreasH earlier said ...<br>>> I'm working on a websync solution, but I don't know how long it will take. I don't have as much time for this as I'd like. <<<br><br>Would this have some big advantage over syncing via dropbox between multiple computers?<br><br>I just double checked that dropbox don't have a windows mobile client. But accessing the dropbox webpage from WM browsers (IE Mobile or Iris) is do able. When on windows mobile I guess I could work from either AFAHK tasks.txt or the exported HTMLs files.<br><br>Mmm ...  ;-)</div>
+<h2>Reply by Andreas Hofmann</h2>
+<div class="meta">2010-02-6 22:22</div>
+<div class="content">sabre23t:<br><br><<Would this have some big advantage over syncing via dropbox between multiple computers?>><br><br>Well, dropbox is fine to sync between two PCs, but when I say web sync, that includes sync with a web application which can be used to work the list, which would also work in mobile browsers and non-windows computers. So it will probably make it a lot more useful. But its also a rather complex task, it's the one AutofocusAHK related task I feel the most resistance toward. So there'll likely be some more releases an other new feature before web sync is done.</div>
+<h2>Reply by sabre23t</h2>
+<div class="meta">2010-02-7 7:58</div>
+<div class="content">Hi AdreasH,<br><br>>> web sync, that includes sync with a web application which can be used to work the list, which would also work in mobile browsers and non-windows computers <<<br><br>Wow. That's what I'm hoping for when I tried out your earlier <a href="http://autofocus.cc" rel="nofollow">http://autofocus.cc</a> (AF1 only web app) from my Windows Mobile. Let me know, what I can do to assist on getting the web sync nearer realisation. ;-)<br><br>At the moment I'm still considering whether I can live without working my DWM list on my windows mobile (only reference access to dropbox), hence can use AFAHK instead of my existing NotesTodo/WMTasks setup. The following pros draws me to AFAHK ...<br>(1) Strict automatic adherence to DWM rules.<br>(2) Automatic tracking of time doing DWM per tasks.<br>(3) Re-entered tasks, are created as duplicate/rephrased copy of completed tasks.<br>(4) Nice auto URL link to webpages being worked on, with notes field.<br><br>I'll let the above brews a bit more before I make a decision. ;-)</div>
+</article>
+    </main>
+    <footer>
+        <p>Archive built from Mark Forster's blog and forums</p>
+    </footer>
+</body>
+</html>

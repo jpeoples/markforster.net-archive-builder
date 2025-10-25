@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Version Simulation (geeky)</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../blog_index.html">Blog</a>
+            <a href="../fvp_forum_index.html">FVP Forum</a>
+            <a href="../general_forum_index.html">General Forum</a>
+        </nav>
+    </header>
+    <main>
+<article>
+<h1>Final Version Simulation (geeky)</h1>
+<div class="meta">
+Author: Tijl | 
+Created: 2012-03-14 1:35
+ | Last Activity: 2012-04-22 17:20
+</div>
+<h2>Original Post</h2>
+<div class="meta">2012-03-14 1:35</div>
+<div class="content">Ok, I didn't want to go to bed yet, and I'm a bit of a geek, so I ran a simulation of Final Version working a list of 100 items 1,000 times over.<br><br>My assumptions were:<br>1) the list started of in random order<br>2) every time a task was done, a new task was added with a random procrastination factor (the higher the procrastination factor, the less likely it will be that you'd want to do it before some other task)<br><br>Here you can see the final list: <a href="http://dl.dropbox.com/u/426952/finalversion-simulation.png" target="new" rel="nofollow">http://dl.dropbox.com/u/426952/finalversion-simulation.png</a><br><br>Ok, let me explain :).<br>1) On the horizontal axis are the task numbers. So the left side are the oldest tasks, the right side are the newest tasks.<br>2) The vertical axis is the procrastination factor of each task.<br>3) As you can see after 1,000 iterations of the Final Version algorithm, you end up with a list that has quite a few procrastination-sensitive tasks at the start of your list (the harder tasks), with easier tasks sprinkled in when you go to the newer tasks.<br>4) The big orange dots are represent the preselected list that you'd tackle next. As you can see it consists of the first task, and then easier and easier tasks.<br>5) So basically when you've done Final Version for a while, you'll constantly be doing a short list of tasks that are on the diagonal line from the old-difficult part to the new-easy part of the list. You are constantly shaving off the diagonal line as new tasks are added on the right.<br><br>One important observation you could make from this graph is that if you add a very difficult task at the end of the list, it will take quite a while until you get to it, because it's in the top right corner of the graph. So it takes time to shave off tasks from the diagonal on the left until you arrive at the difficult task you added. HOWEVER, keep in mind that when a new but difficult task starts to become urgent (and not just difficult), it'll start to descend down the vertical axis because the chances will be rising that you'd want to do it before something else.<br><br>Any thoughts? :P</div>
+<h2>Reply by Tijl</h2>
+<div class="meta">2012-03-14 1:37</div>
+<div class="content">Also from my simulation I can deduce that the preselected list will on average not be longer than about 15% of your total list, and likely much smaller (5-10%) because you're not that likely to select a task that you only want to do more than the previous task by a tiny margin.</div>
+<h2>Reply by Tijl</h2>
+<div class="meta">2012-03-14 1:53</div>
+<div class="content">Also... from this simulation you can deduce some 'ideal' steady list lengths.<br><br>Let's assume that on average you add about 15 new tasks to your list every day. And you want to do at least three cycles of FV every day (make three preselection lists every day). Since you want to finish an equal number of tasks as you add, you want to finish 15 tasks in three cycles of 5 tasks. Since the preselection list length will be about 5-10 % of your total list length, this means you should try to keep your list length at around 50 to 100 tasks.<br><br>If you have way more tasks (say 200), then the preselection list will likely be considerably longer (unless you cap it), e.g. 10 to 20 tasks. That means it will take you almost or more than a day to finish the preselection list.<br><br>Now I'm curious what Mark's numbers would be, and if they correspond to my simulation.<br>Mark, in the unlikely case that you find this procrastination geekery interesting, what is<br>1) your average number of tasks added per day<br>2) your average number of tasks finished per day (equal to 1?)<br>3) your average list length<br>4) the number of preselection lists you make per day<br><br>Okay, it's 3 am, time to put this aside and sleep so I can actually *work* the list tomorrow ;).</div>
+<h2>Reply by Mark Forster</h2>
+<div class="meta">2012-03-14 1:54</div>
+<div class="content">Did you allow for:<br><br>a) the fact that the procrastination factor rises the longer you leave the task undone?<br><br>b) that "want to do" doesn't equate to any one factor, whether it be urgency, importance, resistance, difficulty, or procrastination. It can be any of those or even totally unpredictable.</div>
+<h2>Reply by Bernie</h2>
+<div class="meta">2012-03-14 4:44</div>
+<div class="content">Nice, Tijl! It is hard to simulate something with this much human factor but fun and instructive to attempt. I like the visual of "shaving off tasks from the diagonal." Reminds me of my "tent canvas" image when I looked at "Colley's Cascade," except upside-down.</div>
+<h2>Reply by Cricket</h2>
+<div class="meta">2012-03-14 13:50</div>
+<div class="content">I find important tasks usually don't get harder the longer I let them sit. They're important, so I want to get them done. If letting them sit makes them less important, then maybe they don't need doing at all.<br><br>The exception is important tasks that need momentum built over several closely-spaced sessions. If the chain breaks for too long, it's hard to restart. Much of the next session will be reviewing and reassembling and overcoming inertia rather than making progress. However, if it wasn't important enough to keep momentum going, or to restart despite the inertia, maybe overcoming that inertia over and over isn't the best use of my time -- hence the additional resistance.<br><br>Which brings me back to the first statement: If it's important, I want to get it done (or keep momentum). If it's not important, than neither is the fact that it gets harder to do when it sits.</div>
+<h2>Reply by Alan Baljeu</h2>
+<div class="meta">2012-03-14 14:23</div>
+<div class="content">I think Mark's blog article on "speed of the system" is relevant here.  <a href="../blog/Speed of the New System.html" target="new" rel="nofollow">http://www.markforster.net/blog/2011/9/24/speed-of-the-new-system.html</a><br><br>Although tasks aren't done strictly from front to back, over several iterations, all the front tasks are done, and after a while you will have got through your whole list, not counting new stuff added after.  This means you can calculate.  If you have 100 tasks, and do 20/day, you will get to that high-resistance task by day 6.  Well, a little more data is required to calculate this, but the idea is sure.</div>
+<h2>Reply by James Levine</h2>
+<div class="meta">2012-04-22 17:20</div>
+<div class="content">What's happening at around 80 tasks? I seems like in the data you get the widest distribution of resistance. <br><br>Also there was a similar melt down of conclusions on a separate thread. Something whether it is collecting resistance or dissipating it does not necessarily have bearing on the urgency of the task at hand and how it is handled (maybe its a statement on one's pending urgency to choose "real work" and reevaluating such a task, but that's a legitimate item entry in and of itself or is chipped at from the item place-saver, and still doesn't say anything about the urgency of the item itself or the block in your system.) Because as soon as the item is identified as urgent, irregardless of the adverbs that accompany your evaluation, it is cycled.</div>
+</article>
+    </main>
+    <footer>
+        <p>Archive built from Mark Forster's blog and forums</p>
+    </footer>
+</body>
+</html>

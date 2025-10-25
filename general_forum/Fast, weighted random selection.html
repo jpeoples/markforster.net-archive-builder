@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fast, weighted random selection</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../blog_index.html">Blog</a>
+            <a href="../fvp_forum_index.html">FVP Forum</a>
+            <a href="../general_forum_index.html">General Forum</a>
+        </nav>
+    </header>
+    <main>
+<article>
+<h1>Fast, weighted random selection</h1>
+<div class="meta">
+Author: Kate | 
+Created: 2025-07-30 15:27
+ | Last Activity: 2025-07-31 18:20
+</div>
+<h2>Original Post</h2>
+<div class="meta">2025-07-30 15:27</div>
+<div class="content">Quick idea to share - I've been playing with Obsidian tasks and I like that I can keep MF-style long-lists but also use tags and different queries to pull things like agendas, chores out... I've always loved methods that use randomization somehow, especially when procrastinating or feeling stuck.  And figured out a version I really like today that's particularly enabled by the digital approach:<br><br>1. Create a long list of possible tasks sorted by some order where you'd like the "earlier" tasks in the lists to receive more weight.  This could be the standard FIFO order, sort by due date, etc.  (In Obsidian tasks they have a cute calculated "urgency" factor that accounts for due date, priority etc - would be silly to obsess over but is a nice way to put urgent things on top).  Digital is also nice here because you can use tags to exclude anything not doable now (eg errands, talk to spouse about) to make a list that you should be able to act on anything in theory.<br>2. Tally the number of tasks on the list (I had about 200) and pick a "mean" parameter value for the random selection - I've been liking something like 1/4 of the list, so 50.  Smaller numbers put more weight on the top/older part of the list, larger numbers will be more evenly distributed.<br>3. Generate a random exponential value with the mean you selected in #2.* <br>4. Do the task corresponding to that number! The digital nicety here is you don't have to count.  If you're doing this in Excel you can go by row, in Obsidian click into the query and add "limit 23" and it will give just the top 23 tasks so do the last one.<br>5. If the generated number is *greater* than the number of tasks (which can happen especially if you choose a big parameter) you can use this as a break, or make your own rule (select with intuition, loop around, do the last task, etc.).  If you make it a break, you can use this rule to adjust the probability of landing on break time, for example, using a lower parameter focusing on important tasks during focus times, and a much higher parameter that's more evenly random and more likely to be a break during low-energy times.<br><br>Notes:<br>*  You can use a site like https://www.polyu.edu.hk/ama/OR/calculator/expo_rand.html (lambda would be the inverse, 1/50) or on mac run python (open terminal, run `python3` then `import numpy as np` then run something like `np.round(np.random.exponential(50,1)[0])` and each time it will give you a random value.<br>- If something urgent comes up, add to the *top* of the list.  (If you're using an Obsidian tasks query, you can just "manually" add tasks above / outside the query on top").  If it's truly urgent, just pick by hand from the top of the list.  If it's fairly urgent but you still want some randomness, reduce the random parameter.<br>- I have a personal rule that I *must* do something to the task - if it's unactionable I need to modify the tags or start dates or something to get it off the list, break the task down, etc.)<br><br><br><br>Things I like about this:<br>- I get some chance of any task anytime without having to count a billion numbers on the list - I have a terminal window open with that python command so all I do is hit up-arrow and return to get a new number, then put that in the query and it gives me the task.<br>- It automatically weights towards whatever I want without having to do any crazy math (I had been doing things like making up my own dice schemes.<br>- It easily handles urgent tasks / changing priorities without significantly breaking the algorithm<br>- I don't have to remember where I am in the list - each draw is exactly the same<br>- The "just do something to the task" is such a low bar I manage to push through resistance and make progress on things I've been putting off.</div>
+<h2>Reply by Brent</h2>
+<div class="meta">2025-07-31 16:16</div>
+<div class="content">Above you said " (In Obsidian tasks they have a cute calculated "urgency" factor that accounts for due date, priority etc - would be silly to obsess over but is a nice way to put urgent things on top)."<br><br>Do you have a specific plugin for that?</div>
+<h2>Reply by Kate</h2>
+<div class="meta">2025-07-31 18:20</div>
+<div class="content">It's built into the "Tasks" plugin.  In a code block you can just add sort by urgency, eg.<br><br>```tasks<br>not done<br>tag does not include errands<br>sort by urgency<br>```</div>
+</article>
+    </main>
+    <footer>
+        <p>Archive built from Mark Forster's blog and forums</p>
+    </footer>
+</body>
+</html>

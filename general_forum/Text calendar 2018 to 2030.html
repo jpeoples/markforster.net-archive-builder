@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text calendar 2018 to 2030</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../blog_index.html">Blog</a>
+            <a href="../fvp_forum_index.html">FVP Forum</a>
+            <a href="../general_forum_index.html">General Forum</a>
+        </nav>
+    </header>
+    <main>
+<article>
+<h1>Text calendar 2018 to 2030</h1>
+<div class="meta">
+Author: Chris | 
+Created: 2018-03-15 0:16
+ | Last Activity: 2018-03-19 17:01
+</div>
+<h2>Original Post</h2>
+<div class="meta">2018-03-15 0:16</div>
+<div class="content">In May 2015 someone asked me for the text-based calendar I created and I posted a link. This is a quick note to say I've extended the calendar to 2030 if anyone is interested in a copy.<br><br>https://pastebin.com/qXMTviLF (click download)<br><br>After many years I am still using this as my calendar. I had been storing it in a Google Doc and using my web browser on the Mac and the Google Docs app on the iPhone to edit it. Since last year I've switched to using Apple's vastly improved built-in Notes app. It works very cleanly and reliably and has a raft of useful yet simple features such as checklists, images and sketches.<br><br>Changes I make on the Macs, iPhone or iPad are synced within seconds to the other devices. For extra reliability I've split the calendar into a separate Note for each year as that means there's much less to sync with each change. I sort my Notes by Title and also use a monospaced font which makes it look very tidy. If you're an Apple user and not played with Notes since last year give it a whirl, you'll like it.<br><br>Regards,<br>Chris</div>
+<h2>Reply by james220</h2>
+<div class="meta">2018-03-15 2:48</div>
+<div class="content">Is there a script you use to make this that you could share with us? That would be really helpful...</div>
+<h2>Reply by Chris</h2>
+<div class="meta">2018-03-15 4:47</div>
+<div class="content">I didn't use a script, I created it in TextEdit (text editor on the Mac) using lots of copy/paste. Key to this is the little-known trick that if you hold down Alt when dragging with the mouse you can select vertical areas of text. So it's a simply job of entering once and copying multiple times the days of the week, then entering the dates, copying those for normal and leap years, and then using the trick to align Jan 01 to the correct day of the week for however many years you want. Finally a bit of tidying up, spacing, titles, etc.<br><br>Regards,<br>Chris</div>
+<h2>Reply by Andreas Maurer</h2>
+<div class="meta">2018-03-15 13:40</div>
+<div class="content">james220:<br><br>I wrote a quick JavaScript that produces the same output: <a href="http://jsfiddle.net/qnoertvc/35/" target="new" rel="nofollow">http://jsfiddle.net/qnoertvc/35/</a><br><br>You can set the set the start and end year by changing the variables at the top. You can also change the strings in the variables yearPrefix, months, and weekdays to change the look or translate into another language.</div>
+<h2>Reply by Chris</h2>
+<div class="meta">2018-03-15 14:38</div>
+<div class="content">Nice one, thanks Andreas.</div>
+<h2>Reply by Alan Baljeu</h2>
+<div class="meta">2018-03-15 16:50</div>
+<div class="content">Turns out, a calendar of that format only requires 7 months.  Every other is a quick copy/edit if you know how long your months are.  March is a "Th 01" month.</div>
+<h2>Reply by Chris</h2>
+<div class="meta">2018-03-15 17:04</div>
+<div class="content">Indeed, you can make a template for each month type and then copy them. Some years are the same too, or parts of them. It was actually much quicker to paste entire years and then paste in the entire year of dates starting on the correct date for each one. Andreas's script makes it even quicker - I'll make a note to check it again in 12 years!</div>
+<h2>Reply by Andreas Maurer</h2>
+<div class="meta">2018-03-16 8:08</div>
+<div class="content">Now you made me realise that 2030 is in only 12 years.<br><br>I feel old. :-)</div>
+<h2>Reply by Chris</h2>
+<div class="meta">2018-03-18 3:54</div>
+<div class="content">I remember thinking that 12 years ago!<br><br>I tried to incorporate your code into a standalone html doc (apart from the jquery lib) but my js knowledge is not up to the job. Can you see where I've gone wrong? Your code is between a window.load function, and I've also tried using a paragraph with the output id instead of a div, to no avail.<br><br>https://pastebin.com/3AwUQLqa</div>
+<h2>Reply by Chris</h2>
+<div class="meta">2018-03-18 4:00</div>
+<div class="content">Just to add, I spotted I missed the closing tag from the jquery, added that now, but still no luck.<br>Cheers.</div>
+<h2>Reply by Andreas Maurer</h2>
+<div class="meta">2018-03-18 21:05</div>
+<div class="content">Hi Chris,<br><br>load() does not do what you think it does - <a href="http://api.jquery.com/load/" target="new" rel="nofollow">http://api.jquery.com/load/</a><br><br>Just replace the line<br><br>$(window).load(function(){<br><br>with<br><br>$(function(){<br><br>and it will work.</div>
+<h2>Reply by Andreas Maurer</h2>
+<div class="meta">2018-03-18 21:17</div>
+<div class="content">While I was at it again, I modified the script so it doesn't need jQuery at all - I was just lazy when I wrote it.<br><br>https://pastebin.com/0uPFHC36</div>
+<h2>Reply by Chris</h2>
+<div class="meta">2018-03-18 22:08</div>
+<div class="content">Thanks Andreas, I was so close! With the JQuery reliance gone it's a really handy standalone tool for creating my simple text calendar format, what with the ability to change languages and date ranges. I expect this thread will get referenced on and off over the years if people are looking for a simple calendar as part of a simple digital approach.<br><br>Regards,<br>Chris</div>
+<h2>Reply by Cricket</h2>
+<div class="meta">2018-03-19 17:01</div>
+<div class="content">Here it is in Google Sheets. <br><br>https://docs.google.com/spreadsheets/d/15SpZOWckKCmqnWxUhUHx-nTjYs7CNo5BOwQ5nj9U1O8/edit?usp=sharing<br><br>First sheet is the formulae, with just a few rows, with two options: Single row or multiple row. The second sheet is 2018-2030. It takes a minute or two to calculate almost 5000 rows.</div>
+</article>
+    </main>
+    <footer>
+        <p>Archive built from Mark Forster's blog and forums</p>
+    </footer>
+</body>
+</html>

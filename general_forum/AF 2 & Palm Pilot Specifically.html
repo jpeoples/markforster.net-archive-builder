@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AF 2 & Palm Pilot Specifically</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Home</a>
+            <a href="../blog_index.html">Blog</a>
+            <a href="../fvp_forum_index.html">FVP Forum</a>
+            <a href="../general_forum_index.html">General Forum</a>
+        </nav>
+    </header>
+    <main>
+<article>
+<h1>AF 2 & Palm Pilot Specifically</h1>
+<div class="meta">
+Author: Florida Mark | 
+Created: 2009-07-1 11:30
+ | Last Activity: 2009-07-3 11:48
+</div>
+<h2>Original Post</h2>
+<div class="meta">2009-07-1 11:30</div>
+<div class="content">Thanks for the electronic implementation posts, but as a Palm desktop/pilot user does anyone know if the list will stay in order on Palm?  It seems to move around sometimes for me?<br><br>Thanks<br><br>Mark</div>
+<h2>Reply by Mike</h2>
+<div class="meta">2009-07-1 11:56</div>
+<div class="content">Florida,<br><br>Using the native applications it is devilishly hard to control the order of things.  You have to stand on your head using numbering in the task name and other such devices.<br><br>I played with it for a while and settled on ListPro.  It has a number of sorting and filtering options as well as a good desktop application that syncs easily with the Palm.  If that interests you at all, I'd be happy to share.  But basically the features that I'm using are:<br><br>- A "page" length matching my paper pocket book<br>- Hiding completed tasks (click the check box and they vanish)<br>- Category fields so I can filter certain kinds of tasks to devote time to them in a block<br><br>It is too bad that the native applications are so lame.  Someone here has used the "memo" application with one "memo" per page.  I opted not to do that because you can only categorize an entire memo (therefore an entire AF "page") and I wanted tasks categorized if I was going to do anything electronic.  Likewise, while Palm "tasks" allow categorizing, they have their own idea of how to sort so the whole page concept goes out the window.<br><br>I hope that helps.<br></div>
+<h2>Reply by Lenore</h2>
+<div class="meta">2009-07-2 12:46</div>
+<div class="content">Though I'm not presently a Palm user, I think you might be well served with an outliner such as ShadowPlan, which I used for a long time, or Bonsai.  That is , if they work on the new device. They would most likelyvallow youvto sort by just about anything, including create date/time.<br>Good luck!<br><br></div>
+<h2>Reply by Cixelsyd</h2>
+<div class="meta">2009-07-2 17:04</div>
+<div class="content">Yes, any outlining program should work just great for you. When I was devising my simple outline implementation (see the tech implementation thread) and finally settled on CarbonFin Outliner for my iPhone, I was specifically thinking about Shadow Plan. I really liked it when I was using Palm TX full time: it is a powerful program. Bonsai has a better (read "prettier") UI. Since I was already happy with Shadow Plan, I never tried it, however. If desktop connectivity is important to you, I believe both have a syncable companion.</div>
+<h2>Reply by Charles</h2>
+<div class="meta">2009-07-2 23:49</div>
+<div class="content">Mike,<br>I'm interested to hear you are a ListPro user. Would you mind posting a summary of your ListPro implementation especially the columns you created in your list and the workflow you use?  Many thanks.<br>Charles<br></div>
+<h2>Reply by Mike</h2>
+<div class="meta">2009-07-3 11:48</div>
+<div class="content">Hi Charles,<br><br>I have a love/hate relationship with ListPro.  ;-)  It is simple and flexible but it lacks such obvious things as powerful computation on column contents (it has just a few weak ones).<br><br>My approach is to use the columns (below) and the keep the list sorted in page/line order except to use filtering when I'm interested in working similar tasks ... kind of like keeping a separate list in my paper book, but quicker.  That said, I still see my paper book as the core of my system.  I just can't get around the simplicity of pulling out my notepad without a second thought about batteries, charging, booting, etc.<br><br>That said, the columns I use (in order) are:<br><br>- A check box for "completed".  (I keep the list set to hide completed tasks)<br><br>- Task (self-explanatory ;-)<br><br>- Category (I need to rename this.  It is the TYPE of task I am doing: a COMPUTER project, a HOUSE project, READING, etc.)<br><br>- Purpose (This is WHY I am doing the task: To meet financial goals, for fun, because of an upcoming vacation or visitor, etc.)  Bot this and the previous field allow me to filter so I can group things for a dedicated stint of work.  When my brother-in-law recently came to visit I had a category for that and would filter to see all I needed to do to get ready.  Likewise with my just enjoyed vacation and my upcoming bicycle trip.)<br><br>- Page (a three digit page number upon which my primary sort is based.)  (NOTE: I use a different "number" to separate my project lists.  I would not have to do this if I did not have to match my paper book because I could just filter on one of my categories.  But since the paper won't "filter", I have page numbers like "S" for "Shopping List".  I also have a dummy page "000" to keep some metrics at the top ... like active page number.)<br><br>- Line (a two digit line number upon which my secondary sort is based)  I prefill blank lines when I get to the active page, for simplicity's sake and so it looks like a paper page.)  (NOTE: I put in a dummy line "00" for each page with the task "Page NN" so I can easily see page breaks.  I can quickly see when there are no more items on a page (they are all done or dismissed) because two "Page NN" items are up against each other.  I then am able to "show" completed items and delete them so I can reuse the pages for my next book.  This is important to me since my paper book is primary and I want this to match so I can sync them.  Otherwise I'd just continue numbering pages forever or maybe add a "Book Number" field.  But since I don't keep my books, I recycle the numbers.  During notebook change over it looks a bit odd because I have the first few pages filled with tasks, a bunch of dummy page numbers with no tasks, then the highest page numbers with tasks again.  That has not disturbed me enough to do anything about it yet.  I suppose I could mark the dummy "complete" and it would auto hide and then I could resurrect it when I needed to activate it in the new "book".  There are always options ;-)<br><br>- Date Due (For tasks that have one)<br><br>- Date Added (Self-explanatory)<br><br>- Date Competed (Self-explanatory)<br><br>- Days active!  (Here is where I ran afoul of the lack of powerful math.  I wanted to use the electronic aspect to do calculations so I could sort and filter on age and so on.  It would be helpful I think, to find your oldest task and work on it to get it off the list.  I ditched this when I saw it was not possible.  When it became really important for me to develop some metrics to see how AF2 would work best, I exported everything to Excel where I can go hog wild with calculation ;-)<br><br>That is my setup.  It is not rocket surgery (as some wag noted recently ;-) but it gets the job done.</div>
+</article>
+    </main>
+    <footer>
+        <p>Archive built from Mark Forster's blog and forums</p>
+    </footer>
+</body>
+</html>
